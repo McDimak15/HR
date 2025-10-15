@@ -1,0 +1,30 @@
+Homeward Ragnarok is add-on to Infernal Eclipse of Ragnarok,
+it adds compatibility between Infernal Eclipse of Ragnarok and Homeward Journey mods.
+
+Included support for this mods:
+- Homeward Journey
+- Calamity
+- Thorium
+- Fargo's Souls
+- Calamity - Fargo's Souls DLC
+- Community Souls Expansion
+
+
+Included support but low:
+- Secret of the shadows
+- Consolaria
+
+This mod was tested in multiplayer but still possible bugs.
+Also the mod might be unbalanced.
+
+Changelog: https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing
+
+Discord Server: https://discord.gg/pxxQMVu5ek
+
+Special thanks to Soltan, Infernal Eclipse of Ragnarok Team and Homeward Journey Devs.
+
+Sprites by Soltan, Cenix and Duwop.
+Icon by Duwop.
+Created by Kes.
+
+Please Report Any Bugs.

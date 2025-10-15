@@ -1,0 +1,44 @@
+Homeward Journey:
+Maked The Batter compatible with modded Thrower
+Maked Baseball Cap compatible with modded Thrower
+Maked Steady Cap compatible with modded Thrower
+Maked Catcher's Glove compatible with modded Thrower
+Maked Runner's Legging compatible with modded Thrower
+Maked Bubble Wraps compatible with modded thrower
+
+Changed The Batter Craft
+Changed The Batter workbench
+Added Crafts to: Alpha, Omega, Epsilon
+Rebalanced The Baseball Cap
+Rebalanced The Batter
+
+Changed Tooth Of Cthulhu to thrower class
+Changed Cactus Ball to thrower class
+Changed Solid Tornado to thrower class
+Changed Da Capo to healer class
+
+Buffed Wildfire damage  12 > 18
+Buffed Sparkthrower damage  6 > 9
+Buffed Fountain Staff damage 60 > 140
+
+Changed The Holy Trinity Craft: Ectoplasm > Necroplasm
+Remove any iron bar and Rich Mahogamy from Wildfire (CoJ) Craft
+Add Sparkthrower (CoJ) to Wildfire (CoJ) Craft
+Remove Flamethrower (Terraria) from Wildfire Bloom (Calamity) Craft
+Add Wildfire (CoJ) to Wildfire Bloom (Calamity) Craft
+
+Maked Mushrooms Compatible with thorium healing spells
+
+Homeward Ragnarok:
+Fixed Thorium dependency error
+Maked Boss Summons non-consumable
+Added a new item: The Bible of the Thrower: Volume IV
+Added a new item: Deluxe Dew Collector
+
+Infernum:
+Added Boss Intros
+
+
+
+
+

@@ -1,0 +1,11 @@
+Homeward Ragnarok:
+Removed Thorium from dependencies
+Fixed tooltip in Vampire Talisman
+Fixed tooltip in Dracula`s Charm
+Fixed tooltip in The Holy Trinity
+Fixed tooltip in Alpha
+Fixed tooltip in Epsilon
+Fixed tooltip in Omega
+Fixed tooltip in Father and Son
+Fixed tooltip in Vagabond`s Soul
+Fixed tooltip in Herbalist Pouch

@@ -1,0 +1,107 @@
+Accessories:
+The Holy trinity now works with modded thrower items
+Alpha now works with modded thrower items
+Omega now works with modded thrower items
+Epsilon now works with modded thrower items
+Rebalance The Holy Trinity,Father and Son, Alpha,Omega,Epsilon 
+Epsilon 70% > 30%
+Omega 70% > 20%
+Alpha 70% > 20%
+The Holy Trinity , Father and Son get the same balance
+
+Added The Holy Trinity effect to Vampiric Talisman
+Added The Holy Trinity effect to Dracula’s Charm (Clamity)
+
+Changed Gauntlet of The Commander buff from melee to whip speed
+Gray Rook no longer add melee speed buff
+
+Buffed Altitude
+Added Wings of Rebirth to altitude craft
+
+Replaced the organic staff in terraheart craft with the plantation staff 
+Replaced the blade staff in plantation staff craft with the organic staff 
+Replaced the plantation staff in Elemental Axe craft with the terraheart
+Replaced the plantation staff in Planterror Staff craft with the terraheart
+Added Vein to Vein Burster craft
+Added Vein to Perfect Dark craft
+Added The Holy  to Vampiric Talisman craft
+
+Fargo:
+Added Ancient Blessing to colossus soul craft
+Added Negablast Shield to colossus soul craft
+removed Blast Shield (Thorium) from colossus soul craft
+
+
+Changed Thrower weapons to merged Thrower Unification class
+Added New Dependency ThrowerUnification
+
+Added Homeward Journey Bosses to boss rush
+
+Potions:
+Increase Ultra Healing Potion by +50 HP
+Increase Ultra Mana Potion by +130 Mana
+
+Added Negablast Shield, Effect of negashield and blast shield of thorium
+Added contributor Item Baby Oil
+
+Remove:
+Philosophers Stone from elemental gauntlet
+Counsellors Fan from nucleogenesis
+Saintly eyeball from Ethereal Talisman
+Fungus from Sealed Contract
+Person in dream from elemental bloom
+
+AuroraHeadwear 38 > 20 Aurora Headwear 
+AuroraRobe 44 > 24 Aurora Breastplate
+AuroraBoots 40 > 18 Aurora Leggings
+SunlightHelmet 40 > 20 Sun God Helmet
+SunlightBreastplate 56 > 26 Sun God Breastplate
+SunlightLegging 50 > 24 Sun God Leggings
+HeliologyHelmet 40 >  22 Five-star General Hat
+HeliologyPlate 46 > 26 Five-star General Coat
+HeliologyLeggings 42 > 20 Five-star General Trousers
+PerpetualHelmet 44 > 16 Chrono Helmet
+PerpetualPlate 48 > 30 Chrono Breastplate
+PerpetualLeggings 44 > 18 Chrono Leggings
+BiologicalHelmet 44 > 40
+BiologicalBreastplate 58 > 48
+BiologicalLeggings  50 > 40
+WatchmanHat 48 > 18
+WatchmanShirt 50 > 32
+WatchmanDress  48 > 20
+ForestHelmet 52 > 44
+ForestBreastplate 60 > 50
+ForestLeggings 54 > 42
+EquilibriumBreastplate 65 > 54 Equilibrium Bodysuit
+EquilibriumLeggings 50 > 48 Equilibrium Stockings
+ReflectorHelmet 50 > 56
+ReflectorBreastplate 62 > 52 Reflector Bodysuit
+
+Change Vortex Helmet (ter) to God Slayer Helmet (calamity) in BiologicalHelmet craft
+Change Vortex Breastplate (ter) to God Slayer Chestplate (calamity) in BiologicalBreastplate craft
+Change Vortex Leggings (ter) to God Slayer Leggings (calamity) in BiologicalLeggings craft
+
+Weapons:
+buff rapiers damage by x1.3, Rapiers:
+Copper Rapier, Gold Rapier, Iron Rapier, Lead Rapier, Platinum Rapier, Silver Rapier, Tin Rapier, Tungsten Rapier
+buff Backstabber attack speed from 15 > 12
+buff Bloodthirst attack speed from 24 > 20
+Cactus ball speed 45 > 30 + poison debuff
+Tooth of Cthulhu damage 10 > 15
+Vein damage damage 24 > 28 , attack speed 24 > 20 
+Connivers Kunai damage 20 > 24
+
+Chlorophyte Knife to thrower class
+Lead Knife to thrower class
+
+Boss Rush:
+Added:
+GoblinChariot after brain of Cthulhu
+BigDipper after Queen Bee
+MarquisMoonsquid after The Slime God (Calamity)
+PriestessRod after Skeleton Prime
+Diver after Golem
+TheMotherbrain after Diver
+TheLifebringerHead after DevourerofGods
+TheMaterealizer after TheLifebringerHead 
+WorldsEndEverlastingFallingWhale after TheMaterealizer

@@ -1,0 +1,11 @@
+displayName = Homeward Ragnarok
+author = Kes
+version = 0.4.2
+homepage = https://discord.gg/pxxQMVu5ek
+hideCode = true
+
+modReferences = ContinentOfJourney , InfernalEclipseAPI, ThrowerUnification 
+weakReferences = ssm , SOTS , ThoriumMod 
+sortAfter = ContinentOfJourney ,ThoriumMod , ssm , SOTS , ThrowerUnification
+sortBefore = 
+

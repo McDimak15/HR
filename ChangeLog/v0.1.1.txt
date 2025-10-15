@@ -1,0 +1,2 @@
+Clamity:
+Supreme Barrier = CircuitChip effect,Solar Panel effect, Vanguard Breastpiece effect, TransactionCertificate effect,Grand Spectral effect

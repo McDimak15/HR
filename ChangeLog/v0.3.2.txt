@@ -1,0 +1,5 @@
+Homeward Ragnarok:
+Added a new healer weapon Otherworldly Scythe
+Fixed Boots progression without CSE
+Fixed Boots progression with CSE
+Fixed Whale Tooth craft

@@ -1,0 +1,4 @@
+Homeward Ragnarok:
+Fixed SOTS detection in boss rebalance
+Fixed a bug that prevented Horizon from receiving Dash from Subspace Boosters
+Removed tpackbuilder from dependencies

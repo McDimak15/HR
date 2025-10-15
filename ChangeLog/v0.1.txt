@@ -1,0 +1,119 @@
+StatisCurse = +1 max sentry, Construction PDA to craft, LampreyScarf buff , LampreyScarf to craft
+Nucleogenesis = ArmillarySphere effect,CounsellorsFan effect,ArmillarySphere to craft, LampreyScarf buff
+AsgardsValor = CircuitChip effect,Solar Panel effect,Vanguard Breastpiece effect , Circuit Chip to craft , Vanguard Breastpiece to craft
+AsgardianAegis = CircuitChip effect,Solar Panel effect, Vanguard Breastpiece effect, TransactionCertificate effect, TransactionCertificate to craft
+Ornate Shield = Solar Panel effect, Solar panel to craft
+Star-Tainted Generator = CounsellorsFan effect, CounsellorsFan to craft
+Elemental Gauntlet = removed fire gaunlet, added Godly Touch to craft, inflict the Divine Fire debuff, PhilosophersStone effect, PhilosophersStone to craft
+Elemental Quiver = Crossbow Scope effect, added Crossbow Scope
+Ethereal Talisman = effect of starflower, effect of SaintlyEyeball ,effect of negatama ,any mana star removed from craft,Starflower to craft,SaintlyEyeball to craft,negatama to craft
+Blooming Saintless Statue = effect of SaviorsHeart, SaviorsHeart to craft
+Elemental Bloom = effect of SaviorsHeart, effect of PersonInDream , PersonInDream to craft
+RampartofDeities = Grand Spectral effect , Grand Spectral to craft
+SealedContract = FungusDeluxe effect , FungusDeluxe to craft
+Colossus Soul = CircuitChip effect,Solar Panel effect,Grand Spectral effect,Vanguard Breastpiece effect, TransactionCertificate effect
+Conjurists Soul = ArmillarySphere effect,CounsellorsFan effect,LampreyScarf buff
+Snipers Soul = Crossbow Scope effect
+Berserkers Soul = inflict the Divine Fire debuff, PhilosophersStone effect
+ArchWizardsSoul = effect of starflower, effect of SaintlyEyeball, Negatama
+GuardianAngelsSoul = effect of SaviorsHeart, FungusDeluxe, PersonInDream
+
+Rebalance:
+Horizon speed decreased
+Horizon craft
+Crossbow Scope craft
+Final Bar craft
+PhilosophersStone craft
+StarImage craft
+CommemorativeCoin craft
+VanguardBreastpiece craft
+Vanguard Breastpiece rebalanced
+Laser Sniper Rifle nerfed by -400 damage
+All Crosses if thorium enabled
+Maple Syrup mushroom craft
+Jelly Mushroom craft
+
+Changed all crosses to healer class from thorium
+
+Added Mushroom progression
+Honey Mushroom - Maple Syrup Mushroom - Jelly Mushroom - Fungus Deluxe
+
+Fix boots progression
+subspace boosters (if no sots TerrariumParticleSprinters) - horizon - celestial tracers
+
+Fix shield progression
+Ankh shield - VanguardBreastpiece - AsgardsValor
+
+Fix gauntlet progression
+Fire gauntlet - Godly Touch - Elemental Gauntlet
+
+New Homeward Journey Badges:
+Cleric Badge
+Bard Badge
+Rogue Badge
+
+Add New boss summoning items:
+Overwatch (Summon The Overwatcher from Homeward Journey)
+Holy Symbol (Summon Scarab Belief from Homeward Journey)
+Corrupted Matter (Summon The Materealizer from Homeward Journey)
+Whale Tooth (Summon Worlds End Everlasting Falling Whale from Homeward Journey)
+Yggdrasil Tree (Summon The Lifebringer from Homeward Journey)
+
+
+Boss Summons craft changes:
+SwollenStar(CoJ) x5 to StarCaller (thorium) craft if thorium enabled
+
+PearlShard (Calamity) x3 to Squidfood (CoJ) craft
+removed Squidfood (CoJ) craft which require AnglerCoin (CoJ)
+
+SwollenStar(CoJ) x5 to CannedSoulofFlight (CoJ) craft
+SoulOfPlight (SOTS) x10 to CannedSoulofFlight (CoJ) craft if SOTS enabled
+removed CannedSoulofFlight (CoJ) craft which require AnglerGoldCoin (CoJ)
+
+removed UnstableGlobe (CoJ) craft which require AnglerGoldCoin (CoJ)
+StarblightSoot (Calamity) x5 to UnstableGlobe (CoJ) craft
+
+removed MetalSpine (CoJ) craft which require AnglerGoldCoin (CoJ)
+removed MetalSpine (CoJ) craft which require DeepBar (CoJ)
+Deepbar(CoJ) x6 to MetalSpine (CoJ) craft
+
+SoulOfBlight (CoJ) x5 to Abombination (Calamity) craft
+
+UnholyEssence (Calamity) x10 to SunlightCrown (CoJ) craft
+
+SolarFlareScoria (CoJ) x5 to CosmicWorm (Calamity) craft
+
+SolarFlareScoria (CoJ) x5 and EssenceofTime (CoJ) x5 to SigilOfChampions (Fargo souls) craft
+
+EssenceofTime (CoJ) x5 EssenceofMatter (CoJ) x5 EssenceofLife (CoJ) x5 to AbomsCurse (Fargo souls)
+
+EssenceofDeath (CoJ) x5 to AbominationnVoodooDoll (Fargo souls)
+
+Added knifes to enchantments craft (fargo)
+
+Weapon Changes:
+Adamantite Knife to rogue class
+Broken Hammer to rogue class
+Backstabber to rogue class
+Bloodthirst to rogue class
+CobaltKnife to rogue class
+CopperKnife to rogue class
+GoldKnife to rogue class
+IronKnife to rogue class
+MythrilKnife to rogue class
+OrichalcumKnife to rogue class
+PalladiumKnife to rogue class
+PlatinumKnife to rogue class
+SilverKnife to rogue class
+TinKnife to rogue class
+Dark Knife to rogue class
+Titanium Knife to rogue class
+Tungsten Knife to rogue class
+HardKnuckle to rogue class
+hellfire to rogue class
+Fission to rogue class
+Longinus to rogue class
+InkyToss to rogue class
+Rolling Cutter to rogue class
+Shoreline to Melee class
+

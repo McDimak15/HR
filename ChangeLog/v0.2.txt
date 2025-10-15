@@ -1,0 +1,52 @@
+Boss Rebalance:
+
+
+Added New Items:
+Evil Flask
+Herbalist Pouch
+Changed Summons Icons
+
+Added New Crafting station:
+Timeless Fountain
+
+Homeward Ragnarok:
+Tube Artifacts now compatible with modded Flamethrowers
+
+Fargo:
+Added Herbalist pouch to Berserker Soul craft
+Berserker Soul  have Herbalist pouch effect
+
+ssm:
+Berserker Soul removed duplication PhilosophersStone ,BlizzardPouch craft fix
+Arch Wizards Soul duplication starflower craft fix
+Sniper Soul Crossbow scope duplicaton fix + removed throwing accessories
+Fixed Boots Progression
+Fixed Gauntlet Progression
+Fixed Boss Rebalance
+
+Consolaria:
+Added new crafts with Homeward Journey soul of blight 
+
+Calamity +20% hp
+Infernum +25% hp
+fargo +20% hp
+thorium +10% hp
+sots +5% hp
+
+Calamity +5% multiplier
+Infernum +5% multiplier
+fargo +5% multiplier
+
+Calamity +10% dmg
+Infernum +15% dmg
+fargo +10% dmg
+thorium +10% dmg
+sots +5% dmg
+
+bosses: BigDipper,Diver,GoblinChariot,TheLifebringerHead,MarquisMoonsquid,PriestessRod,PuppetOpera,ScarabBelief,ScarabBelief_Minion,SlimeGod,FlyingSpikeSlime,TheMaterealizer,TheMaterealizer_Minion,
+TheMotherbrain,TheMotherbrain_Minion,TheOverwatcher,TheOverwatcher_Minion,TheSon,TheSon_Minion,WallofShadow,WallofShadow_Minion,WorldsEndEverlastingFallingWhale
+
+TheLifebringerHead,ScarabBelief,ScarabBelief_Minion,SlimeGod,FlyingSpikeSlime,TheMaterealizer,TheMaterealizer_Minion,TheOverwatcher,TheOverwatcher_Minion,WorldsEndEverlastingFallingWhale
+will receive a multiplier
+
+

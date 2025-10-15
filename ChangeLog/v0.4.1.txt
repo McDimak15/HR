@@ -1,0 +1,2 @@
+Fixed Boss Stats scaling with Community Souls Expansion
+Fixed Infinity  Staacking of Ring Buffs
