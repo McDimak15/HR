@@ -7,11 +7,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Summons
 {
     public class BrokenChest : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         private const int FrameCount = 7;
         private int frameHeight;
 
@@ -72,11 +78,11 @@ namespace HomewardRagnarok.Items.Summons
 
             SoundEngine.PlaySound(SoundID.Roar, player.Center);
 
-            if (Main.netMode != NetmodeID.MultiplayerClient) // Singleplayer
+            if (Main.netMode != NetmodeID.MultiplayerClient)
             {
                 NPC.SpawnOnPlayer(player.whoAmI, bossType);
             }
-            else // Multiplayer
+            else 
             {
                 NetMessage.SendData(61, -1, -1, null, player.whoAmI, (float)bossType, 0f, 0f, 0, 0, 0);
             }

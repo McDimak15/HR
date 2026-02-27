@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Accessories
 {
@@ -10,6 +11,11 @@ namespace HomewardRagnarok.Items.Accessories
     [ExtendsFromMod("ThoriumMod")]
     public class HerbalistPouch : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetDefaults()
         {
             Item.width = 28;

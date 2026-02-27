@@ -49,7 +49,7 @@ namespace HomewardRagnarok.Items.Accessories
             {
                 ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
                 player.GetDamage<HealerDamage>() += 0.20f;
-                player.GetCritChance<HealerDamage>() += 0.05f;
+                player.GetCritChance<HealerDamage>() += 5f;
             }
         }
     }

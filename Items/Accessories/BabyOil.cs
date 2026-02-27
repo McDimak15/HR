@@ -7,11 +7,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using Terraria.GameContent;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Accessories
 {
     public class BabyOil : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 1;
@@ -111,8 +117,8 @@ namespace HomewardRagnarok.Items.Accessories
                         Player.Center,
                         velocity,
                         ModContent.ProjectileType<BabyOilDroplet>(),
-                        20, // damage
-                        2f, // knockback
+                        20, 
+                        2f,
                         Player.whoAmI
                     );
                 }

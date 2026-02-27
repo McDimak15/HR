@@ -5,11 +5,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Summons
 {
     public class WhaleTooth : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -59,52 +65,53 @@ namespace HomewardRagnarok.Items.Summons
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                // Singleplayer 
                 NPC.SpawnOnPlayer(player.whoAmI, whaleType);
             }
             else
             {
-                // Multiplayer
                 NetMessage.SendData(61, -1, -1, null, player.whoAmI, whaleType);
             }
 
             return true;
         }
+    }
+
+    public class WhaleToothRecipeSystem : ModSystem
+    {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void AddRecipes()
         {
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) ||
-                !ModLoader.TryGetMod("CalamityMod", out Mod calamity))
+            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamity) || !ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
+                return;
+            if (!calamity.TryFind<ModTile>("CosmicAnvil", out ModTile cosmicAnvil))
                 return;
 
-            int whaleType = ModContent.ItemType<WhaleTooth>();
-            int tankCorruption = coj.Find<ModItem>("TankOfThePastCorruption")?.Type ?? -1;
-            int cosmicAnvilTile = calamity.Find<ModTile>("CosmicAnvil")?.Type ?? -1;
+            int whaleToothType = ModContent.ItemType<WhaleTooth>();
 
             if (ModLoader.TryGetMod("ThoriumMod", out Mod thorium))
             {
-                int oceanEssence = thorium.Find<ModItem>("OceanEssence")?.Type ?? -1;
-                int infernoEssence = thorium.Find<ModItem>("InfernoEssence")?.Type ?? -1;
-                int deathEssence = thorium.Find<ModItem>("DeathEssence")?.Type ?? -1;
-
-                if (oceanEssence > 0 && infernoEssence > 0 && deathEssence > 0 && cosmicAnvilTile > 0)
+                if (thorium.TryFind("OceanEssence", out ModItem ocean) &&
+                    thorium.TryFind("InfernoEssence", out ModItem inferno) &&
+                    thorium.TryFind("DeathEssence", out ModItem death))
                 {
-                    Recipe recipe = Recipe.Create(whaleType);
-                    recipe.AddIngredient(oceanEssence, 5);
-                    recipe.AddIngredient(infernoEssence, 5);
-                    recipe.AddIngredient(deathEssence, 5);
-                    recipe.AddTile(cosmicAnvilTile);
+                    Recipe recipe = Recipe.Create(whaleToothType);
+                    recipe.AddIngredient(ocean.Type, 5);
+                    recipe.AddIngredient(inferno.Type, 5);
+                    recipe.AddIngredient(death.Type, 5);
+                    recipe.AddTile(cosmicAnvil.Type);
                     recipe.Register();
                 }
             }
-            else
+            else if (coj.TryFind("TankOfThePastCorruption", out ModItem tank))
             {
-                if (tankCorruption > 0 && cosmicAnvilTile > 0)
-                {
-                    Recipe recipe = Recipe.Create(whaleType);
-                    recipe.AddIngredient(tankCorruption, 10);
-                    recipe.AddTile(cosmicAnvilTile);
-                    recipe.Register();
-                }
+                Recipe recipe = Recipe.Create(whaleToothType);
+                recipe.AddIngredient(tank.Type, 10);
+                recipe.AddTile(cosmicAnvil.Type); // Cosmic Anvil is required
+                recipe.Register();
             }
         }
     }

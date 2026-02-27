@@ -10,11 +10,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Enums;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Tiles
 {
     public class TimelessFountain: ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

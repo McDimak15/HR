@@ -7,6 +7,7 @@ using ThoriumMod.Items.HealerItems;
 using ThoriumMod.Utilities;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Accessories
 {
@@ -14,10 +15,9 @@ namespace HomewardRagnarok.Items.Accessories
     [ExtendsFromMod("ThoriumMod")]
     public class DeluxeDewCollector : ModItem
     {
-        public override void SetStaticDefaults()
+        public override bool IsLoadingEnabled(Mod mod)
         {
-            // DisplayName.SetDefault("Deluxe Dew Collector");
-            // Tooltip.SetDefault("Combines the properties of Dew Collector and Fungus Deluxe");
+            return ServerConfig.Instance.CustomContent;
         }
 
         public override void SetDefaults()

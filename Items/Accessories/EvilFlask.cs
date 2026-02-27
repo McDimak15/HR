@@ -6,11 +6,17 @@ using Terraria.DataStructures;
 using ContinentOfJourney.Items.Accessories.Bookmarks;
 using ContinentOfJourney;
 using System.Linq;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Accessories
 {
     public class EvilFlask : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -42,16 +48,9 @@ namespace HomewardRagnarok.Items.Accessories
 
         public override void AddRecipes()
         {
-            int rottenMatterType = 0;
-            if (ModLoader.TryGetMod("CalamityMod", out var calamity))
-            {
-                rottenMatterType = calamity.Find<ModItem>("RottenMatter").Type;
-            }
-
             CreateRecipe()
                 .AddIngredient(ItemID.Lens, 5)
                 .AddIngredient(ItemID.ShadowScale, 5)
-                .AddIngredient(rottenMatterType, 5)
                 .AddCondition(Condition.NearWater)
                 .Register();
         }

@@ -40,7 +40,7 @@ namespace HomewardRagnarok.Items.Accessories
         {
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             player.GetDamage<BardDamage>() += 0.20f;
-            player.GetCritChance<BardDamage>() += 0.05f;
+            player.GetCritChance<BardDamage>() += 5f;
         }
     }
 

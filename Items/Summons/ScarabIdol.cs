@@ -5,11 +5,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Summons
 {
     public class ScarabIdol : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -59,12 +65,10 @@ namespace HomewardRagnarok.Items.Summons
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                // singleplayer
                 NPC.SpawnOnPlayer(player.whoAmI, scarabType);
             }
             else
             {
-                // multiplayer
                 NetMessage.SendData(61, -1, -1, null, player.whoAmI, scarabType, 0f, 0f, 0, 0, 0);
             }
 

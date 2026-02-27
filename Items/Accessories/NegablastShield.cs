@@ -1,30 +1,24 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using HomewardRagnarok.Config;
+using ThoriumMod.Items;
 
 namespace HomewardRagnarok.Items.Accessories
 {
-    public class NegablastShield : ModItem
+    [JITWhenModsEnabled("ThoriumMod")]
+    [ExtendsFromMod("ThoriumMod")]
+    public class NegablastShield : ThoriumItem
     {
+        public override bool IsLoadingEnabled(Mod mod) => ServerConfig.Instance.CustomContent;
+
         public override string Texture => "HomewardRagnarok/Items/Accessories/NegablastShield";
 
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 1;
-        }
-
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "NegablastShield",
-                "50 base damage\n" +
-                "Slightly increases length of invincibility after taking damage\n" +
-                "Increases the knockback you receive\n" +
-                "Release an explosions when damaged\n" +
-                "Immune to enemy knockback & enemies are more likely to target you\n" +
-                "Damage taken reduced by 10%\n" +
-                "Every 3 seconds, taking damage will unleash a volatile explosion all around you\n" +
-                "Explosion damage scales with your defense"));
         }
 
         public override void SetDefaults()
@@ -35,24 +29,30 @@ namespace HomewardRagnarok.Items.Accessories
             Item.defense = 6;
             Item.value = Item.sellPrice(gold: 10);
             Item.rare = ItemRarityID.Red;
+            this.accessoryType = AccessoryType.OmniShield;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+
+            var shieldTag = new TooltipLine(Mod, "OmniShieldTag", Terraria.Localization.Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.OmniShield"))
+            {
+                OverrideColor = new Color(102, 255, 255)
+            };
+            int index = tooltips.FindIndex(tt => tt.Name == "ItemName");
+            if (index != -1) tooltips.Insert(index + 1, shieldTag);
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            if (ModLoader.TryGetMod("ThoriumMod", out Mod thorium))
             {
-                Mod thorium = ModLoader.GetMod("ThoriumMod");
-                if (thorium != null)
-                {
-                    ModItem blastShield = thorium.Find<ModItem>("BlastShield");
-                    blastShield?.UpdateAccessory(player, hideVisual);
-                }
+                thorium.Find<ModItem>("BlastShield")?.UpdateAccessory(player, hideVisual);
+            }
 
-                Mod coj = ModLoader.GetMod("ContinentOfJourney");
-                if (coj != null)
-                {
-                    ModItem negashield = coj.Find<ModItem>("Negashield");
-                    negashield?.UpdateAccessory(player, hideVisual);
-                }
+            if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
+            {
+                coj.Find<ModItem>("Negashield")?.UpdateAccessory(player, hideVisual);
             }
         }
 

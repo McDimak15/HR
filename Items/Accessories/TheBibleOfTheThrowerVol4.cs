@@ -4,26 +4,27 @@ using Terraria.ModLoader;
 using ThoriumMod.Items.ThrownItems;
 using ContinentOfJourney.Items.Accessories;
 using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
 using ContinentOfJourney;
 using Microsoft.Xna.Framework;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Items.Accessories
 {
     [ExtendsFromMod("ThoriumMod", "CalamityMod")]
     public class TheBibleOfTheThrowerVol4 : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ServerConfig.Instance.CustomContent;
+        }
+
         public override void SetStaticDefaults()
         {
         }
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
         {
-            tooltips.Add(new TooltipLine(Mod, "BibleDamage", "20% increased thrower damage"));
-            tooltips.Add(new TooltipLine(Mod, "BibleVelocity", "50% increased consumable thrower weapon velocity"));
-            tooltips.Add(new TooltipLine(Mod, "BibleUseTime", "Decrease use time of consumable thrower weapons by 20%"));
-            tooltips.Add(new TooltipLine(Mod, "BibleAcceleration", "When holding a thrower weapon, increase acceleration by 75%"));
-            tooltips.Add(new TooltipLine(Mod, "Bible17", "17.5% of your thrower damage is duplicated"));
-
             TooltipLine exhaustion = new TooltipLine(Mod, "BibleExhaustion","Removes all Exhaustion when equipped");
             exhaustion.OverrideColor = new Color(95, 193, 4); 
             tooltips.Add(exhaustion);
@@ -54,6 +55,11 @@ namespace HomewardRagnarok.Items.Accessories
                 cojPlayer.CatchersGlove = true;
                 cojPlayer.TheBatter = true;
                 cojPlayer.RunnersLegging = true;
+                cojPlayer.GrandSlam = true;
+                cojPlayer.HolyTrinity = true;
+                cojPlayer.AlphaTrinity = true;
+                cojPlayer.OmegaTrinity = true;
+                cojPlayer.EpsilonTrinity = true;
             }
         }
 
@@ -64,6 +70,7 @@ namespace HomewardRagnarok.Items.Accessories
                 CreateRecipe()
                     .AddIngredient(ModContent.ItemType<ThrowingGuideVolume3>())
                     .AddIngredient(ModContent.ItemType<TheBatter>())
+                    .AddIngredient(ModContent.ItemType<ShadowspecBar>(), 5)
                     .AddIngredient(ModContent.ItemType<ContinentOfJourney.Items.Material.EssenceofBright>(), 5)
                     .AddTile(ModContent.TileType<DraedonsForge>())
                     .Register();
