@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
 {
@@ -32,6 +33,9 @@ namespace HomewardRagnarok.CrossMod
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             TemplatePlayer modPlayer = player.GetModPlayer<TemplatePlayer>();
 
             bool hasItem = false;
@@ -85,6 +89,9 @@ namespace HomewardRagnarok.CrossMod
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             bool showTooltip = false;
 
             if (ModLoader.TryGetMod("CalamityMod", out Mod calamity) &&
@@ -104,22 +111,12 @@ namespace HomewardRagnarok.CrossMod
             if (!showTooltip)
                 return;
 
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, 0.5f * (1f + (float)Math.Sin(timer * MathHelper.TwoPi)));
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            int armillarySphereType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.ArmillarySphere>();
-            string iconTag = $"[i:{armillarySphereType}] ";
-
-            TooltipLine customLine = new TooltipLine(Mod, "HomewardRagnarokBonus",
-                iconTag + "Your sentries form a constellation that hurts for 50% of your held weapon's damage (Homeward Ragnarok)")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarokBonus", "Your sentries form a constellation that hurts for 50% of your held weapon's damage")
             {
                 OverrideColor = animatedColor
-            };
-
-            tooltips.RemoveAll(t => t.Name == "HomewardRagnarokBonus");
-            tooltips.Add(customLine);
+            });
         }
 
     }

@@ -4,6 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using ContinentOfJourney.Projectiles;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -31,6 +32,9 @@ namespace HomewardRagnarok
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
+            if (!ServerConfig.Instance.ThoriumBalance)
+                return false;
+
             if (!ModLoader.TryGetMod("ThoriumMod", out _)) return false;
             return ModContent.TryFind<ModItem>("ContinentOfJourney", "MythrilCross", out var mythrilCross)
                    && entity.type == mythrilCross.Type;

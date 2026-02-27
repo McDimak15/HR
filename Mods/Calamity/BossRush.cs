@@ -1,3 +1,4 @@
+/*
 using Terraria.ModLoader;
 using Terraria.ID; 
 using static CalamityMod.Events.BossRushEvent;
@@ -68,3 +69,4 @@ namespace HomewardRagnarok
         }
     }
 }
+*/

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using ContinentOfJourney;
@@ -13,23 +14,13 @@ namespace HomewardRagnarok
         {
             if (item.ModItem?.Name != "AsgardsValor") return;
 
-            int vanguardType = ModLoader.TryGetMod("ContinentOfJourney", out Mod cojMod)
-                ? cojMod.Find<ModItem>("VanguardBreastpiece")?.Type ?? 0
-                : 0;
-            string iconTag = vanguardType != 0 ? $"[i:{vanguardType}] " : "";
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, (float)(0.5f * (1 + System.Math.Sin(timer * 6.2831))));
-
-            tooltips.RemoveAll(t => t.Name == "HomewardRagnarok1" || t.Name == "HomewardRagnarok2");
-
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok1", iconTag + "Grants immunity to Vulnerable (Homeward Ragnarok)")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok1","Grants immunity to Vulnerable")
             {
                 OverrideColor = animatedColor
             });
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok2", iconTag + "Damage taken by debuffs decreased by 35% (Homeward Ragnarok)")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok2","Damage taken by debuffs decreased by 35%")
             {
                 OverrideColor = animatedColor
             });

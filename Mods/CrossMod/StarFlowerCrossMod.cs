@@ -5,15 +5,13 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
     public class EtherealAndSoulsGlobal : GlobalItem
     {
         private static int etherealTalismanType;
-        private static int universeSoulType;
-        private static int conjuristsSoulType;
-        private static int eternitySoulType;
         private static int starflowerType;
 
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
@@ -21,24 +19,17 @@ namespace HomewardRagnarok
             if (etherealTalismanType == 0 && ModLoader.TryGetMod("CalamityMod", out var calamity))
                 etherealTalismanType = calamity.Find<ModItem>("EtherealTalisman")?.Type ?? 0;
 
-            if (universeSoulType == 0 && ModLoader.TryGetMod("FargowiltasSouls", out var fargo))
-            {
-                universeSoulType = fargo.Find<ModItem>("UniverseSoul")?.Type ?? -1;
-                conjuristsSoulType = fargo.Find<ModItem>("ArchWizardsSoul")?.Type ?? -1;
-                eternitySoulType = fargo.Find<ModItem>("EternitySoul")?.Type ?? -1;
-            }
-
             if (starflowerType == 0 && ModLoader.TryGetMod("ContinentOfJourney", out var coj))
                 starflowerType = coj.Find<ModItem>("Starflower")?.Type ?? 0;
 
-            return entity.type == etherealTalismanType ||
-                   entity.type == universeSoulType ||
-                   entity.type == conjuristsSoulType ||
-                   entity.type == eternitySoulType;
+            return entity.type == etherealTalismanType;
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             player.statManaMax2 += 80;
             player.manaCost *= 0.88f;
             player.manaFlower = true;
@@ -48,20 +39,31 @@ namespace HomewardRagnarok
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (item.type == universeSoulType || item.type == eternitySoulType) return;
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
 
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3f);
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, (float)(0.5 * (1 + Math.Sin(timer * MathHelper.TwoPi))));
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            tooltips.Add(new TooltipLine(Mod, "StarflowerBuff1",
-                $"[i:{starflowerType}] Decrease mana usage by 12% (Homeward Ragnarok)")
-            { OverrideColor = animatedColor });
-
-            tooltips.Add(new TooltipLine(Mod, "StarflowerBuff2",
-                $"[i:{starflowerType}] +80 max mana (Homeward Ragnarok)")
-            { OverrideColor = animatedColor });
+            int maxTooltipIndex = -1;
+            int maxNumber = -1;
+            for (int i = 0; i < tooltips.Count; i++)
+            {
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        maxTooltipIndex = i;
+                    }
+                }
+                else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                {
+                    maxTooltipIndex = i;
+                }
+            }
+            int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "StarflowerBuff1", "Decrease mana usage by 12%") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "StarflowerBuff2", "+80 max mana") { OverrideColor = animatedColor });
         }
 
     }
@@ -80,6 +82,9 @@ namespace HomewardRagnarok
     {
         public override void PostAddRecipes()
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (!ModLoader.TryGetMod("CalamityMod", out Mod calamityMod)) return;
             if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod cojMod)) return;
 

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
 {
@@ -17,25 +18,12 @@ namespace HomewardRagnarok.CrossMod
             {
                 return true;
             }
-
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-            {
-                int archWizardSoulType = fargo.Find<ModItem>("ArchWizardsSoul")?.Type ?? -1;
-                int universeSoulType = fargo.Find<ModItem>("UniverseSoul")?.Type ?? -1;
-                int eternitySoulType = fargo.Find<ModItem>("EternitySoul")?.Type ?? -1;
-
-                if (item.type == archWizardSoulType ||
-                    item.type == universeSoulType ||
-                    item.type == eternitySoulType)
-                    return true;
-            }
-
             return false;
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out var coj))
+            if (!ServerConfig.Instance.CalamityBalance)
                 return;
 
             var modPlayer = player.GetModPlayer<NegatamaPlayer>();
@@ -44,6 +32,9 @@ namespace HomewardRagnarok.CrossMod
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             bool showTooltip = false;
 
             if (ModLoader.TryGetMod("CalamityMod", out Mod calamity) &&
@@ -53,38 +44,30 @@ namespace HomewardRagnarok.CrossMod
                 showTooltip = true;
             }
 
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-            {
-                int archWizardSoulType = fargo.Find<ModItem>("ArchWizardsSoul")?.Type ?? -1;
-                int universeSoulType = fargo.Find<ModItem>("UniverseSoul")?.Type ?? -1;
-                int eternitySoulType = fargo.Find<ModItem>("EternitySoul")?.Type ?? -1;
-
-                if (item.type == archWizardSoulType)
-                    showTooltip = true;
-
-                if (item.type == universeSoulType || item.type == eternitySoulType)
-                    showTooltip = false;
-            }
-
             if (!showTooltip)
                 return;
 
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-            Color darkPurple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(darkPurple, white, 0.5f * (1f + (float)Math.Sin(timer * MathHelper.TwoPi)));
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            int negatamaType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.Negatama>();
-            string iconTag = $"[i:{negatamaType}] ";
-
-            TooltipLine customLine = new TooltipLine(Mod, "HomewardRagnarokNegatama",
-                iconTag + "Releases dark energy, the lower mana you have, the more damage it deals (Homeward Ragnarok)")
+            int maxTooltipIndex = -1;
+            int maxNumber = -1;
+            for (int i = 0; i < tooltips.Count; i++)
             {
-                OverrideColor = animatedColor
-            };
-
-            tooltips.RemoveAll(t => t.Name == "HomewardRagnarokNegatama");
-            tooltips.Add(customLine);
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        maxTooltipIndex = i;
+                    }
+                }
+                else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                {
+                    maxTooltipIndex = i;
+                }
+            }
+            int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarokNegatama", "Releases dark energy, the lower mana you have, the more damage it deals") { OverrideColor = animatedColor });
         }
     }
 

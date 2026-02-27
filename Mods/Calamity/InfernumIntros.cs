@@ -33,17 +33,21 @@ namespace HomewardRagnarok.Compat
         {
             var bosses = new List<(string InternalName, Color Color, SoundStyle Tick, SoundStyle End)>
             {
-                ("MarquisMoonsquid", Color.DeepSkyBlue, SoundID.MenuTick, SoundID.Item14),
+                //("GoblinChariot", Color.Brown, SoundID.MenuTick, SoundID.Item14),
+                //("PuppetOpera", Color.LightGreen, SoundID.MenuTick, SoundID.Item14),
+                //("BigDipper", Color.Blue, SoundID.MenuTick, SoundID.Item14),
                 ("PriestessRod", Color.White, SoundID.MenuTick, SoundID.Item14),
                 ("Diver", Color.Purple, SoundID.MenuTick, SoundID.Item14),
-                ("TheMotherbrain", Color.Red, SoundID.MenuTick, SoundID.Item14),
-                ("WallofShadow", Color.Black, SoundID.MenuTick, SoundID.Item14),
-                ("SlimeGod", Color.Orange, SoundID.MenuTick, SoundID.Item14),
-                ("TheOverwatcher", Color.Gold, SoundID.MenuTick, SoundID.Item14),
-                ("TheLifebringerHead", Color.LightGreen, SoundID.MenuTick, SoundID.Item14),
-                ("TheMaterealizer", Color.Cyan, SoundID.MenuTick, SoundID.Item14),
-                ("ScarabBelief", Color.Yellow, SoundID.MenuTick, SoundID.Item14),
-                ("WorldsEndEverlastingFallingWhale", Color.DeepSkyBlue, SoundID.MenuTick, SoundID.Item14),
+                ("MarquisMoonsquid", Color.DeepSkyBlue, SoundID.MenuTick, SoundID.Item14),
+                ("Diver", Color.Purple, SoundID.MenuTick, SoundID.Item14),
+                //("TheMotherbrain", Color.Red, SoundID.MenuTick, SoundID.Item14),
+                //("WallofShadow", Color.Black, SoundID.MenuTick, SoundID.Item14),
+                //("SlimeGod", Color.Orange, SoundID.MenuTick, SoundID.Item14),
+                //("TheOverwatcher", Color.Gold, SoundID.MenuTick, SoundID.Item14),
+                //("TheLifebringerHead", Color.LightGreen, SoundID.MenuTick, SoundID.Item14),
+                //("TheMaterealizer", Color.Cyan, SoundID.MenuTick, SoundID.Item14),
+                //("ScarabBelief", Color.Yellow, SoundID.MenuTick, SoundID.Item14),
+                //("WorldsEndEverlastingFallingWhale", Color.DeepSkyBlue, SoundID.MenuTick, SoundID.Item14),
                 ("TheSon", Color.White, SoundID.MenuTick, SoundID.NPCHit13)
             };
 
@@ -61,7 +65,7 @@ namespace HomewardRagnarok.Compat
                 object introScreen = Infernum.Call(
                     "InitializeIntroScreen",
                     text,
-                    400,       // display time
+                    400,  
                     true,    
                     condition,
                     colorFunc

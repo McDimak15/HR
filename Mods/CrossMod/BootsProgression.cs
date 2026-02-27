@@ -12,7 +12,9 @@ namespace HomewardRagnarok
             bool cojLoaded = ModLoader.TryGetMod("ContinentOfJourney", out Mod coj);
             bool sotsLoaded = ModLoader.TryGetMod("SOTS", out Mod sots);
             bool thoriumLoaded = ModLoader.TryGetMod("ThoriumMod", out Mod thorium);
-
+            bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamity);
+            bool ssmLoaded = ModLoader.TryGetMod("ssm", out Mod ssm);
+            bool fargoLoaded = ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo);
 
             int horizonBootsType = coj.Find<ModItem>("Horizon")?.Type ?? -1;
 
@@ -54,18 +56,6 @@ namespace HomewardRagnarok
                     newRecipe.Register();
                 }
             }
-        }
-        
-        public override void OnWorldLoad()
-        {
-            bool sotsLoaded = ModLoader.TryGetMod("SOTS", out Mod sots);
-            bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamity);
-            bool cojLoaded = ModLoader.TryGetMod("ContinentOfJourney", out Mod coj);
-            bool thoriumLoaded = ModLoader.TryGetMod("ThoriumMod", out Mod thorium);
-            bool ssmLoaded = ModLoader.TryGetMod("ssm", out Mod ssm);
-            bool fargoLoaded = ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo);
-
-            int horizonBootsType = coj.Find<ModItem>("Horizon")?.Type ?? -1;
 
             if (sotsLoaded && calamityLoaded)
             {
@@ -134,6 +124,6 @@ namespace HomewardRagnarok
                     }
                 }
             }
-        }
+        }       
     }
 }

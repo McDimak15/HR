@@ -1,0 +1,30 @@
+Slime God Rematch:
+Celestial Slime Staff 106 > 153
+White Dwarf Staff 120 > 162
+Star Eater Staff 300 > 70, inflict Holy Flames
+
+Overwatcher:
+Understanding 75 > 90
+Sentry Gun Wand 50 > 85 
+Flyback Hand Projectile Count 1 > 3, damage 310 > 210
+Galvanized Hand 850 >  682
+Handgun 305 > 147
+Metal Gear 670 > 241
+Sweep Hand size x1.5, damage 300 > 340
+
+Materealizer:
+Dialetics 485 > 420, Projectile Count 1 > 2
+Fission 181 > 127, inflict Vaporfied
+Materialism speed 40 > 13, critical chance 8% > 14%, size x1.3
+Book Full of Projection speed 30 > 15, damage 215 > 235
+Duality 507 > 480, speed 30 > 26
+The Scottish Resistance speed 30 > 24
+Vector Addition 215 > 267, mana cost 20 > 8
+
+Make HWJ boss summons unconsumable
+
+Make heart and ambulance thing add healing bonus too
+
+
+
+

@@ -4,6 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using ContinentOfJourney.Projectiles;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -31,6 +32,9 @@ namespace HomewardRagnarok
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
+            if (!ServerConfig.Instance.ThoriumBalance)
+                return false;
+
             if (!ModLoader.TryGetMod("ThoriumMod", out _)) return false;
             return ModContent.TryFind<ModItem>("ContinentOfJourney", "AlloyCross", out var alloyCross)
                    && entity.type == alloyCross.Type;
@@ -44,7 +48,7 @@ namespace HomewardRagnarok
                                  || t.Text.Contains("upon every 7 magic attacks")
                                  || t.Text.Contains("22% decreased magic damage"));
 
-            tooltips.Add(new TooltipLine(Mod, "AlloyCrossPatch1", "+5% increased radiant damage"));
+            tooltips.Add(new TooltipLine(Mod, "AlloyCrossPatch1", "+8% increased radiant damage"));
             tooltips.Add(new TooltipLine(Mod, "AlloyCrossPatch2", "Heals the most damaged teammate by 5"));
             tooltips.Add(new TooltipLine(Mod, "AlloyCrossPatch3", "upon every 10 radiant attacks"));
         }
@@ -61,7 +65,7 @@ namespace HomewardRagnarok
             if (ModLoader.TryGetMod("ThoriumMod", out var thorium))
             {
                 if (thorium.TryFind("HealerDamage", out DamageClass healerDamage))
-                    player.GetDamage(healerDamage) += 0.05f;
+                    player.GetDamage(healerDamage) += 0.08f;
             }
 
             var templatePlayer = player.GetModPlayer<ContinentOfJourney.TemplatePlayer>();

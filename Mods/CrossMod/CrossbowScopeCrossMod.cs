@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
 {
@@ -17,16 +18,14 @@ namespace HomewardRagnarok.CrossMod
                 entity.type == eq.Type)
                 return true;
 
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo) &&
-                fargo.TryFind("SnipersSoul", out ModItem ss) &&
-                entity.type == ss.Type)
-                return true;
-
             return false;
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             var modPlayer = player.GetModPlayer<TemplatePlayer>();
             modPlayer.GooglesOn = true;
             modPlayer.StarQuiver = true;
@@ -42,29 +41,37 @@ namespace HomewardRagnarok.CrossMod
             player.arrowDamage *= 1.15f;
         }
 
-        private static float colorTimer = 0f;
-
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            colorTimer += 0.0025f;
-            if (colorTimer > 1f) colorTimer = 0f;
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
 
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, 0.5f * (1f + (float)Math.Sin(colorTimer * MathHelper.TwoPi)));
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            int airborneType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.AirborneGoogles>();
-            int starQuiverType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.StarQuiver>();
-            int crossbowScopeType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.CrossbowScope>();
-
-            tooltips.RemoveAll(t => t.Name.StartsWith("HR_Bonus"));
-
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus1", $"[i:{airborneType}] Show a bullet trace of bullet-firing guns (Homeward Ragnarok)") { OverrideColor = animatedColor });
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus2", $"[i:{starQuiverType}] Turn wooden arrows into holy arrows (Homeward Ragnarok)") { OverrideColor = animatedColor });
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus3", $"[i:{starQuiverType}] Increase the damage of arrows (Homeward Ragnarok)") { OverrideColor = animatedColor });
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus4", $"[i:{starQuiverType}] Enemies are less likely to target you (Homeward Ragnarok)") { OverrideColor = animatedColor });
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus5", $"[i:{crossbowScopeType}] +7% increased ranged critical strike chance (Homeward Ragnarok)") { OverrideColor = animatedColor });
-            tooltips.Add(new TooltipLine(Mod, "HR_Bonus6", $"[i:{crossbowScopeType}] +5% increased ranged damage (Homeward Ragnarok)") { OverrideColor = animatedColor });
+            int maxTooltipIndex = -1;
+            int maxNumber = -1;
+            for (int i = 0; i < tooltips.Count; i++)
+            {
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        maxTooltipIndex = i;
+                    }
+                }
+                else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                {
+                    maxTooltipIndex = i;
+                }
+            }
+            int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus1", "Show a bullet trace of bullet-firing guns") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus2", "Turn wooden arrows into holy arrows") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus3", "Increase the damage of arrows") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus4", "Enemies are less likely to target you") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus5", "+7% increased ranged critical strike chance") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus6", "+5% increased ranged damage") { OverrideColor = animatedColor });
         }
     }
 }

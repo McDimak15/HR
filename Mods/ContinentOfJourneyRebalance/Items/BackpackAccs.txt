@@ -1,0 +1,12 @@
+Gray Rook:
+Nerfed whip range from 35% to 25%
+Nerfed Use time decrease 35% > 0%
+Added +1 Healing bonus
+Added +2 Max Inspiration
+Added +10% thrower attack speed
+Added +25% melee size
+
+Battalion's Backup:
+Nerf defense per minion 2 > 1
+Nerf defense 30 > 15
+Nerf reduce damage taken 70% > 20%

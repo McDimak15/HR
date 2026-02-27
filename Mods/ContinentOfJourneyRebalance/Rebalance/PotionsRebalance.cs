@@ -16,10 +16,10 @@ namespace HomewardRagnarok.Compat
         public override void SetDefaults(Item entity)
         {
             if (entity.type == ModContent.ItemType<UltraHealingPotion>())
-                entity.healLife = 350; // from 300 to 350
+                entity.healLife = 350;
 
             if (entity.type == ModContent.ItemType<UltraManaPotion>())
-                entity.healMana = 450; // from 320 to 450
+                entity.healMana = 450; 
         }
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)

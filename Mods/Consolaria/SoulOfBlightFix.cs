@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -11,6 +12,8 @@ namespace HomewardRagnarok
             if (!ModLoader.TryGetMod("Consolaria", out Mod consolaria))
                 return;
             if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
+                return;
+            if (!ServerConfig.Instance.ConsolariaBalance)
                 return;
 
             int consolariaBlight = consolaria.Find<ModItem>("SoulofBlight")?.Type ?? -1;

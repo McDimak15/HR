@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -7,6 +8,9 @@ namespace HomewardRagnarok
     {
         public override void PostAddRecipes()
         {
+            if (!ServerConfig.Instance.ThoriumBalance)
+                return;
+
             if (!ModLoader.TryGetMod("CalamityBardHealer", out Mod calamityBardHealer)) return;
             if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj)) return;
 

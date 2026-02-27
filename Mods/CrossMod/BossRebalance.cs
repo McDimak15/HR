@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -33,6 +34,9 @@ namespace HomewardRagnarok
 
         public override void OnSpawn(NPC npc, Terraria.DataStructures.IEntitySource source)
         {
+            if (!ServerConfig.Instance.EnableBossScaling)
+                return;
+
             ssmLoaded = ssmLoaded || ModLoader.HasMod("ssm");
             if (ssmLoaded)
                 return; 

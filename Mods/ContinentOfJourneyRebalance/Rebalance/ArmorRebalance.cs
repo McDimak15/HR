@@ -1,5 +1,11 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
+using Terraria.ID;
+using HomewardRagnarok.Config;
+using System.Linq;
+using System.Reflection;
+using System.Collections.Generic;
 
 namespace HomewardRagnarok
 {
@@ -7,6 +13,9 @@ namespace HomewardRagnarok
     {
         public override void SetDefaults(Item item)
         {
+            if (!ServerConfig.Instance.ArmorBalancing)
+                return;
+
             // Aurora Set
             if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.AuroraHeadwear>())
                 item.defense = 20; // Aurora Headwear 
@@ -77,10 +86,72 @@ namespace HomewardRagnarok
         }
     }
 
+    public class ArmorRebalancePlayer : ModPlayer
+    {
+        public override void PostUpdateMiscEffects()
+        {
+            if (!ServerConfig.Instance.ArmorBalancing) return;
+
+            if (Player.TryGetModPlayer<ContinentOfJourney.TemplatePlayer>(out var cojPlayer))
+            {
+                if (cojPlayer.HeliologyArmorSetEffect)
+                {
+                    float baseMinions = Player.maxMinions / 1.77f;
+                    Player.maxMinions = (int)System.Math.Round(baseMinions * 1.20f);
+                }
+            }
+        }
+    }
+
+    public class ArmorGlobalProjectile : GlobalProjectile
+    {
+        public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
+        {
+            if (!ServerConfig.Instance.ArmorBalancing) return;
+
+            Player player = Main.player[projectile.owner];
+            if (player.TryGetModPlayer<ContinentOfJourney.TemplatePlayer>(out var cojPlayer))
+            {
+                if (cojPlayer.HeliologyArmorSetEffect && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
+                {
+                    float penaltyAmount = (projectile.damage - Terraria.Utils.Clamp(projectile.ArmorPenetration, 0, target.defense) / 2) * 0.38f;
+                    modifiers.FinalDamage.Flat += penaltyAmount;
+                }
+            }
+        }
+    }
+
+    public class ArmorTooltipSystem : ModSystem
+    {
+        public override void PostSetupContent()
+        {
+            if (!ServerConfig.Instance.ArmorBalancing) return;
+
+            string key = "Mods.ContinentOfJourney.Armor_HeliologyBonus";
+            string newText = "Increases max number of minions by 20%";
+
+            if (Language.Exists(key))
+            {
+                LocalizedText localizedText = Language.GetText(key);
+
+                FieldInfo valueField = typeof(LocalizedText).GetField("value", BindingFlags.NonPublic | BindingFlags.Instance)
+                                    ?? typeof(LocalizedText).GetField("_value", BindingFlags.NonPublic | BindingFlags.Instance);
+
+                if (valueField != null)
+                {
+                    valueField.SetValue(localizedText, newText);
+                }
+            }
+        }
+    }
+
     public class ArmorRecipePatch : ModSystem
     {
         public override void PostAddRecipes()
         {
+            if (!ServerConfig.Instance.ArmorCraft)
+                return;
+
             if (ModLoader.TryGetMod("ContinentOfJourney", out var coj) &&
                 ModLoader.TryGetMod("CalamityMod", out var calamity))
             {

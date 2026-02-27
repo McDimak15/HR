@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using System;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.CrossMod
 {
     public class DivineTouchBuffs : GlobalItem
     {
@@ -13,6 +14,9 @@ namespace HomewardRagnarok
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (IsTargetItem(item))
             {
                 TemplatePlayer modPlayer = player.GetModPlayer<TemplatePlayer>();
@@ -22,22 +26,35 @@ namespace HomewardRagnarok
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (IsTooltipTargetItem(item))
             {
                 if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) &&
                     coj.TryFind("DivineTouch", out ModItem divineTouch))
                 {
-                    float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
+                    Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-                    Color purple = new Color(128, 0, 128);
-                    Color white = Color.White;
-                    Color animatedColor = Color.Lerp(purple, white, (float)(0.5 * (1 + Math.Sin(timer * MathHelper.TwoPi))));
-
-                    string iconTag = $"[i:{divineTouch.Type}] ";
-                    tooltips.RemoveAll(t => t.Name == "DivineFireEffect");
-                    tooltips.Add(new TooltipLine(Mod, "DivineFireEffect",
-                        iconTag + "Causes melee attacks to inflict the Divine Fire debuff (Homeward Ragnarok)")
-                    { OverrideColor = animatedColor });
+                    int maxTooltipIndex = -1;
+                    int maxNumber = -1;
+                    for (int i = 0; i < tooltips.Count; i++)
+                    {
+                        if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                        {
+                            if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                            {
+                                maxNumber = num;
+                                maxTooltipIndex = i;
+                            }
+                        }
+                        else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                        {
+                            maxTooltipIndex = i;
+                        }
+                    }
+                    int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+                    tooltips.Insert(insertAt, new TooltipLine(Mod, "DivineFireEffect", "Causes melee attacks to inflict the Divine Fire debuff") { OverrideColor = animatedColor });
                 }
             }
         }
@@ -48,16 +65,6 @@ namespace HomewardRagnarok
                 item.type == calamity.Find<ModItem>("ElementalGauntlet")?.Type)
                 return true;
 
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-            {
-                int berserkerSoul = fargo.Find<ModItem>("BerserkerSoul")?.Type ?? 0;
-                int universeSoul = fargo.Find<ModItem>("UniverseSoul")?.Type ?? 0;
-                int eternitySoul = fargo.Find<ModItem>("EternitySoul")?.Type ?? 0;
-
-                if (item.type == berserkerSoul || item.type == universeSoul || item.type == eternitySoul)
-                    return true;
-            }
-
             return false;
         }
 
@@ -66,15 +73,6 @@ namespace HomewardRagnarok
             if (ModLoader.TryGetMod("CalamityMod", out Mod calamity) &&
                 item.type == calamity.Find<ModItem>("ElementalGauntlet")?.Type)
                 return true;
-
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-            {
-                int berserkerSoul = fargo.Find<ModItem>("BerserkerSoul")?.Type ?? 0;
-                int universeSoul = fargo.Find<ModItem>("UniverseSoul")?.Type ?? 0;
-
-                if (item.type == berserkerSoul)
-                    return true;
-            }
 
             return false;
         }

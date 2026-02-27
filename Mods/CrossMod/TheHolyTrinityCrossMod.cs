@@ -1,3 +1,4 @@
+/*
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -6,57 +7,11 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
 
 namespace HomewardRagnarok
 {
-    public class VampiricTalismanTrinityPatch : GlobalItem
-    {
-        public override bool AppliesToEntity(Item entity, bool lateInstantiation)
-        {
-            if (!ModLoader.TryGetMod("CalamityMod", out var calamity)) return false;
-            int vampType = calamity.Find<ModItem>("VampiricTalisman")?.Type ?? 0;
-            return vampType > 0 && entity.type == vampType;
-        }
-
-        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
-        {
-            var modPlayer = player.GetModPlayer<TemplatePlayer>();
-            modPlayer.HolyTrinity = true;
-            modPlayer.AlphaTrinity = true;
-            modPlayer.OmegaTrinity = true;
-            modPlayer.EpsilonTrinity = true;
-        }
-
-        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
-        {
-            AddTrinityTooltip(tooltips);
-        }
-
-        private void AddTrinityTooltip(List<TooltipLine> tooltips)
-        {
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-            Color darkPurple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(darkPurple, white, 0.5f * (1f + (float)Math.Sin(timer * MathHelper.TwoPi)));
-
-            int holyTrinityType = ModContent.ItemType<TheHolyTrinity>();
-            string iconTag = $"[i:{holyTrinityType}] ";
-
-            TooltipLine customLine = new TooltipLine(Mod, "HomewardRagnarokTrinity",
-                iconTag + "A ring will rotate around you\n" +
-                iconTag + "A ring will stay at a distance from you\n" +
-                iconTag + "A ring will stay between you and the enemy with the lowest health\n" +
-                iconTag + "Thrower weapons passing through the ring gain 30% more damage")
-            {
-                OverrideColor = animatedColor
-            };
-
-            tooltips.RemoveAll(t => t.Name == "HomewardRagnarokTrinity");
-            tooltips.Add(customLine);
-        }
-    }
-
     public class DraculasCharmTrinityPatch : GlobalItem
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
@@ -68,6 +23,9 @@ namespace HomewardRagnarok
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.ClamityBalance)
+                return;
+
             var modPlayer = player.GetModPlayer<TemplatePlayer>();
             modPlayer.HolyTrinity = true;
             modPlayer.AlphaTrinity = true;
@@ -77,6 +35,9 @@ namespace HomewardRagnarok
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.ClamityBalance)
+                return;
+
             float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
             Color darkPurple = new Color(128, 0, 128);
             Color white = Color.White;
@@ -167,9 +128,12 @@ namespace HomewardRagnarok
     {
         public override void PostAddRecipes()
         {
-            if (!ModLoader.TryGetMod("CalamityMod", out var calamity)) return;
+            if (!ServerConfig.Instance.ClamityBalance)
+                return;
 
-            int vampType = calamity.Find<ModItem>("VampiricTalisman")?.Type ?? 0;
+            if (!ModLoader.TryGetMod("Clamity", out var calamity)) return;
+
+            int vampType = calamity.Find<ModItem>("DraculasCharm")?.Type ?? 0;
             if (vampType == 0) return;
 
             foreach (Recipe recipe in Main.recipe)
@@ -185,3 +149,4 @@ namespace HomewardRagnarok
         }
     }
 }
+*/

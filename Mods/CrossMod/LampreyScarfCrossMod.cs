@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
 {
@@ -24,20 +25,14 @@ namespace HomewardRagnarok.CrossMod
                 if (item.type == calamity.Find<ModItem>("Nucleogenesis")?.Type)
                     return true;
             }
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-            {
-                if (item.type == fargo.Find<ModItem>("ConjuristsSoul")?.Type)
-                    return true;
-                if (item.type == fargo.Find<ModItem>("UniverseSoul")?.Type)
-                    return true;
-                if (item.type == fargo.Find<ModItem>("EternitySoul")?.Type)
-                    return true;
-            }
             return false;
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) && coj.TryFind("LampreyScarf", out ModItem lampreyScarf))
             {
                 TemplatePlayer modPlayer = player.GetModPlayer<TemplatePlayer>();
@@ -52,7 +47,6 @@ namespace HomewardRagnarok.CrossMod
                 else
                 {
                     bool calamityLoaded = ModLoader.TryGetMod("CalamityMod", out Mod calamity);
-                    bool fargoLoaded = ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo);
 
                     if (calamityLoaded)
                     {
@@ -67,31 +61,18 @@ namespace HomewardRagnarok.CrossMod
                             player.AddBuff(ModContent.BuffType<ContinentOfJourney.Buffs.LampreyBuff>(), 2);
                         }
                     }
-
-                    if (fargoLoaded)
-                    {
-                        int conjuristsSoulType = fargo.Find<ModItem>("ConjuristsSoul")?.Type ?? -1;
-                        int universeSoulType = fargo.Find<ModItem>("UniverseSoul")?.Type ?? -1;
-                        int eternitySoulType = fargo.Find<ModItem>("EternitySoul")?.Type ?? -1;
-
-                        if (item.type == conjuristsSoulType || item.type == universeSoulType || item.type == eternitySoulType)
-                        {
-                            player.dd2Accessory = true;
-                            player.whipRangeMultiplier += 0.10f;
-                            modPlayer.Lamprey = true;
-                            player.AddBuff(ModContent.BuffType<ContinentOfJourney.Buffs.LampreyBuff>(), 2);
-                        }
-                    }
                 }
             }
         }
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) && coj.TryFind("LampreyScarf", out ModItem lampreyScarf))
             {
                 bool isCalamityItem = false;
-                bool isFargoItem = false;
 
                 if (ModLoader.TryGetMod("CalamityMod", out Mod calamity))
                 {
@@ -101,17 +82,7 @@ namespace HomewardRagnarok.CrossMod
                         isCalamityItem = true;
                 }
 
-                if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargo))
-                {
-                    int conjuristsSoulType = fargo.Find<ModItem>("ConjuristsSoul")?.Type ?? -1;
-                    int universeSoulType = fargo.Find<ModItem>("UniverseSoul")?.Type ?? -1;
-                    int eternitySoulType = fargo.Find<ModItem>("EternitySoul")?.Type ?? -1;
-
-                    if (item.type == conjuristsSoulType)
-                        isFargoItem = true;
-                }
-
-                if (isCalamityItem || isFargoItem)
+                if (isCalamityItem)
                 {
                     AddLampreyTooltips(lampreyScarf, tooltips);
                 }
@@ -120,35 +91,29 @@ namespace HomewardRagnarok.CrossMod
 
         private void AddLampreyTooltips(ModItem lampreyScarf, List<TooltipLine> tooltips)
         {
-            string iconTag = $"[i:{lampreyScarf.Type}] ";
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            tooltips.RemoveAll(t => t.Name == "LampreyScarfBuff1");
-            tooltips.RemoveAll(t => t.Name == "LampreyScarfBuff2");
-            tooltips.RemoveAll(t => t.Name == "LampreyScarfBuff3");
-
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, (float)(0.5 * (1 + Math.Sin(timer * MathHelper.TwoPi))));
-
-            tooltips.Add(new TooltipLine(Mod, "LampreyScarfBuff1",
-                iconTag + "Summons Lamprey Scarf. (Homeward Ragnarok)")
+            int maxTooltipIndex = -1;
+            int maxNumber = -1;
+            for (int i = 0; i < tooltips.Count; i++)
             {
-                OverrideColor = animatedColor
-            });
-
-            tooltips.Add(new TooltipLine(Mod, "LampreyScarfBuff2",
-                iconTag + "Increase whip range by 10%. (Homeward Ragnarok)")
-            {
-                OverrideColor = animatedColor
-            });
-
-            tooltips.Add(new TooltipLine(Mod, "LampreyScarfBuff3",
-                iconTag + "Increases your max number of sentries by 1. (Homeward Ragnarok)")
-            {
-                OverrideColor = animatedColor
-            });
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        maxTooltipIndex = i;
+                    }
+                }
+                else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                {
+                    maxTooltipIndex = i;
+                }
+            }
+            int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff1", "Summons Lamprey Scarf") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff2", "Increase whip range by 10%") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff3", "Increases your max number of sentries by 1") { OverrideColor = animatedColor });
         }
     }
 }

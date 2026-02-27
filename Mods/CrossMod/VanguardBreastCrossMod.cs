@@ -1,16 +1,21 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using ContinentOfJourney;
+using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.CrossMod
 {
     public class AsgardianAegisBuffs : GlobalItem
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (item.ModItem == null) return;
 
             string name = item.ModItem.Name;
@@ -50,42 +55,43 @@ namespace HomewardRagnarok
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (!ServerConfig.Instance.CalamityBalance)
+                return;
+
             if (item.ModItem == null) return;
 
             string name = item.ModItem.Name;
 
-            if (name == "AsgardianAegis" || name == "ColossusSoul")
+            if (name == "AsgardianAegis" || name == "SupremeBarrier" || name == "ColossusSoul")
             {
-                float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-                Color purple = new Color(128, 0, 128);
-                Color white = Color.White;
-                Color animatedColor = Color.Lerp(purple, white, (float)(0.5f * (1 + System.Math.Sin(timer * 6.2831))));
-
-                int vanguardType = 0;
-                int transactionType = 0;
-                if (ModLoader.TryGetMod("ContinentOfJourney", out Mod cojMod))
+                if (name == "SupremeBarrier" && Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.LeftControl))
                 {
-                    vanguardType = cojMod.Find<ModItem>("VanguardBreastpiece")?.Type ?? 0;
-                    transactionType = cojMod.Find<ModItem>("TransactionCertificate")?.Type ?? 0;
+                    return;
                 }
 
-                string vanguardTag = vanguardType != 0 ? $"[i:{vanguardType}] " : "";
-                string transactionTag = transactionType != 0 ? $"[i:{transactionType}] " : "";
+                Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-                tooltips.RemoveAll(t => t.Name == "HomewardRagnarok1" || t.Name == "HomewardRagnarok2" || t.Name == "HomewardRagnarok3");
-
-                tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok1", vanguardTag + "Grants immunity to Vulnerable (Homeward Ragnarok)")
+                int maxTooltipIndex = -1;
+                int maxNumber = -1;
+                for (int i = 0; i < tooltips.Count; i++)
                 {
-                    OverrideColor = animatedColor
-                });
-                tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok2", vanguardTag + "Damage taken by debuffs decreased by 35% (Homeward Ragnarok)")
-                {
-                    OverrideColor = animatedColor
-                });
-                tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok3", transactionTag + "Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown (Homeward Ragnarok)")
-                {
-                    OverrideColor = animatedColor
-                });
+                    if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                    {
+                        if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                        {
+                            maxNumber = num;
+                            maxTooltipIndex = i;
+                        }
+                    }
+                    else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                    {
+                        maxTooltipIndex = i;
+                    }
+                }
+                int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok1", "Grants immunity to Vulnerable") { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok2", "Damage taken by debuffs decreased by 35%") { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok3", "Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown") { OverrideColor = animatedColor });
             }
         }
     }

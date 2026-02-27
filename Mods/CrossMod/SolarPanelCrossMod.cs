@@ -3,14 +3,15 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.CrossMod
 {
     public class SolarPanelTooltipFix : GlobalItem
     {
         public override bool AppliesToEntity(Item entity, bool lateInstantiation)
         {
-            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod) && ServerConfig.Instance.CalamityBalance)
             {
                 string[] calamityItems = { "OrnateShield", "AsgardsValor", "AsgardianAegis" };
                 foreach (string itemName in calamityItems)
@@ -20,14 +21,7 @@ namespace HomewardRagnarok
                 }
             }
 
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargoMod))
-            {
-                int colossusSoulType = fargoMod.Find<ModItem>("ColossusSoul")?.Type ?? 0;
-                if (entity.type == colossusSoulType)
-                    return true;
-            }
-
-            if (ModLoader.TryGetMod("Clamity", out Mod clamityMod))
+            if (ModLoader.TryGetMod("Clamity", out Mod clamityMod) && ServerConfig.Instance.ClamityBalance)
             {
                 if (clamityMod.TryFind("SupremeBarrier", out ModItem barrier) && entity.type == barrier.Type)
                     return true;
@@ -38,43 +32,46 @@ namespace HomewardRagnarok
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out _))
+            if (!ServerConfig.Instance.CalamityBalance)
                 return;
 
-            if (ModLoader.TryGetMod("Clamity", out Mod clamityMod))
+            if (ModLoader.TryGetMod("Clamity", out Mod clamity) &&
+                        clamity.TryFind("SupremeBarrier", out ModItem barrier))
             {
-                if (clamityMod.TryFind("SupremeBarrier", out ModItem barrier) && item.type == barrier.Type)
+                if (item.type == barrier.Type && Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.LeftControl))
+                {
                     return;
+                }
             }
 
-            float timer = (float)(Main.GlobalTimeWrappedHourly * 0.3);
-            Color purple = new Color(128, 0, 128);
-            Color white = Color.White;
-            Color animatedColor = Color.Lerp(purple, white, (float)(0.5 * (1 + Math.Sin(timer * MathHelper.TwoPi))));
+            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            int solarPanelType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.SolarPanel>();
-            string iconTag = $"[i:{solarPanelType}] ";
-
-            tooltips.RemoveAll(t => t.Name == "HomewardRagnarokSolarPanel");
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarokSolarPanel", iconTag + "Generates energy balls while moving (Homeward Ragnarok)")
+            int maxTooltipIndex = -1;
+            int maxNumber = -1;
+            for (int i = 0; i < tooltips.Count; i++)
             {
-                OverrideColor = animatedColor
-            });
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        maxTooltipIndex = i;
+                    }
+                }
+                else if (tooltips[i].Mod == "InfernalEclipseAPI")
+                {
+                    maxTooltipIndex = i;
+                }
+            }
+
+            int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "SolarPanelBonus", "Generates energy balls while moving") { OverrideColor = animatedColor });
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out _))
-                return;
-
-            int colossusSoulType = -1;
-            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargoMod))
-            {
-                colossusSoulType = fargoMod.Find<ModItem>("ColossusSoul")?.Type ?? -1;
-            }
-
             bool calamityEquipped = false;
-            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod))
+            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod) && ServerConfig.Instance.CalamityBalance)
             {
                 string[] calamityItems = { "OrnateShield", "AsgardsValor", "AsgardianAegis" };
                 foreach (string itemName in calamityItems)
@@ -88,7 +85,7 @@ namespace HomewardRagnarok
             }
 
             bool clamityEquipped = false;
-            if (ModLoader.TryGetMod("Clamity", out Mod clamityMod))
+            if (ModLoader.TryGetMod("Clamity", out Mod clamityMod) && ServerConfig.Instance.ClamityBalance)
             {
                 if (clamityMod.TryFind("SupremeBarrier", out ModItem barrier) && item.type == barrier.Type)
                 {
@@ -96,7 +93,7 @@ namespace HomewardRagnarok
                 }
             }
 
-            if (item.type == colossusSoulType || calamityEquipped || clamityEquipped)
+            if (calamityEquipped || clamityEquipped)
             {
                 SolarPanelLogic(player);
             }

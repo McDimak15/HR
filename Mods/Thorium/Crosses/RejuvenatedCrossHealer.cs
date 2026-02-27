@@ -5,6 +5,7 @@ using ContinentOfJourney.Items.Accessories;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using ContinentOfJourney.Projectiles;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
 {
@@ -33,6 +34,9 @@ namespace HomewardRagnarok
     {
         public override bool AppliesToEntity(Item item, bool lateInstantiation)
         {
+            if (!ServerConfig.Instance.ThoriumBalance)
+                return false;
+
             return item.type == ModContent.ItemType<RejuvenatedCross>();
         }
 
