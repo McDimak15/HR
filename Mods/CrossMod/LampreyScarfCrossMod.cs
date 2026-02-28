@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -111,9 +112,7 @@ namespace HomewardRagnarok.CrossMod
                 }
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff1", "Summons Lamprey Scarf") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff2", "Increase whip range by 10%") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff3", "Increases your max number of sentries by 1") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "LampreyScarfBuff1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.LampreyScarf")) { OverrideColor = animatedColor });
         }
     }
 }

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -59,9 +60,12 @@ namespace HomewardRagnarok.Compat
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            tooltips.RemoveAll(l => l.Text.Contains("range") || l.Text.Contains("Range"));
+            tooltips.RemoveAll(l => 
+                l.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.Remove'range'")) || 
+                l.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.Remove'Range'"))
+            );
 
-            var line = new TooltipLine(Mod, "SpikyCoverRework", "Whip tips deal 1.5x damage and cause bleeding");
+            var line = new TooltipLine(Mod, "SpikyCoverRework", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SpikyCoverRework"));
             tooltips.Add(line);
         }
     }

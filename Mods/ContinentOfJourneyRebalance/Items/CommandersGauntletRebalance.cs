@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using System.Collections.Generic;
 
 namespace HomewardRagnarok.Compat
@@ -27,9 +28,12 @@ namespace HomewardRagnarok.Compat
             for (int i = 0; i < tooltips.Count; i++)
             {
                 TooltipLine line = tooltips[i];
-                if (line.Text.Contains("melee speed"))
+                if (line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommandersGaunlet.OrigTooltip")))
                 {
-                    line.Text = line.Text.Replace("melee speed", "whip speed");
+                    line.Text = line.Text.Replace(
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommandersGaunlet.OrigTooltip"),
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommandersGaunlet.Replace")
+                    );
                 }
             }
         }

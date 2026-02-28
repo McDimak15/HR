@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using System;
@@ -54,7 +55,7 @@ namespace HomewardRagnarok.CrossMod
                         }
                     }
                     int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-                    tooltips.Insert(insertAt, new TooltipLine(Mod, "DivineFireEffect", "Causes melee attacks to inflict the Divine Fire debuff") { OverrideColor = animatedColor });
+                    tooltips.Insert(insertAt, new TooltipLine(Mod, "DivineFireEffect", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.DivineTouch")) { OverrideColor = animatedColor });
                 }
             }
         }

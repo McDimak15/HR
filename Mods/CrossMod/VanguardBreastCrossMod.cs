@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using System;
 using System.Collections.Generic;
@@ -89,9 +90,9 @@ namespace HomewardRagnarok.CrossMod
                     }
                 }
                 int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok1", "Grants immunity to Vulnerable") { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok2", "Damage taken by debuffs decreased by 35%") { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok3", "Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown") { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ImmunityVulnerable")) { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok2", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommemorativeCoin")) { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok3", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TransactionCertificate")) { OverrideColor = animatedColor });
             }
         }
     }

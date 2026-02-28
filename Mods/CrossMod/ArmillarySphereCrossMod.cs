@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -113,7 +114,7 @@ namespace HomewardRagnarok.CrossMod
 
             Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarokBonus", "Your sentries form a constellation that hurts for 50% of your held weapon's damage")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarokBonus", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ArmillarySphere"))
             {
                 OverrideColor = animatedColor
             });

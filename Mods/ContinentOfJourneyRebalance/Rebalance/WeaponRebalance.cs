@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.DataStructures;
 using HomewardRagnarok.Config;
 using ContinentOfJourney.Items;
@@ -249,15 +250,15 @@ namespace HomewardRagnarok
 
             if (item.ModItem is ItemCactusBall)
             {
-                tooltips.Add(new TooltipLine(Mod, "PoisonEffect", "Inflicts Poison"));
+                tooltips.Add(new TooltipLine(Mod, "PoisonEffect", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.PoisonEffect")));
             }
             if (item.ModItem is StarEaterStaff)
             {
-                tooltips.Add(new TooltipLine(Mod, "HolyFlamesEffect", "Inflicts Holy Flames"));
+                tooltips.Add(new TooltipLine(Mod, "HolyFlamesEffect", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.HolyFlamesEffect")));
             }
             if (item.ModItem is Fission)
             {
-                tooltips.Add(new TooltipLine(Mod, "Vaporfied", "Inflicts Vaporfied"));
+                tooltips.Add(new TooltipLine(Mod, "Vaporfied", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.VaporfiedEffect")));
             }
         }
 

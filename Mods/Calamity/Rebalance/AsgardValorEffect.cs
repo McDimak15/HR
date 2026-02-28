@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ namespace HomewardRagnarok
 
             Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok1","Grants immunity to Vulnerable")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ImmunityVulnerable"))
             {
                 OverrideColor = animatedColor
             });
-            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok2","Damage taken by debuffs decreased by 35%")
+            tooltips.Add(new TooltipLine(Mod, "HomewardRagnarok2", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommemorativeCoin"))
             {
                 OverrideColor = animatedColor
             });

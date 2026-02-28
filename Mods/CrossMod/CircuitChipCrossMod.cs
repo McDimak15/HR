@@ -76,7 +76,7 @@ namespace HomewardRagnarok.CrossMod
                 }
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "MiniLinkaEffect", "Summons a mini linka to fight for you") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "MiniLinkaEffect", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CircuitChip")) { OverrideColor = animatedColor });
         }
     }
 }

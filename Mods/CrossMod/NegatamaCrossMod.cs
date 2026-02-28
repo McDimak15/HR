@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -67,7 +68,7 @@ namespace HomewardRagnarok.CrossMod
                 }
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarokNegatama", "Releases dark energy, the lower mana you have, the more damage it deals") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarokNegatama", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.Negatama")) { OverrideColor = animatedColor });
         }
     }
 

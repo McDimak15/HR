@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -65,7 +66,7 @@ namespace HomewardRagnarok.CrossMod
             }
 
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "SolarPanelBonus", "Generates energy balls while moving") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "SolarPanelBonus", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SolarPanel")) { OverrideColor = animatedColor });
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)

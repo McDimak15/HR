@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -56,10 +57,6 @@ namespace HomewardRagnarok.CrossMod
 
                 Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-                string gss1 = "Increases length of invincibility";
-                string gss2 = "Summon spectrals when damaged";
-                string gss3 = "Summon spectrals when hitting enemy";
-
                 int maxTooltipIndex = -1;
                 int maxNumber = -1;
                 for (int i = 0; i < tooltips.Count; i++)
@@ -79,9 +76,7 @@ namespace HomewardRagnarok.CrossMod
                 }
 
                 int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "GSS1", gss1) { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt + 1, new TooltipLine(Mod, "GSS2", gss2) { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt + 2, new TooltipLine(Mod, "GSS3", gss3) { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "GSS1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrandSpectral")) { OverrideColor = animatedColor });
             }
         }
 

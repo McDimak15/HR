@@ -4,6 +4,7 @@ using MonoMod.Cil;
 using Mono.Cecil.Cil;
 using MonoMod.RuntimeDetour;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 namespace HomewardRagnarok.Mods.BossChecklist
 {
@@ -88,7 +89,7 @@ namespace HomewardRagnarok.Mods.BossChecklist
                     {
                         if (strVal.Contains("Mods.ContinentOfJourney.SG") || strVal.Contains("SG"))
                         {
-                            instr.Operand = "Slime God: Rematch";
+                            instr.Operand = Language.GetTextValue("Mods.HomewardRagnarok.ModCompat.BossChecklistBoss.Checklist.SlimeGod");
                             return;
                         }
                     }

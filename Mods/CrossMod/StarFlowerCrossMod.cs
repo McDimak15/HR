@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -62,10 +63,8 @@ namespace HomewardRagnarok
                 }
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "StarflowerBuff1", "Decrease mana usage by 12%") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "StarflowerBuff2", "+80 max mana") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "StarflowerBuff1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.StarFlower")) { OverrideColor = animatedColor });
         }
-
     }
 
     public class EtherealAndSoulsBuffs : ModPlayer

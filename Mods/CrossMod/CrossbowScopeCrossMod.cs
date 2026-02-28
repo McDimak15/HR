@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System;
@@ -66,12 +67,7 @@ namespace HomewardRagnarok.CrossMod
                 }
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus1", "Show a bullet trace of bullet-firing guns") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus2", "Turn wooden arrows into holy arrows") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus3", "Increase the damage of arrows") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus4", "Enemies are less likely to target you") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus5", "+7% increased ranged critical strike chance") { OverrideColor = animatedColor });
-            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus6", "+5% increased ranged damage") { OverrideColor = animatedColor });
+            tooltips.Insert(insertAt, new TooltipLine(Mod, "HR_Bonus1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CrossbowScope")) { OverrideColor = animatedColor });
         }
     }
 }
