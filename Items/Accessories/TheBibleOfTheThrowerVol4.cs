@@ -26,7 +26,7 @@ namespace HomewardRagnarok.Items.Accessories
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
         {
-            TooltipLine exhaustion = new TooltipLine(Mod, "BibleExhaustion", Language.GetTextValue("Mods.HomewardRagnarok.Items.NoExhaustion")"Removes all Exhaustion when equipped");
+            TooltipLine exhaustion = new TooltipLine(Mod, "BibleExhaustion", Language.GetTextValue("Mods.HomewardRagnarok.Items.TheBibleOfTheThrowerVol4.NoExhaustion"));
             exhaustion.OverrideColor = new Color(95, 193, 4); 
             tooltips.Add(exhaustion);
         }
