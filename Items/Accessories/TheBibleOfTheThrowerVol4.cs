@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using ThoriumMod.Items.ThrownItems;
 using ContinentOfJourney.Items.Accessories;
 using CalamityMod.Tiles.Furniture.CraftingStations;
@@ -25,7 +26,7 @@ namespace HomewardRagnarok.Items.Accessories
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
         {
-            TooltipLine exhaustion = new TooltipLine(Mod, "BibleExhaustion","Removes all Exhaustion when equipped");
+            TooltipLine exhaustion = new TooltipLine(Mod, "BibleExhaustion", Language.GetTextValue("Mods.HomewardRagnarok.Items.NoExhaustion")"Removes all Exhaustion when equipped");
             exhaustion.OverrideColor = new Color(95, 193, 4); 
             tooltips.Add(exhaustion);
         }

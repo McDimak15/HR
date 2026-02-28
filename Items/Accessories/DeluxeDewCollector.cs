@@ -29,13 +29,6 @@ namespace HomewardRagnarok.Items.Accessories
             Item.rare = ItemRarityID.Lime;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "Dew1", "Healing an ally grants them 2 life recovery and generates dew"));
-            tooltips.Add(new TooltipLine(Mod, "Dew2", "Picking up dew increases your own life recovery by 4"));
-            tooltips.Add(new TooltipLine(Mod, "Dew3", "Healing spells will heal an additional 6 life"));
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             ModContent.GetInstance<DewCollector>().UpdateAccessory(player, hideVisual);

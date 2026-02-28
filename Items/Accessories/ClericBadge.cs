@@ -33,16 +33,6 @@ namespace HomewardRagnarok.Items.Accessories
             Item.accessory = true;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            if (!ModLoader.TryGetMod("ThoriumMod", out _))
-                return;
-
-            tooltips.RemoveAll(t => t.Name.StartsWith("ClericBadge_"));
-            tooltips.Add(new TooltipLine(Mod, "ClericBadge_1", "20% increased radiant damage"));
-            tooltips.Add(new TooltipLine(Mod, "ClericBadge_2", "5% increased radiant critical strike chance"));
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (ModLoader.TryGetMod("ThoriumMod", out Mod _))

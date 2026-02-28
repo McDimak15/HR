@@ -42,12 +42,6 @@ namespace HomewardRagnarok.Items.Tiles
             Item.createTile = ModContent.TileType<TimelessFountainTile>();
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "TimelessFountainInfo",
-                "Counts as a Fountain of Life, Fountain of Matter, Fountain of Time"));
-        }
-
         public override void AddRecipes()
         {
             if (!ModLoader.TryGetMod("CalamityMod", out Mod calamity)) return;

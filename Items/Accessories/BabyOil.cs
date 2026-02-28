@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using Terraria.GameContent;
 using HomewardRagnarok.Config;
+using Terraria.Localization;
 
 namespace HomewardRagnarok.Items.Accessories
 {
@@ -37,7 +38,7 @@ namespace HomewardRagnarok.Items.Accessories
             tooltips.Add(new TooltipLine(Mod, "BabyOil1", "When damaged cause 3-5 droplets of oil to drop out from you"));
             tooltips.Add(new TooltipLine(Mod, "BabyOil2", "Droplets do damage to enemies"));
 
-            tooltips.Add(new TooltipLine(Mod, "BabyOilFancy", "- Contributor Item -"));
+            tooltips.Add(new TooltipLine(Mod, "BabyOilFancy", Language.GetTextValue("Mods.HomewardRagnarok.Items.BabyOil.Contributor")));
         }
 
         public override bool PreDrawTooltipLine(DrawableTooltipLine line, ref int yOffset)

@@ -25,12 +25,6 @@ namespace HomewardRagnarok.Items.Accessories
             Item.value = Item.buyPrice(gold: 5);
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "HerbalistPouch1", "While equipped, your yoyo damage inflicts frostburn and venom and has a chance to freeze enemies\nDamaging an enemy with a yoyo will grant you 10% damage reduction until you take damage\nThis effect must recharge for 15 seconds after protecting you"));
-            tooltips.Add(new TooltipLine(Mod, "HerbalistPouch2", "Hitting enemies with yoyos charge a leaf shield\nThe shield is fully charged in 10 hits\nThe shield decreases up to 21% of the next damage you take\nThe shield is launched when retrieving the yoyo"));
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             Mod thorium = ModLoader.GetMod("ThoriumMod");
@@ -49,7 +43,6 @@ namespace HomewardRagnarok.Items.Accessories
 
             player.GetModPlayer<HerbalistPouchPlayer>().herbalistAcidVenom = true;
         }
-
 
         public override void AddRecipes()
         {

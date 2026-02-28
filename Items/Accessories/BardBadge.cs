@@ -27,15 +27,6 @@ namespace HomewardRagnarok.Items.Accessories
             Item.accessory = true;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-
-
-            tooltips.RemoveAll(t => t.Name.StartsWith("BardBadge_"));
-            tooltips.Add(new TooltipLine(Mod, "BardBadge_1", "20% increased symphonic damage"));
-            tooltips.Add(new TooltipLine(Mod, "BardBadge_2", "5% increased symphonic critical strike chance"));
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();

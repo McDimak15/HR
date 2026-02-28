@@ -30,16 +30,6 @@ namespace HomewardRagnarok.Items.Accessories
             Item.accessory = true;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            if (!ModLoader.TryGetMod("CalamityMod", out _))
-                return;
-
-            tooltips.RemoveAll(t => t.Name.StartsWith("RogueBadge_"));
-            tooltips.Add(new TooltipLine(Mod, "RogueBadge_1", "20% increased rogue damage"));
-            tooltips.Add(new TooltipLine(Mod, "RogueBadge_2", "5% increased rogue critical strike chance"));
-        }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (ModLoader.TryGetMod("CalamityMod", out Mod _))

@@ -35,11 +35,6 @@ namespace HomewardRagnarok.Items.Summons
             Item.noMelee = true;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "WhaleToothTooltip", "Summons Worlds End Everlasting Falling Whale\nCan be used in any biome"));
-        }
-
         public override bool CanUseItem(Player player)
         {
             if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))

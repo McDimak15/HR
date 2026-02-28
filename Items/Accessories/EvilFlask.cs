@@ -54,15 +54,6 @@ namespace HomewardRagnarok.Items.Accessories
                 .AddCondition(Condition.NearWater)
                 .Register();
         }
-
-        public override void ModifyTooltips(System.Collections.Generic.List<Terraria.ModLoader.TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "EvilFlask1", "20% chance to not consume ammo when using a flamethrower"));
-            tooltips.Add(new TooltipLine(Mod, "EvilFlask2", "Allows you to customize the projectile of your flamethrower"));
-            tooltips.Add(new TooltipLine(Mod, "EvilFlask3", "Your flamethrower inflicts Brain Rot debuff"));
-            tooltips.Add(new TooltipLine(Mod, "EvilFlask4", "When equipped, show items that can be inserted"));
-            tooltips.Add(new TooltipLine(Mod, "EvilFlask5", "You can insert 2 ingredients at most"));
-        }
     }
 
     public class EvilFlaskPlayer : ModPlayer

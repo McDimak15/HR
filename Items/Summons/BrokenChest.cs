@@ -50,11 +50,6 @@ namespace HomewardRagnarok.Items.Summons
             Item.scale = 0.5f; 
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "BrokenChestTooltip", "Summons The Materealizer\nCan be used in any biome"));
-        }
-
         public override bool CanUseItem(Player player)
         {
             if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))

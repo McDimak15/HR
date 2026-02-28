@@ -1,162 +1,230 @@
 Items: {
-	Horizon: {
-		DisplayName: Horizon
-		Tooltip: ""
-	}
-
-	CommemorativeCoin: {
-		Tooltip: ""
-		DisplayName: Commemorative Coin
-	}
-
-	ClericEmblem: {
-		Tooltip: ""
-		DisplayName: Cleric Emblem
-	}
-
 	ClericBadge: {
-		Tooltip: ""
 		DisplayName: Cleric Badge
-	}
-
-	Overwatch: {
-		Tooltip: ""
-		DisplayName: Overwatch
+		Tooltip:
+			'''
+			20% increased radiant damage
+			5% increased radiant critical strike chance
+			'''
 	}
 
 	BardBadge: {
 		DisplayName: Bard Badge
-		Tooltip: ""
-	}
-
-	HolySymbol: {
-		DisplayName: Holy Symbol
-		Tooltip: ""
+		Tooltip:
+			'''
+			20% increased symphonic damage
+			5% increased symphonic critical strike chance
+			'''
 	}
 
 	WhaleTooth: {
-		Tooltip: ""
 		DisplayName: Whale Tooth
-	}
-
-	CorruptedMatter: {
-		DisplayName: Corrupted Matter
-		Tooltip: ""
-	}
-
-	LifeTree: {
-		DisplayName: Life Tree
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons Worlds End Everlasting Falling Whale
+			Can be used in any biome
+			'''
 	}
 
 	YggdrasilTree: {
 		DisplayName: Yggdrasil Tree
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons The Lifebringer
+			Can be used in any biome
+			'''
 	}
 
 	RogueBadge: {
-		Tooltip: ""
 		DisplayName: Rogue Badge
+		Tooltip:
+			'''
+			20% increased rogue damage
+			5% increased rogue critical strike chance
+			'''
 	}
 
 	BrokenChest: {
 		DisplayName: Broken Chest
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons The Materealizer
+			Can be used in any biome
+			'''
 	}
 
 	EternalClock: {
 		DisplayName: Eternal Clock
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons The Overwatcher
+			Can be used in any biome
+			'''
 	}
 
 	ScarabIdol: {
 		DisplayName: Scarab Idol
-		Tooltip: ""
-	}
-
-	AuricFrame: {
-		DisplayName: Auric Frame
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons Scarab Belief
+			Can be used in any biome
+			'''
 	}
 
 	HerbalistPouch: {
 		DisplayName: Herbalist Pouch
-		Tooltip: ""
+		Tooltip:
+			'''
+			While equipped, your yoyo damage inflicts frostburn and venom and has a chance to freeze enemies
+			Damaging an enemy with a yoyo will grant you 10% damage reduction until you take damage
+			This effect must recharge for 15 seconds after protecting you
+			Hitting enemies with yoyos charge a leaf shield
+			The shield is fully charged in 10 hits
+			The shield decreases up to 21% of the next damage you take
+			The shield is launched when retrieving the yoyo
+			'''
 	}
 
 	EvilFlask: {
 		DisplayName: Evil Flask
-		Tooltip: ""
-	}
-
-	TimelessFountainItem: {
-		DisplayName: Timeless Fountain Item
-		Tooltip: ""
+		Tooltip:
+			'''
+			20% chance to not consume ammo when using a flamethrower
+			Allows you to customize the projectile of your flamethrower
+			Your flamethrower inflicts Brain Rot debuff
+			When equipped, show items that can be inserted
+			You can insert 2 ingredients at most
+			'''
 	}
 
 	TimelessFountain: {
 		DisplayName: Timeless Fountain
-		Tooltip: ""
-	}
-
-	CryonicClaw: {
-		DisplayName: Cryonic Claw
-		Tooltip: ""
+		Tooltip: Counts as a Fountain of Life, Fountain of Matter, Fountain of Time
 	}
 
 	NegablastShield: {
 		DisplayName: Negablast Shield
-		Tooltip: ""
+		Tooltip:
+			'''
+			50 base damage
+			Slightly increases length of invincibility after taking damage
+			Increases the knockback you receive
+			Release an explosion when damaged
+			Immune to enemy knockback & enemies are more likely to target you
+			Damage taken reduced by 10%
+			Every 3 seconds, taking damage will unleash a volatile explosion all around you
+			Explosion damage scales with your defense
+			'''
 	}
 
 	BabyOil: {
 		DisplayName: Baby Oil
-		Tooltip: ""
-	}
-
-	OtherworldlyScythe: {
-		Tooltip: ""
-		DisplayName: Otherworldly Scythe
-	}
-
-	ScytheOfLife: {
-		Tooltip: ""
-		DisplayName: Scythe Of Life
-	}
-
-	FlowerScythe: {
-		DisplayName: Flower Scythe
-		Tooltip: ""
+		Tooltip:
+			'''
+			When damaged cause 3-5 droplets of oil to drop out from you
+			Droplets do damage to enemies
+			'''
+		Contributor: - Contributor Item -
 	}
 
 	TheBibleOfTheThrowerVol4: {
-		Tooltip: ""
 		DisplayName: The Bible of the Thrower: Volume IV
-	}
-
-	CubismKunai: {
-		DisplayName: Cubism Kunai
-		Tooltip: ""
-	}
-
-	LifeStealer: {
-		Tooltip: ""
-		DisplayName: Life Stealer
-	}
-
-	ClawManufactory: {
-		DisplayName: Claw Manufactory
-		Tooltip: A station for crafting claws
+		Tooltip:
+			'''
+			20% increased thrower damage
+			50% increased consumable thrower weapon velocity
+			Swing a bat at close range when using consumable weapons
+			Three rings will boost the projectiles you throw
+			Decrease use time of consumable thrower weapons by 20%
+			When holding a thrower weapon, increase acceleration by 75%
+			17.5% of your thrower damage is duplicated
+			'''
+		NoExhaustion: Removes all Exhaustion when equipped
 	}
 
 	DeluxeDewCollector: {
 		DisplayName: Deluxe Dew Collector
+		Tooltip:
+			'''
+			Healing an ally grants them 2 life recovery and generates dew
+			Picking up dew increases your own life recovery by 4
+			Healing spells will heal an additional 6 life
+			'''
+	}
+
+	PriestessRodRelic: {
+		Tooltip: ""
+		DisplayName: Priestess Rod Relic
+	}
+
+	ChariotRelic: {
+		Tooltip: ""
+		DisplayName: Chariot Relic
+	}
+
+	MarquisMoonsquidRelic: {
+		Tooltip: ""
+		DisplayName: Marquis Moonsquid Relic
+	}
+
+	BigDipperRelic: {
+		Tooltip: ""
+		DisplayName: Big Dipper Relic
+	}
+
+	PuppetRelic: {
+		DisplayName: Puppet Relic
 		Tooltip: ""
 	}
 
-	RodScythe: {
+	TheMotherbrainRelic: {
 		Tooltip: ""
-		DisplayName: Rod Scythe
+		DisplayName: The Motherbrain Relic
+	}
+
+	DiverRelic: {
+		Tooltip: ""
+		DisplayName: Diver Relic
+	}
+
+	SolarRelic: {
+		DisplayName: Solar Relic
+		Tooltip: ""
+	}
+
+	TheOverwatcherRelic: {
+		DisplayName: The Overwatcher Relic
+		Tooltip: ""
+	}
+
+	WallofShadowRelic: {
+		DisplayName: Wall of Shadow Relic
+		Tooltip: ""
+	}
+
+	TheMaterealizerRelic: {
+		Tooltip: ""
+		DisplayName: The Materealizer Relic
+	}
+
+	TheLifebringerRelic: {
+		Tooltip: ""
+		DisplayName: The Lifebringer Relic
+	}
+
+	ScarabBeliefRelic: {
+		Tooltip: ""
+		DisplayName: Scarab Belief Relic
+	}
+
+	TheSonRelic: {
+		DisplayName: The Son Relic
+		Tooltip: ""
+	}
+
+	WhaleRelic: {
+		DisplayName: World's End Everlasting Falling Whale Relic
+		Tooltip: ""
 	}
 }
 
@@ -164,17 +232,6 @@ Tiles.TimelessFountainTile.MapEntry: Timeless Fountain Tile
 
 Projectiles: {
 	BabyOilDroplet.DisplayName: Baby Oil Droplet
-	OtherworldlyBubble.DisplayName: Otherworldly Bubble
-	OtherworldlyScythePro.DisplayName: Otherworldly Scythe Pro
-	ScytheOfLifeSpirit.DisplayName: Scythe Of Life Spirit
-	ScytheOfLifeProj.DisplayName: Scythe Of Life Proj
-	FlowerOnGround.DisplayName: Flower On Ground
-	FlowerScytheProj.DisplayName: Flower Scythe Proj
-	CubismKunaiProj.DisplayName: Cubism Kunai Proj
-	LifeStealerProjectile.DisplayName: Life Stealer Projectile
-	FissionThrow_2.DisplayName: Fission Throw_2
-	RodScythePro.DisplayName: Rod Scythe Pro
-	RodScytheBeam.DisplayName: Rod Scythe Beam
 }
 
 Buffs: {
@@ -187,6 +244,21 @@ Buffs: {
 Mods: {
 	HomewardRagnarok: {
 		CoJIntro: {
+			GoblinChariot:
+				'''
+				The reckless war-engine
+				Goblin Chariot
+				'''
+			PuppetOpera:
+				'''
+				The strings of fate
+				Puppet Opera
+				'''
+			BigDipper:
+				'''
+				The wandering starborn
+				Big Dipper
+				'''
 			MarquisMoonsquid:
 				'''
 				The abyssal tyrant
@@ -215,7 +287,7 @@ Mods: {
 			SlimeGod:
 				'''
 				Primordial Slime
-				Slime God
+				Slime God: Rematch
 				'''
 			TheOverwatcher:
 				'''
@@ -252,3 +324,103 @@ Mods: {
 }
 
 FlamethrowerEx.HomewardRagnarok.SulphuricScaleEffect: Flames inflict Irradiated for 6 seconds
+
+Configs: {
+	ServerConfig: {
+		DisplayName: Server Config
+
+		Headers: {
+			MainCategory: Main
+			WeaponChanges: Weapon Changes
+			ArmorChanges: Armor Changes
+			ModChanges: Mod Changes
+		}
+
+		EnableBossScaling: {
+			Label: "[i:ContinentOfJourney/SolarFlareScoria] Boss Stats Scaling"
+			Tooltip: If enabled, HWJ boss stats will scale based on installed mods.
+		}
+
+		HWJRecipes: {
+			Label: "[i:ContinentOfJourney/FinalBar] HWJ Recipe Tweaks"
+			Tooltip: If enabled, Balance HWJ recipes to fit other mods progression.
+		}
+
+		EnableBookmarks: {
+			Label: "[i:ContinentOfJourney/EruditeBookmark] Enable Bookmarks"
+			Tooltip: If enabled, Modded mage weapons will work with Spell Pages.
+		}
+
+		CustomContent: {
+			Label: "[i:HomewardRagnarok/RogueBadge] Custom Mod Content"
+			Tooltip: If enabled, Add new content which fill gaps in progression.
+		}
+
+		BloodOrbPotions: {
+			Label: "[i:CalamityMod/BloodOrb] Potion Blood Orb Duplication"
+			Tooltip: If enabled, HWJ potions can be duplicated with calamity blood.
+		}
+
+		CustomStealthStrikes: {
+			Label: "[i:ContinentOfJourney/RisingAction] HWJ Stealth Strikes"
+			Tooltip: If enabled, Some HWJ weapons will have stealth strikes
+		}
+
+		EnableRogueClassChanges: {
+			Label: "[i:ContinentOfJourney/Fission] Merge Thrower Class"
+			Tooltip: If enabled, HWJ throwable weapons will be converted to thrower class.
+		}
+
+		EnableMeleeClassChanges: {
+			Label: "[i:ContinentOfJourney/Shoreline] Merge Melee Class"
+			Tooltip: If enabled, some HWJ weapons will become a melee weapon.
+		}
+
+		EnableHealerClassChanges: {
+			Label: "[i:ContinentOfJourney/DaCapo] Merge Healer Class"
+			Tooltip: If enabled, HWJ Scythes will use Thorium Healer class.
+		}
+
+		WeaponBalancing: {
+			Label: "[i:ContinentOfJourney/StarEaterStaff] Weapon Balancing"
+			Tooltip: If enabled, HWJ weapons will be rebalanced according to other mods.
+		}
+
+		ArmorBalancing: {
+			Label: "[i:ContinentOfJourney/WatchmanHat] Armor Balancing"
+			Tooltip: If enabled, HWJ armor will be rebalanced according to other mods.
+		}
+
+		ArmorCraft: {
+			Label: "[i:ContinentOfJourney/EquilibriumBreastplate] Armor Recipes"
+			Tooltip: If enabled, HWJ armor recipes will be merged with other mods.
+		}
+
+		CalamityBalance: {
+			Label: Calamity Support
+			Tooltip: If enabled, Merge Calamity accessories, weapons and recipes with Homeward Journey.
+		}
+
+		ClamityBalance: {
+			Label: Clamity Support
+			Tooltip: If enabled, Adjusts some Clamity accesories and weapons according to Homeward Journey.
+		}
+
+		ThoriumBalance: {
+			Label: Thorium Support
+			Tooltip: If enabled, Merge some Thorium healer accesories and recipes with Homeward Journey, also support Thorium Add-ons.
+		}
+
+		SOTSBalance: {
+			Label: SOTS Support
+			Tooltip: If enabled, Adjust SOTS and Unofficial SOTS Bard,Thrower and Healer recipes.
+		}
+
+		ConsolariaBalance: {
+			Label: Consolaria Support
+			Tooltip: If enabled, Merge soul of blight with Consolaria.
+		}
+	}
+}
+
+ItemTooltips.OmniShield: -Omni Shield-

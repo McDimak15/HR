@@ -1,0 +1,426 @@
+Items: {
+	ClericBadge: {
+		DisplayName: 圣牧徽章
+		Tooltip:
+			'''
+			增加20%光辉伤害
+			增加5%光辉暴击率
+			'''
+	}
+
+	BardBadge: {
+		DisplayName: 颂歌徽章
+		Tooltip:
+			'''
+			增加20%音波伤害
+			增加5%音波暴击率
+			'''
+	}
+
+	WhaleTooth: {
+		DisplayName: 永落鲸牙
+		Tooltip:
+			'''
+			召唤世末 · 永落鲸
+			可以在任意环境下使用
+			'''
+	}
+
+	YggdrasilTree: {
+		DisplayName: 世界树
+		Tooltip:
+			'''
+			召唤万籁携生
+			可以在任意环境下使用
+			'''
+	}
+
+	RogueBadge: {
+		DisplayName: 神盗徽章
+		Tooltip:
+			'''
+			增加20%盗贼伤害
+			增加5%盗贼暴击率
+			'''
+	}
+
+	BrokenChest: {
+		DisplayName: 破损胸骨
+		Tooltip:
+			'''
+			召唤化物天匠
+			可以在任意环境下使用
+			'''
+	}
+
+	EternalClock: {
+		DisplayName: 永恒时钟
+		Tooltip:
+			'''
+			召唤极视终表
+			可以在任意环境下使用
+			'''
+	}
+
+	ScarabIdol: {
+		DisplayName: 圣甲虫神像
+		Tooltip:
+			'''
+			召唤圣甲虫信仰
+			可以在任意环境下使用
+			'''
+	}
+
+	HerbalistPouch: {
+		DisplayName: 药草袋
+		Tooltip:
+			'''
+			[i:ThoriumMod/BlizzardPouch] 装备时，悠悠球攻击施加[C/1CC6F4:霜冻]和[C/7B4783:酸性毒液]并有概率冻结敌怪
+			用悠悠球攻击敌怪使你获得10%伤害减免，直到受到伤害为止
+			此效果在保护你后必须花15秒重新充能
+			[i:ContinentOfJourney/LeafOil] 悠悠球击中敌人为叶子护盾充能
+			击中10次时护盾完全充能
+			护盾为下一次承受的伤害提供至多21%伤害减免
+			收回悠悠球时发射护盾
+			'''
+	}
+
+	EvilFlask: {
+		DisplayName: 邪恶烧瓶
+		Tooltip:
+			'''
+			使用喷火器时有20%概率不消耗弹药
+			允许你自定义喷火器的射弹
+			喷火器能施加[C/A4A84E:大脑溃烂]减益
+			装备时显示可以放入的材料
+			可放入至多2个材料
+			'''
+	}
+
+	TimelessFountain: {
+		DisplayName: 永恒喷泉
+		Tooltip: 同时充当[C/9FD140:生命喷泉]、[C/4460E6:物质喷泉]和[C/FFBA35:时光喷泉]
+	}
+
+	NegablastShield: {
+		DisplayName: 负能爆破盾
+		Tooltip:
+			'''
+			50 基础伤害
+			[i:ContinentOfJourney/Negashield] 轻微延长受伤后的无敌状态时间
+			增加你受到的击退
+			受伤时释放爆炸
+			[i:ThoriumMod/BlastShield] 免疫敌怪击退且敌怪更有可能攻击你
+			所受伤害降低10%
+			每3秒，受到伤害会在你周围释放一场不稳定的爆炸
+			爆炸伤害受你的防御影响
+			'''
+	}
+
+	BabyOil: {
+		DisplayName: 宝宝油
+		Tooltip:
+			'''
+			受伤时，会从你身上滴落3-5滴油滴
+			液滴会对敌人造成伤害
+			'''
+		Contributor: -贡献者物品-
+	}
+
+	TheBibleOfTheThrowerVol4: {
+		DisplayName: 投手圣书：卷四
+		Tooltip:
+			'''
+			增加20%投掷伤害
+			增加50%可消耗投掷武器弹幕速度
+			使用投掷武器时近距离挥舞球棒
+			三个圆环将会增强你投掷的弹幕
+			减少20%可消耗投掷武器使用时间
+			当持有投掷武器，加速度提升75%
+			复制你17.5%的投掷伤害
+			'''
+		NoExhaustion: 装备时移除所有疲劳值
+	}
+
+	DeluxeDewCollector: {
+		DisplayName: 奢华露水收集器
+		Tooltip:
+			'''
+			治疗队友会提供他们2点生命恢复并生成露水
+			拾取露水会增加自身4点生命恢复
+			治疗法术会额外治疗6点生命值
+			'''
+	}
+
+	PriestessRodRelic: {
+		Tooltip: ""
+		DisplayName: 天竿鱼祭司炼狱圣物
+	}
+
+	ChariotRelic: {
+		Tooltip: ""
+		DisplayName: 哥布林战车炼狱圣物
+	}
+
+	MarquisMoonsquidRelic: {
+		Tooltip: ""
+		DisplayName: 月光鱿侯炼狱圣物
+	}
+
+	BigDipperRelic: {
+		Tooltip: ""
+		DisplayName: 大熊星座炼狱圣物
+	}
+
+	PuppetRelic: {
+		DisplayName: 木偶歌剧炼狱圣物
+		Tooltip: ""
+	}
+
+	TheMotherbrainRelic: {
+		Tooltip: ""
+		DisplayName: 母脑炼狱圣物
+	}
+
+	DiverRelic: {
+		Tooltip: ""
+		DisplayName: 深潜者炼狱圣物
+	}
+
+	SolarRelic: {
+		DisplayName: 史莱姆之神炼狱圣物
+		Tooltip: ""
+	}
+
+	TheOverwatcherRelic: {
+		DisplayName: 极视终表炼狱圣物
+		Tooltip: ""
+	}
+
+	WallofShadowRelic: {
+		DisplayName: 暗影墙炼狱圣物
+		Tooltip: ""
+	}
+
+	TheMaterealizerRelic: {
+		Tooltip: ""
+		DisplayName: 化物天匠炼狱圣物
+	}
+
+	TheLifebringerRelic: {
+		Tooltip: ""
+		DisplayName: 万籁携生炼狱圣物
+	}
+
+	ScarabBeliefRelic: {
+		Tooltip: ""
+		DisplayName: 圣甲虫信仰炼狱圣物
+	}
+
+	TheSonRelic: {
+		DisplayName: 圣子炼狱圣物
+		Tooltip: ""
+	}
+
+	WhaleRelic: {
+		DisplayName: 世末 · 永落鲸炼狱圣物
+		Tooltip: ""
+	}
+}
+
+Tiles.TimelessFountainTile.MapEntry: 永恒喷泉
+
+Projectiles: {
+	BabyOilDroplet.DisplayName: 宝宝油液滴
+}
+
+Buffs: {
+	BubbleShield: {
+		DisplayName: 泡泡护盾
+		Description: 下次受到的伤害减少10%
+	}
+}
+
+Mods: {
+	HomewardRagnarok: {
+		CoJIntro: {
+			GoblinChariot:
+				'''
+				鲁莽的战争机器
+				哥布林战车
+				'''
+			PuppetOpera:
+				'''
+				命运之线
+				木偶歌剧
+				'''
+			BigDipper:
+				'''
+				流浪卫星
+				大熊星座
+				'''
+			MarquisMoonsquid:
+				'''
+				深渊暴君
+				月光鱿侯
+				'''
+			PriestessRod:
+				'''
+				祝福之兆
+				天竿鱼祭司
+				'''
+			Diver:
+				'''
+				深海护卫
+				深潜者
+				'''
+			TheMotherbrain:
+				'''
+				诡计之主
+				母脑
+				'''
+			WallofShadow:
+				'''
+				黑暗造物
+				暗影墙
+				'''
+			SlimeGod:
+				'''
+				原初史莱姆
+				史莱姆之神：再临
+				'''
+			TheOverwatcher:
+				'''
+				现实守望
+				极视钟表
+				'''
+			TheLifebringerHead:
+				'''
+				神圣绽辉
+				万籁携生
+				'''
+			TheMaterealizer:
+				'''
+				万象缔造
+				化物天匠
+				'''
+			ScarabBelief:
+				'''
+				亘古虔诚
+				圣甲虫信仰
+				'''
+			WorldsEndEverlastingFallingWhale:
+				'''
+				沉沦渊海
+				世末 · 永落鲸
+				'''
+			TheSon:
+				'''
+				圣洁基督
+				圣子
+				'''
+		}
+	}
+}
+
+FlamethrowerEx.HomewardRagnarok.SulphuricScaleEffect: 火焰会造成6秒的辐射减益
+
+Configs: {
+	ServerConfig: {
+		DisplayName: 服务器配置
+
+		Headers: {
+			MainCategory: 主要
+			WeaponChanges: 武器修改
+			ArmorChanges: 盔甲修改
+			ModChanges: 模组修改
+		}
+
+		EnableBossScaling: {
+			Label: "[i:ContinentOfJourney/SolarFlareScoria] Boss数值修改"
+			Tooltip: 启用后，旅人归途的Boss数值会根据你启用的模组进行变更
+		}
+
+		HWJRecipes: {
+			Label: "[i:ContinentOfJourney/FinalBar] 旅人归途配方调整"
+			Tooltip: 启用后，旅人归途的配方会被调整以适配其他模组的进程
+		}
+
+		EnableBookmarks: {
+			Label: "[i:ContinentOfJourney/EruditeBookmark] 启用书签"
+			Tooltip: 启用后，模组的魔法武器能够使用魔咒书页
+		}
+
+		CustomContent: {
+			Label: "[i:HomewardRagnarok/RogueBadge] 自制模组内容"
+			Tooltip: 启用后，会添加可以弥补游戏进程空缺的新内容
+		}
+
+		BloodOrbPotions: {
+			Label: "[i:CalamityMod/BloodOrb] 药水血珠复制"
+			Tooltip: 启用后，旅人归途的药水可以使用灾厄血珠进行复制
+		}
+
+		CustomStealthStrikes: {
+			Label: "[i:ContinentOfJourney/RisingAction] 旅人归途潜伏攻击"
+			Tooltip: 启用后，部分旅人归途武器获得潜伏攻击
+		}
+
+		EnableRogueClassChanges: {
+			Label: "[i:ContinentOfJourney/Fission] 投手职业融合"
+			Tooltip: 启用后，旅人归途的可投掷武器会被转换为投手职业
+		}
+
+		EnableMeleeClassChanges: {
+			Label: "[i:ContinentOfJourney/Shoreline] 近战职业融合"
+			Tooltip: 启用后，一些旅人归途的武器会被转换为近战武器
+		}
+
+		EnableHealerClassChanges: {
+			Label: "[i:ContinentOfJourney/DaCapo] 牧师职业融合"
+			Tooltip: 启用后，旅人归途的镰刀会使用瑟银的牧师职业
+		}
+
+		WeaponBalancing: {
+			Label: "[i:ContinentOfJourney/StarEaterStaff] 武器平衡"
+			Tooltip: 启用后，旅人归途的武器会根据其他模组进行重平衡
+		}
+
+		ArmorBalancing: {
+			Label: "[i:ContinentOfJourney/WatchmanHat] 盔甲平衡"
+			Tooltip: 启用后，旅人归途的盔甲会根据其他模组进行重平衡
+		}
+
+		ArmorCraft: {
+			Label: "[i:ContinentOfJourney/EquilibriumBreastplate] 盔甲配方"
+			Tooltip: 启用后，旅人归途的盔甲配方会与其他模组融合
+		}
+
+		CalamityBalance: {
+			Label: 灾厄支持
+			Tooltip: 启用后，灾厄的饰品、武器和配方将会和旅人归途融合
+		}
+
+		ClamityBalance: {
+			Label: 灾蛤支持
+			Tooltip: 启用后，根据旅人归途调整灾蛤的部分饰品和武器
+		}
+
+		ThoriumBalance: {
+			Label: 瑟银支持
+			Tooltip: 启用后，将部分瑟银的牧师饰品和配方与旅人归途融合，瑟银的附属模组同样支持
+		}
+
+		SOTSBalance: {
+			Label: 暗影奥秘支持
+			Tooltip: 启用后，调整暗影奥秘和非官方暗影奥秘吟游诗人、投手&牧师武器的配方
+		}
+
+		ConsolariaBalance: {
+			Label: Consolaria支持
+			Tooltip: 启用后，将旅人归途的枯萎之魂与Consolaria的融合
+		}
+	}
+}
+
+ItemTooltips.OmniShield: -至高神盾-
