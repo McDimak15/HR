@@ -64,32 +64,6 @@ namespace HomewardRagnarok.CrossMod
             }
 
             newFinalBarRecipe.Register();
-
-            if (ModLoader.TryGetMod("CalamityMod", out Mod calamityMod) && calamityMod.TryFind("ShadowspecBar", out ModItem shadowspecBar) && ServerConfig.Instance.CalamityBalance)
-            {
-                int shadowspecBarType = shadowspecBar.Type;
-
-                foreach (var rec in Main.recipe)
-                {
-                    if (rec != null && rec.HasResult(shadowspecBarType))
-                    {
-                        bool hasFinalBar = false;
-                        foreach (var ing in rec.requiredItem)
-                        {
-                            if (ing.type == finalBarType)
-                            {
-                                hasFinalBar = true;
-                                break;
-                            }
-                        }
-
-                        if (!hasFinalBar)
-                        {
-                            rec.AddIngredient(finalBarType);
-                        }
-                    }
-                }
-            }
         }
     }
 }
