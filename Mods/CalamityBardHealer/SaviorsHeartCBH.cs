@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -68,18 +69,12 @@ namespace HomewardRagnarok
 
             Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
 
-            TooltipLine line1 = new TooltipLine(Mod, "SaviorsHeart1","Heals you by 20 health for every 100 mana consumed")
+            TooltipLine line = new TooltipLine(Mod, "SaviorsHeart1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SaviorsHeart"))
             {
                 OverrideColor = animatedColor
             };
+            tooltips.Add(line);
 
-            TooltipLine line2 = new TooltipLine(Mod, "SaviorsHeart2","Healing spells will heal an additional 6 life")
-            {
-                OverrideColor = animatedColor
-            };
-
-            tooltips.Add(line1);
-            tooltips.Add(line2);
         }
 
     }

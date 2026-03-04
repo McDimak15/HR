@@ -26,15 +26,24 @@ namespace HomewardRagnarok.Compat
         {
             if (item.type == ModContent.ItemType<UltraHealingPotion>())
             {
-                tooltips.RemoveAll(t => t.Text.Contains("Restores 300 life"));
-                tooltips.Add(new TooltipLine(Mod, "UltraHealingPotionBuff", "Restores 350 life"));
+                foreach (var tooltip in tooltips)
+                {
+                    if (tooltip.Mod == "Terraria" && tooltip.Name == "HealLife" && tooltip.Text.Contains("300"))
+                    {
+                        tooltip.Text = tooltip.Text.Replace("300", "350");
+                    }
+                }
             }
 
             if (item.type == ModContent.ItemType<UltraManaPotion>())
             {
-                tooltips.RemoveAll(t => t.Text.Contains("Restores 320 mana"));
-                tooltips.RemoveAll(t => t.Text.Contains("Restores 450"));
-                tooltips.Add(new TooltipLine(Mod, "UltraManaPotionBuff", "Restores 450 mana"));
+                foreach (var tooltip in tooltips)
+                {
+                    if (tooltip.Mod == "Terraria" && tooltip.Name == "HealMana" && tooltip.Text.Contains("450"))
+                    {
+                        tooltip.Text = tooltip.Text.Replace("450", "350");
+                    }
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -44,19 +45,21 @@ namespace HomewardRagnarok
         {
             if (!AppliesToEntity(item, false)) return;
 
-            tooltips.RemoveAll(t => t.Text.Contains("Heals the most damaged teammate")
-                                 || t.Text.Contains("upon every 7 magic attacks")
-                                 || t.Text.Contains("15% decreased magic damage"));
-
             if (ModLoader.TryGetMod("ThoriumMod", out _))
             {
-                tooltips.Add(new TooltipLine(Mod, "MythrilCrossPatch1", "+4% increased radiant damage"));
-                tooltips.Add(new TooltipLine(Mod, "MythrilCrossPatch2", "Heals the most damaged teammate by 4"));
-                tooltips.Add(new TooltipLine(Mod, "MythrilCrossPatch3", "upon every 9 radiant attacks"));
+                foreach (var tooltip in tooltips)
+                {
+                    if (tooltip.Mod == "ContinentOfJourney" && tooltip.Name.Contains("Tooltip"))
+                    {
+                        tooltip.Hide();
+                    }
+                }
+
+                tooltips.Add(new TooltipLine(Mod, "MythrilCrossPatch1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.MythrilCross")));
             }
             else
             {
-                tooltips.Add(new TooltipLine(Mod, "MythrilCrossNoThorium", "(Radiant effects require Thorium)"));
+                tooltips.Add(new TooltipLine(Mod, "MythrilCrossNoThorium", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThoriumRequire")));
             }
         }
 

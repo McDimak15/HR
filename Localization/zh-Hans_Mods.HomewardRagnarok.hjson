@@ -423,4 +423,160 @@ Configs: {
 	}
 }
 
-ItemTooltips.OmniShield: -至高神盾-
+ModCompat:{
+	BossChecklist.SlimeGod: "史莱姆之神：再临"
+}
+
+ItemTooltips:{
+	ThoriumRequire: （光辉效果需要 瑟银）
+	OmniShield: -至高神盾-
+	ImmunityVulnerable: 使你免疫脆弱
+	CommemorativeCoin: 减少35%你受到的减益伤害
+	TransactionCertificate: 受到致命伤害时将hp锁定为1点，有10分钟冷却时间
+	SolarPanel: 当你移动时，在你的位置生成能量球
+	CircuitChip: 召唤一只迷你林卡为你而战
+	GrandSpectral:
+		'''
+		延长你的无敌时间
+		受伤时召唤光谱追杀敌人
+		击中敌人时召唤光谱追杀敌人
+		'''
+	LampreyScarf: 
+		'''
+		召唤七鳃鳗围巾
+		鞭子距离增加10%
+		增加1个最大哨兵栏
+		'''
+	ArmillarySphere: 你的哨兵连结成星座对路径上的敌人造成召唤武器的一半伤害
+	Remove'Range': 远程
+	Remove'range': 远程
+	SpikyCoverRework: 鞭子尖端造成1.5倍伤害并施加流血
+	CrossbowScope:
+		'''
+		增加5%远程伤害
+		增加7%远程暴击率
+		降低敌人瞄准你的概率
+		提高箭矢的伤害
+		将木箭转化为圣箭
+		手持枪械时显示一条只有你能看到的子弹轨迹
+		'''
+	DivineTouch: 近战攻击施加圣火减益
+	StarFlower:
+		'''
+		增加80点最大魔力值
+		减少12%魔力消耗
+		'''
+	Negatama: 释放暗能量，魔力越低伤害越高
+	PoisonEffect: 施加中毒减益
+	HolyFlamesEffect: 施加圣火减益
+	VaporfiedEffect: 施加蒸汽波减益
+	CommandersGaunlet:{
+		OrigTooltip: 近战攻击速度
+		Replace: 鞭子挥舞速度
+	}
+	GrayRook:{
+		Remove'UseTime': -物品使用时间减少35%
+
+		OrigTooltip1: 提高2%近战攻速与
+		Replace1: 提高
+		OrigTooltip2: -鞭子距离增加35%
+		Replace2: -鞭子距离增加25%
+
+		MeleeRebalance: -近战武器大小增加25%
+		RogueRebalance: -盗贼攻击速度提升10%
+		HealerRebalance: -额外治疗量增加1点
+		BardRebalance: -最大灵感值增加2点
+	}
+	GrayRookBuff:{
+		OrigTooltip1: 鞭子距离增加30%
+		Replace1: 鞭子距离增加25%
+		OrigTooltip2: 物品使用时间减少35%
+		Replace2: 盗贼攻击速度提升10%
+
+		MeleeRebalance:
+			'''
+
+			近战武器大小增加25%
+			'''
+		HealerRebalance: 
+			'''
+			
+			额外治疗量增加1点
+			'''
+		BardRebalance:
+			'''
+
+			最大灵感值增加2点
+			'''
+	}
+	OrichalcumCross:
+		'''
+		增加4%光辉伤害
+		为团队中生命值最少的队友恢复4点生命值
+		每9次光辉攻击触发一次
+		'''
+	CrossOfTheFlamingSwords:
+		'''
+		增加3%光辉伤害
+		为团队中生命值最少的队友恢复5点生命值
+		每10次光辉攻击触发一次
+		'''
+	SilverCross:
+		'''
+		增加2%光辉伤害
+		为团队中生命值最少的队友恢复3点生命值
+		每7次光辉攻击触发一次
+		'''
+	WoodenCross:
+		'''
+		增加2%光辉伤害
+		为团队中生命值最少的队友恢复2点生命值
+		每8次光辉攻击触发一次
+		'''
+	AlloyCross:
+		'''
+		增加8%光辉伤害
+		为团队中生命值最少的队友恢复5点生命值
+		每10次光辉攻击触发一次
+		'''
+	MythrilCross:
+		'''
+		增加4%光辉伤害
+		为团队中生命值最少的队友恢复4点生命值
+		每9次光辉攻击触发一次
+		'''
+	TungstenCross:
+		'''
+		增加2%光辉伤害
+		为团队中生命值最少的队友恢复3点生命值
+		每7次光辉攻击触发一次
+		'''
+	RejuvenatedCross:
+		'''
+		增加5%光辉伤害
+		恢复团队中生命值最少的队友
+		每10次光辉攻击触发一次
+		'''
+	UndyingCross:
+		'''
+		增加8%光辉伤害
+		为团队中生命值最少的队友恢复5点生命值
+		每5次光辉攻击触发一次
+		免疫圣火减益
+		'''
+	BiomatterCross:
+		'''
+		增加5%光辉伤害
+		为团队中生命值最少的队友恢复5点生命值
+		每10次光辉攻击触发一次
+		'''
+	SaviorsHeart:
+		'''
+		每消耗100点魔力恢复20点生命值
+		治疗法术会额外治疗6点生命值
+		'''
+	MushroomAccessory:{
+		OrigTooltip: 治疗量
+		Replace: 增加额外{0}点治疗量 
+	}
+}

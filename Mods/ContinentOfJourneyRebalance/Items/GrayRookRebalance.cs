@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -75,21 +76,25 @@ namespace HomewardRagnarok.ContinentOfJourneyRebalance.Items
             if (item.type != ModContent.ItemType<GrayRook>())
                 return;
 
-            tooltips.RemoveAll(l => l.Text.Contains("-item use time decreased by 35%"));
+            tooltips.RemoveAll(l => l.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.Remove'UseTime'")));
 
             int maxTooltipIndex = -1;
             int maxNumber = -1;
 
             for (int i = 0; i < tooltips.Count; i++)
             {
-                if (tooltips[i].Text.Contains("melee speed"))
+                if (tooltips[i].Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip1")))
                 {
-                    tooltips[i].Text = tooltips[i].Text.Replace("Increase your melee speed by 2% and", "Increase your");
+                    tooltips[i].Text = tooltips[i].Text.Replace(
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip1"),
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.Replace1"));
                 }
 
-                if (tooltips[i].Text.Contains("range increased"))
+                if (tooltips[i].Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip2")))
                 {
-                    tooltips[i].Text = tooltips[i].Text.Replace("-whip range increased by 35%", "-whip range increased by 25%");
+                    tooltips[i].Text = tooltips[i].Text.Replace(
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip2"), 
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.Replace2"));
                 }
 
                 if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
@@ -104,13 +109,13 @@ namespace HomewardRagnarok.ContinentOfJourneyRebalance.Items
 
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex : tooltips.Count;
 
-            tooltips.Insert(insertAt++, new TooltipLine(Mod, "Rebalance1", "-melee size increased by 25%"));
-            tooltips.Insert(insertAt++, new TooltipLine(Mod, "Rogue", "-rogue attack speed is increased by 10%"));
+            tooltips.Insert(insertAt++, new TooltipLine(Mod, "Rebalance1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.MeleeRebalance")));
+            tooltips.Insert(insertAt++, new TooltipLine(Mod, "Rogue", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.RogueRebalance")));
 
             if (ModLoader.HasMod("ThoriumMod"))
             {
-                tooltips.Insert(insertAt++, new TooltipLine(Mod, "Healer", "-healing bonus is increased by 1"));
-                tooltips.Insert(insertAt++, new TooltipLine(Mod, "Bard", "-max inspiration is increased by 2"));
+                tooltips.Insert(insertAt++, new TooltipLine(Mod, "Healer", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.HealerRebalance")));
+                tooltips.Insert(insertAt++, new TooltipLine(Mod, "Bard", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.BardRebalance")));
             }
         }
     }
@@ -121,14 +126,18 @@ namespace HomewardRagnarok.ContinentOfJourneyRebalance.Items
         {
             if (type == ModContent.BuffType<GrayRookBuff>())
             {
-                tooltip = tooltip.Replace("30%", "25%");
-                tooltip = tooltip.Replace("item use time decreased by 35%", "thrower attack speed is increased by 10%");
-                tooltip += "\nmelee size increased by 25%";
+                tooltip = tooltip.Replace(
+                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.OrigTooltip1"),
+                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.Replace1"));
+                tooltip = tooltip.Replace(
+                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.OrigTooltip2"), 
+                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.Replace2"));
+                tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.MeleeRebalance");
 
                 if (ModLoader.HasMod("ThoriumMod"))
                 {
-                    tooltip += "\nhealing bonus is increased by 1";
-                    tooltip += "\nmax inspiration is increased by 2";
+                    tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.HealerRebalance");
+                    tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.BardRebalance");
                 }
             }
         }

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using ContinentOfJourney.Items.Accessories;
 using Microsoft.Xna.Framework;
@@ -44,15 +45,17 @@ namespace HomewardRagnarok
         {
             if (!AppliesToEntity(item, false)) return;
 
-            tooltips.RemoveAll(t => t.Text.Contains("20% decreased magic damage")
-                                 || t.Text.Contains("Grants regeneration")
-                                 || t.Text.Contains("upon every 5 magic attacks"));
-
             if (ModLoader.TryGetMod("ThoriumMod", out _))
             {
-                tooltips.Add(new TooltipLine(Mod, "RejuvenatedCrossPatch1", "+5% increased radiant damage"));
-                tooltips.Add(new TooltipLine(Mod, "RejuvenatedCrossPatch2", "Grants regeneration to the most damaged teammate"));
-                tooltips.Add(new TooltipLine(Mod, "RejuvenatedCrossPatch3", "upon every 10 radiant attacks"));
+                foreach (var tooltip in tooltips)
+                {
+                    if (tooltip.Mod == "ContinentOfJourney" && tooltip.Name.Contains("Tooltip"))
+                    {
+                        tooltip.Hide();
+                    }
+                }
+
+                tooltips.Add(new TooltipLine(Mod, "RejuvenatedCrossPatch1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.RejuvenatedCross")));
             }
         }
 

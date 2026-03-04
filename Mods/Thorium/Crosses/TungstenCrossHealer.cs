@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -41,15 +42,18 @@ namespace HomewardRagnarok
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             if (!AppliesToEntity(item, false)) return;
-            tooltips.RemoveAll(t => t.Text.Contains("Heals the most damaged teammate")
-                                 || t.Text.Contains("upon every 6 magic attacks")
-                                 || t.Text.Contains("7% decreased magic damage"));
 
             if (ModLoader.TryGetMod("ThoriumMod", out _))
             {
-                tooltips.Add(new TooltipLine(Mod, "TungstenCrossPatch1", "+2% increased radiant damage"));
-                tooltips.Add(new TooltipLine(Mod, "TungstenCrossPatch2", "Heals the most damaged teammate by 3"));
-                tooltips.Add(new TooltipLine(Mod, "TungstenCrossPatch3", "upon every 7 radiant attacks"));
+                foreach (var tooltip in tooltips)
+                {
+                    if (tooltip.Mod == "ContinentOfJourney" && tooltip.Name.Contains("Tooltip"))
+                    {
+                        tooltip.Hide();
+                    }
+                }
+
+                tooltips.Add(new TooltipLine(Mod, "TungstenCrossPatch1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TungstenCross")));
             }
         }
 

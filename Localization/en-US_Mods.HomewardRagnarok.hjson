@@ -423,4 +423,160 @@ Configs: {
 	}
 }
 
-ItemTooltips.OmniShield: -Omni Shield-
+ModCompat:{
+	BossChecklist.SlimeGod: "Slime God: Rematch"
+}
+
+ItemTooltips:{
+	ThoriumRequire: (Radiant effects require Thorium)
+	OmniShield: -Omni Shield-
+	ImmunityVulnerable: Grants immunity to Vulnerable
+	CommemorativeCoin: Damage taken by debuffs decreased by 35%
+	TransactionCertificate: Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown
+	SolarPanel: Generates energy balls while moving
+	CircuitChip: Summons a mini linka to fight for you
+	GrandSpectral:
+		'''
+		Increases length of invincibility
+		Summon spectrals when damaged
+		Summon spectrals when hitting enemy
+		'''
+	LampreyScarf: 
+		'''
+		Summons Lamprey Scarf
+		Increase whip range by 10%
+		Increases your max number of sentries by 1
+		'''
+	ArmillarySphere: Your sentries form a constellation that hurts for 50% of your held weapon's damage
+	Remove'Range': Range
+	Remove'range': range
+	SpikyCoverRework: Whip tips deal 1.5x damage and cause bleeding
+	CrossbowScope:
+		'''
+		+5% increased ranged damage
+		+7% increased ranged critical strike chance
+		Enemies are less likely to target you
+		Increase the damage of arrows
+		Turn wooden arrows into holy arrows
+		Show a bullet trace of bullet-firing guns
+		'''
+	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
+	StarFlower:
+		'''
+		+80 max mana
+		Decrease mana usage by 12%
+		'''
+	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
+	PoisonEffect: Inflicts Poison
+	HolyFlamesEffect: Inflicts Holy Flames
+	VaporfiedEffect: Inflicts Vaporfied
+	CommandersGaunlet:{
+		OrigTooltip: melee speed
+		Replace: whip speed
+	}
+	GrayRook:{
+		Remove'UseTime': -item use time decreased by 35%
+
+		OrigTooltip1: Increase your melee speed by 2% and
+		Replace1: Increase your
+		OrigTooltip2: -whip range increased by 35%
+		Replace2: -whip range increased by 25%
+
+		MeleeRebalance: -melee size increased by 25%
+		RogueRebalance: -rogue attack speed is increased by 10%
+		HealerRebalance: -healing bonus is increased by 1
+		BardRebalance: -max inspiration is increased by 2
+	}
+	GrayRookBuff:{
+		OrigTooltip1: whip range increased by 30%
+		Replace1: whip range increased by 25%
+		OrigTooltip2: item use time decreased by 35%
+		Replace2: thrower attack speed is increased by 10%
+
+		MeleeRebalance:
+			'''
+
+			melee size increased by 25%
+			'''
+		HealerRebalance: 
+			'''
+			
+			healing bonus is increased by 1
+			'''
+		BardRebalance:
+			'''
+
+			max inspiration is increased by 2
+			'''
+	}
+	OrichalcumCross:
+		'''
+		+4% increased radiant damage
+		Heals the most damaged teammate by 4
+		upon every 9 radiant attacks
+		'''
+	CrossOfTheFlamingSwords:
+		'''
+		+3% increased radiant damage
+		Heals the most damaged teammate by 5
+		upon every 10 radiant attacks
+		'''
+	SilverCross:
+		'''
+		+2% increased radiant damage
+		Heals the most damaged teammate by 3
+		upon every 7 radiant attacks
+		'''
+	WoodenCross:
+		'''
+		+2% increased radiant damage
+		Heals the most damaged teammate by 2
+		upon every 8 radiant attacks
+		'''
+	AlloyCross:
+		'''
+		+8% increased radiant damage
+		Heals the most damaged teammate by 5
+		upon every 10 radiant attacks
+		'''
+	MythrilCross:
+		'''
+		+4% increased radiant damage
+		Heals the most damaged teammate by 4
+		upon every 9 radiant attacks
+		'''
+	TungstenCross:
+		'''
+		+2% increased radiant damage
+		Heals the most damaged teammate by 3
+		upon every 7 radiant attacks
+		'''
+	RejuvenatedCross:
+		'''
+		+5% increased radiant damage
+		Grants regeneration to the most damaged teammate
+		upon every 10 radiant attacks
+		'''
+	UndyingCross:
+		'''
+		+8% increased radiant damage
+		Heals the most damaged teammate by 5
+		upon every 5 radiant attacks
+		Immunity to Divine Fire
+		'''
+	BiomatterCross:
+		'''
+		+5% increased radiant damage
+		Heals the most damaged teammate by 5
+		upon every 10 radiant attacks
+		'''
+	SaviorsHeart:
+		'''
+		Heals you by 20 health for every 100 mana consumed
+		Healing spells will heal an additional 6 life
+		'''
+	MushroomAccessory:{
+		OrigTooltip: Increase healing amount
+		Replace: Increase bonus healing by {0}
+	}
+}

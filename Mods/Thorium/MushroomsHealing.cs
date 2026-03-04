@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using ContinentOfJourney.Items.Accessories; 
 using HomewardRagnarok.Config;
 using System.Collections.Generic;
@@ -37,8 +38,8 @@ namespace HomewardRagnarok
 
             if (bonus > 0)
             {
-                tooltips.RemoveAll(line => line.Text.Contains("Increase healing amount"));
-                var line = new TooltipLine(Mod, "ThoriumHealerBonus", $"Increase bonus healing by {bonus}");
+                tooltips.RemoveAll(line => line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.MushroomAccessory.OrigTooltip")));
+                var line = new TooltipLine(Mod, "ThoriumHealerBonus", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.MushroomAccessory.Replace",bonus));
                 tooltips.Add(line);
             }
         }
