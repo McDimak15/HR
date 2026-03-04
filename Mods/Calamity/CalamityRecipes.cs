@@ -93,10 +93,12 @@ namespace HomewardRagnarok
                     recipe.AddIngredient(ModContent.ItemType<ArmillarySphere>());
                 }
 
-                // Ornate Shield
-                if (type == ModContent.ItemType<OrnateShield>())
+
+                // Elemental Gauntlet
+                if (type == ModContent.ItemType<ElementalGauntlet>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<SolarPanel>());
+                    recipe.RemoveIngredient(ItemID.FireGauntlet);
+                    recipe.AddIngredient(ModContent.ItemType<DivineTouch>());
                 }
 
                 // Rampart of Deities
@@ -108,7 +110,6 @@ namespace HomewardRagnarok
                 // Seraph Tracers
                 if (type == ModContent.ItemType<SeraphTracers>())
                 {
-                    recipe.RemoveIngredient(ModContent.ItemType<WingsofRebirth>());
                     recipe.AddIngredient(ModContent.ItemType<Altitude>());
                 }
 
@@ -160,6 +161,22 @@ namespace HomewardRagnarok
                 if (type == ModContent.ItemType<RedCube>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<Lumenyl>(), 5);
+                }
+
+                // Shadowspec Bar
+                if (type == ModContent.ItemType<ShadowspecBar>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>(), 5);
+                }
+
+                // Miracle Matter
+                if (type == ModContent.ItemType<MiracleMatter>())
+                {
+                    if (ModLoader.HasMod("ThoriumMod"))
+                    {
+                        recipe.requiredItem.RemoveAll(i => i != null && i.type == ModLoader.GetMod("ThoriumMod").Find<ModItem>("TerrariumCore").Type);
+                    }
+                    recipe.AddIngredient(ModContent.ItemType<FinalBar>(), 2);
                 }
 
                 // Ultra Healing Potion
