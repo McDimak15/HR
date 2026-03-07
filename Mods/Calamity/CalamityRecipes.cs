@@ -77,7 +77,6 @@ namespace HomewardRagnarok
                 if (type == ModContent.ItemType<AsgardsValor>())
                 {
                     recipe.requiredItem.RemoveAll(i => i != null && i.type == ItemID.AnkhShield);
-                    recipe.AddIngredient(ModContent.ItemType<CircuitChip>());
                     recipe.AddIngredient(ModContent.ItemType<VanguardBreastpiece>());
                 }
 
