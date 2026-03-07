@@ -229,15 +229,17 @@ Items: {
 }
 
 Tiles.TimelessFountainTile.MapEntry: Timeless Fountain Tile
-
-Projectiles: {
-	BabyOilDroplet.DisplayName: Baby Oil Droplet
-}
+Projectiles.BabyOilDroplet.DisplayName: Baby Oil Droplet
 
 Buffs: {
 	BubbleShield: {
 		DisplayName: Bubble Shield
 		Description: Reduces next damage by 10%
+	}
+
+	HeartOfThoriumBuff: {
+		DisplayName: Heart Of Thorium Buff
+		Description: Increase Max inspiration by 5
 	}
 }
 
@@ -423,11 +425,9 @@ Configs: {
 	}
 }
 
-ModCompat:{
-	BossChecklist.SlimeGod: "Slime God: Rematch"
-}
+ModCompat.BossChecklist.SlimeGod: Slime God: Rematch
 
-ItemTooltips:{
+ItemTooltips: {
 	ThoriumRequire: (Radiant effects require Thorium)
 	OmniShield: -Omni Shield-
 	ImmunityVulnerable: Grants immunity to Vulnerable
@@ -441,15 +441,15 @@ ItemTooltips:{
 		Summon spectrals when damaged
 		Summon spectrals when hitting enemy
 		'''
-	LampreyScarf: 
+	LampreyScarf:
 		'''
 		Summons Lamprey Scarf
 		Increase whip range by 10%
 		Increases your max number of sentries by 1
 		'''
 	ArmillarySphere: Your sentries form a constellation that hurts for 50% of your held weapon's damage
-	Remove'Range': Range
-	Remove'range': range
+	"Remove'Range'": Range
+	"Remove'range'": range
 	SpikyCoverRework: Whip tips deal 1.5x damage and cause bleeding
 	CrossbowScope:
 		'''
@@ -470,45 +470,46 @@ ItemTooltips:{
 	PoisonEffect: Inflicts Poison
 	HolyFlamesEffect: Inflicts Holy Flames
 	VaporfiedEffect: Inflicts Vaporfied
-	CommandersGaunlet:{
+
+	CommandersGaunlet: {
 		OrigTooltip: melee speed
 		Replace: whip speed
 	}
-	GrayRook:{
-		Remove'UseTime': -item use time decreased by 35%
 
+	GrayRook: {
+		"Remove'UseTime'": -item use time decreased by 35%
 		OrigTooltip1: Increase your melee speed by 2% and
 		Replace1: Increase your
 		OrigTooltip2: -whip range increased by 35%
 		Replace2: -whip range increased by 25%
-
 		MeleeRebalance: -melee size increased by 25%
 		RogueRebalance: -rogue attack speed is increased by 10%
 		HealerRebalance: -healing bonus is increased by 1
 		BardRebalance: -max inspiration is increased by 2
 	}
-	GrayRookBuff:{
+
+	GrayRookBuff: {
 		OrigTooltip1: whip range increased by 30%
 		Replace1: whip range increased by 25%
 		OrigTooltip2: item use time decreased by 35%
 		Replace2: thrower attack speed is increased by 10%
-
 		MeleeRebalance:
 			'''
 
 			melee size increased by 25%
 			'''
-		HealerRebalance: 
+		HealerRebalance:
 			'''
-			
+
 			healing bonus is increased by 1
 			'''
 		BardRebalance:
 			'''
 
-			max inspiration is increased by 2
+			max inspiration is increased by 5
 			'''
 	}
+
 	OrichalcumCross:
 		'''
 		+4% increased radiant damage
@@ -575,7 +576,20 @@ ItemTooltips:{
 		Heals you by 20 health for every 100 mana consumed
 		Healing spells will heal an additional 6 life
 		'''
-	MushroomAccessory:{
+	MoonwalkEffect:
+		'''
+		Grants the effects of featherfall
+		Increases jump height by 5% for each minion you've summoned
+		Damage dealt by minions charge up the power meter
+		When the meter is full, double tap UP to grant you and your team following buffs:
+		- 1.5x move speed and 1.2x summon damage
+		- Makes you "moonwalk" 
+		- Teammates receive 1.25x speed boost
+		These effect last for 12 seconds
+		'Hee-hee!'
+		'''
+
+	MushroomAccessory: {
 		OrigTooltip: Increase healing amount
 		Replace: Increase bonus healing by {0}
 	}
