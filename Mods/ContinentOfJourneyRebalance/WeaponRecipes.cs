@@ -1,9 +1,13 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System.Collections.Generic;
-using System.Linq;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items;
+using ContinentOfJourney.Items.Flamethrowers;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Materials;
 
 namespace HomewardRagnarok
 {
@@ -14,25 +18,9 @@ namespace HomewardRagnarok
             if (!ServerConfig.Instance.WeaponBalancing)
                 return;
 
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj)) return;
-            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamity)) return;
-
-            coj.TryFind("ClottedStaff", out ModItem clottedStaff);
-            coj.TryFind("OrganicStaff", out ModItem organicStaff);
-            coj.TryFind("Vein", out ModItem vein);
-            coj.TryFind("FT2Wildfire", out ModItem wildfire);
-            coj.TryFind("FT1Sparkthrower", out ModItem sparkthrower);
-            coj.TryFind("Denial", out ModItem denial);
-            coj.TryFind("Acceptance", out ModItem acceptance);
-            coj.TryFind("TrueDawnsBorder", out ModItem anger);
-            coj.TryFind("Depression", out ModItem depression);
-
-            calamity.TryFind("PlantationStaff", out ModItem plantationStaff);
-            calamity.TryFind("ElementalAxe", out ModItem elementalAxe);
-            calamity.TryFind("VeinBurster", out ModItem veinBurster);
-            calamity.TryFind("PerfectDark", out ModItem perfectDark);
-            calamity.TryFind("WildfireBloom", out ModItem wildfireBloom);
-            calamity.TryFind("DarkPlasma", out ModItem darkPlasma);
+            // Direct check for required mods
+            if (!ModLoader.HasMod("ContinentOfJourney") || !ModLoader.HasMod("CalamityMod"))
+                return;
 
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
@@ -44,95 +32,95 @@ namespace HomewardRagnarok
                 int resultType = recipe.createItem.type;
 
                 // Terraheart (ClottedStaff) swap OrganicStaff with PlantationStaff
-                if (clottedStaff != null && resultType == clottedStaff.Type)
+                if (resultType == ModContent.ItemType<ClottedStaff>())
                 {
-                    if (organicStaff != null && recipe.TryGetIngredient(organicStaff.Type, out Item ing))
+                    if (recipe.TryGetIngredient(ModContent.ItemType<OrganicStaff>(), out Item ing))
                     {
                         recipe.RemoveIngredient(ing.type);
-                        if (plantationStaff != null) recipe.AddIngredient(plantationStaff.Type);
+                        recipe.AddIngredient(ModContent.ItemType<PlantationStaff>());
                     }
                 }
 
                 // Plantation Staff swap BladeStaff with OrganicStaff
-                if (plantationStaff != null && resultType == plantationStaff.Type)
+                if (resultType == ModContent.ItemType<PlantationStaff>())
                 {
                     if (recipe.TryGetIngredient(ItemID.Smolstar, out Item ing))
                     {
                         recipe.RemoveIngredient(ing.type);
-                        if (organicStaff != null) recipe.AddIngredient(organicStaff.Type);
+                        recipe.AddIngredient(ModContent.ItemType<OrganicStaff>());
                     }
                 }
 
-                // Elemental Axe swap PlantationStaff with Terraheart (ClottedStaff)
-                if (elementalAxe != null && resultType == elementalAxe.Type)
-                {
-                    if (plantationStaff != null && recipe.TryGetIngredient(plantationStaff.Type, out Item ing))
-                    {
-                        recipe.RemoveIngredient(ing.type);
-                        if (clottedStaff != null) recipe.AddIngredient(clottedStaff.Type);
-                    }
-                }
 
-                // Planterror Staff (Clamity) swap PlantationStaff with Terraheart
-                if (ModLoader.TryGetMod("Clamity", out Mod clamity) && clamity.TryFind("PlanterrorStaff", out ModItem planterror))
+                // Planterror Staff (Clamity) swap PlantationStaff with Terraheart 
+                if (ModLoader.TryGetMod("Clamity", out Mod clamity))
                 {
-                    if (resultType == planterror.Type)
+                    if (clamity.TryFind("PlanterrorStaff", out ModItem planterror) && resultType == planterror.Type)
                     {
-                        if (plantationStaff != null && recipe.TryGetIngredient(plantationStaff.Type, out Item ing))
+                        if (recipe.TryGetIngredient(ModContent.ItemType<PlantationStaff>(), out Item ing))
                         {
                             recipe.RemoveIngredient(ing.type);
-                            if (clottedStaff != null) recipe.AddIngredient(clottedStaff.Type);
+                            recipe.AddIngredient(ModContent.ItemType<ClottedStaff>());
                         }
                     }
                 }
 
+                // Add Terraheart and remove BladeStaff and PlantationStaff from Legion of Celestia 
+                if (resultType == ModContent.ItemType<LegionofCelestia>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<PlantationStaff>());
+                    recipe.RemoveIngredient(ItemID.Smolstar);
+                    recipe.AddIngredient(ModContent.ItemType<ClottedStaff>());
+                }
+
+                // Remove ImpStaff from Sinking West
+                if (resultType == ModContent.ItemType<SinkingWest>())
+                {
+                    recipe.RemoveIngredient(ItemID.ImpStaff);
+                }
 
                 // Add Vein to Vein Burster
-                if (veinBurster != null && resultType == veinBurster.Type && vein != null)
+                if (resultType == ModContent.ItemType<VeinBurster>())
                 {
-                    if (perfectDark != null && !recipe.HasIngredient(perfectDark.Type))
-                        recipe.AddIngredient(vein.Type);
+                    if (!recipe.HasIngredient(ModContent.ItemType<PerfectDark>()))
+                        recipe.AddIngredient(ModContent.ItemType<Vein>());
                 }
 
                 // Add Vein to Perfect Dark
-                if (perfectDark != null && resultType == perfectDark.Type && vein != null)
+                if (resultType == ModContent.ItemType<PerfectDark>())
                 {
-                    if (veinBurster != null && !recipe.HasIngredient(veinBurster.Type))
-                        recipe.AddIngredient(vein.Type);
+                    if (!recipe.HasIngredient(ModContent.ItemType<VeinBurster>()))
+                        recipe.AddIngredient(ModContent.ItemType<Vein>());
                 }
 
-
                 // Wildfire 
-                if (wildfire != null && resultType == wildfire.Type)
+                if (resultType == ModContent.ItemType<FT2Wildfire>())
                 {
                     recipe.RemoveIngredient(ItemID.IronBar);
                     recipe.RemoveIngredient(ItemID.LeadBar);
                     recipe.RemoveIngredient(ItemID.RichMahogany);
-                    if (sparkthrower != null) recipe.AddIngredient(sparkthrower.Type);
+                    recipe.AddIngredient(ModContent.ItemType<FT1Sparkthrower>());
                 }
 
-                // Wildfire Bloom
-                if (wildfireBloom != null && resultType == wildfireBloom.Type)
+                // Wildfire Bloom 
+                if (resultType == ModContent.ItemType<WildfireBloom>())
                 {
                     if (recipe.TryGetIngredient(ItemID.Flamethrower, out Item ing))
                     {
                         recipe.RemoveIngredient(ing.type);
-                        if (wildfire != null) recipe.AddIngredient(wildfire.Type);
+                        recipe.AddIngredient(ModContent.ItemType<FT2Wildfire>());
                     }
                 }
 
                 // Add 3x Dark Plasma to Denial, Acceptance, Anger, Depression
-                if (darkPlasma != null)
+                if (resultType == ModContent.ItemType<Denial>() ||
+                    resultType == ModContent.ItemType<Acceptance>() ||
+                    resultType == ModContent.ItemType<TrueDawnsBorder>() ||
+                    resultType == ModContent.ItemType<Depression>())
                 {
-                    if ((denial != null && resultType == denial.Type) ||
-                        (acceptance != null && resultType == acceptance.Type) ||
-                        (anger != null && resultType == anger.Type) ||
-                        (depression != null && resultType == depression.Type))
+                    if (!recipe.HasIngredient(ModContent.ItemType<DarkPlasma>()))
                     {
-                        if (!recipe.HasIngredient(darkPlasma.Type))
-                        {
-                            recipe.AddIngredient(darkPlasma.Type, 3);
-                        }
+                        recipe.AddIngredient(ModContent.ItemType<DarkPlasma>(), 3);
                     }
                 }
             }
