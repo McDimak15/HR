@@ -229,15 +229,17 @@ Items: {
 }
 
 Tiles.TimelessFountainTile.MapEntry: 永恒喷泉
-
-Projectiles: {
-	BabyOilDroplet.DisplayName: 宝宝油液滴
-}
+Projectiles.BabyOilDroplet.DisplayName: 宝宝油液滴
 
 Buffs: {
 	BubbleShield: {
 		DisplayName: 泡泡护盾
 		Description: 下次受到的伤害减少10%
+	}
+
+	HeartOfThoriumBuff: {
+		DisplayName: Heart Of Thorium Buff
+		Description: 增加5点最大生命值
 	}
 }
 
@@ -423,9 +425,7 @@ Configs: {
 	}
 }
 
-ModCompat:{
-	BossChecklist.SlimeGod: "史莱姆之神：再临"
-}
+ModCompat.BossChecklist.SlimeGod: "史莱姆之神：再临"
 
 ItemTooltips:{
 	ThoriumRequire: （光辉效果需要 瑟银）
@@ -470,37 +470,37 @@ ItemTooltips:{
 	PoisonEffect: 施加中毒减益
 	HolyFlamesEffect: 施加圣火减益
 	VaporfiedEffect: 施加蒸汽波减益
+
 	CommandersGaunlet:{
 		OrigTooltip: 近战攻击速度
 		Replace: 鞭子挥舞速度
 	}
-	GrayRook:{
-		Remove'UseTime': -物品使用时间减少35%
 
+	GrayRook:{
+		"Remove'UseTime'": -物品使用时间减少35%
 		OrigTooltip1: 提高2%近战攻速与
 		Replace1: 提高
 		OrigTooltip2: -鞭子距离增加35%
 		Replace2: -鞭子距离增加25%
-
 		MeleeRebalance: -近战武器大小增加25%
 		RogueRebalance: -盗贼攻击速度提升10%
 		HealerRebalance: -额外治疗量增加1点
 		BardRebalance: -最大灵感值增加2点
 	}
+
 	GrayRookBuff:{
 		OrigTooltip1: 鞭子距离增加30%
 		Replace1: 鞭子距离增加25%
 		OrigTooltip2: 物品使用时间减少35%
 		Replace2: 盗贼攻击速度提升10%
-
 		MeleeRebalance:
 			'''
 
 			近战武器大小增加25%
 			'''
-		HealerRebalance: 
+		HealerRebalance:
 			'''
-			
+
 			额外治疗量增加1点
 			'''
 		BardRebalance:
@@ -509,6 +509,7 @@ ItemTooltips:{
 			最大灵感值增加2点
 			'''
 	}
+
 	OrichalcumCross:
 		'''
 		增加4%光辉伤害
@@ -575,6 +576,19 @@ ItemTooltips:{
 		每消耗100点魔力恢复20点生命值
 		治疗法术会额外治疗6点生命值
 		'''
+	MoonwalkEffect:
+		'''
+		获得羽落效果
+		每拥有一只召唤物，增加5%跳跃高度
+		仆从造成的伤害积蓄充能条
+		充能条满时，双击上键使你和团队获得以下效果：
+		- 1.5倍移动速度和1.2倍召唤伤害
+		- 使你能够“月球漫步”
+		- 队友获得1.25倍速度增幅
+		这些效果持续12秒
+		“嘿嘿！”
+		'''
+
 	MushroomAccessory:{
 		OrigTooltip: 治疗量
 		Replace: 增加额外{0}点治疗量 
