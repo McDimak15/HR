@@ -3,7 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using ContinentOfJourney.Items.Accessories;
+using ContinentOfJourney.Items.ThrowerWeapons;
 using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Items.Placables;
 using ContinentOfJourney.Items.Accessories.MechArms;
 using CalamityMod.Systems;
 using HomewardRagnarok.Config;
@@ -61,12 +63,27 @@ namespace HomewardRagnarok
                     recipe.RemoveIngredient(ItemID.BeeWax);
                 }
 
-                //  Star Image
+                // Star Image
                 if (recipe.createItem.type == ModContent.ItemType<StarImage>())
                 {
                     recipe.requiredItem.RemoveAll(i => i.type == ModContent.ItemType<EssenceofMatter>());
                 }
 
+                // Menger Sponge
+                if (recipe.createItem.type == ModContent.ItemType<SpongeBlock>())
+                {
+                    recipe.requiredItem.RemoveAll(i => i.type == ModContent.ItemType<EssenceofNothingness>());
+                    recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>());
+                }
+
+                // Bump Attack
+                if (recipe.createItem.type == ModContent.ItemType<BumpAttack>())
+                {
+                    recipe.requiredItem.RemoveAll(i => i.type == ModContent.ItemType<EssenceofDeath>());
+                    recipe.AddIngredient(ModContent.ItemType<EssenceofBright>(), 5);
+                }
+
+                // Survival Crisis
                 if (recipe.createItem.type == ModContent.ItemType<SurvivalCrisis>())
                 {
                     recipe.AddRecipeGroup("Boss2Material", 10);
@@ -101,6 +118,17 @@ namespace HomewardRagnarok
                         if (line.Text.Contains("Increase healing amount by 1"))
                         {
                             line.Text = "Increase healing amount by 2";
+                        }
+                    }
+                }
+
+                if (item.type == ModContent.ItemType<ItemBlueCoin>())
+                {
+                    foreach (var line in tooltips)
+                    {
+                        if (line.Text.Contains("ztar"))
+                        {
+                            line.Text = "Summons bouncing star upon each eighth hit";
                         }
                     }
                 }
