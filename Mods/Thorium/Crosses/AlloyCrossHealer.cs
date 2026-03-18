@@ -49,7 +49,7 @@ namespace HomewardRagnarok
             {
                 foreach (var tooltip in tooltips)
                 {
-                    if (tooltip.Mod == "ContinentOfJourney" && tooltip.Name.Contains("Tooltip"))
+                    if (tooltip.Mod == "Terraria" && tooltip.Name.Contains("Tooltip"))
                     {
                         tooltip.Hide();
                     }

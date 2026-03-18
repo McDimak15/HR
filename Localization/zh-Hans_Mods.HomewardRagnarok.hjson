@@ -425,9 +425,9 @@ Configs: {
 	}
 }
 
-ModCompat.BossChecklist.SlimeGod: "史莱姆之神：再临"
+ModCompat.BossChecklist.SlimeGod: 史莱姆之神：再临
 
-ItemTooltips:{
+ItemTooltips: {
 	ThoriumRequire: （光辉效果需要 瑟银）
 	OmniShield: -至高神盾-
 	ImmunityVulnerable: 使你免疫脆弱
@@ -441,15 +441,15 @@ ItemTooltips:{
 		受伤时召唤光谱追杀敌人
 		击中敌人时召唤光谱追杀敌人
 		'''
-	LampreyScarf: 
+	LampreyScarf:
 		'''
 		召唤七鳃鳗围巾
 		鞭子距离增加10%
 		增加1个最大哨兵栏
 		'''
 	ArmillarySphere: 你的哨兵连结成星座对路径上的敌人造成召唤武器的一半伤害
-	Remove'Range': 远程
-	Remove'range': 远程
+	"Remove'Range'": 远程
+	"Remove'range'": 远程
 	SpikyCoverRework: 鞭子尖端造成1.5倍伤害并施加流血
 	CrossbowScope:
 		'''
@@ -471,12 +471,12 @@ ItemTooltips:{
 	HolyFlamesEffect: 施加圣火减益
 	VaporfiedEffect: 施加蒸汽波减益
 
-	CommandersGaunlet:{
+	CommandersGaunlet: {
 		OrigTooltip: 近战攻击速度
 		Replace: 鞭子挥舞速度
 	}
 
-	GrayRook:{
+	GrayRook: {
 		"Remove'UseTime'": -物品使用时间减少35%
 		OrigTooltip1: 提高2%近战攻速与
 		Replace1: 提高
@@ -488,7 +488,7 @@ ItemTooltips:{
 		BardRebalance: -最大灵感值增加2点
 	}
 
-	GrayRookBuff:{
+	GrayRookBuff: {
 		OrigTooltip1: 鞭子距离增加30%
 		Replace1: 鞭子距离增加25%
 		OrigTooltip2: 物品使用时间减少35%
@@ -589,8 +589,8 @@ ItemTooltips:{
 		“嘿嘿！”
 		'''
 
-	MushroomAccessory:{
+	MushroomAccessory: {
 		OrigTooltip: 治疗量
-		Replace: 增加额外{0}点治疗量 
+		Replace: 增加额外{0}点治疗量
 	}
 }
