@@ -89,7 +89,7 @@ namespace HomewardRagnarok.Mods.BossChecklist
                     {
                         if (strVal.Contains("Mods.ContinentOfJourney.SG") || strVal.Contains("SG"))
                         {
-                            instr.Operand = Language.GetTextValue("Mods.HomewardRagnarok.ModCompat.BossChecklistBoss.Checklist.SlimeGod");
+                            instr.Operand = Language.GetTextValue("Mods.HomewardRagnarok.ModCompat.BossChecklist.SlimeGod");
                             return;
                         }
                     }
