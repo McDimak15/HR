@@ -67,19 +67,6 @@ namespace HomewardRagnarok
 
                 int type = recipe.createItem.type;
 
-                // Asgardian Aegis
-                if (type == ModContent.ItemType<AsgardianAegis>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<TransactionCertificate>());
-                }
-
-                // Asgard's Valor
-                if (type == ModContent.ItemType<AsgardsValor>())
-                {
-                    recipe.requiredItem.RemoveAll(i => i != null && i.type == ItemID.AnkhShield);
-                    recipe.AddIngredient(ModContent.ItemType<VanguardBreastpiece>());
-                }
-
                 // PlanebreakersPouch
                 if (type == ModContent.ItemType<PlanebreakersPouch>())
                 {

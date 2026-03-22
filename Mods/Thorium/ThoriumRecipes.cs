@@ -8,6 +8,7 @@ using ThoriumMod.Items.Sandstone;
 using ThoriumMod.Items.SummonItems;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.FurnitureStatigel;
+using CalamityMod.Items.Accessories;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
 
@@ -54,6 +55,22 @@ namespace HomewardRagnarok
                     type == ModContent.ItemType<gSandStoneThrowingKnife>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<KnifeBag>());
+                }
+
+                // Vanguard Breastpiece
+                if (type == ModContent.ItemType<VanguardBreastpiece>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<TerrariumDefender>());
+                    recipe.RemoveIngredient(ItemID.AnkhShield);
+                    recipe.requiredTile.Clear();
+                    recipe.AddTile(TileID.LunarCraftingStation);
+                }
+
+                // Rampart of Deities
+                if (type == ModContent.ItemType<RampartofDeities>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<VanguardBreastpiece>());
+                    recipe.RemoveIngredient(ModContent.ItemType<TerrariumDefender>());
                 }
             }
         }

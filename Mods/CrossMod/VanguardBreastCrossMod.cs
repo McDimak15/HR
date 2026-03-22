@@ -10,7 +10,7 @@ using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
 {
-    public class AsgardianAegisBuffs : GlobalItem
+    public class VanguardBreastpieceCrossmod : GlobalItem
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
@@ -21,34 +21,14 @@ namespace HomewardRagnarok.CrossMod
 
             string name = item.ModItem.Name;
 
-            if (name == "AsgardianAegis" || name == "ColossusSoul" || name == "DimensionSoul" ||
-                name == "EternitySoul" || name == "SupremeBarrier")
+            if (name == "RampartofDeities" || name == "SupremeBarrier")
             {
-                player.noKnockback = true;
-                player.buffImmune[BuffID.Burning] = true;
-                player.buffImmune[BuffID.OnFire] = true;
-                player.buffImmune[BuffID.OnFire3] = true;
-                player.buffImmune[BuffID.Weak] = true;
-                player.buffImmune[BuffID.Bleeding] = true;
-                player.buffImmune[BuffID.Poisoned] = true;
-                player.buffImmune[BuffID.BrokenArmor] = true;
-                player.buffImmune[BuffID.Confused] = true;
-                player.buffImmune[BuffID.Darkness] = true;
-                player.buffImmune[BuffID.Silenced] = true;
-                player.buffImmune[BuffID.Chilled] = true;
-                player.buffImmune[BuffID.Slow] = true;
-                player.buffImmune[BuffID.Cursed] = true;
-                player.buffImmune[BuffID.Stoned] = true;
-                player.buffImmune[BuffID.Venom] = true;
-                player.buffImmune[BuffID.CursedInferno] = true;
-                player.buffImmune[BuffID.Ichor] = true;
-
-                if (ModLoader.TryGetMod("ContinentOfJourney", out Mod cojMod))
-                {
-                    int vulnerableBuff = ModContent.BuffType<ContinentOfJourney.Buffs.VulnerableBuff>();
-                    player.buffImmune[vulnerableBuff] = true;
-                }
-
+                player.buffImmune[39] = true;
+                player.buffImmune[67] = true;
+                player.buffImmune[69] = true;
+                player.buffImmune[70] = true;
+                player.buffImmune[ModContent.BuffType<ContinentOfJourney.Buffs.VulnerableBuff>()] = true;
+                
                 player.GetModPlayer<TemplatePlayer>().PinkPenny = true;
                 player.GetModPlayer<TemplatePlayer>().TransactionCertificate = true;
             }
@@ -63,9 +43,9 @@ namespace HomewardRagnarok.CrossMod
 
             string name = item.ModItem.Name;
 
-            if (name == "AsgardianAegis" || name == "SupremeBarrier" || name == "ColossusSoul")
+            if (name == "RampartofDeities" || name == "SupremeBarrier")
             {
-                if (name == "SupremeBarrier" && Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.LeftControl))
+                if ((name == "SupremeBarrier" || name == "RampartofDeities") && Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.LeftControl))
                 {
                     return;
                 }
@@ -90,9 +70,8 @@ namespace HomewardRagnarok.CrossMod
                     }
                 }
                 int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ImmunityVulnerable")) { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok2", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommemorativeCoin")) { OverrideColor = animatedColor });
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok3", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TransactionCertificate")) { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok1", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.CommemorativeCoin")) { OverrideColor = animatedColor });
+                tooltips.Insert(insertAt, new TooltipLine(Mod, "HomewardRagnarok2", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TransactionCertificate")) { OverrideColor = animatedColor });
             }
         }
     }
