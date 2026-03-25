@@ -96,7 +96,9 @@ namespace HomewardRagnarok
                 // Seraph Tracers
                 if (type == ModContent.ItemType<SeraphTracers>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<Altitude>());
+                    recipe.AddIngredient(ModContent.ItemType<Horizon>());
+                    recipe.AddIngredient(ModContent.ItemType<Edgewalker>());
+                    recipe.RemoveIngredient(ModContent.ItemType<VoidStriders>());
                 }
 
                 // Statis Curse

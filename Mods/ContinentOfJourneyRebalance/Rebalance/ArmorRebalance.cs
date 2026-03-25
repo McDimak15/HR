@@ -151,34 +151,6 @@ namespace HomewardRagnarok
         {
             if (!ServerConfig.Instance.ArmorCraft)
                 return;
-
-            if (ModLoader.TryGetMod("ContinentOfJourney", out var coj) &&
-                ModLoader.TryGetMod("CalamityMod", out var calamity))
-            {
-                int bioHelm = coj.Find<ModItem>("BiologicalHelmet")?.Type ?? -1;
-                int bioChest = coj.Find<ModItem>("BiologicalBreastplate")?.Type ?? -1;
-                int bioLegs = coj.Find<ModItem>("BiologicalLeggings")?.Type ?? -1;
-
-                int godSlayerHelm = calamity.Find<ModItem>("GodSlayerHeadMelee")?.Type ?? -1;
-                int godSlayerChest = calamity.Find<ModItem>("GodSlayerChestplate")?.Type ?? -1;
-                int godSlayerLegs = calamity.Find<ModItem>("GodSlayerLeggings")?.Type ?? -1;
-
-                int vortexHelm = Terraria.ID.ItemID.VortexHelmet;
-                int vortexChest = Terraria.ID.ItemID.VortexBreastplate;
-                int vortexLegs = Terraria.ID.ItemID.VortexLeggings;
-
-                foreach (Recipe recipe in Main.recipe)
-                {
-                    if (recipe.createItem.type == bioHelm)
-                        ReplaceIngredient(recipe, vortexHelm, godSlayerHelm);
-
-                    if (recipe.createItem.type == bioChest)
-                        ReplaceIngredient(recipe, vortexChest, godSlayerChest);
-
-                    if (recipe.createItem.type == bioLegs)
-                        ReplaceIngredient(recipe, vortexLegs, godSlayerLegs);
-                }
-            }
         }
 
         private void ReplaceIngredient(Recipe recipe, int oldItem, int newItem)

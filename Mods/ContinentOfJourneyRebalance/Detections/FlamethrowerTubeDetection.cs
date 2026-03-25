@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
-using Terraria.Audio; // Required for SoundEngine
+using Terraria.Audio; 
 using ContinentOfJourney;
 using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories.Bookmarks;
@@ -13,7 +13,7 @@ using ContinentOfJourney.Items.Material;
 using ContinentOfJourney.Projectiles.Flame;
 using ContinentOfJourney.Buffs;
 using ContinentOfJourney.Buffs.JavalinBuffs;
-using ContinentOfJourney.NPCs; // Required for Javelin_GlobalNPC
+using ContinentOfJourney.NPCs; 
 
 namespace HomewardRagnarok
 {
@@ -35,11 +35,6 @@ namespace HomewardRagnarok
             else if (projectile.aiStyle == 8)
             {
                 IsFlamethrower = true;
-            }
-
-            if (IsFlamethrower)
-            {
-                //Main.NewText("DEBUG: Flamethrower Projectile Spawned!"); 
             }
 
             if (projectile.type == ModContent.ProjectileType<Flame>())
@@ -179,7 +174,6 @@ namespace HomewardRagnarok
 
             if (modPlayer.isUsingTestTube)
             {
-                // Re-added the missing knockout detection
                 bool knockOut = false;
                 if (target.life <= 0 && !target.active) knockOut = true;
                 else if (target.realLife >= 0) if (damageDone >= Main.npc[target.realLife].life) knockOut = true;
@@ -214,7 +208,7 @@ namespace HomewardRagnarok
                     int num = Projectile.NewProjectile(projectile.GetSource_FromThis(), vector.X, vector.Y, spinningpoint.X, spinningpoint.Y, 975, projectile.damage, 3f, projectile.owner, 1f, target.whoAmI);
                     Main.projectile[num].StatusNPC(target.whoAmI);
                     Main.projectile[num].timeLeft = efx * 120;
-                    Projectile.KillOldestJavelin(num, 975, target.whoAmI, new Point[5]); // Static method
+                    Projectile.KillOldestJavelin(num, 975, target.whoAmI, new Point[5]);
                 }
 
                 efx = CountItem(player, ItemID.IceBlock);

@@ -1,62 +1,73 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using ContinentOfJourney.Items.Accessories;
+using ContinentOfJourney;
+using ContinentOfJourney.Projectiles;
+using System;
 
 namespace HomewardRagnarok
 {
-    public class HorizonBootsPlayer : ModPlayer
+    public class HorizonRebalance : GlobalItem
     {
-        private bool hasHorizonBoots;
-        private bool fargoLoaded;
+        private float flightCounter = 0f;
 
-        public override void OnEnterWorld()
+        public override bool InstancePerEntity => true;
+
+        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            fargoLoaded = ModLoader.HasMod("FargowiltasSouls");
-        }
-
-        public override void ResetEffects()
-        {
-            hasHorizonBoots = false;
-        }
-
-        public override void PostUpdateEquips()
-        {
-            int horizonBootsType = ModContent.ItemType<ContinentOfJourney.Items.Accessories.Horizon>();
-
-            for (int i = 3; i < 8 + Player.extraAccessorySlots; i++)
+            if (item.type == ModContent.ItemType<Horizon>())
             {
-                Item item = Player.armor[i];
-                if (item != null && !item.IsAir && item.type == horizonBootsType)
-                {
-                    hasHorizonBoots = true;
-                    break;
-                }
-            }
+                var cojPlayer = player.GetModPlayer<TemplatePlayer>();
 
-            if (hasHorizonBoots)
-            {
-                Player.accRunSpeed = 6f;
-                Player.maxRunSpeed = 6f;
-                Player.rocketBoots = Player.vanityRocketBoots = 4;
-                Player.moveSpeed += 0.08f;
-                Player.iceSkate = true;
-                Player.waterWalk = true;
-                Player.fireWalk = true;
-                Player.lavaMax += 420;
-                Player.lavaRose = true;
-                Player.desertBoots = true;
-                Player.jumpBoost = true;
-                Player.noFallDmg = true;
 
-                if (fargoLoaded)
+                if (player.controlJump && cojPlayer.Horizon_Time > 0 && cojPlayer.Horizon_Time < 165)
                 {
-                    Mod fargo = ModLoader.GetMod("FargowiltasSouls");
-                    if (fargo != null)
+                    if (Main.GameUpdateCount % 2 == 0 && player.velocity.Y != 0)
                     {
-                        fargo.Call("AddEffect", Player, "MasoAeolusFlower");
-                        fargo.Call("AddEffect", Player, "MasoAeolusFrog");
+                        cojPlayer.Horizon_Time += 1;
                     }
+                }
+
+                player.moveSpeed -= 0.03f;
+                player.accRunSpeed -= 3.25f;
+
+                if (player.equippedWings == null)
+                {
+                    if (player.controlJump && cojPlayer.Horizon_Time > 0 && player.velocity.Y != 0)
+                    {
+                        flightCounter += 1f;
+
+                        float progress = MathHelper.Clamp(flightCounter / 150f, 0f, 1f);
+
+                        if (player.velocity.Y > -20.5f)
+                        {
+                            float smoothThrust = MathHelper.Lerp(0.25f, 0.65f, progress);
+
+                            player.velocity.Y -= smoothThrust;
+                        }
+
+                        if (player.velocity.Y > 0f) player.velocity.Y -= 0.15f;
+
+                        if (Main.rand.NextBool(5) && Main.myPlayer == player.whoAmI)
+                        {
+                            int proj = Projectile.NewProjectile(player.GetSource_Accessory(item), player.MountedCenter,
+                                new Vector2(Main.rand.NextFloat(-50f, 50f), 0),
+                                ModContent.ProjectileType<Horizon_Ascension>(), 0, 0f, player.whoAmI);
+                            Main.projectile[proj].netUpdate = true;
+                        }
+                    }
+                    else
+                    {
+                        flightCounter = 0f;
+                    }
+                }
+                else if (!hideVisual && player.velocity.Y < player.oldVelocity.Y && player.controlJump && Main.rand.NextBool(3) && Main.myPlayer == player.whoAmI)
+                {
+                    int proj = Projectile.NewProjectile(player.GetSource_Accessory(item), player.MountedCenter,
+                        new Vector2(Main.rand.NextFloat(-50f, 50f), 0),
+                        ModContent.ProjectileType<Horizon_Ascension>(), 0, 0f, player.whoAmI);
+                    Main.projectile[proj].netUpdate = true;
                 }
             }
         }

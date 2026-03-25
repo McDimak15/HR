@@ -14,8 +14,6 @@ namespace HomewardRagnarok.CrossMod
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (!ServerConfig.Instance.SOTSBalance) return;
-
             if (item.ModItem == null) return;
 
             string name = item.ModItem.Name;

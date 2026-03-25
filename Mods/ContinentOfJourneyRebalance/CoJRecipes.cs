@@ -7,7 +7,10 @@ using ContinentOfJourney.Items.ThrowerWeapons;
 using ContinentOfJourney.Items.Material;
 using ContinentOfJourney.Items.Placables;
 using ContinentOfJourney.Items.Accessories.MechArms;
+using ContinentOfJourney.Tiles;
 using CalamityMod.Systems;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Wings;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
@@ -46,6 +49,15 @@ namespace HomewardRagnarok
                 .AddIngredient(ModContent.ItemType<SwollenStar>(), 5)
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
+
+            // Crossbow Scope 
+            Recipe.Create(ModContent.ItemType<CrossbowScope>())
+                .AddIngredient(ModContent.ItemType<StarQuiver>(), 1)
+                .AddIngredient(ModContent.ItemType<MachinaScope>(), 1)
+                .AddIngredient(ModContent.ItemType<EternalBar>(), 6)
+                .AddIngredient(ModContent.ItemType<SolarFlareScoria>(), 12)
+                .AddTile(TileID.LunarCraftingStation)
+                .Register();
         }
 
         public override void PostAddRecipes()
@@ -70,7 +82,7 @@ namespace HomewardRagnarok
                 }
 
                 // Menger Sponge
-                if (recipe.createItem.type == ModContent.ItemType<SpongeBlock>())
+                if (recipe.createItem.type == ModContent.ItemType<ContinentOfJourney.Items.Placables.SpongeBlock>())
                 {
                     recipe.requiredItem.RemoveAll(i => i.type == ModContent.ItemType<EssenceofNothingness>());
                     recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>());
@@ -89,21 +101,23 @@ namespace HomewardRagnarok
                     recipe.AddRecipeGroup("Boss2Material", 10);
                 }
 
+                // Horizon
+                if (recipe != null && recipe.createItem.type == ModContent.ItemType<Horizon>())
+                    recipe.DisableRecipe();
+
                 // Disable Crossbow Scope 
                 if (recipe.createItem.type == ModContent.ItemType<CrossbowScope>())
                 {
                     recipe.DisableRecipe();
                 }
-
             }
 
-            // Crossbow Scope 
-            Recipe.Create(ModContent.ItemType<CrossbowScope>())
-                .AddIngredient(ModContent.ItemType<StarQuiver>(), 1)
-                .AddIngredient(ModContent.ItemType<MachinaScope>(), 1)
-                .AddIngredient(ModContent.ItemType<EternalBar>(), 6)
-                .AddIngredient(ModContent.ItemType<SolarFlareScoria>(), 12)
-                .AddTile(TileID.LunarCraftingStation)
+
+            Recipe.Create(ModContent.ItemType<Horizon>())
+                .AddIngredient(ModContent.ItemType<VoidStriders>())
+                .AddIngredient(ModContent.ItemType<TankOfThePastJungle>(), 6)
+                .AddIngredient(ModContent.ItemType<FinalBar>(), 1)
+                .AddTile(ModContent.TileType<ContinentOfJourney.Tiles.FinalAnvil>())
                 .Register();
         }
 

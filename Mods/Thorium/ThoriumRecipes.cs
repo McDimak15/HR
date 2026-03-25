@@ -56,22 +56,6 @@ namespace HomewardRagnarok
                 {
                     recipe.AddIngredient(ModContent.ItemType<KnifeBag>());
                 }
-
-                // Vanguard Breastpiece
-                if (type == ModContent.ItemType<VanguardBreastpiece>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<TerrariumDefender>());
-                    recipe.RemoveIngredient(ItemID.AnkhShield);
-                    recipe.requiredTile.Clear();
-                    recipe.AddTile(TileID.LunarCraftingStation);
-                }
-
-                // Rampart of Deities
-                if (type == ModContent.ItemType<RampartofDeities>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<VanguardBreastpiece>());
-                    recipe.RemoveIngredient(ModContent.ItemType<TerrariumDefender>());
-                }
             }
         }
     }

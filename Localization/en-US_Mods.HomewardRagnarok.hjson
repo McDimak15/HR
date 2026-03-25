@@ -154,76 +154,76 @@ Items: {
 
 	PriestessRodRelic: {
 		Tooltip: ""
-		DisplayName: Priestess Rod Relic
+		DisplayName: Infernal Priestess Rod Relic
 	}
 
 	ChariotRelic: {
 		Tooltip: ""
-		DisplayName: Chariot Relic
+		DisplayName: Infernal Chariot Relic
 	}
 
 	MarquisMoonsquidRelic: {
 		Tooltip: ""
-		DisplayName: Marquis Moonsquid Relic
+		DisplayName: Infernal Marquis Moonsquid Relic
 	}
 
 	BigDipperRelic: {
 		Tooltip: ""
-		DisplayName: Big Dipper Relic
+		DisplayName: Infernal Big Dipper Relic
 	}
 
 	PuppetRelic: {
-		DisplayName: Puppet Relic
+		DisplayName: Infernal Puppet Relic
 		Tooltip: ""
 	}
 
 	TheMotherbrainRelic: {
 		Tooltip: ""
-		DisplayName: The Motherbrain Relic
+		DisplayName: Infernal The Motherbrain Relic
 	}
 
 	DiverRelic: {
 		Tooltip: ""
-		DisplayName: Diver Relic
+		DisplayName: Infernal Diver Relic
 	}
 
 	SolarRelic: {
-		DisplayName: Solar Relic
+		DisplayName: Infernal Solar Relic
 		Tooltip: ""
 	}
 
 	TheOverwatcherRelic: {
-		DisplayName: The Overwatcher Relic
+		DisplayName: Infernal The Overwatcher Relic
 		Tooltip: ""
 	}
 
 	WallofShadowRelic: {
-		DisplayName: Wall of Shadow Relic
+		DisplayName: Infernal Wall of Shadow Relic
 		Tooltip: ""
 	}
 
 	TheMaterealizerRelic: {
 		Tooltip: ""
-		DisplayName: The Materealizer Relic
+		DisplayName: Infernal The Materealizer Relic
 	}
 
 	TheLifebringerRelic: {
 		Tooltip: ""
-		DisplayName: The Lifebringer Relic
+		DisplayName: Infernal The Lifebringer Relic
 	}
 
 	ScarabBeliefRelic: {
 		Tooltip: ""
-		DisplayName: Scarab Belief Relic
+		DisplayName: Infernal Scarab Belief Relic
 	}
 
 	TheSonRelic: {
-		DisplayName: The Son Relic
+		DisplayName: Infernal The Son Relic
 		Tooltip: ""
 	}
 
 	WhaleRelic: {
-		DisplayName: World's End Everlasting Falling Whale Relic
+		DisplayName: Infernal World's End Everlasting Falling Whale Relic
 		Tooltip: ""
 	}
 }
@@ -238,8 +238,38 @@ Buffs: {
 	}
 
 	HeartOfThoriumBuff: {
-		DisplayName: Heart Of Thorium Buff
-		Description: Increase Max inspiration by 5
+		DisplayName: Heart Of Thorium
+		Description: Max inspiration increased by 5
+	}
+
+	HeartOfLifeQuartzBuff: {
+		DisplayName: Heart Of Life Quartz
+		Description: Bonus healing increasedby 2
+	}
+
+	HeartOfAqualiteBuff: {
+		DisplayName: Heart Of Aquaite
+		Description: Movement Speed increased by 5%
+	}
+
+	HeartOfSmoothCoalBuff: {
+		DisplayName: Heart Of Smooth Coal
+		Description: Negates fall damage
+	}
+
+	HeartOfLodestoneBuff: {
+		DisplayName: Heart Of Lodestone
+		Description: Critical chance increased by 5%
+	}
+
+	HeartOfValadiumBuff: {
+		DisplayName: Heart Of Valadium
+		Description: Critical chance increased by 5%
+	}
+
+	HeartOfIllumiteBuff: {
+		DisplayName: Heart Of Illumite
+		Description: Defense increased by 10%
 	}
 }
 
@@ -428,13 +458,11 @@ Configs: {
 ModCompat.BossChecklist.SlimeGod: Slime God: Rematch
 
 ItemTooltips: {
-	ThoriumRequire: (Radiant effects require Thorium)
 	OmniShield: -Omni Shield-
 	ImmunityVulnerable: Grants immunity to Vulnerable
 	CommemorativeCoin: Damage taken by debuffs decreased by 35%
 	TransactionCertificate: Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown
-	SolarPanel: Generates energy balls while moving
-	CircuitChip: Summons a mini linka to fight for you
+	AbyssCore: Emits light on your cursorˊs position
 	GrandSpectral:
 		'''
 		Increases length of invincibility
@@ -474,6 +502,25 @@ ItemTooltips: {
 	CommandersGaunlet: {
 		OrigTooltip: melee speed
 		Replace: whip speed
+	}
+
+	Edgewalker: {
+		EdgeCrit: 6% increased critical strike chance
+		EdgeRocket: Perfect your ability to use explosive launchers
+	}
+
+	VanguardBreastpiece: {
+		Remove1: Grants immunity to Knockback
+		Remove2: Slightly increase your invis time
+		OrigTooltip1: Grants immunity to Burning and most debuffs
+		Replace1: Grants immunity to most status debuffs, knockback, and fire blocks
+		Sots1: Surrounds you with 4 orbital projectiles
+		Sots2: Launches attackers away from you with javelins
+		Sots3: Increases void gain by 2 and life regeneration by 1
+		Sots4: Reduces damage taken by 7% and increases critical strike chance by 4%
+		Sots5: Projectiles disabled when hidden
+		Thorium1: When above 25% life, absorbs 25% of damage done to nearby players on your team
+		Thorium2: When below 25% life, you will rapidly regenerate life and gain increased defense
 	}
 
 	GrayRook: {
