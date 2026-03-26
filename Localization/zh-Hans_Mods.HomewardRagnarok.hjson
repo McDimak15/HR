@@ -238,8 +238,38 @@ Buffs: {
 	}
 
 	HeartOfThoriumBuff: {
-		DisplayName: Heart Of Thorium Buff
-		Description: 增加5点最大生命值
+		DisplayName: 瑟银之心
+		Description: 增加5点最大灵感值
+	}
+
+	HeartOfLifeQuartzBuff: {
+		DisplayName: 生命石英之心
+		Description: 增加2点额外治疗量
+	}
+
+	HeartOfAqualiteBuff: {
+		DisplayName: 海洋之心
+		Description: 提升5%移动速度
+	}
+
+	HeartOfSmoothCoalBuff: {
+		DisplayName: 光滑煤之心
+		Description: 免疫摔落伤害
+	}
+
+	HeartOfLodestoneBuff: {
+		DisplayName: 地脉之心
+		Description: 增加5%暴击率
+	}
+
+	HeartOfValadiumBuff: {
+		DisplayName: 虚金之心
+		Description: 增加5%暴击率
+	}
+
+	HeartOfIllumiteBuff: {
+		DisplayName: 荧光之心
+		Description: 增加10%防御力
 	}
 }
 
@@ -428,13 +458,11 @@ Configs: {
 ModCompat.BossChecklist.SlimeGod: 史莱姆之神：再临
 
 ItemTooltips: {
-	ThoriumRequire: （光辉效果需要 瑟银）
 	OmniShield: -至高神盾-
 	ImmunityVulnerable: 使你免疫脆弱
 	CommemorativeCoin: 减少35%你受到的减益伤害
 	TransactionCertificate: 受到致命伤害时将hp锁定为1点，有10分钟冷却时间
-	SolarPanel: 当你移动时，在你的位置生成能量球
-	CircuitChip: 召唤一只迷你林卡为你而战
+	AbyssCore: 鼠标位置发光
 	GrandSpectral:
 		'''
 		延长你的无敌时间
@@ -474,6 +502,25 @@ ItemTooltips: {
 	CommandersGaunlet: {
 		OrigTooltip: 近战攻击速度
 		Replace: 鞭子挥舞速度
+	}
+
+	Edgewalker: {
+		EdgeCrit: 提高6%暴击率
+		EdgeRocket: 完善你使用火炮的能力
+	}
+
+	VanguardBreastpiece: {
+		Remove1: 免疫击退
+		Remove2: 略微延长你的无敌时间
+		OrigTooltip1: 对着火与大部分减益免疫
+		Replace1: 免疫大部分状态减益、击退和火块
+		Sots1: 使4个轨道弹幕围绕你
+		Sots2: 发射能让攻击者远离你的标枪
+		Sots3: 增加2点虚空恢复量和1点生命恢复速度
+		Sots4: 降低7%所受伤害，并增加4%暴击率
+		Sots5: 隐藏外观时会禁用弹幕
+		Thorium1: 高于25%生命值时，可吸收团队附近队友所受伤害的25%
+		Thorium2: 低于25%生命值时，你会快速再生生命并增加防御
 	}
 
 	GrayRook: {
