@@ -9,12 +9,14 @@ using CalamityMod.Items.Weapons.Rogue;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.Furniture.CraftingStations;
 using CalamityMod.Items.Potions;
+using CalamityMod.Systems;
 using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
 using ContinentOfJourney.Items.Material;
+using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.Calamity
 {
     public class CalamityRecipes : ModSystem
     {
@@ -31,7 +33,6 @@ namespace HomewardRagnarok
                 .Register();
 
             // Omega
-
             Recipe.Create(ModContent.ItemType<Omega>())
                 .AddIngredient(ModContent.ItemType<EssenceofEleum>(), 5)
                 .AddIngredient(ModContent.ItemType<CryonicBar>(), 7)
@@ -70,15 +71,10 @@ namespace HomewardRagnarok
                 // PlanebreakersPouch
                 if (type == ModContent.ItemType<PlanebreakersPouch>())
                 {
+                    recipe.RemoveRecipeGroup(RecipeSystem.AnyQuiver);
+                    recipe.RemoveIngredient(ItemID.MagicQuiver);
                     recipe.AddIngredient(ModContent.ItemType<CrossbowScope>());
                 }
-
-                // Nucleogenesis
-                if (type == ModContent.ItemType<Nucleogenesis>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<ArmillarySphere>());
-                }
-
 
                 // Elemental Gauntlet
                 if (type == ModContent.ItemType<ElementalGauntlet>())
@@ -101,17 +97,40 @@ namespace HomewardRagnarok
                     recipe.RemoveIngredient(ModContent.ItemType<VoidStriders>());
                 }
 
+                // Nucleogenesis
+                if (type == ModContent.ItemType<Nucleogenesis>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<LampreyScarf>());
+                }
+
+                // Star-Tainted Generator
+                if (type == ModContent.ItemType<StarTaintedGenerator>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<ConstructionPDA>());
+                    recipe.AddIngredient(ModContent.ItemType<SoulofBlight>(), 10);
+                }
+
                 // Statis Curse
                 if (type == ModContent.ItemType<StatisCurse>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<ConstructionPDA>());
-                    recipe.AddIngredient(ModContent.ItemType<LampreyScarf>());
+                    recipe.RemoveIngredient(ModContent.ItemType<StatisBlessing>());
+                    recipe.RemoveIngredient(ModContent.ItemType<Necroplasm>());
+                    recipe.AddIngredient(ModContent.ItemType<DivineNecklace>());
+                    recipe.AddIngredient(ModContent.ItemType<EssenceofNothingness>(), 6);
+                }
+
+                // Sigil of Calamitas
+                if (type == ModContent.ItemType<SigilofCalamitas>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<Negatama>());
                 }
 
                 // Ethereal Talisman
                 if (type == ModContent.ItemType<EtherealTalisman>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<Negatama>());
+                    recipe.RemoveIngredient(ItemID.ManaFlower);
+                    recipe.RemoveRecipeGroup(RecipeGroup.recipeGroupIDs["AnyManaFlowerAccessory"]);
+                    recipe.AddIngredient(ModContent.ItemType<Starflower>());
                 }
 
                 // Knifes
@@ -154,7 +173,7 @@ namespace HomewardRagnarok
                 // Shadowspec Bar
                 if (type == ModContent.ItemType<ShadowspecBar>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>(), 5);
+                    recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>());
                 }
 
                 // Miracle Matter

@@ -11,6 +11,7 @@ using ContinentOfJourney.Tiles;
 using CalamityMod.Systems;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Accessories.Wings;
+using CalamityMod.Items.Materials;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok
@@ -48,15 +49,6 @@ namespace HomewardRagnarok
                 .AddIngredient(ItemID.Bone, 5)
                 .AddIngredient(ModContent.ItemType<SwollenStar>(), 5)
                 .AddTile(TileID.TinkerersWorkbench)
-                .Register();
-
-            // Crossbow Scope 
-            Recipe.Create(ModContent.ItemType<CrossbowScope>())
-                .AddIngredient(ModContent.ItemType<StarQuiver>(), 1)
-                .AddIngredient(ModContent.ItemType<MachinaScope>(), 1)
-                .AddIngredient(ModContent.ItemType<EternalBar>(), 6)
-                .AddIngredient(ModContent.ItemType<SolarFlareScoria>(), 12)
-                .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }
 
@@ -101,6 +93,21 @@ namespace HomewardRagnarok
                     recipe.AddRecipeGroup("Boss2Material", 10);
                 }
 
+                // Bat Hairpin
+                if (recipe.createItem.type == ModContent.ItemType<BatNecklace>())
+                {
+                    recipe.RemoveIngredient(ItemID.PygmyNecklace);
+                    recipe.AddIngredient(ModContent.ItemType<StatisBlessing>());
+                    recipe.AddIngredient(ModContent.ItemType<Necroplasm>(), 4);
+                }
+
+                // Divine Hairpin
+                if (recipe.createItem.type == ModContent.ItemType<DivineNecklace>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<DivineGeode>(), 5);
+                    recipe.AddIngredient(ModContent.ItemType<UnholyEssence>(), 3);
+                }
+
                 // Horizon
                 if (recipe != null && recipe.createItem.type == ModContent.ItemType<Horizon>())
                     recipe.DisableRecipe();
@@ -112,7 +119,23 @@ namespace HomewardRagnarok
                 }
             }
 
+            // Crossbow Scope 
+            Recipe.Create(ModContent.ItemType<CrossbowScope>())
+                .AddIngredient(ModContent.ItemType<StarQuiver>(), 1)
+                .AddIngredient(ModContent.ItemType<MachinaScope>(), 1)
+                .AddIngredient(ModContent.ItemType<TankOfThePastCorruption>(), 6)
+                .AddTile(ModContent.TileType<ContinentOfJourney.Tiles.FinalAnvil>())
+                .Register();
 
+            // Crossbow Scope 2
+            Recipe.Create(ModContent.ItemType<CrossbowScope>())
+                .AddIngredient(ModContent.ItemType<StarQuiver>(), 1)
+                .AddIngredient(ModContent.ItemType<MachinaScope>(), 1)
+                .AddIngredient(ModContent.ItemType<TankOfThePastCrimson>(), 6)
+                .AddTile(ModContent.TileType<ContinentOfJourney.Tiles.FinalAnvil>())
+                .Register();
+
+            // Horizon
             Recipe.Create(ModContent.ItemType<Horizon>())
                 .AddIngredient(ModContent.ItemType<VoidStriders>())
                 .AddIngredient(ModContent.ItemType<TankOfThePastJungle>(), 6)

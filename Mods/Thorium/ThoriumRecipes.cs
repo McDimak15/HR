@@ -6,6 +6,7 @@ using HomewardRagnarok.Config;
 using ThoriumMod.Items.Terrarium;
 using ThoriumMod.Items.Sandstone;
 using ThoriumMod.Items.SummonItems;
+using ThoriumMod.Items.Donate;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.FurnitureStatigel;
 using CalamityMod.Items.Accessories;
@@ -51,10 +52,34 @@ namespace HomewardRagnarok
                 int type = recipe.createItem.type;
 
                 // Knifes
-                if (type == ModContent.ItemType<TerrariumRippleKnife>() ||
-                    type == ModContent.ItemType<gSandStoneThrowingKnife>())
+                if (type == ModContent.ItemType<TerrariumRippleKnife>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<KnifeBag>());
+                }
+
+                // Construction PDA
+                if (type == ModContent.ItemType<ConstructionPDA>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<SteamkeeperWatch>());
+                }
+
+                // Natural Essence
+                if (type == ModContent.ItemType<NaturalEssence>())
+                {
+                    recipe.RemoveIngredient(ItemID.NaturesGift);
+                    recipe.AddIngredient(ModContent.ItemType<HungeringBlossom>());
+                }
+
+                // Ethereal Talisman
+                if (type == ModContent.ItemType<EtherealTalisman>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<HungeringBlossom>());
+                }
+
+                // Star-Tainted Generator
+                if (type == ModContent.ItemType<StarTaintedGenerator>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<SteamkeeperWatch>());
                 }
             }
         }

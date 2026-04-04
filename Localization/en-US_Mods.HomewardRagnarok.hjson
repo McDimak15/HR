@@ -226,9 +226,23 @@ Items: {
 		DisplayName: Infernal World's End Everlasting Falling Whale Relic
 		Tooltip: ""
 	}
+
+	CampfireOfTheWildheart: {
+		DisplayName: Campfire Of The Wildheart
+		Tooltip: ""
+	}
+
+	RiftGenerator: {
+		Tooltip: ""
+		DisplayName: Rift Generator
+	}
 }
 
-Tiles.TimelessFountainTile.MapEntry: Timeless Fountain Tile
+Tiles: {
+	TimelessFountainTile.MapEntry: Timeless Fountain Tile
+	CampfireOfTheWildheartTile.MapEntry: Campfire Of The Wildheart Tile
+}
+
 Projectiles.BabyOilDroplet.DisplayName: Baby Oil Droplet
 
 Buffs: {
@@ -462,6 +476,11 @@ ItemTooltips: {
 	ImmunityVulnerable: Grants immunity to Vulnerable
 	CommemorativeCoin: Damage taken by debuffs decreased by 35%
 	TransactionCertificate: Keep your HP at 1 upon receiving a fatal hit, 10 minutes cooldown
+	SteamkeeperWatch: Your sentries last forever and gain up to 15% damage over the course of 2 minutes
+	HungeringBlossom: Grants the effects of the Hungering Blossom when visibility is off
+	ConstructionPDA: Increases your max number of sentries by 1
+	DivineNecklace: Your minion will let your enemies bask in a Gods′ grace
+	ToggleWings: Shift-Right Click this item in your inventory to toggle the [i:493] wings
 	AbyssCore: Emits light on your cursorˊs position
 	GrandSpectral:
 		'''
@@ -473,7 +492,7 @@ ItemTooltips: {
 		'''
 		Summons Lamprey Scarf
 		Increase whip range by 10%
-		Increases your max number of sentries by 1
+		Increases your max number of sentries by 2
 		'''
 	ArmillarySphere: Your sentries form a constellation that hurts for 50% of your held weapon's damage
 	"Remove'Range'": Range
@@ -491,13 +510,33 @@ ItemTooltips: {
 	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
 	StarFlower:
 		'''
-		+80 max mana
-		Decrease mana usage by 12%
+		OrigTooltip1: +150 max mana and 10% decreased mana usage
+		Replace1: +150 max mana and 10% decreased mana usage
 		'''
 	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
 	PoisonEffect: Inflicts Poison
 	HolyFlamesEffect: Inflicts Holy Flames
 	VaporfiedEffect: Inflicts Vaporfied
+
+	Horizon: {
+		Remove: "'The air lifts you upward'"
+		HoldShift: Hold Shift for more
+		DefaultStats:
+			'''
+			Flight Time: 3.75 seconds
+			Max horizontal speed: 52 mph
+			Max vertical speed: 100 mph
+			'''
+		HidedStats:
+			'''
+			Horizontal acceleration: 61.32 mph/s
+			Vertical Acceleration:
+			42.98 mph/s
+			89.21 mph/s if ascending slower than 41 mph
+			326.38 mph/s if ascending while falling
+			'''
+		RunningAccel: 44% increased running acceleration
+	}
 
 	CommandersGaunlet: {
 		OrigTooltip: melee speed
@@ -533,6 +572,19 @@ ItemTooltips: {
 		RogueRebalance: -rogue attack speed is increased by 10%
 		HealerRebalance: -healing bonus is increased by 1
 		BardRebalance: -max inspiration is increased by 2
+	}
+
+	BatNecklace: {
+		OrigTooltip1: Increase your minion slot by 2
+		Replace1: Increases your max number of minions by 2, and summon damage by 12%
+		StatisBlessing: Increased minion knockback
+		ThoriumBuffs:
+			'''
+			Minion attacks have a 15% chance to produce a crystal scorpion
+			Minion attacks deal 3 more damage while a crystal scorpion is active
+			Minion and sentry attacks briefly deal 2 more damage after killing an enemy 
+			Increases max sentries by 2
+			'''
 	}
 
 	GrayRookBuff: {

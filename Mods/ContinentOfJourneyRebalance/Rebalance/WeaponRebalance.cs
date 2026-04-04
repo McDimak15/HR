@@ -3,8 +3,8 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using HomewardRagnarok.Config;
 using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.ThrowerWeapons;
@@ -175,6 +175,10 @@ namespace HomewardRagnarok
                 item.damage = 284;
                 item.mana = 8;
             }
+
+            // Ultra Star Gatling Gun
+            if (item.ModItem is UltraStarGatlingGun)
+                item.damage = 215;
 
             // Doctor Expeller
             if (item.ModItem is DoctorExpeller)
