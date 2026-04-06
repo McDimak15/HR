@@ -226,9 +226,23 @@ Items: {
 		DisplayName: 世末 · 永落鲸炼狱圣物
 		Tooltip: ""
 	}
+
+	CampfireOfTheWildheart: {
+		DisplayName: 荒野之心篝火
+		Tooltip: ""
+	}
+
+	RiftGenerator: {
+		Tooltip: ""
+		DisplayName: Rift Generator
+	}
 }
 
-Tiles.TimelessFountainTile.MapEntry: 永恒喷泉
+Tiles: {
+	TimelessFountainTile.MapEntry: 永恒喷泉
+	CampfireOfTheWildheartTile.MapEntry: 荒野之心篝火
+}
+
 Projectiles.BabyOilDroplet.DisplayName: 宝宝油液滴
 
 Buffs: {
@@ -462,6 +476,11 @@ ItemTooltips: {
 	ImmunityVulnerable: 使你免疫脆弱
 	CommemorativeCoin: 减少35%你受到的减益伤害
 	TransactionCertificate: 受到致命伤害时将hp锁定为1点，有10分钟冷却时间
+	SteamkeeperWatch: 你的哨兵可以永久存在并在2分钟内获得至多15%伤害提升
+	HungeringBlossom: 可见性关闭时获得饮魔玫瑰的效果
+	ConstructionPDA: 最大哨兵栏数量增加 1 个
+	DivineNecklace: 仆从的攻击令敌人沐浴在神的荣光下
+	ToggleWings: 在物品栏中按住Shift右键切换 [i:493] 翅膀的效果
 	AbyssCore: 鼠标位置发光
 	GrandSpectral:
 		'''
@@ -499,6 +518,26 @@ ItemTooltips: {
 	HolyFlamesEffect: 施加圣火减益
 	VaporfiedEffect: 施加蒸汽波减益
 
+	Horizon: {
+		Remove: “大气将你抬得很高很高”
+		HoldShift: 按住Shift以了解更多
+		DefaultStats:
+			'''
+			飞行时间：3.75秒
+			最高水平速度：52mph
+			最高垂直速度：100mph
+			'''
+		HidedStats:
+			'''
+			水平加速度：每秒61.32mph
+			垂直加速度：
+			每秒42.98mph
+			当上升速度低于41mph时：每秒89.21mph
+			在下降期间重新上升时：每秒326.38mph
+			'''
+		RunningAccel: 增加44%奔跑加速度
+	}
+
 	CommandersGaunlet: {
 		OrigTooltip: 近战攻击速度
 		Replace: 鞭子挥舞速度
@@ -533,6 +572,19 @@ ItemTooltips: {
 		RogueRebalance: -盗贼攻击速度提升10%
 		HealerRebalance: -额外治疗量增加1点
 		BardRebalance: -最大灵感值增加2点
+	}
+
+	BatNecklace: {
+		OrigTooltip1: 最大仆从数量增加2个
+		Replace1: 最大仆从数量增加2个并增加12%召唤伤害
+		StatisBlessing: 提升仆从击退力
+		ThoriumBuffs:
+			'''
+			仆从攻击有15%概率产生一只水晶蝎
+			水晶蝎存在时仆从攻击造成3点伤害
+			击杀敌怪后仆从和哨兵攻击短暂造成2点伤害
+			增加2个最大哨兵栏
+			'''
 	}
 
 	GrayRookBuff: {
