@@ -59,12 +59,7 @@ namespace HomewardRagnarok.CrossMod
             switch (itemName)
             {
                 case "Nucleogenesis":
-                    player.dd2Accessory = true;
-                    player.whipRangeMultiplier += 0.10f;
-                    modPlayer.Lamprey = true;
                     modPlayer.DivineNecklace = true;
-                    player.AddBuff(ModContent.BuffType<ContinentOfJourney.Buffs.LampreyBuff>(), 2);
-                    player.maxTurrets += 1; 
                     break;
 
                 case "StarTaintedGenerator":
@@ -112,7 +107,7 @@ namespace HomewardRagnarok.CrossMod
                     Lighting.AddLight((int)(Main.MouseWorld.X / 16f), (int)(Main.MouseWorld.Y / 16f), 2f, 2f, 2f);
                     break;
 
-                case "ElementalQuiver":
+                case "PlanebreakersPouch":
                     modPlayer.GooglesOn = true;
                     modPlayer.StarQuiver = true;
                     player.magicQuiver = true;
@@ -185,7 +180,7 @@ namespace HomewardRagnarok.CrossMod
                 case "AbyssalDivingSuit":
                     InsertTooltip(tooltips, "HR1", "AbyssCore");
                     break;
-                case "ElementalQuiver":
+                case "PlanebreakersPouch":
                     InsertTooltip(tooltips, "HR_Bonus1", "CrossbowScope");
                     break;
                 case "ElementalGauntlet":

@@ -6,6 +6,9 @@ using HomewardRagnarok.Config;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Accessories.Wings;
 using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.Furniture.CraftingStations;
 using CalamityMod.Items.Potions;
@@ -14,6 +17,7 @@ using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
 using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Items.Flamethrowers;
 using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
 
 namespace HomewardRagnarok.Mods.Calamity
@@ -97,10 +101,10 @@ namespace HomewardRagnarok.Mods.Calamity
                     recipe.RemoveIngredient(ModContent.ItemType<VoidStriders>());
                 }
 
-                // Nucleogenesis
-                if (type == ModContent.ItemType<Nucleogenesis>())
+                // Abyssal Diving Suit
+                if (type == ModContent.ItemType<AbyssalDivingSuit>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<LampreyScarf>());
+                    recipe.AddIngredient(ModContent.ItemType<AbyssCore>());
                 }
 
                 // Star-Tainted Generator
@@ -205,6 +209,24 @@ namespace HomewardRagnarok.Mods.Calamity
                 {
                     recipe.requiredItem.RemoveAll(i => i.type == ItemID.SuperManaPotion);
                     recipe.AddIngredient(ModContent.ItemType<UltraManaPotion>());
+                }
+
+                // Wildfire
+                if (type == ModContent.ItemType<WildfireBloom>())
+                {
+                    if (recipe.TryGetIngredient(ItemID.Flamethrower, out Item ing))
+                    {
+                        recipe.RemoveIngredient(ing.type);
+                        recipe.AddIngredient(ModContent.ItemType<FT2Wildfire>());
+                    }
+                }
+
+                // Legion of Celestia
+                if (type == ModContent.ItemType<LegionofCelestia>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<PlantationStaff>());
+                    recipe.RemoveIngredient(ItemID.Smolstar);
+                    recipe.AddIngredient(ModContent.ItemType<ClottedStaff>());
                 }
             }
         }

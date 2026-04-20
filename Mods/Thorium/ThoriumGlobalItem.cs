@@ -4,9 +4,8 @@ using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
-using ThoriumMod.Items.SummonItems;
-using ThoriumMod.Utilities;
 using HomewardRagnarok.Config;
+using ThoriumMod;
 
 namespace HomewardRagnarok.CrossMod
 {
@@ -18,13 +17,61 @@ namespace HomewardRagnarok.CrossMod
         {
             if (!ServerConfig.Instance.ThoriumBalance || item.ModItem == null) return;
 
+            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+
             if (item.ModItem.Mod.Name == "ThoriumMod")
+            {
+                if (item.ModItem.Name == "TerrariumDefender")
+                {
+                    player.buffImmune[24] = true;
+                    player.buffImmune[323] = true;
+                }
+            }
+            else if (item.ModItem.Mod.Name == "ContinentOfJourney")
             {
                 switch (item.ModItem.Name)
                 {
-                    case "TerrariumDefender":
-                        player.buffImmune[24] = true;
-                        player.buffImmune[323] = true;
+                    case "ConstructionPDA":
+                        thoriumPlayer.accSteamkeeperWatch = true;
+                        break;
+
+                    case "BatNecklace":
+                    case "DivineNecklace":
+                        thoriumPlayer.accCrystalScorpion = true;
+                        thoriumPlayer.accNecroticSkull = true;
+                        break;
+
+                    case "NaturalEssence":
+                    case "Starflower":
+                        if (hideVisual)
+                        {
+                            thoriumPlayer.hungeringBlossom = true;
+                        }
+                        break;
+                }
+            }
+        }
+
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            if (!ServerConfig.Instance.ThoriumBalance || item.ModItem == null) return;
+
+            if (item.ModItem.Mod.Name == "ContinentOfJourney")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "ConstructionPDA":
+                        InsertTooltip(tooltips, "SteamWatch", "SteamkeeperWatch");
+                        break;
+
+                    case "NaturalEssence":
+                    case "Starflower":
+                        InsertTooltip(tooltips, "HungerBlossom", "HungeringBlossom");
+                        break;
+
+                    case "BatNecklace":
+                    case "DivineNecklace":
+                        InsertTooltip(tooltips, "ThoriumBatNecklace", "BatNecklace.ThoriumBuffs");
                         break;
                 }
             }

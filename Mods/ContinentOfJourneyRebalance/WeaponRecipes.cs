@@ -18,7 +18,6 @@ namespace HomewardRagnarok
             if (!ServerConfig.Instance.WeaponBalancing)
                 return;
 
-            // Direct check for required mods
             if (!ModLoader.HasMod("ContinentOfJourney") || !ModLoader.HasMod("CalamityMod"))
                 return;
 

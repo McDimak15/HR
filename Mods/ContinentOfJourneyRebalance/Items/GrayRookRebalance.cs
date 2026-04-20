@@ -93,7 +93,7 @@ namespace HomewardRagnarok.ContinentOfJourneyRebalance.Items
                 if (tooltips[i].Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip2")))
                 {
                     tooltips[i].Text = tooltips[i].Text.Replace(
-                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip2"), 
+                        Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.OrigTooltip2"),
                         Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.Replace2"));
                 }
 
@@ -116,29 +116,6 @@ namespace HomewardRagnarok.ContinentOfJourneyRebalance.Items
             {
                 tooltips.Insert(insertAt++, new TooltipLine(Mod, "Healer", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.HealerRebalance")));
                 tooltips.Insert(insertAt++, new TooltipLine(Mod, "Bard", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRook.BardRebalance")));
-            }
-        }
-    }
-
-    public class GrayRookBuffPatch : GlobalBuff
-    {
-        public override void ModifyBuffText(int type, ref string displayName, ref string tooltip, ref int drawOffset)
-        {
-            if (type == ModContent.BuffType<GrayRookBuff>())
-            {
-                tooltip = tooltip.Replace(
-                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.OrigTooltip1"),
-                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.Replace1"));
-                tooltip = tooltip.Replace(
-                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.OrigTooltip2"), 
-                    Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.Replace2"));
-                tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.MeleeRebalance");
-
-                if (ModLoader.HasMod("ThoriumMod"))
-                {
-                    tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.HealerRebalance");
-                    tooltip += Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.GrayRookBuff.BardRebalance");
-                }
             }
         }
     }

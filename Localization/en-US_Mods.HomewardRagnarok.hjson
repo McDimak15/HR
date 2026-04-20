@@ -229,12 +229,21 @@ Items: {
 
 	CampfireOfTheWildheart: {
 		DisplayName: Campfire Of The Wildheart
-		Tooltip: ""
+		Tooltip: "'Makes you feel like you can take on multiverse'"
 	}
 
 	RiftGenerator: {
-		Tooltip: ""
 		DisplayName: Rift Generator
+		Tooltip:
+			'''
+			Increases max minions and sentries by 1
+			Generate 4 platforms to the left and right of you
+			You can right click to drag the platforms, but they will always remain symmetrical
+			Sentries can be summoned on top of the platforms
+			Minions and sentry attacks briefly deal 2 more damage after killing an enemy
+			Summons Devour Lamprey behind you
+			Whip tips deal 1.5x damage and cause bleeding
+			'''
 	}
 }
 
@@ -243,7 +252,10 @@ Tiles: {
 	CampfireOfTheWildheartTile.MapEntry: Campfire Of The Wildheart Tile
 }
 
-Projectiles.BabyOilDroplet.DisplayName: Baby Oil Droplet
+Projectiles: {
+	BabyOilDroplet.DisplayName: Baby Oil Droplet
+	DevourScarf.DisplayName: Devour Scarf
+}
 
 Buffs: {
 	BubbleShield: {
@@ -508,10 +520,10 @@ ItemTooltips: {
 		Show a bullet trace of bullet-firing guns
 		'''
 	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
-	StarFlower:
+	EtherealTalisman:
 		'''
 		OrigTooltip1: +150 max mana and 10% decreased mana usage
-		Replace1: +150 max mana and 10% decreased mana usage
+		Replace1: +230 max mana and 12% decreased mana usage
 		'''
 	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
 	PoisonEffect: Inflicts Poison
@@ -691,5 +703,11 @@ ItemTooltips: {
 	MushroomAccessory: {
 		OrigTooltip: Increase healing amount
 		Replace: Increase bonus healing by {0}
+	}
+
+	FlasksTooltip: {
+		ItemOrigTooltip: Melee and Whip attacks
+		BuffOrigTooltip: Melee attacks
+		Replace: Melee, Whip and Rogue attacks
 	}
 }

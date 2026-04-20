@@ -34,24 +34,4 @@ namespace HomewardRagnarok
             }
         }
     }
-
-    public class BattalionsBuffPatch : GlobalBuff
-    {
-        public override void Update(int type, Player player, ref int buffIndex)
-        {
-            if (type == ModContent.BuffType<BattaliansBackupBuff>())
-            {
-                player.statDefense -= 15;
-                player.endurance -= 0.50f;
-            }
-        }
-
-        public override void ModifyBuffText(int type, ref string displayName, ref string tooltip, ref int drawOffset)
-        {
-            if (type == ModContent.BuffType<BattaliansBackupBuff>())
-            {
-                tooltip = tooltip.Replace("70%", "20%").Replace("30", "15");
-            }
-        }
-    }
 }

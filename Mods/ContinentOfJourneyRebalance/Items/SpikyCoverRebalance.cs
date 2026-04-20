@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Buffs.DamageOverTime;
- using ContinentOfJourney.Items.Accessories;
+using ContinentOfJourney.Items.Accessories;
+using HomewardRagnarok.Items.Accessories;
 
 namespace HomewardRagnarok.Compat
 {
@@ -23,7 +24,6 @@ namespace HomewardRagnarok.Compat
             {
                 if (player.armor[i].type == ModContent.ItemType<SpikyCover>() ||
                     player.armor[i].type == ModContent.ItemType<LampreyScarf>() ||
-                    player.armor[i].type == ModContent.ItemType<StatisCurse>() ||
                     player.armor[i].type == ModContent.ItemType<Nucleogenesis>()
                     )
                 {
@@ -103,11 +103,11 @@ namespace HomewardRagnarok.Compat
 
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            if (item.type == ModContent.ItemType<StatisCurse>() || item.type == ModContent.ItemType<Nucleogenesis>())
+            if (item.type == ModContent.ItemType<Nucleogenesis>())
             {
                 tooltips.Insert(insertAt, new TooltipLine(Mod, "SpikyCoverRework", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SpikyCoverRework")) { OverrideColor = animatedColor });
             }
-            else if (item.type == ModContent.ItemType<SpikyCover>() || item.type == ModContent.ItemType<LampreyScarf>())
+            else if (item.type == ModContent.ItemType<SpikyCover>() || item.type == ModContent.ItemType<LampreyScarf>() || item.type == ModContent.ItemType<RiftGenerator>())
             {
                 tooltips.Insert(insertAt, new TooltipLine(Mod, "SpikyCoverRework", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SpikyCoverRework")));
             }
