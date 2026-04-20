@@ -12,6 +12,7 @@ using CalamityMod.Tiles.FurnitureStatigel;
 using CalamityMod.Items.Accessories;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
+using HomewardRagnarok.Items.Accessories;
 
 namespace HomewardRagnarok
 {
@@ -61,6 +62,12 @@ namespace HomewardRagnarok
                 if (type == ModContent.ItemType<ConstructionPDA>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<SteamkeeperWatch>());
+                }
+
+                // Rift Generator
+                if (type == ModContent.ItemType<RiftGenerator>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<TerrariumCore>(), 5);
                 }
 
                 // Natural Essence

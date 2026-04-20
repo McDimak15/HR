@@ -14,6 +14,9 @@ using SOTS.Projectiles.Minions;
 using ContinentOfJourney;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Buffs;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Rarities;
+using CalamityMod.Items.Materials;
 using HomewardRagnarok.Buffs;
 
 namespace HomewardRagnarok.Items.Accessories
@@ -33,7 +36,7 @@ namespace HomewardRagnarok.Items.Accessories
             Item.width = 32;
             Item.height = 58;
             Item.value = Item.sellPrice(0, 50, 0, 0);
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ModContent.RarityType<CosmicPurple>();
             Item.accessory = true;
             Item.defense = 8;
         }
@@ -56,7 +59,8 @@ namespace HomewardRagnarok.Items.Accessories
             CreateRecipe(1)
                 .AddIngredient(ModContent.ItemType<SOTS.Items.FortressGenerator>())
                 .AddIngredient(ModContent.ItemType<LampreyScarf>())
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddIngredient(ModContent.ItemType<AscendantSpiritEssence>(), 4)
+                .AddTile(ModContent.TileType<CosmicAnvil>())
                 .Register();
         }
     }

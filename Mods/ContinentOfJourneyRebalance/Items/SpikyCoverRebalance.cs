@@ -24,7 +24,7 @@ namespace HomewardRagnarok.Compat
             {
                 if (player.armor[i].type == ModContent.ItemType<SpikyCover>() ||
                     player.armor[i].type == ModContent.ItemType<LampreyScarf>() ||
-                    player.armor[i].type == ModContent.ItemType<Nucleogenesis>()
+                    player.armor[i].type == ModContent.ItemType<RiftGenerator>()
                     )
                 {
                     equipped = true;
@@ -57,8 +57,7 @@ namespace HomewardRagnarok.Compat
     {
         public override bool AppliesToEntity(Item item, bool lateInstantiation) => item.type == ModContent.ItemType<SpikyCover>() ||
             item.type == ModContent.ItemType<LampreyScarf>() ||
-            item.type == ModContent.ItemType<StatisCurse>() ||
-            item.type == ModContent.ItemType<Nucleogenesis>()
+            item.type == ModContent.ItemType<RiftGenerator>()
             ;
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
@@ -103,11 +102,7 @@ namespace HomewardRagnarok.Compat
 
             }
             int insertAt = maxTooltipIndex != -1 ? maxTooltipIndex + 1 : tooltips.Count;
-            if (item.type == ModContent.ItemType<Nucleogenesis>())
-            {
-                tooltips.Insert(insertAt, new TooltipLine(Mod, "SpikyCoverRework", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SpikyCoverRework")) { OverrideColor = animatedColor });
-            }
-            else if (item.type == ModContent.ItemType<SpikyCover>() || item.type == ModContent.ItemType<LampreyScarf>() || item.type == ModContent.ItemType<RiftGenerator>())
+            if (item.type == ModContent.ItemType<SpikyCover>() || item.type == ModContent.ItemType<LampreyScarf>() || item.type == ModContent.ItemType<RiftGenerator>())
             {
                 tooltips.Insert(insertAt, new TooltipLine(Mod, "SpikyCoverRework", Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SpikyCoverRework")));
             }

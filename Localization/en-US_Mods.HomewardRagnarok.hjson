@@ -153,78 +153,78 @@ Items: {
 	}
 
 	PriestessRodRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Priestess Rod Relic
 	}
 
 	ChariotRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Chariot Relic
 	}
 
 	MarquisMoonsquidRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Marquis Moonsquid Relic
 	}
 
 	BigDipperRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Big Dipper Relic
 	}
 
 	PuppetRelic: {
 		DisplayName: Infernal Puppet Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	TheMotherbrainRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal The Motherbrain Relic
 	}
 
 	DiverRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Diver Relic
 	}
 
 	SolarRelic: {
 		DisplayName: Infernal Solar Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	TheOverwatcherRelic: {
 		DisplayName: Infernal The Overwatcher Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	WallofShadowRelic: {
 		DisplayName: Infernal Wall of Shadow Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	TheMaterealizerRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal The Materealizer Relic
 	}
 
 	TheLifebringerRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal The Lifebringer Relic
 	}
 
 	ScarabBeliefRelic: {
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 		DisplayName: Infernal Scarab Belief Relic
 	}
 
 	TheSonRelic: {
 		DisplayName: Infernal The Son Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	WhaleRelic: {
 		DisplayName: Infernal World's End Everlasting Falling Whale Relic
-		Tooltip: ""
+		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	CampfireOfTheWildheart: {
@@ -242,7 +242,6 @@ Items: {
 			Sentries can be summoned on top of the platforms
 			Minions and sentry attacks briefly deal 2 more damage after killing an enemy
 			Summons Devour Lamprey behind you
-			Whip tips deal 1.5x damage and cause bleeding
 			'''
 	}
 }

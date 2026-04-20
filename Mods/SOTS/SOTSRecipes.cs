@@ -3,10 +3,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using System.Linq;
+using CalamityMod.Items.Accessories;
 using ContinentOfJourney.Items.Material;
 using ContinentOfJourney.Items.Accessories;
 using SOTS.Items;
 using SOTS.Items.Fragments;
+using SOTS.Items.Inferno;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Mods.SOTS
@@ -42,6 +44,37 @@ namespace HomewardRagnarok.Mods.SOTS
                 if (recipe.createItem.type == ModContent.ItemType<BulwarkOfTheAncients>() && !recipe.requiredItem.Any(i => i.type == ModContent.ItemType<AnkhAmulet>()))
                 {
                     recipe.AddIngredient(ModContent.ItemType<BottledBlueIce>());
+                }
+
+                // PlanebreakersPouch
+                if (recipe.createItem.type == ModContent.ItemType<PlanebreakersPouch>() && recipe.requiredItem.Any(i => i.type == ModContent.ItemType<BlazingQuiver>()))
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<BlazingQuiver>());
+                }
+
+                // FortressGenerator
+                if (recipe.createItem.type == ModContent.ItemType<FortressGenerator>())
+                {
+                    if (ModLoader.TryGetMod("ThoriumMod", out Mod thorium))
+                    {
+                        if (thorium.TryFind("SteamkeeperWatch", out ModItem watchItem))
+                        {
+                            int watchType = watchItem.Type;
+
+                            if (recipe.requiredItem.Any(i => i.type == watchType))
+                            {
+                                recipe.RemoveIngredient(watchType);
+                                recipe.AddIngredient(ModContent.ItemType<ConstructionPDA>());
+                            }
+                        }
+                    }
+                }
+
+                // Star Quiver
+                if (recipe.createItem.type == ModContent.ItemType<StarQuiver>() && recipe.requiredItem.Any(i => i.type == ItemID.MoltenQuiver))
+                {
+                    recipe.AddIngredient(ModContent.ItemType<BlazingQuiver>());
+                    recipe.RemoveIngredient(ItemID.MoltenQuiver);
                 }
             }
         }

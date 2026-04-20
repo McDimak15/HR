@@ -110,7 +110,6 @@ namespace HomewardRagnarok.Mods.Calamity
                 // Star-Tainted Generator
                 if (type == ModContent.ItemType<StarTaintedGenerator>())
                 {
-                    recipe.AddIngredient(ModContent.ItemType<ConstructionPDA>());
                     recipe.AddIngredient(ModContent.ItemType<SoulofBlight>(), 10);
                 }
 

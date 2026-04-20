@@ -1,4 +1,5 @@
 using Terraria.ModLoader;
+using Terraria.Localization;
 using InfernumMode.Content.Tiles.Relics;
 using InfernumMode.Content.Items.Relics;
 
@@ -10,7 +11,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Chariot
     public class ChariotRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Chariot Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<ChariotRelicTile>();
     }
     public class ChariotRelicTile : BaseInfernumBossRelic
@@ -22,7 +23,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Big Dipper
     public class BigDipperRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Big Dipper Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<BigDipperRelicTile>();
     }
     public class BigDipperRelicTile : BaseInfernumBossRelic
@@ -34,7 +35,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Puppet Opera
     public class PuppetRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Puppet Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<PuppetRelicTile>();
     }
     public class PuppetRelicTile : BaseInfernumBossRelic
@@ -46,7 +47,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Marquis Moonsquid 
     public class MarquisMoonsquidRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Marquis Moonsquid Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<MarquisMoonsquidRelicTile>();
     }
     public class MarquisMoonsquidRelicTile : BaseInfernumBossRelic
@@ -58,7 +59,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Priestess Rod
     public class PriestessRodRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Priestess Rod Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<PriestessRodRelicTile>();
     }
     public class PriestessRodRelicTile : BaseInfernumBossRelic
@@ -70,7 +71,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Diver
     public class DiverRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Diver Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<DiverRelicTile>();
     }
     public class DiverRelicTile : BaseInfernumBossRelic
@@ -82,7 +83,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // The Motherbrain
     public class TheMotherbrainRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal The Motherbrain Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<TheMotherbrainRelicTile>();
     }
     public class TheMotherbrainRelicTile : BaseInfernumBossRelic
@@ -94,7 +95,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Wall of Shadow
     public class WallofShadowRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Wall of Shadow Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<WallofShadowRelicTile>();
     }
     public class WallofShadowRelicTile : BaseInfernumBossRelic
@@ -106,7 +107,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Slime God
     public class SolarRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Solar Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<SolarRelicTile>();
     }
     public class SolarRelicTile : BaseInfernumBossRelic
@@ -118,7 +119,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // The Overwatcher
     public class TheOverwatcherRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal The Overwatcher Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<TheOverwatcherRelicTile>();
     }
     public class TheOverwatcherRelicTile : BaseInfernumBossRelic
@@ -130,7 +131,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // The Materealizer
     public class TheMaterealizerRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal The Materealizer Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<TheMaterealizerRelicTile>();
     }
     public class TheMaterealizerRelicTile : BaseInfernumBossRelic
@@ -142,7 +143,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // The Lifebringer
     public class TheLifebringerRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal The Lifebringer Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<TheLifebringerRelicTile>();
     }
     public class TheLifebringerRelicTile : BaseInfernumBossRelic
@@ -154,7 +155,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Scarab Belief
     public class ScarabBeliefRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal Scarab Belief Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<ScarabBeliefRelicTile>();
     }
     public class ScarabBeliefRelicTile : BaseInfernumBossRelic
@@ -166,7 +167,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // Whale
     public class WhaleRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal World's End Everlasting Falling Whale Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<WhaleRelicTile>();
     }
     public class WhaleRelicTile : BaseInfernumBossRelic
@@ -178,7 +179,7 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     // The Son
     public class TheSonRelic : BaseRelicItem
     {
-        public override string DisplayNameToUse => "Infernal The Son Relic";
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
         public override int TileID => ModContent.TileType<TheSonRelicTile>();
     }
     public class TheSonRelicTile : BaseInfernumBossRelic

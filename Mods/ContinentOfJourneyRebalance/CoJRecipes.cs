@@ -21,7 +21,7 @@ using CalamityMod.Items.Weapons.Ranged;
 
 namespace HomewardRagnarok
 {
-    public class CoJUnifiedSystem : ModSystem
+    public class CoJRecipes : ModSystem
     {
         public override void AddRecipes()
         {

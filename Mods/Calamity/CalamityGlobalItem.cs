@@ -62,10 +62,6 @@ namespace HomewardRagnarok.CrossMod
                     modPlayer.DivineNecklace = true;
                     break;
 
-                case "StarTaintedGenerator":
-                    player.maxTurrets += 1;
-                    break;
-
                 case "StatisCurse":
                     modPlayer.DivineNecklace = true;
                     break;
@@ -161,14 +157,10 @@ namespace HomewardRagnarok.CrossMod
                     InsertTooltip(tooltips, "HR2", "TransactionCertificate");
                     break;
                 case "Nucleogenesis":
-                    InsertTooltip(tooltips, "LampreyScarfBuff1", "LampreyScarf");
                     InsertTooltip(tooltips, "DivineNecklaceBuff1", "DivineNecklace");
                     break;
                 case "StatisCurse":
                     InsertTooltip(tooltips, "DivineNecklaceBuff1", "DivineNecklace");
-                    break;
-                case "StarTaintedGenerator":
-                    InsertTooltip(tooltips, "PDA1", "ConstructionPDA");
                     break;
                 case "SigilofCalamitas":
                     InsertTooltip(tooltips, "HRNegatama", "Negatama");

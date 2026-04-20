@@ -50,6 +50,15 @@ namespace HomewardRagnarok.CrossMod
                         break;
                 }
             }
+            else if (item.ModItem.Mod.Name == "HomewardRagnarok")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "RiftGenerator":
+                        thoriumPlayer.accSteamkeeperWatch = true;
+                        break;
+                }
+            }
         }
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
@@ -75,14 +84,22 @@ namespace HomewardRagnarok.CrossMod
                         break;
                 }
             }
+            else if (item.ModItem.Mod.Name == "HomewardRagnarok")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "RiftGenerator":
+                        InsertTooltip(tooltips, "SteamWatch", "SteamkeeperWatch", false);
+                        break;
+                }
+            }
         }
 
-        private void InsertTooltip(List<TooltipLine> tooltips, string lineName, string langKey)
+        private void InsertTooltip(List<TooltipLine> tooltips, string lineName, string langKey, bool animated = true)
         {
-            Color animatedColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
-
             int insertAt = tooltips.Count;
             int maxNumber = -1;
+
             for (int i = 0; i < tooltips.Count; i++)
             {
                 if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
@@ -99,7 +116,12 @@ namespace HomewardRagnarok.CrossMod
                 }
             }
 
-            tooltips.Insert(insertAt, new TooltipLine(Mod, lineName, Language.GetTextValue($"Mods.HomewardRagnarok.ItemTooltips.{langKey}")) { OverrideColor = animatedColor });
+            var newLine = new TooltipLine(Mod, lineName, Language.GetTextValue($"Mods.HomewardRagnarok.ItemTooltips.{langKey}"));
+            if (animated)
+            {
+                newLine.OverrideColor = Color.Lerp(Color.White, new Color(214, 145, 49), (float)(Math.Sin(Main.GlobalTimeWrappedHourly * 2.0) * 0.5 + 0.5));
+            }
+            tooltips.Insert(insertAt, newLine);
         }
     }
 }
