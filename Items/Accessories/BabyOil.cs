@@ -35,9 +35,6 @@ namespace HomewardRagnarok.Items.Accessories
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            tooltips.Add(new TooltipLine(Mod, "BabyOil1", "When damaged cause 3-5 droplets of oil to drop out from you"));
-            tooltips.Add(new TooltipLine(Mod, "BabyOil2", "Droplets do damage to enemies"));
-
             tooltips.Add(new TooltipLine(Mod, "BabyOilFancy", Language.GetTextValue("Mods.HomewardRagnarok.Items.BabyOil.Contributor")));
         }
 

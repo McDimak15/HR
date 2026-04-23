@@ -520,10 +520,10 @@ ItemTooltips: {
 		'''
 	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
 	EtherealTalisman:
-		'''
+	{
 		OrigTooltip1: +150 max mana and 10% decreased mana usage
 		Replace1: +230 max mana and 12% decreased mana usage
-		'''
+	}
 	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
 	PoisonEffect: Inflicts Poison
 	HolyFlamesEffect: Inflicts Holy Flames

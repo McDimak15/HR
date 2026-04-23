@@ -519,11 +519,12 @@ ItemTooltips: {
 		Показывает траекторию полёта пуль, когда вы держите в руках огнестрельное оружие
 		'''
 	DivineTouch: Атаки оружий ближнего боя заставляют ваших врагов наслождаться милостью богов
-	/* EtherealTalisman:
-		'''
+	/* 
+	EtherealTalisman: {
 		OrigTooltip1: +150 max mana and 10% decreased mana usage
 		Replace1: +230 max mana and 12% decreased mana usage
-		''' */
+	}	 
+	*/
 	Negatama: Высвобождает темную энергию, чем меньше у вас маны, тем больше урона наносёт
 	PoisonEffect: Накладывает отравление
 	HolyFlamesEffect: Накладывает святой огонь

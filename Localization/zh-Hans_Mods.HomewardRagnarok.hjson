@@ -153,88 +153,96 @@ Items: {
 	}
 
 	PriestessRodRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 天竿鱼祭司炼狱圣物
 	}
 
 	ChariotRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 哥布林战车炼狱圣物
 	}
 
 	MarquisMoonsquidRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 月光鱿侯炼狱圣物
 	}
 
 	BigDipperRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 大熊星座炼狱圣物
 	}
 
 	PuppetRelic: {
 		DisplayName: 木偶歌剧炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	TheMotherbrainRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 母脑炼狱圣物
 	}
 
 	DiverRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 深潜者炼狱圣物
 	}
 
 	SolarRelic: {
 		DisplayName: 史莱姆之神炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	TheOverwatcherRelic: {
 		DisplayName: 极视终表炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	WallofShadowRelic: {
 		DisplayName: 暗影墙炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	TheMaterealizerRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 化物天匠炼狱圣物
 	}
 
 	TheLifebringerRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 万籁携生炼狱圣物
 	}
 
 	ScarabBeliefRelic: {
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 		DisplayName: 圣甲虫信仰炼狱圣物
 	}
 
 	TheSonRelic: {
 		DisplayName: 圣子炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	WhaleRelic: {
 		DisplayName: 世末 · 永落鲸炼狱圣物
-		Tooltip: ""
+		Tooltip: 以殁者之火铸其形，其焰猩赫
 	}
 
 	CampfireOfTheWildheart: {
 		DisplayName: 荒野之心篝火
-		Tooltip: ""
+		Tooltip: “你感觉自己足以挑战整个多元宇宙”
 	}
 
 	RiftGenerator: {
-		Tooltip: ""
-		DisplayName: Rift Generator
+		DisplayName: 裂隙生成盾
+		Tooltip:
+			'''
+			+1召唤栏和哨兵栏
+			在你左右两侧生成4个平台
+			右键点击可拖动平台，但它们会始终保持对称
+			可在平台顶部召唤哨兵
+			仆从和哨兵在击杀敌人后短暂地多造成2点伤害
+			召唤神明吞噬者七鳃鳗在你身后
+			'''
 	}
 }
 
@@ -243,7 +251,10 @@ Tiles: {
 	CampfireOfTheWildheartTile.MapEntry: 荒野之心篝火
 }
 
-Projectiles.BabyOilDroplet.DisplayName: 宝宝油液滴
+Projectiles: {
+	BabyOilDroplet.DisplayName: 宝宝油液滴
+	DevourScarf.DisplayName: 吞噬者围巾
+}
 
 Buffs: {
 	BubbleShield: {
@@ -508,11 +519,11 @@ ItemTooltips: {
 		手持枪械时显示一条只有你能看到的子弹轨迹
 		'''
 	DivineTouch: 近战攻击施加圣火减益
-	StarFlower:
-		'''
-		增加80点最大魔力值
-		减少12%魔力消耗
-		'''
+	EtherealTalisman:
+	{
+		OrigTooltip1: 增加150点最大魔力值并降低10%魔力消耗
+		Replace1: 增加230点最大魔力值并降低12%魔力消耗
+	}
 	Negatama: 释放暗能量，魔力越低伤害越高
 	PoisonEffect: 施加中毒减益
 	HolyFlamesEffect: 施加圣火减益
@@ -691,5 +702,11 @@ ItemTooltips: {
 	MushroomAccessory: {
 		OrigTooltip: 治疗量
 		Replace: 增加额外{0}点治疗量
+	}
+
+	FlasksTooltip: {
+		ItemOrigTooltip: 近战与鞭子攻击
+		BuffOrigTooltip: 近战攻击
+		Replace: 近战、鞭子和盗贼攻击
 	}
 }
