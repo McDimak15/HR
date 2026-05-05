@@ -18,7 +18,6 @@ using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
 using ContinentOfJourney.Items.Material;
 using ContinentOfJourney.Items.Flamethrowers;
-using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
 
 namespace HomewardRagnarok.Mods.Calamity
 {
@@ -113,6 +112,19 @@ namespace HomewardRagnarok.Mods.Calamity
                     recipe.AddIngredient(ModContent.ItemType<SoulofBlight>(), 10);
                 }
 
+                // Ancient Blessing
+                if (type == ModContent.ItemType<AncientBlessing>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<TrinketofChi>());
+                    recipe.RemoveIngredient(ItemID.CelestialShell);
+                }
+
+                // Chalice Of The Blood God
+                if (recipe.createItem.type == ModContent.ItemType<ChaliceOfTheBloodGod>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<AncientBlessing>());
+                }
+
                 // Statis Curse
                 if (type == ModContent.ItemType<StatisCurse>())
                 {
@@ -132,7 +144,6 @@ namespace HomewardRagnarok.Mods.Calamity
                 if (type == ModContent.ItemType<EtherealTalisman>())
                 {
                     recipe.RemoveIngredient(ItemID.ManaFlower);
-                    recipe.RemoveRecipeGroup(RecipeGroup.recipeGroupIDs["AnyManaFlowerAccessory"]);
                     recipe.AddIngredient(ModContent.ItemType<Starflower>());
                 }
 
@@ -177,6 +188,13 @@ namespace HomewardRagnarok.Mods.Calamity
                 if (type == ModContent.ItemType<ShadowspecBar>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<EssenceofDeath>());
+                }
+
+                // Cold Blood
+                if (type == ModContent.ItemType<ColdBlood>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<TankOfThePastSnowland>());
+                    recipe.AddIngredient(ModContent.ItemType<UnholyEssence>(), 6);
                 }
 
                 // Miracle Matter

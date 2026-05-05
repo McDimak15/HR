@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using ContinentOfJourney.Items.Accessories;
 
-namespace HomewardRagnarok.Compat
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Items
 {
     public class AltitudePatch : GlobalItem
     {

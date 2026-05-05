@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
 using ContinentOfJourney.Items.Accessories;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.CrossMod
@@ -52,6 +54,31 @@ namespace HomewardRagnarok.CrossMod
                 // Bottled Blue Ice 
                 player.buffImmune[24] = true;
                 player.buffImmune[323] = true;
+            }
+
+            if (modName == "ContinentOfJourney" && ServerConfig.Instance.CalamityBalance)
+            {
+                if (itemName == "AncientBlessing")
+                {
+                    player.Calamity().trinketOfChi = true;
+                    if (player.whoAmI != Main.myPlayer && player.miscCounter % 10 == 0 && Main.LocalPlayer.team == player.team && player.team != 0)
+                    {
+                        Main.LocalPlayer.AddBuff(ModContent.BuffType<ChiRegenBuff>(), 20, true, false);
+                    }
+
+                    // Disable Celestial Shell
+                    player.lifeRegen -= 4;
+                    player.GetAttackSpeed(DamageClass.Melee) -= 0.1f;
+                    player.GetDamage(DamageClass.Generic) -= 0.1f;
+                    player.GetCritChance(DamageClass.Generic) -= 3;
+                    player.pickSpeed -= 0.15f;
+                    player.GetKnockback(DamageClass.Summon) -= 0.5f;
+                    player.longInvince = false;
+                    player.accMerman = false;
+                    player.wolfAcc = false;
+                    player.GetJumpState<FlipperJump>().Disable();
+                    player.gills = false;
+                }
             }
 
             if (modName != "CalamityMod") return;
@@ -118,6 +145,15 @@ namespace HomewardRagnarok.CrossMod
                     modPlayer.DivineEmblem = true;
                     break;
 
+
+                case "ChaliceOfTheBloodGod":
+                    player.Calamity().trinketOfChi = true;
+                    if (player.whoAmI != Main.myPlayer && player.miscCounter % 10 == 0 && Main.LocalPlayer.team == player.team && player.team != 0)
+                    {
+                        Main.LocalPlayer.AddBuff(ModContent.BuffType<ChiRegenBuff>(), 20, true, false);
+                    }
+                    break;
+
                 case "SeraphTracers":
                     player.GetCritChance(DamageClass.Generic) += 6;
                     modPlayer.DemolitionistsLuckyClover = true;
@@ -143,6 +179,14 @@ namespace HomewardRagnarok.CrossMod
                     InsertTooltip(tooltips, "GSS1", "GrandSpectral");
                     InsertTooltip(tooltips, "HR1", "CommemorativeCoin");
                     InsertTooltip(tooltips, "HR2", "TransactionCertificate");
+                }
+            }
+
+            if (modName == "ContinentOfJourney" && ServerConfig.Instance.CalamityBalance)
+            {
+                if (itemName == "AncientBlessing")
+                {
+                    InsertTooltip(tooltips, "TrinketOfChi", "TrinketOfChi");
                 }
             }
 

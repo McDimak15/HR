@@ -1,5 +1,12 @@
-InfernumTitle.SlimeGod:
-	'''
-	Mindless Sun Deity
-	Slime God: Rematch
-	'''
+InfernumTitle: {
+	SlimeGod:
+		'''
+		Mindless Sun Deity
+		Slime God: Rematch
+		'''
+	PuppetOpera:
+		'''
+		The Other Puppet
+		Phantom of the Opera
+		'''
+}

@@ -20,15 +20,24 @@ namespace HomewardRagnarok.Config
 
         [DefaultValue(true)]
         [ReloadRequired]
-        public bool EnableBookmarks { get; set; }
-
-        [DefaultValue(true)]
-        [ReloadRequired]
         public bool CustomContent { get; set; }
 
         [DefaultValue(true)]
         [ReloadRequired]
         public bool BloodOrbPotions { get; set; }
+
+        [Header("AccessoryChanges")]
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool PermanentToAccessories { get; set; }
+
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool EnableBookmarks { get; set; }
+
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool EnableTickets { get; set; }
 
         [Header("WeaponChanges")]
         [DefaultValue(true)]

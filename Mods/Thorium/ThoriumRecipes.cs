@@ -7,12 +7,14 @@ using ThoriumMod.Items.Terrarium;
 using ThoriumMod.Items.Sandstone;
 using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.Donate;
+using ThoriumMod.Items.BossThePrimordials.Omni;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.FurnitureStatigel;
 using CalamityMod.Items.Accessories;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
 using HomewardRagnarok.Items.Accessories;
+using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
 
 namespace HomewardRagnarok
 {
@@ -81,12 +83,19 @@ namespace HomewardRagnarok
                 if (type == ModContent.ItemType<EtherealTalisman>())
                 {
                     recipe.RemoveIngredient(ModContent.ItemType<HungeringBlossom>());
+                    recipe.RemoveRecipeGroup(RecipeGroup.recipeGroupIDs["AnyManaFlowerAccessory"]);
                 }
 
                 // Star-Tainted Generator
                 if (type == ModContent.ItemType<StarTaintedGenerator>())
                 {
                     recipe.RemoveIngredient(ModContent.ItemType<SteamkeeperWatch>());
+                }
+
+                // Ancient Blessing
+                if (type == ModContent.ItemType<AncientBlessing>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<DeathEssence>(), 3);
                 }
             }
         }

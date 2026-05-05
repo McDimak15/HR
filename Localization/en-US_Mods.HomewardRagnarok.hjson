@@ -244,6 +244,109 @@ Items: {
 			Summons Devour Lamprey behind you
 			'''
 	}
+
+	Lore: {
+		LoreBigDipper: {
+			DisplayName: Big Dipper
+			Tooltip: ""
+		}
+
+		LoreDiver: {
+			DisplayName: Diver
+			Tooltip: ""
+		}
+
+		LoreGoblinChariot: {
+			DisplayName: Goblin Chariot
+			Tooltip: ""
+		}
+
+		LoreMarquisMoonsquid: {
+			DisplayName: Marquis Moonsquid
+			Tooltip: ""
+		}
+
+		LoreOverwatcher: {
+			DisplayName: The Overwatcher
+			Tooltip: ""
+			Lore:
+				'''
+				Goblins as a race are actually fairly young in the grand scheme of Terraria. 
+				Even their oldest settlements are still young enough to be built with more modern infrastructure. 
+				Not much more can be said about their reputation as raiders that hasn't already been said or made obvious. 
+				Many saw these raiders as a pest, including me and other Goblin tribes. 
+				You'd be surprised to learn that, during the first year of my conquest, a Goblin clan was amongst the first true factions to join my side. 
+				They proved their ingenuity with wooden chariots such as these, marking my army's first real vehicle support. 
+				I have honored my alliance with this particular tribe, even when a new addition to my army replaced every single one of their sciences with his own.
+				'''
+		}
+
+		LorePriestessRod: {
+			DisplayName: Priestess Rod
+			Tooltip: ""
+		}
+
+		LorePuppetOpera: {
+			DisplayName: Puppet Opera
+			Tooltip: ""
+		}
+
+		LoreScarabBelief: {
+			DisplayName: Scarab Belief
+			Tooltip: ""
+		}
+
+		LoreSlimeGod: {
+			DisplayName: Slime God
+			Tooltip: ""
+		}
+
+		LoreTheLifebringer: {
+			DisplayName: The Lifebringer
+			Tooltip: ""
+			Lore:
+				'''
+				The auric soul of life was broad. Too broad for any one god to hold complete dominion over. 
+				Silva herself only held dominion over a portion of life's concepts, as nature was far too diverse to be handled by a even a single auric soul. 
+				The Lifebringer held a different portion, more focused on balance and the ecosystem than evolution and survival of the fittest. 
+				Their greatest difference from Silva was the ability to, somehow, gather faith and worship from both flora and fauna. 
+				The ecosystems its roots dwelled in didn't need to be aware of the Lifebringer. 
+				Their engagement in the circle of life was more than enough for it to gorge itself. 
+				For the longest time, I assumed its few human followers, who were living off of the land itself, were remnants of Silva's religion before its name was revealed and the truth dawned on me.
+				Despite my resources, my hunts for it would always come up short. 
+				Because it wasn't worshiped in the conventional way, there were no temples, statues, or even writing that regarded it. 
+				I had no trail to follow, and when I thought I did, it would inevitably lead to a dead end. 
+				On occasion, hunting parties would report unusually aggressive animals and carnivorous plants sprouting from the ground, possibly a deterrent, possibly not. 
+				There were other gods to crusade against, and I couldn't justify spending more of my resources on these hunts, so I postponed them until I had a better method. 
+				Needless to say, I never found one.
+				'''
+		}
+
+		LoreTheMaterealizer: {
+			DisplayName: The Materealizer
+			Tooltip: ""
+		}
+
+		LoreTheMotherbrain: {
+			DisplayName: The Motherbrain
+			Tooltip: ""
+		}
+
+		LoreTheSon: {
+			DisplayName: The Son
+			Tooltip: ""
+		}
+
+		LoreWallofShadow: {
+			DisplayName: Wall of Shadow
+			Tooltip: ""
+		}
+
+		LoreWhale: {
+			DisplayName: World's End Everlasting Falling Whale
+			Tooltip: ""
+		}
+	}
 }
 
 Tiles: {
@@ -295,6 +398,11 @@ Buffs: {
 	HeartOfIllumiteBuff: {
 		DisplayName: Heart Of Illumite
 		Description: Defense increased by 10%
+	}
+
+	WhaleBoneRecovery: {
+		DisplayName: Skeletal reconstruction
+		Description: Whale will heal you by {0}
 	}
 }
 
@@ -391,6 +499,7 @@ Configs: {
 			WeaponChanges: Weapon Changes
 			ArmorChanges: Armor Changes
 			ModChanges: Mod Changes
+			AccessoryChanges: Accessory Changes
 		}
 
 		EnableBossScaling: {
@@ -403,9 +512,19 @@ Configs: {
 			Tooltip: If enabled, Balance HWJ recipes to fit other mods progression.
 		}
 
+		PermanentToAccessories: {
+			Label: "[i:ContinentOfJourney/TheSwitch] The Switch Rework"
+			Tooltip: If enabled, The Switch will be converted to accessory.
+		}
+
 		EnableBookmarks: {
 			Label: "[i:ContinentOfJourney/EruditeBookmark] Enable Bookmarks"
 			Tooltip: If enabled, Modded mage weapons will work with Spell Pages.
+		}
+
+		EnableTickets: {
+			Label: "[i:ContinentOfJourney/LegacyTicket] Ticket Balancing"
+			Tooltip: If enabled, Thrower luck tickets will be rebalanced according to other mods
 		}
 
 		CustomContent: {
@@ -505,10 +624,22 @@ ItemTooltips: {
 		Increase whip range by 10%
 		Increases your max number of sentries by 2
 		'''
+	TrinketOfChi:
+		'''
+		Increases damage reduction by 8% if you avoid taking damage for 10 seconds
+		This buff expires on hit
+		+1 HP/s life regen for you and your teammates
+		'''
 	ArmillarySphere: Your sentries form a constellation that hurts for 50% of your held weapon's damage
 	"Remove'Range'": Range
 	"Remove'range'": range
 	SpikyCoverRework: Whip tips deal 1.5x damage and cause bleeding
+	ColdBloodRework: Decreases debuff time and damage by 25%
+	WhaleBoneCharmRework:
+		'''
+		Gives 20% damage reduction
+		If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
+		'''
 	CrossbowScope:
 		'''
 		+5% increased ranged damage
@@ -519,15 +650,42 @@ ItemTooltips: {
 		Show a bullet trace of bullet-firing guns
 		'''
 	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
-	EtherealTalisman:
-	{
+
+	EtherealTalisman: {
 		OrigTooltip1: +150 max mana and 10% decreased mana usage
 		Replace1: +230 max mana and 12% decreased mana usage
 	}
+
+	AncientBlessing: {
+		Remove: Increases length of invincibility,
+		Remove1: Minor increase to all stats
+		Remove2: Provides adaption to nights and liquid
+		AlchemistsCharm:
+			'''
+			Increases healing and mana received from potions by 100
+			Increases buff duration by 67%
+			'''
+	}
+
 	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
 	PoisonEffect: Inflicts Poison
 	HolyFlamesEffect: Inflicts Holy Flames
 	VaporfiedEffect: Inflicts Vaporfied
+
+	ThrowerTickets: {
+		Orig: Enables charge shot for consumable ranged weapons
+		Replace: Improve your Stealth strikes ability
+	}
+
+	TheSwitch: {
+		HoldShift: Shift-Right Click this item in your inventory to change mode
+		ColdBlood: Decrease debuff time and damage by 40%
+		WhaleBoneCharm:
+			'''
+			Gives 30% damage reduction
+			If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
+			'''
+	}
 
 	Horizon: {
 		Remove: "'The air lifts you upward'"
@@ -571,6 +729,11 @@ ItemTooltips: {
 		Sots5: Projectiles disabled when hidden
 		Thorium1: When above 25% life, absorbs 25% of damage done to nearby players on your team
 		Thorium2: When below 25% life, you will rapidly regenerate life and gain increased defense
+	}
+
+	HolyTrinity: {
+		OrigTrinityClass: Consumable ranged
+		RepTrinityClass: Thrower
 	}
 
 	GrayRook: {
@@ -707,6 +870,6 @@ ItemTooltips: {
 	FlasksTooltip: {
 		ItemOrigTooltip: Melee and Whip attacks
 		BuffOrigTooltip: Melee attacks
-		Replace: Melee, Whip and Rogue attacks
+		Replace: Melee, Whip and Thrower attacks
 	}
 }

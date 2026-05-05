@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CalamityMod.Items.Accessories;
@@ -9,6 +10,7 @@ using ContinentOfJourney.Items.Accessories;
 using SOTS.Items;
 using SOTS.Items.Fragments;
 using SOTS.Items.Inferno;
+using SOTS.Items.Permafrost;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Mods.SOTS
@@ -39,6 +41,41 @@ namespace HomewardRagnarok.Mods.SOTS
             foreach (var recipe in Main.recipe)
             {
                 if (recipe == null || recipe.createItem == null) continue;
+
+                if (recipe.createItem.ModItem?.Mod.Name == "ContinentOfJourney")
+                {
+                    int sightStack = 0;
+                    int mightStack = 0;
+                    int frightStack = 0;
+
+                    foreach (Item item in recipe.requiredItem)
+                    {
+                        if (item.type == ItemID.SoulofSight) sightStack = item.stack;
+                        else if (item.type == ItemID.SoulofMight) mightStack = item.stack;
+                        else if (item.type == ItemID.SoulofFright) frightStack = item.stack;
+                    }
+                    if (sightStack > 0 && mightStack > 0 && frightStack > 0)
+                    {
+                        int neededStack = Math.Max(sightStack, Math.Max(mightStack, frightStack));
+                        recipe.AddIngredient(ModContent.ItemType<SoulOfPlight>(), neededStack);
+                    }
+
+                    // Ancient Blessing
+                    if (recipe.createItem.type == ModContent.ItemType<AncientBlessing>())
+                    {
+                        recipe.AddIngredient(ModContent.ItemType<AlchemistsCharm>());
+                        recipe.RemoveIngredient(ItemID.CharmofMyths);
+                    }
+                }
+
+                if (recipe.createItem.ModItem?.Mod.Name == "CalamityMod")
+                {
+                    // Chalice Of The Blood God
+                    if (recipe.createItem.type == ModContent.ItemType<ChaliceOfTheBloodGod>())
+                    {
+                        recipe.RemoveIngredient(ModContent.ItemType<AlchemistsCharm>());
+                    }
+                }
 
                 // Bulwark Of The Ancients
                 if (recipe.createItem.type == ModContent.ItemType<BulwarkOfTheAncients>() && !recipe.requiredItem.Any(i => i.type == ModContent.ItemType<AnkhAmulet>()))

@@ -4,27 +4,44 @@ using Terraria.Localization;
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using SOTS;
 using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok.CrossMod
+namespace HomewardRagnarok.Mods.SOTS
 {
     public class SOTSGlobalItem : GlobalItem
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.ModItem == null || item.ModItem.Mod.Name != "SOTS") return;
+            if (item.ModItem == null) return;
+            if (!ServerConfig.Instance.SOTSBalance) return;
 
+            string modName = item.ModItem.Mod.Name;
             string name = item.ModItem.Name;
+            SOTSPlayer sotsPlayer = SOTSPlayer.ModPlayer(player);
 
-            if (name == "BulwarkOfTheAncients")
+            if (modName == "SOTS")
             {
-                player.buffImmune[24] = true;
-                player.buffImmune[323] = true;
+                if (name == "BulwarkOfTheAncients")
+                {
+                    player.buffImmune[24] = true;
+                    player.buffImmune[323] = true;
+                }
+
+                if (name == "FortressGenerator")
+                {
+                    player.maxTurrets += 1;
+                }
             }
 
-            if (name == "FortressGenerator")
+            if (modName == "ContinentOfJourney")
             {
-                player.maxTurrets += 1;
+                if (name == "AncientBlessing")
+                {
+                    sotsPlayer.additionalHeal += 100;
+                    sotsPlayer.additionalPotionMana += 100;
+                    sotsPlayer.PotionBuffDegradeRate -= 0.4f;
+                }
             }
         }
 
@@ -35,13 +52,25 @@ namespace HomewardRagnarok.CrossMod
             string modName = item.ModItem.Mod.Name;
             string itemName = item.ModItem.Name;
 
-            if (modName != "SOTS" || !ServerConfig.Instance.SOTSBalance) return;
-
-            switch (itemName)
+            if (modName == "SOTS" && ServerConfig.Instance.SOTSBalance)
             {
-                case "FortressGenerator":
-                    InsertTooltip(tooltips, "PDA1", "ConstructionPDA");
-                    break;
+                switch (itemName)
+                {
+                    case "FortressGenerator":
+                        InsertTooltip(tooltips, "PDA1", "ConstructionPDA");
+                        break;
+                }
+            }
+
+            if (modName == "ContinentOfJourney" && ServerConfig.Instance.SOTSBalance)
+            {
+                switch (itemName)
+                {
+                    case "AncientBlessing":
+                        RemoveTooltips(tooltips, "AncientBlessing");
+                        InsertTooltip(tooltips, "AlchemistCharm", "AncientBlessing.AlchemistsCharm");
+                        break;
+                }
             }
         }
 
@@ -68,6 +97,21 @@ namespace HomewardRagnarok.CrossMod
             }
 
             tooltips.Insert(insertAt, new TooltipLine(Mod, lineName, Language.GetTextValue($"Mods.HomewardRagnarok.ItemTooltips.{langKey}")) { OverrideColor = animatedColor });
+        }
+
+        private void RemoveTooltips(List<TooltipLine> tooltips, string itemName)
+        {
+            string baseKey = $"Mods.HomewardRagnarok.ItemTooltips.{itemName}.Remove";
+            for (int i = 0; i <= 5; i++)
+            {
+                string key = baseKey + (i == 0 ? "" : i.ToString());
+
+                if (!Language.Exists(key))
+                    break;
+
+                string targetText = Language.GetTextValue(key);
+                tooltips.RemoveAll(t => t.Text == targetText);
+            }
         }
     }
 }
