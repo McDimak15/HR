@@ -6,6 +6,8 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Tiles;
 
 namespace HomewardRagnarok.Items.Summons
 {
@@ -72,17 +74,11 @@ namespace HomewardRagnarok.Items.Summons
 
         public override void AddRecipes()
         {
-            if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
-            {
-                int solarFlareScoria = coj.Find<ModItem>("SolarFlareScoria")?.Type ?? -1;
-                if (solarFlareScoria != -1)
-                {
-                    CreateRecipe()
-                        .AddIngredient(solarFlareScoria, 10)
-                        .AddTile(TileID.LunarCraftingStation)
-                        .Register();
-                }
-            }
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<EternalBar>(), 3)
+                .AddIngredient(ModContent.ItemType<EssenceofTime>(), 2)
+                .AddTile(ModContent.TileType<FountainofTime>())
+                .Register();
         }
     }
 }

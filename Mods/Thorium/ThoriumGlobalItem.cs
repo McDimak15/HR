@@ -4,10 +4,11 @@ using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
-using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Accessories;
 using ThoriumMod;
+using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok.CrossMod
+namespace HomewardRagnarok.Mods.Thorium
 {
     [JITWhenModsEnabled("ThoriumMod")]
     [ExtendsFromMod("ThoriumMod")]
@@ -25,6 +26,11 @@ namespace HomewardRagnarok.CrossMod
                 {
                     player.buffImmune[24] = true;
                     player.buffImmune[323] = true;
+                }
+
+                if (item.ModItem.Name == "MantleoftheProtector")
+                {
+                    ModContent.GetInstance<GrandSpectral>().UpdateAccessory(player, hideVisual);
                 }
             }
             else if (item.ModItem.Mod.Name == "ContinentOfJourney")
@@ -81,6 +87,15 @@ namespace HomewardRagnarok.CrossMod
                     case "BatNecklace":
                     case "DivineNecklace":
                         InsertTooltip(tooltips, "ThoriumBatNecklace", "BatNecklace.ThoriumBuffs");
+                        break;
+                }
+            }
+            else if (item.ModItem.Mod.Name == "ThoriumMod")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "MantleoftheProtector":
+                        InsertTooltip(tooltips, "Spectral", "GrandSpectral", true);
                         break;
                 }
             }

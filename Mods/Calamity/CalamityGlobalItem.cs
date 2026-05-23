@@ -79,6 +79,12 @@ namespace HomewardRagnarok.CrossMod
                     player.GetJumpState<FlipperJump>().Disable();
                     player.gills = false;
                 }
+
+                if (itemName == "GrandSpectral")
+                {
+                    player.Calamity().dAmulet = true;
+                    player.panic = true;
+                }
             }
 
             if (modName != "CalamityMod") return;
@@ -187,6 +193,10 @@ namespace HomewardRagnarok.CrossMod
                 if (itemName == "AncientBlessing")
                 {
                     InsertTooltip(tooltips, "TrinketOfChi", "TrinketOfChi");
+                }
+                else if (itemName == "GrandSpectral")
+                {
+                    InsertTooltip(tooltips, "Deific", "DeificAmulet");
                 }
             }
 

@@ -80,20 +80,33 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Items
         {
             tooltips.RemoveAll(line => line.Mod == "ContinentOfJourney" && line.Name == "CoJTS");
 
-            int insertIndex = tooltips.FindLastIndex(line => !line.Name.Contains("Prefix") && !line.Name.Contains("Price"));
-            if (insertIndex == -1) insertIndex = tooltips.Count - 1;
+            TooltipLine toggleLine = InsertTooltip(tooltips, "TheSwitchToggle", "TheSwitch.HoldShift");
+            toggleLine.OverrideColor = Color.Gray;
 
-            string stateText = modeColdBlood ?
-                Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TheSwitch.ColdBlood") :
-                Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.TheSwitch.WhaleBoneCharm");
+            string stateKey = modeColdBlood ? "TheSwitch.ColdBlood" : "TheSwitch.WhaleBoneCharm";
+            InsertTooltip(tooltips, "TheSwitchState", stateKey);
+        }
 
-            tooltips.Insert(insertIndex + 1, new TooltipLine(Mod, "TheSwitchState", stateText));
+        private TooltipLine InsertTooltip(List<TooltipLine> tooltips, string lineName, string langKey)
+        {
+            int insertAt = tooltips.Count;
+            int maxNumber = -1;
 
-            TooltipLine toggleLine = new TooltipLine(Mod, "TheSwitchToggle", "Hold SHIFT and Right Click to switch modes")
+            for (int i = 0; i < tooltips.Count; i++)
             {
-                OverrideColor = Color.Gray
-            };
-            tooltips.Add(toggleLine);
+                if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
+                {
+                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    {
+                        maxNumber = num;
+                        insertAt = i + 1;
+                    }
+                }
+            }
+
+            TooltipLine newLine = new TooltipLine(Mod, lineName, Language.GetTextValue($"Mods.HomewardRagnarok.ItemTooltips.{langKey}"));
+            tooltips.Insert(insertAt, newLine);
+            return newLine;
         }
 
         public override void PostDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)

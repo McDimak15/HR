@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using ContinentOfJourney.Items.Accessories.MeleeExpansion;
 
 namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
@@ -29,6 +30,18 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
+            if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
+            {
+                if (item.TryGetGlobalItem<SpearBadge_GlobalItem>(out var cojGlobal))
+                {
+                    if (cojGlobal.isSpear == 2)
+                    {
+                        cojGlobal.isSpear = 1;
+                    }
+                }
+                tooltips.RemoveAll(line => line.Mod == "ContinentOfJourney" && line.Name == "CoJSpearDash");
+            }
+
             if (item.ModItem == null || item.ModItem.Mod.Name != "ContinentOfJourney") return;
 
             switch (item.ModItem.Name)
@@ -84,6 +97,21 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                     InsertTooltip(tooltips, "StatisBlessing", "BatNecklace.StatisBlessing");
                     break;
             }
+        }
+
+        public override bool AltFunctionUse(Item item, Player player)
+        {
+            if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
+            {
+                if (item.TryGetGlobalItem<SpearBadge_GlobalItem>(out var cojGlobal))
+                {
+                    if (cojGlobal.isSpear == 1)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return base.AltFunctionUse(item, player);
         }
 
         private void InsertTooltip(List<TooltipLine> tooltips, string lineName, string langKey)

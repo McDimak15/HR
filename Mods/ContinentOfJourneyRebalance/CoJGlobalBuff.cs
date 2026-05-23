@@ -30,6 +30,10 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             {
                 player.lifeRegen += 350;
             }
+            if (type == ModContent.BuffType<StoppedBuff>())
+            {
+                Main.debuff[type] = true;
+            }
         }
 
         public override void ModifyBuffText(int type, ref string displayName, ref string tooltip, ref int drawOffset)

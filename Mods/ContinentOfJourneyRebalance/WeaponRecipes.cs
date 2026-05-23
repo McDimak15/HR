@@ -64,14 +64,6 @@ namespace HomewardRagnarok
                     }
                 }
 
-                // Add Terraheart and remove BladeStaff and PlantationStaff from Legion of Celestia 
-                if (resultType == ModContent.ItemType<LegionofCelestia>())
-                {
-                    recipe.RemoveIngredient(ModContent.ItemType<PlantationStaff>());
-                    recipe.RemoveIngredient(ItemID.Smolstar);
-                    recipe.AddIngredient(ModContent.ItemType<ClottedStaff>());
-                }
-
                 // Remove ImpStaff from Sinking West
                 if (resultType == ModContent.ItemType<SinkingWest>())
                 {

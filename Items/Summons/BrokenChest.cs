@@ -8,6 +8,8 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Tiles;
 
 namespace HomewardRagnarok.Items.Summons
 {
@@ -95,21 +97,11 @@ namespace HomewardRagnarok.Items.Summons
 
         public override void AddRecipes()
         {
-            if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) &&
-                ModLoader.TryGetMod("CalamityMod", out Mod calamity))
-            {
-                int essenceDeathType = coj.Find<ModItem>("EssenceofDeath")?.Type ?? -1;
-                int yharonSoulType = calamity.Find<ModItem>("YharonSoulFragment")?.Type ?? -1;
-
-                if (essenceDeathType != -1 && yharonSoulType != -1)
-                {
-                    Recipe recipe = CreateRecipe();
-                    recipe.AddIngredient(essenceDeathType, 5);
-                    recipe.AddIngredient(yharonSoulType, 5);
-                    recipe.AddTile(TileID.LunarCraftingStation);
-                    recipe.Register();
-                }
-            }
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<CubistBar>(), 3)
+                .AddIngredient(ModContent.ItemType<EssenceofMatter>(), 2)
+                .AddTile(ModContent.TileType<FountainofMatter>())
+                .Register();
         }
     }
 }

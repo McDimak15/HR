@@ -6,6 +6,8 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Tiles;
 
 namespace HomewardRagnarok.Items.Summons
 {
@@ -70,21 +72,11 @@ namespace HomewardRagnarok.Items.Summons
 
         public override void AddRecipes()
         {
-            if (!ModLoader.TryGetMod("ContinentOfJourney", out Mod coj) ||
-                !ModLoader.TryGetMod("CalamityMod", out Mod calamity))
-                return;
-
-            int essenceNothingnessType = coj.Find<ModItem>("EssenceofNothingness")?.Type ?? -1;
-            int cosmiliteBarType = calamity.Find<ModItem>("CosmiliteBar")?.Type ?? -1;
-
-            if (essenceNothingnessType != -1 && cosmiliteBarType != -1)
-            {
-                Recipe recipe = Recipe.Create(ModContent.ItemType<YggdrasilTree>());
-                recipe.AddIngredient(essenceNothingnessType, 5);
-                recipe.AddIngredient(cosmiliteBarType, 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
-                recipe.Register();
-            }
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<LivingBar>(), 3)
+                .AddIngredient(ModContent.ItemType<EssenceofLife>(), 2)
+                .AddTile(ModContent.TileType<FountainofLife>())
+                .Register();
         }
     }
 }

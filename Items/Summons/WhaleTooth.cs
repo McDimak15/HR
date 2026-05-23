@@ -6,6 +6,8 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Tiles;
 
 namespace HomewardRagnarok.Items.Summons
 {
@@ -69,45 +71,13 @@ namespace HomewardRagnarok.Items.Summons
 
             return true;
         }
-    }
-
-    public class WhaleToothRecipeSystem : ModSystem
-    {
-        public override bool IsLoadingEnabled(Mod mod)
-        {
-            return ServerConfig.Instance.CustomContent;
-        }
 
         public override void AddRecipes()
         {
-            if (!ModLoader.TryGetMod("CalamityMod", out Mod calamity) || !ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
-                return;
-            if (!calamity.TryFind<ModTile>("CosmicAnvil", out ModTile cosmicAnvil))
-                return;
-
-            int whaleToothType = ModContent.ItemType<WhaleTooth>();
-
-            if (ModLoader.TryGetMod("ThoriumMod", out Mod thorium))
-            {
-                if (thorium.TryFind("OceanEssence", out ModItem ocean) &&
-                    thorium.TryFind("InfernoEssence", out ModItem inferno) &&
-                    thorium.TryFind("DeathEssence", out ModItem death))
-                {
-                    Recipe recipe = Recipe.Create(whaleToothType);
-                    recipe.AddIngredient(ocean.Type, 5);
-                    recipe.AddIngredient(inferno.Type, 5);
-                    recipe.AddIngredient(death.Type, 5);
-                    recipe.AddTile(cosmicAnvil.Type);
-                    recipe.Register();
-                }
-            }
-            else if (coj.TryFind("TankOfThePastCorruption", out ModItem tank))
-            {
-                Recipe recipe = Recipe.Create(whaleToothType);
-                recipe.AddIngredient(tank.Type, 10);
-                recipe.AddTile(cosmicAnvil.Type); // Cosmic Anvil is required
-                recipe.Register();
-            }
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<EssenceofDeath>(), 2)
+                .AddTile(ModContent.TileType<HallowedAltar>())
+                .Register();
         }
     }
 }

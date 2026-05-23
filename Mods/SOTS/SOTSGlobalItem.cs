@@ -9,6 +9,8 @@ using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Mods.SOTS
 {
+    [JITWhenModsEnabled("SOTS")]
+    [ExtendsFromMod("SOTS")]
     public class SOTSGlobalItem : GlobalItem
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)

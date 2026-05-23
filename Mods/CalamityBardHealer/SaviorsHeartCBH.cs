@@ -74,7 +74,6 @@ namespace HomewardRagnarok
                 OverrideColor = animatedColor
             };
             tooltips.Add(line);
-
         }
 
     }

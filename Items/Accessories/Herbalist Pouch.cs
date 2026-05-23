@@ -41,7 +41,7 @@ namespace HomewardRagnarok.Items.Accessories
                 leafOil?.UpdateAccessory(player, hideVisual);
             }
 
-            player.GetModPlayer<HerbalistPouchPlayer>().herbalistAcidVenom = true;
+            player.GetModPlayer<HomeRagPlayer>().herbalistAcidVenom = true;
         }
 
         public override void AddRecipes()
@@ -62,6 +62,24 @@ namespace HomewardRagnarok.Items.Accessories
 
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
+        }
+    }
+
+    public class HerbalistPouchGlobalProjectile : GlobalProjectile
+    {
+        public override bool InstancePerEntity => true;
+
+        public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            Player player = Main.player[projectile.owner];
+
+            if (player.GetModPlayer<HomeRagPlayer>().herbalistAcidVenom)
+            {
+                if (projectile.aiStyle == 99)
+                {
+                    target.AddBuff(BuffID.Venom, 300);
+                }
+            }
         }
     }
 }

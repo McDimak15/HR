@@ -6,6 +6,8 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using System.Collections.Generic;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Material;
+using ContinentOfJourney.Tiles;
 
 namespace HomewardRagnarok.Items.Summons
 {
@@ -72,17 +74,10 @@ namespace HomewardRagnarok.Items.Summons
 
         public override void AddRecipes()
         {
-            if (ModLoader.TryGetMod("ContinentOfJourney", out Mod coj))
-            {
-                int tankHallowType = coj.Find<ModItem>("TankOfThePastHallow")?.Type ?? -1;
-                if (tankHallowType != -1)
-                {
-                    CreateRecipe()
-                        .AddIngredient(tankHallowType, 10)
-                        .AddTile(TileID.LunarCraftingStation)
-                        .Register();
-                }
-            }
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<EssenceofNothingness>(), 2)
+                .AddTile(ModContent.TileType<HallowedAltar>())
+                .Register();
         }
     }
 }

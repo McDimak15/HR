@@ -95,10 +95,20 @@ namespace HomewardRagnarok
                         recipe.AddIngredient(ModContent.ItemType<Necroplasm>(), 4);
                     }
 
+                    if (resultType == ItemID.Zenith)
+                    {
+                        recipe.RemoveIngredient(ModContent.ItemType<EssenceofBright>());
+                    }
+
                     if (resultType == ModContent.ItemType<DivineNecklace>())
                     {
                         recipe.AddIngredient(ModContent.ItemType<DivineGeode>(), 5);
                         recipe.AddIngredient(ModContent.ItemType<UnholyEssence>(), 3);
+                    }
+
+                    if (resultType == ModContent.ItemType<GrandSpectral>())
+                    {
+                        recipe.AddIngredient(ModContent.ItemType<DeificAmulet>());
                     }
 
                     if (resultType == ModContent.ItemType<Horizon>() || resultType == ModContent.ItemType<CrossbowScope>())

@@ -86,12 +86,6 @@ namespace HomewardRagnarok.Mods.Calamity
                     recipe.AddIngredient(ModContent.ItemType<DivineTouch>());
                 }
 
-                // Rampart of Deities
-                if (type == ModContent.ItemType<RampartofDeities>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<GrandSpectral>());
-                }
-
                 // Seraph Tracers
                 if (type == ModContent.ItemType<SeraphTracers>())
                 {

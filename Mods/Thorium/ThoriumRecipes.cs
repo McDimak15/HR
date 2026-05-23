@@ -16,7 +16,7 @@ using ContinentOfJourney.Items.Material;
 using HomewardRagnarok.Items.Accessories;
 using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.Thorium
 {
     [JITWhenModsEnabled("ThoriumMod")]
     [ExtendsFromMod("ThoriumMod")]
@@ -70,6 +70,13 @@ namespace HomewardRagnarok
                 if (type == ModContent.ItemType<RiftGenerator>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<TerrariumCore>(), 5);
+                }
+
+                // Mantle of the Protector
+                if (type == ModContent.ItemType<MantleoftheProtector>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<DeificAmulet>());
+                    recipe.AddIngredient(ModContent.ItemType<GrandSpectral>());
                 }
 
                 // Natural Essence
