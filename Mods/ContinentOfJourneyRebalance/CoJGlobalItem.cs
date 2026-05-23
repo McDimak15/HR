@@ -105,8 +105,9 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             {
                 if (item.TryGetGlobalItem<SpearBadge_GlobalItem>(out var cojGlobal))
                 {
-                    if (cojGlobal.isSpear == 1)
+                    if (cojGlobal.isSpear == 2)
                     {
+                        cojGlobal.isSpear = 1;
                         return false;
                     }
                 }
