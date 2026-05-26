@@ -249,21 +249,63 @@ Items: {
 		LoreBigDipper: {
 			DisplayName: Big Dipper
 			Tooltip: ""
+			Lore:
+				'''
+				My head scientist told me of his past only once. How he woke up in a laboratory, 
+				surrounded by advanced technology, eventually joining my cause to build machines of war, all in the name of progress. 
+				I bring this up because Draedon has explicitly told me that this satellite is not one of his. 
+				As far as we could tell, this was a communications satellite that could relay positions on a detailed map of the land. 
+				Unfortunately, the map itself only shows locations already mapped centuries ago. 
+				Draedon has already analyzed everything he could about this satellite, even making more robust models for himself.
+				While possessing little value in of itself, it's a stark reminder that, 
+				if someone built Draedon through great effort, who's to say there couldn't be other, equally advanced creations?
+				'''
 		}
 
 		LoreDiver: {
 			DisplayName: Diver
 			Tooltip: ""
+			Lore:
+				'''
+				A trans-dimensional gateway keyed to the heart of an alternate universe... it is no wonder what brought ruin to this place. 
+				Many institutions were erected for the purpose of reaching and studying whatever alternate dimensions they happened to come across,
+				especially when rumors around the devourer started spreading. 
+				None of these organizations still exist. 
+				This abomination is a perfect example of what the endpoint of interdimensional research looks like: 
+				to be noticed by a greater darkness, bringing madness and death for everyone involved.
+				The best one can hope from peering sideways in reality is a place populated exclusively by simple beings, 
+				like a world of sapient birds riding giant crabs. 
+				...Don't ask why I know that. Cosmology can be a very strange field.
+				'''
 		}
 
 		LoreGoblinChariot: {
 			DisplayName: Goblin Chariot
 			Tooltip: ""
+			Lore:
+				'''
+				Goblins as a race are actually fairly young in the grand scheme of Terraria. 
+				Even their oldest settlements are still young enough to be built with relatively modern infrastructure. 
+				Not much more can be said about their reputation as raiders that hasn't already been said or made obvious, 
+				especially by their common targets.
+				You'd be surprised to learn that, during the first year of my conquest, a Goblin clan was amongst the first true factions to join my side. 
+				Their ingenuity led to my first real vehicle support, 
+				which gave them my favor until a new addition to my army replaced every single one of their sciences with his own. 
+				Current times must be dire to rely on such outdated machinery.
+				'''
 		}
 
 		LoreMarquisMoonsquid: {
 			DisplayName: Marquis Moonsquid
 			Tooltip: ""
+			Lore:
+				'''
+				One of countless ocean predators dwelling deep beneath the waves, though this one appears to have grown to an unusual size. 
+				Moonsquids only live in the deepest parts of the ocean, 
+				far away from the fishrons they compete with, using bioluminescence to communicate with one another in total darkness. 
+				These factors make this beast's appearance on the surface an oddity. 
+				What a curious set of changes... what must have occurred in that abyss to mutate this poor creature and push it towards the surface?
+				'''
 		}
 
 		LoreOverwatcher: {
@@ -271,34 +313,84 @@ Items: {
 			Tooltip: ""
 			Lore:
 				'''
-				Goblins as a race are actually fairly young in the grand scheme of Terraria. 
-				Even their oldest settlements are still young enough to be built with more modern infrastructure. 
-				Not much more can be said about their reputation as raiders that hasn't already been said or made obvious. 
-				Many saw these raiders as a pest, including me and other Goblin tribes. 
-				You'd be surprised to learn that, during the first year of my conquest, a Goblin clan was amongst the first true factions to join my side. 
-				They proved their ingenuity with wooden chariots such as these, marking my army's first real vehicle support. 
-				I have honored my alliance with this particular tribe, even when a new addition to my army replaced every single one of their sciences with his own.
+				The god of time was reclusive. 
+				When one can view past and future as if they were left and right, it gives a far, far greater range of places to seclude oneself. 
+				So much so that I am still unsure how he gathered his disciples. 
+				My only method of reaching him was finding one such disciple, beating them within an inch of their life so they would lead me to their idol. 
+				Once it was in my sight-
+				(The whispers become briefly muffled. Is part of the story missing?)
+				-Leaving me stranded in the desert. For all of my effort, the only things I gained were such nonsensical wording. What a waste of my time…
 				'''
 		}
 
 		LorePriestessRod: {
 			DisplayName: Priestess Rod
 			Tooltip: ""
+			Lore:
+				'''
+				While this is definitely one of the strangest body plans of all, 
+				the propeller-like wings of Sky Rods allow them to blitz across the sky faster than any other flier, 
+				or at least those who are native to our world. 
+				The most frightful aspect of Sky Rods is their method of feeding. 
+				This species does not subsist on any solid foods, instead having the unique ability to devour souls directly. 
+				This also means they can feed on souls within machines, much to Draedon's chagrin. 
+				Turns out, soldiers of steel powered by souls are more filling than most things that live in the atmosphere. 
+				I've had to derive countermeasures against this unexpected foe more times than I'd like to admit. 
+				Some have even grown much larger from the sheer volume of souls, 
+				which in turn makes a single Priestess Rod a threat to anything my soldiers would have already threatened.
+				'''
 		}
 
 		LorePuppetOpera: {
 			DisplayName: Puppet Opera
 			Tooltip: ""
+			Lore:
+				'''
+				It feels surreal to see what became of this theatre, having visited it during its prime. 
+				I could barely even see what you were fighting through that darkness.
+				This wooden maze was once a place of bustling culture, protected from attackers by its ever-shifting walls. 
+				The theatre was its heart, most known for holding the most extravagant puppet shows the land had to offer, 
+				something my archmage was known to frequent. 
+				As my crusade faded, I turned a blind eye to this place. I expected it to be abandoned at most, but this... 
+				This was once a place of reprieve. Now, it seems to be a magnet for the horrors of the world. 
+				I can only imagine what happened to its former citizens... if they yet live.
+				'''
 		}
 
 		LoreScarabBelief: {
 			DisplayName: Scarab Belief
 			Tooltip: ""
+			Lore:
+				'''
+				The god of myth was confusing. 
+				Contradictory histories plague even the oldest libraries in Terraria, based entirely on the word of its followers. 
+				To call those followers overzealous would be an understatement, what they worshiped was the idea of worshipping itself. 
+				Every worshipper has their own version of Scarab they claim to see clearly and no two were ever the same, 
+				varying wildly even within the same group. The entire image of Scarab Belief is composed of lies and misconceptions, 
+				including nonsensical rituals where-
+				(The whispers become briefly muffled. Is part of the story missing?)
+				-bare concept of a solid form than anything else, existing as merely an idea which inhabits the minds of its followers.
+				How sickening. Even Providence never crossed that boundary. Hopefully, this perversion of faith will stay eternally forgotten.
+				'''
 		}
 
 		LoreSlimeGod: {
-			DisplayName: Slime God
+			DisplayName: Slime of Divinity
 			Tooltip: ""
+			Lore:
+				'''
+				The god of slimes was separated. 
+				You might be familiar with the entity I previously referred to as the 'Slime God'. 
+				That title isn't inaccurate... though it is quite misleading. 
+				Although a god in its own right, all slimes are theorized to have originally spawned from a singular, 'true' slime god, 
+				and will eventually return to him upon death. 
+				Information about this entity is obscure beyond his place of residence, existing either within, 
+				or potentially as, the primordial light itself. 
+				How much him and Zeratros's sun are the same being is a debate best saved for scholars, but I can tell you-
+				(You can barely hear the whispers through a loud static. Is someone interfering?)
+				-can't imagine the amount of power if he reabsorbed all slimes into himself without restraint.
+				Then, you might not have stood a chance.
+				'''
 		}
 
 		LoreTheLifebringer: {
@@ -306,18 +398,14 @@ Items: {
 			Tooltip: ""
 			Lore:
 				'''
-				The auric soul of life was broad. Too broad for any one god to hold complete dominion over. 
-				Silva herself only held dominion over a portion of life's concepts, as nature was far too diverse to be handled by a even a single auric soul. 
-				The Lifebringer held a different portion, more focused on balance and the ecosystem than evolution and survival of the fittest. 
-				Their greatest difference from Silva was the ability to, somehow, gather faith and worship from both flora and fauna. 
-				The ecosystems its roots dwelled in didn't need to be aware of the Lifebringer. 
-				Their engagement in the circle of life was more than enough for it to gorge itself. 
-				For the longest time, I assumed its few human followers, who were living off of the land itself, were remnants of Silva's religion before its name was revealed and the truth dawned on me.
-				Despite my resources, my hunts for it would always come up short. 
-				Because it wasn't worshiped in the conventional way, there were no temples, statues, or even writing that regarded it. 
-				I had no trail to follow, and when I thought I did, it would inevitably lead to a dead end. 
-				On occasion, hunting parties would report unusually aggressive animals and carnivorous plants sprouting from the ground, possibly a deterrent, possibly not. 
-				There were other gods to crusade against, and I couldn't justify spending more of my resources on these hunts, so I postponed them until I had a better method. 
+				The god of life was broad. 
+				Too broad for any one auric soul to hold complete dominion over. 
+				Silva herself only held dominion over a portion of life's concepts, as nature was far too diverse for her to control. 
+				The Lifebringer appears to hold a more ‘complete’ power over the throes of nature, not just evolution or survival.
+				Her greatest difference from Silva was- 
+				(The whispers become briefly muffled. Is part of the story missing?) 
+				-cause she wasn't worshiped in the conventional way, there were no temples, statues, or even writing that regarded her. 
+				I had no trail to follow, and I couldn't justify an aimless hunt, so I postponed until I had a better method. 
 				Needless to say, I never found one.
 				'''
 		}
@@ -325,26 +413,91 @@ Items: {
 		LoreTheMaterealizer: {
 			DisplayName: The Materealizer
 			Tooltip: ""
+			Lore:
+				'''
+				The god of matter was dutiful. 
+				As the current retainer of our world’s material laws, functionally its building blocks, 
+				he is every bit as cold and calculating as is required of him. Given a task, he will perform it to the most precise detail. 
+				The same goes for his followers, who have acted as hired builders for various factions. 
+				Pay their price, and you will not have a finer monument, from towering statues in ilmeris, to that very temple Providence calls home. 
+				Their neutrality made it easy for me to approach under the pretense of a commission, where I was led to a spiral-
+				(Loud static fills your ears, The whispers are inaudible, but continue uninterrupted. Is someone interfering?)
+				-took me an embarrassingly long amount of time to find the exit. Afterwards, I simply returned home and… pondered.
+				'''
 		}
 
 		LoreTheMotherbrain: {
 			DisplayName: The Motherbrain
 			Tooltip: ""
+			Lore:
+				'''
+				I had forgotten about this machine's existence for some time. 
+				Draedon was commissioned to create this shell by the dragon cult, 
+				built to occupy the jobs of the jailors whose souls were used in its creation. 
+				Having much higher intelligence, it also served as an experiment in psionic tech,
+				being able to lock any unruly prisoners in a virtual world designed to confuse and torment. 
+				The request called for a warden, what they got was a torture device.
+				When the souls within the dungeon grew restless, Draedon was forced to abandon it within those cursed walls. 
+				I could tell he was annoyed by that, but he never complained much, already moving on to his next project. 
+				With everything else falling apart around me, a lost machine, 
+				unaware that my crusade had already come to a close, became a footnote in my terrible, blood-stained history.
+				'''
 		}
 
 		LoreTheSon: {
 			DisplayName: The Son
 			Tooltip: ""
+			Lore:
+				'''
+				As the gods staked their claim in this world, residuals who devoutly followed the dragons stood as vanguard against them. 
+				There was one who claimed to be a direct descendant of the gods yet chastised their crimes against Terraria. 
+				Beings such as this became known as demigods: childish facsimiles of the truly divine. 
+				The power wielded by this son was truly remarkable, 
+				tempered by a philosophical mind that positioned him at the forefront of a crusade that predated my birth. 
+				Sadly, right as he began his movement... Xeroc himself had gotten involved. 
+				Ultimately, the Son was burned on a crucifix by holy flame. 
+				The reason why the first god felt the need to intervene, only he would know. 
+				Perhaps there is a reason the parent of this prophet was never named by history. 
+				You, perhaps unknowingly, recreated the exact structure I once used to- 
+				(Outside influence muffles the whispers… then you hear a rumbling.)
+				I think that’s enough.
+				'''
 		}
 
 		LoreWallofShadow: {
 			DisplayName: Wall of Shadow
 			Tooltip: ""
+			Lore:
+				'''
+				Alternating patterns of shadow and sinew, limbs outstretched to feed its hungry eyes, 
+				the stench of death hanging in the air... I'd recognize this brand of magic anywhere. 
+				This is unquestionably, uncannily, the same kind of behemoth as the one I used to bind the gods' essences. 
+				I highly doubt its makers were even aware of me, merely converging on this solution to contain otherworlders who emerge from their portals. 
+				Their plan’s failure was simple: the makers did not account for when their prison inevitably became full. 
+				By the time primordial shadows were leaking out of the brickwork, it was already too late. 
+				It became a ticking time bomb of essences from countless dimensions studied over the city's life. 
+				With the explosion of color you've forced upon this world, it will not be long until the gods take notice of your presence. 
+				Once they choose to act, you will know what to do.
+				'''
 		}
 
 		LoreWhale: {
 			DisplayName: World's End Everlasting Falling Whale
 			Tooltip: ""
+			Lore:
+				'''
+				The god of death was ironic. 
+				Of everything that could have taken the role of reaper, 
+				of every horror that could have used the power to enforce death, potentially even on the traitor almighty… 
+				that title fell to the whale. Though not unintelligent, it is much closer to an actual animal in behavior, 
+				acting with an innocence which belies its truly terrifying power. 
+				The legend of the Everlasting Whale survived by being mostly passed around by sailors, 
+				attracting foolhardy parties to try, and ultimately fail, to claim its power. 
+				I deliberated on following these unconfirmed testimonies, eventually settling on-
+				(The whispers become briefly muffled. Is part of the story missing?) 
+				-For what it's worth, I recognize the whale as a product of circumstance and nothing more. 
+				I could never condone its worship, but there are far worse crimes than wanting to be left alone.
+				'''
 		}
 	}
 }
@@ -599,7 +752,7 @@ Configs: {
 	}
 }
 
-ModCompat.BossChecklist.SlimeGod: Slime God: Rematch
+ModCompat.BossChecklist.SlimeGod: Slime of Divinity
 
 ItemTooltips: {
 	OmniShield: -Omni Shield-
@@ -614,7 +767,6 @@ ItemTooltips: {
 	AbyssCore: Emits light on your cursorˊs position
 	GrandSpectral:
 		'''
-		Increases length of invincibility
 		Summon spectrals when damaged
 		Summon spectrals when hitting enemy
 		'''
@@ -629,6 +781,11 @@ ItemTooltips: {
 		Increases damage reduction by 8% if you avoid taking damage for 10 seconds
 		This buff expires on hit
 		+1 HP/s life regen for you and your teammates
+		'''
+	DeificAmulet:
+		'''
+		Releases a burst of homing star-bees, increases movement speed, and drenches you in [cbuff:Honey] after taking damage
+		Increases the length of invincibility, with it increasing even more when at low health
 		'''
 	ArmillarySphere: Your sentries form a constellation that hurts for 50% of your held weapon's damage
 	"Remove'Range'": Range

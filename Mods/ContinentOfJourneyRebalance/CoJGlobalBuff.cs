@@ -18,6 +18,10 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                 player.statDefense -= 15;
                 player.endurance -= 0.50f;
             }
+            if (type == ModContent.BuffType<DispenserBuff>())
+            {
+                player.lifeRegen -= 30;
+            }
             if (type == ModContent.BuffType<SolarBurntBuff>())
             {
                 player.lifeRegen += 120;

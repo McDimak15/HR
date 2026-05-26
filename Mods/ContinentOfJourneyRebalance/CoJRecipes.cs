@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,7 +20,7 @@ using CalamityMod.Items.Weapons.Summon;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Items.Weapons.Ranged;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
     public class CoJRecipes : ModSystem
     {
@@ -163,6 +164,19 @@ namespace HomewardRagnarok
                     {
                         if (!recipe.HasIngredient(ModContent.ItemType<DarkPlasma>()))
                             recipe.AddIngredient(ModContent.ItemType<DarkPlasma>(), 3);
+                    }
+
+                    // Shimmer
+                    int[] disabledShimmerItems = new int[] {
+                        ModContent.ItemType<Alpha>(),
+                        ModContent.ItemType<Omega>(),
+                        ModContent.ItemType<Epsilon>()
+                    };
+
+                    if (disabledShimmerItems.Contains(resultType))
+                    {
+                        recipe.DisableDecraft();
+                        continue;
                     }
                 }
             }
