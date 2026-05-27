@@ -279,6 +279,24 @@ Items: {
 				'''
 		}
 
+		LoreTrench: {
+			DisplayName: The Trench
+			Tooltip: ""
+			Lore:
+				'''
+				Another stain on the coastline, untouched by the gods. 
+				One would assume its distance from the sulphurous seas and lack of viable entrances would render it untouchable to the outside world.
+				This is what the settlers of this trench thought, using an obscure form of hydromancy to create a dry pocket within. 
+				Cut off from the surface, they had all of the time they would ever need to themselves. 
+				All I knew was the primary development here was in demonology, 
+				the storied practice of enslaving demons to one's will, and oddly enough, cosmology.
+				I was always skeptical of how a subterranean institution could know so much about the greater universe, 
+				but by the time Draedon had probed it, the abyssal city was long since flooded and abandoned. 
+				Judging by the various horrors that now inhabit this place, 
+				I have a reasonable enough answer for my questions about both the nature and fate of these people.
+				'''
+		}
+
 		LoreGoblinChariot: {
 			DisplayName: Goblin Chariot
 			Tooltip: ""
@@ -1001,11 +1019,7 @@ ItemTooltips: {
 		Heals the most damaged teammate by 5
 		upon every 10 radiant attacks
 		'''
-	SaviorsHeart:
-		'''
-		Heals you by 20 health for every 100 mana consumed
-		Healing spells will heal an additional 6 life
-		'''
+	SaviorsHeart: Heals you by 20 health for every 100 mana consumed
 	MoonwalkEffect:
 		'''
 		Grants the effects of featherfall

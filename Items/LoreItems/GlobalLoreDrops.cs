@@ -59,6 +59,9 @@ namespace HomewardRagnarok.Items.LoreItems
             {
                 npcLoot.AddConditionalPerPlayer(() => !ContinentOfJourney.DownedBossSystem.downedDiverBoss,
                     ModContent.ItemType<LoreDiver>(), true, DropHelper.FirstKillText);
+
+                npcLoot.AddConditionalPerPlayer(() => !ContinentOfJourney.DownedBossSystem.downedDiverBoss,
+                    ModContent.ItemType<LoreTrench>(), true, DropHelper.FirstKillText);
             }
 
             if (npc.type == ModContent.NPCType<TheMotherbrain>())

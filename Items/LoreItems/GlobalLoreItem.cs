@@ -96,6 +96,21 @@ namespace HomewardRagnarok.Items.LoreItems
         }
     }
 
+    public class LoreTrench : LoreItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 20;
+            Item.height = 20;
+            Item.rare = ItemRarityID.Green;
+            Item.consumable = false;
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe().AddIngredient<DiverTrophy>().AddTile(101).Register();
+        }
+    }
+
     public class LoreTheMotherbrain : LoreItem
     {
         public override void SetDefaults()

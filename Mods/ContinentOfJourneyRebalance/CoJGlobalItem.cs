@@ -15,16 +15,28 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.ModItem == null || item.ModItem.Mod.Name != "ContinentOfJourney") return;
+            if (item.ModItem == null) return;
 
-            switch (item.ModItem.Name)
+            if (item.ModItem.Mod.Name == "ContinentOfJourney")
             {
-                case "BatNecklace":
-                case "DivineNecklace":
-                    player.GetKnockback<SummonDamageClass>() += 2.5f;
-                    player.GetDamage<SummonDamageClass>() += 0.12f;
-                    player.maxTurrets += 2;
-                    break;
+                switch (item.ModItem.Name)
+                {
+                    case "BatNecklace":
+                    case "DivineNecklace":
+                        player.GetKnockback<SummonDamageClass>() += 2.5f;
+                        player.GetDamage<SummonDamageClass>() += 0.12f;
+                        player.maxTurrets += 2;
+                        break;
+                }
+            }
+            else if (item.ModItem.Mod.Name == "CalamityBardHealer")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "BloomingSaintessStatue":
+                        player.GetModPlayer<TemplatePlayer>().SaviorsHeart = true;
+                        break;
+                }
             }
         }
 
@@ -42,60 +54,78 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                 tooltips.RemoveAll(line => line.Mod == "ContinentOfJourney" && line.Name == "CoJSpearDash");
             }
 
-            if (item.ModItem == null || item.ModItem.Mod.Name != "ContinentOfJourney") return;
+            if (item.ModItem == null) return;
 
-            switch (item.ModItem.Name)
+            if (item.ModItem.Mod.Name == "ContinentOfJourney")
             {
-                case "MapleMushroom":
-                    foreach (var line in tooltips)
-                    {
-                        if (line.Text.Contains("1"))
-                            line.Text = line.Text.Replace("1", "2");
-                    }
-                    break;
-                
-                case "SteelFlask":
-                case "PlagueFlask":
-                case "ForceBreakFlask":
-                case "DivineFireFlask":
-                    foreach (var line in tooltips)
-                    {
-                        if (line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.FlasksTooltip.ItemOrigTooltip")))
-                            line.Text = line.Text.Replace(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.FlasksTooltip.ItemOrigTooltip"), Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.FlasksTooltip.Replace"));
-                    }
-                    break;
-
-                case "DebtTicket":
-                case "WindfallTicket":
-                case "WealthTicket":
-                case "LuckTicket":
-                case "LegacyTicket":
-                case "FortuneTicket":
-                case "AffluenceTicket":
-                case "JackpotTicket":
-                    foreach (var line in tooltips)
-                    {
-                        if (line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThrowerTickets.Orig")))
-                            line.Text = line.Text.Replace(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThrowerTickets.Orig"), Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThrowerTickets.Replace"));
-                        if (line.Text.Contains("400%"))
-                            line.Text = line.Text.Replace("400%", "50%");
-                    }
-                    break;
-
-                case "BatNecklace":
-                case "DivineNecklace":
-                    foreach (var line in tooltips)
-                    {
-                        if (line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.BatNecklace.OrigTooltip1")))
+                switch (item.ModItem.Name)
+                {
+                    case "MapleMushroom":
+                        foreach (var line in tooltips)
                         {
-                            line.Text = line.Text.Replace(
-                                Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.BatNecklace.OrigTooltip1"),
-                                Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.BatNecklace.Replace1")
-                            );
+                            if (line.Text.Contains("1"))
+                                line.Text = line.Text.Replace("1", "2");
                         }
-                    }
-                    InsertTooltip(tooltips, "StatisBlessing", "BatNecklace.StatisBlessing");
-                    break;
+                        break;
+
+                    case "SteelFlask":
+                    case "PlagueFlask":
+                    case "ForceBreakFlask":
+                    case "DivineFireFlask":
+                        foreach (var line in tooltips)
+                        {
+                            string origText = Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.FlasksTooltip.ItemOrigTooltip");
+                            if (line.Text.Contains(origText))
+                            {
+                                line.Text = line.Text.Replace(origText, Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.FlasksTooltip.Replace"));
+                            }
+                        }
+                        break;
+
+                    case "DebtTicket":
+                    case "WindfallTicket":
+                    case "WealthTicket":
+                    case "LuckTicket":
+                    case "LegacyTicket":
+                    case "FortuneTicket":
+                    case "AffluenceTicket":
+                    case "JackpotTicket":
+                        foreach (var line in tooltips)
+                        {
+                            string origText = Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThrowerTickets.Orig");
+                            if (line.Text.Contains(origText))
+                            {
+                                line.Text = line.Text.Replace(origText, Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.ThrowerTickets.Replace"));
+                            }
+                            if (line.Text.Contains("400%"))
+                            {
+                                line.Text = line.Text.Replace("400%", "50%");
+                            }
+                        }
+                        break;
+
+                    case "BatNecklace":
+                    case "DivineNecklace":
+                        foreach (var line in tooltips)
+                        {
+                            string origText = Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.BatNecklace.OrigTooltip1");
+                            if (line.Text.Contains(origText))
+                            {
+                                line.Text = line.Text.Replace(origText, Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.BatNecklace.Replace1"));
+                            }
+                        }
+                        InsertTooltip(tooltips, "StatisBlessing", "BatNecklace.StatisBlessing");
+                        break;
+                }
+            }
+            else if (item.ModItem.Mod.Name == "CalamityBardHealer")
+            {
+                switch (item.ModItem.Name)
+                {
+                    case "BloomingSaintessStatue":
+                        InsertTooltip(tooltips, "SaviorHeart", "SaviorsHeart");
+                        break;
+                }
             }
         }
 

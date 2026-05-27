@@ -5,7 +5,7 @@ homepage = https://discord.gg/pxxQMVu5ek
 hideCode = true
 
 modReferences = ContinentOfJourney, InfernalEclipseAPI, ThrowerUnification, HomewardWorldGenFix
-weakReferences = SOTS , ThoriumMod 
+weakReferences = SOTS , ThoriumMod, CalamityBardHealer
 sortAfter = InfernalEclipseAPI, ContinentOfJourney, ThoriumMod, SOTS, CalamityMod, Clamity
 sortBefore = ThrowerUnification
 loadAfter = RevengeancePlus
