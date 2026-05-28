@@ -1,5 +1,12 @@
-InfernumTitle.SlimeGod:
-	'''
-	愚昧日神
-	史莱姆之神：再临
-	'''
+InfernumTitle:{
+	SlimeGod:
+		'''
+		愚昧日神
+		神化史莱姆
+		'''
+	PuppetOpera:
+		'''
+		奇外木偶
+		歌剧魅影
+		'''
+}
