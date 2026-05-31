@@ -518,6 +518,46 @@ Items: {
 				'''
 		}
 	}
+
+	ThreeThousandWorldsRelic: {
+		DisplayName: Three Thousand Worlds Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	TheHolyRelic: {
+		DisplayName: The Holy Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	SpiralStairsRelic: {
+		DisplayName: Spiral Stairs Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	RisingWorldRelic: {
+		DisplayName: Rising World Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	OozysseyRelic: {
+		DisplayName: Oozyssey Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	LunarRelic: {
+		DisplayName: Lunar Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	KhronoTriggerRelic: {
+		DisplayName: Khrono Trigger Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
+
+	EtzHaChayimRelic: {
+		DisplayName: Etz Ha Chayim Relic
+		Tooltip: Imbued with the infernal flames of a defeated foe
+	}
 }
 
 Tiles: {
@@ -815,14 +855,18 @@ ItemTooltips: {
 		Gives 20% damage reduction
 		If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
 		'''
-	CrossbowScope:
+	StarQuiver:
 		'''
-		+5% increased ranged damage
-		+7% increased ranged critical strike chance
-		Enemies are less likely to target you
-		Increase the damage of arrows
+		Increase the damage of arrows by 15%
 		Turn wooden arrows into holy arrows
-		Show a bullet trace of bullet-firing guns
+		Enemies are less likely to target you
+		'''
+	CrossbowScopeSOTS:
+		'''
+		Grants a 20% chance not to consume ammo
+		Striking enemies has a chance to refund ammo
+		Landing the killing blow on enemies may also refund ammo
+		If accessory visablity is on, you consume void instead of ammunition
 		'''
 	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
 

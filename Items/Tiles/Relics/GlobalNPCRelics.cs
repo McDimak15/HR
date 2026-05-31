@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using CalamityMod;
@@ -31,6 +32,11 @@ namespace HomewardRagnarok.Items.Tiles.Relics
         public override void ModifyNPCLoot(Terraria.NPC npc, Terraria.ModLoader.NPCLoot npcLoot)
         {
             static bool isInfernum() => WorldSaveSystem.InfernumModeEnabled;
+
+            if (npc.type == NPCID.BloodNautilus)
+            {
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<LunarRelic>());
+            }
             if (npc.type == ModContent.NPCType<GoblinChariot>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<ChariotRelic>());
@@ -66,30 +72,37 @@ namespace HomewardRagnarok.Items.Tiles.Relics
             if (npc.type == ModContent.NPCType<SlimeGod>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<SolarRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<OozysseyRelic>());
             }
             if (npc.type == ModContent.NPCType<TheOverwatcher>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<TheOverwatcherRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<KhronoTriggerRelic>());
             }
             if (npc.type == ModContent.NPCType<TheMaterealizer>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<TheMaterealizerRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<SpiralStairsRelic>());
             }
             if (npc.type == ModContent.NPCType<TheLifebringerHead>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<TheLifebringerRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<EtzHaChayimRelic>());
             }
             if (npc.type == ModContent.NPCType<ScarabBelief>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<ScarabBeliefRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<ThreeThousandWorldsRelic>());
             }
             if (npc.type == ModContent.NPCType<WorldsEndEverlastingFallingWhale>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<WhaleRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<RisingWorldRelic>());
             }
             if (npc.type == ModContent.NPCType<TheSon>())
             {
                 npcLoot.AddIf(isInfernum, ModContent.ItemType<TheSonRelic>());
+                npcLoot.AddIf(isInfernum, ModContent.ItemType<TheHolyRelic>());
             }
         }
     }

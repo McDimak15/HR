@@ -184,14 +184,14 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             if (doHWJ)
             {
                 Recipe.Create(ModContent.ItemType<CrossbowScope>())
-                    .AddIngredient(ModContent.ItemType<StarQuiver>())
+                    .AddIngredient(ModContent.ItemType<PlanebreakersPouch>())
                     .AddIngredient(ModContent.ItemType<MachinaScope>())
                     .AddIngredient(ModContent.ItemType<TankOfThePastCorruption>(), 6)
                     .AddTile<ContinentOfJourney.Tiles.FinalAnvil>()
                     .Register();
 
                 Recipe.Create(ModContent.ItemType<CrossbowScope>())
-                    .AddIngredient(ModContent.ItemType<StarQuiver>())
+                    .AddIngredient(ModContent.ItemType<PlanebreakersPouch>())
                     .AddIngredient(ModContent.ItemType<MachinaScope>())
                     .AddIngredient(ModContent.ItemType<TankOfThePastCrimson>(), 6)
                     .AddTile<ContinentOfJourney.Tiles.FinalAnvil>()

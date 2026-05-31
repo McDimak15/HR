@@ -1,12 +1,27 @@
+using System;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using InfernumMode.Content.Tiles.Relics;
 using InfernumMode.Content.Items.Relics;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace HomewardRagnarok.Items.Tiles.Relics
 {
     [JITWhenModsEnabled("InfernumMode")]
     [ExtendsFromMod("InfernumMode")]
+    // Lunar (Blood Moon)
+    public class LunarRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<LunarRelicTile>();
+    }
+    public class LunarRelicTile : BaseInfernumBossRelic
+    {
+        public override int DropItemID => ModContent.ItemType<LunarRelic>();
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/LunarRelicTile";
+    }
 
     // Chariot
     public class ChariotRelic : BaseRelicItem
@@ -116,6 +131,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/SolarRelicTile";
     }
 
+    // Oozyssey
+    public class OozysseyRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<OozysseyRelicTile>();
+    }
+    public class OozysseyRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<OozysseyRelic>();
+        public override string CoJRelicName => "OozysseyRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/OozysseyRelicTile";
+    }
+
     // The Overwatcher
     public class TheOverwatcherRelic : BaseRelicItem
     {
@@ -126,6 +154,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     {
         public override int DropItemID => ModContent.ItemType<TheOverwatcherRelic>();
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/TheOverwatcherRelicTile";
+    }
+
+    // Khrono Trigger
+    public class KhronoTriggerRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<KhronoTriggerRelicTile>();
+    }
+    public class KhronoTriggerRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<KhronoTriggerRelic>();
+        public override string CoJRelicName => "KhronoTriggerRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/KhronoTriggerRelicTile";
     }
 
     // The Materealizer
@@ -140,6 +181,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/TheMaterealizerRelicTile";
     }
 
+    // Spiral Stairs
+    public class SpiralStairsRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<SpiralStairsRelicTile>();
+    }
+    public class SpiralStairsRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<SpiralStairsRelic>();
+        public override string CoJRelicName => "SpiralStairsRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/SpiralStairsRelicTile";
+    }
+
     // The Lifebringer
     public class TheLifebringerRelic : BaseRelicItem
     {
@@ -150,6 +204,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     {
         public override int DropItemID => ModContent.ItemType<TheLifebringerRelic>();
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/TheLifebringerRelicTile";
+    }
+
+    // EtzHaChayim
+    public class EtzHaChayimRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<EtzHaChayimRelicTile>();
+    }
+    public class EtzHaChayimRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<EtzHaChayimRelic>();
+        public override string CoJRelicName => "EtzHaChayimRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/EtzHaChayimRelicTile";
     }
 
     // Scarab Belief
@@ -164,6 +231,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/ScarabBeliefRelicTile";
     }
 
+    // Three Thousand Worlds
+    public class ThreeThousandWorldsRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<ThreeThousandWorldsRelicTile>();
+    }
+    public class ThreeThousandWorldsRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<ThreeThousandWorldsRelic>();
+        public override string CoJRelicName => "ThreeThousandWorldsRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/ThreeThousandWorldsRelicTile";
+    }
+
     // Whale
     public class WhaleRelic : BaseRelicItem
     {
@@ -176,6 +256,19 @@ namespace HomewardRagnarok.Items.Tiles.Relics
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/WhaleRelicTile";
     }
 
+    // Rising World
+    public class RisingWorldRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<RisingWorldRelicTile>();
+    }
+    public class RisingWorldRelicTile : InfernumRainbowRelic
+    {
+        public override int DropItemID => ModContent.ItemType<RisingWorldRelic>();
+        public override string CoJRelicName => "RisingWorldRelic";
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/RisingWorldRelicTile";
+    }
+
     // The Son
     public class TheSonRelic : BaseRelicItem
     {
@@ -186,5 +279,17 @@ namespace HomewardRagnarok.Items.Tiles.Relics
     {
         public override int DropItemID => ModContent.ItemType<TheSonRelic>();
         public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/TheSonRelicTile";
+    }
+
+    // The Holy
+    public class TheHolyRelic : BaseRelicItem
+    {
+        public override LocalizedText Tooltip => Language.GetText($"Mods.HomewardRagnarok.Items.{this.Name}.Tooltip");
+        public override int TileID => ModContent.TileType<TheHolyRelicTile>();
+    }
+    public class TheHolyRelicTile : BaseInfernumBossRelic
+    {
+        public override int DropItemID => ModContent.ItemType<TheHolyRelic>();
+        public override string RelicTextureName => "HomewardRagnarok/Items/Tiles/Relics/TheHolyRelicTile";
     }
 }

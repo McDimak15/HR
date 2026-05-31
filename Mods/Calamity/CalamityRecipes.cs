@@ -71,12 +71,12 @@ namespace HomewardRagnarok.Mods.Calamity
 
                 int type = recipe.createItem.type;
 
-                // PlanebreakersPouch
+                // Planebreakers Pouch
                 if (type == ModContent.ItemType<PlanebreakersPouch>())
                 {
                     recipe.RemoveRecipeGroup(RecipeSystem.AnyQuiver);
                     recipe.RemoveIngredient(ItemID.MagicQuiver);
-                    recipe.AddIngredient(ModContent.ItemType<CrossbowScope>());
+                    recipe.AddIngredient(ModContent.ItemType<StarQuiver>());
                 }
 
                 // Elemental Gauntlet

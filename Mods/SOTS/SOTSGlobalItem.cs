@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using SOTS;
+using SOTS.Items.ChestItems;
+using SOTS.Items.Conduit;
 using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Mods.SOTS
@@ -13,6 +15,15 @@ namespace HomewardRagnarok.Mods.SOTS
     [ExtendsFromMod("SOTS")]
     public class SOTSGlobalItem : GlobalItem
     {
+        private Mod sots
+        {
+            get
+            {
+                ModLoader.TryGetMod("SOTS", out Mod sots);
+                return sots;
+            }
+        }
+
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
             if (item.ModItem == null) return;
@@ -44,6 +55,21 @@ namespace HomewardRagnarok.Mods.SOTS
                     sotsPlayer.additionalPotionMana += 100;
                     sotsPlayer.PotionBuffDegradeRate -= 0.4f;
                 }
+
+                if (name == "CrossbowScope")
+                {
+                    ModItem bagofammo = sots.Find<ModItem>("BagOfAmmoGathering");
+                    ModItem voidammobag = sots.Find<ModItem>("InfinityPouch");
+
+                    if (hideVisual == false)
+                    {
+                        voidammobag.UpdateAccessory(player, hideVisual);
+                    }
+                    else
+                    {
+                        bagofammo.UpdateAccessory(player, hideVisual);
+                    }
+                }
             }
         }
 
@@ -71,6 +97,10 @@ namespace HomewardRagnarok.Mods.SOTS
                     case "AncientBlessing":
                         RemoveTooltips(tooltips, "AncientBlessing");
                         InsertTooltip(tooltips, "AlchemistCharm", "AncientBlessing.AlchemistsCharm");
+                        break;
+
+                    case "CrossbowScope":
+                        InsertTooltip(tooltips, "CrossbowScopeSOTS", "CrossbowScopeSOTS");
                         break;
                 }
             }

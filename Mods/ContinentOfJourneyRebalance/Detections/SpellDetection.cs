@@ -13,8 +13,20 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
     public class SpellPersistencePlayer : ModPlayer
     {
         private static FieldInfo bookMarkField;
+
+        private static readonly HashSet<string> BlacklistedWeapons = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "OmegaBlaster",
+            "SpectralBlade"
+        };
+
         public static bool IsValidMagicItem(Item item)
         {
+            if (item.ModItem != null && BlacklistedWeapons.Contains(item.ModItem.Name))
+            {
+                return false;
+            }
+
             bool isMagic = item.DamageType == DamageClass.Magic || item.mana > 0;
             if (!isMagic) return false;
 

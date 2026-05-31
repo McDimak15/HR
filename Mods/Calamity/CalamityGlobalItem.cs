@@ -85,6 +85,12 @@ namespace HomewardRagnarok.CrossMod
                     player.Calamity().dAmulet = true;
                     player.panic = true;
                 }
+
+                if (itemName == "CrossbowScope")
+                {
+                    player.Calamity().deadshotBrooch = true;
+                    player.Calamity().ammoCost *= 0.8f;
+                }
             }
 
             if (modName != "CalamityMod") return;
@@ -137,14 +143,9 @@ namespace HomewardRagnarok.CrossMod
                     break;
 
                 case "PlanebreakersPouch":
-                    modPlayer.GooglesOn = true;
-                    modPlayer.StarQuiver = true;
-                    player.magicQuiver = true;
-                    player.aggro -= 400;
-                    if (player.HeldItem.useAmmo == AmmoID.Bullet) player.scope = true;
-                    player.GetDamage(DamageClass.Ranged) += 0.05f;
-                    player.GetCritChance(DamageClass.Ranged) += 7;
                     player.arrowDamage *= 1.15f;
+                    player.aggro -= 400;
+                    modPlayer.StarQuiver = true;
                     break;
 
                 case "ElementalGauntlet":
@@ -227,7 +228,7 @@ namespace HomewardRagnarok.CrossMod
                     InsertTooltip(tooltips, "HR1", "AbyssCore");
                     break;
                 case "PlanebreakersPouch":
-                    InsertTooltip(tooltips, "HR_Bonus1", "CrossbowScope");
+                    InsertTooltip(tooltips, "StarQuiver", "StarQuiver");
                     break;
                 case "ElementalGauntlet":
                     InsertTooltip(tooltips, "DivineFireEffect", "DivineTouch");
