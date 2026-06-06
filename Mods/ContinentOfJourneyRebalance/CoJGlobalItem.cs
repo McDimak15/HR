@@ -5,7 +5,9 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
+using HomewardRagnarok.Config;
 
 namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
@@ -40,6 +42,24 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             }
         }
 
+        public override bool CanUseItem(Item item, Player player)
+        {
+            if (item.ModItem != null && item.ModItem.Type == ModContent.ItemType<SunsHeart>() && player.GetModPlayer<HomeRagPlayer>().hasSunsHeartFlightUpgrade && ServerConfig.Instance.PermanentToAccessories == true)
+            {
+                return false;
+            }
+            return base.CanUseItem(item, player);
+        }
+        public override bool? UseItem(Item item, Player player)
+        {
+            if (item.ModItem != null && item.ModItem.Type == ModContent.ItemType<SunsHeart>() && ServerConfig.Instance.PermanentToAccessories == true)
+            {
+                player.GetModPlayer<HomeRagPlayer>().hasSunsHeartFlightUpgrade = true;
+                return true;
+            }
+            return base.UseItem(item, player);
+        }
+
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
@@ -60,6 +80,17 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             {
                 switch (item.ModItem.Name)
                 {
+                    case "SunsHeart":
+                        foreach (var line in tooltips)
+                        {
+                            string origText = Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SunsHeart.OrigTooltip");
+                            if (line.Text.Contains(origText))
+                            {
+                                line.Text = line.Text.Replace(origText, Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.SunsHeart.Replace"));
+                            }
+                        }
+                        break;
+
                     case "MapleMushroom":
                         foreach (var line in tooltips)
                         {
@@ -115,6 +146,11 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                             }
                         }
                         InsertTooltip(tooltips, "StatisBlessing", "BatNecklace.StatisBlessing");
+                        break;
+
+                    case "StarQuiver":
+                    case "CrossbowScope":
+                        InsertTooltip(tooltips, "StarQuiverEffect", "StarQuiverEffect");
                         break;
                 }
             }

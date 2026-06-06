@@ -2,6 +2,8 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories.PermanentUpgradesSystem;
 using HomewardRagnarok.Items.Accessories;
 using HomewardRagnarok.Buffs;
@@ -17,6 +19,7 @@ namespace HomewardRagnarok
         public bool equippedWhaleBoneCharm;
         public bool equippedImprovedColdBlood;
         public bool equippedImprovedWhaleBone;
+        public bool hasSunsHeartFlightUpgrade;
         public float whaleBoneHealPool = 0;
         public int devourDelay = 0;
         private int debuffTickCounter;
@@ -30,6 +33,27 @@ namespace HomewardRagnarok
             equippedWhaleBoneCharm = false;
             equippedImprovedColdBlood = false;
             equippedImprovedWhaleBone = false;
+        }
+
+        public override void SaveData(TagCompound tag)
+        {
+            if (hasSunsHeartFlightUpgrade)
+            {
+                tag["hasSunsHeartFlightUpgrade"] = true;
+            }
+        }
+
+        public override void LoadData(TagCompound tag)
+        {
+            hasSunsHeartFlightUpgrade = tag.ContainsKey("hasSunsHeartFlightUpgrade");
+        }
+
+        public override void PreUpdate()
+        {
+            if (Player.TryGetModPlayer(out OtherUpgradesPlayer otherPlayer) && ServerConfig.Instance.PermanentToAccessories == true)
+            {
+                otherPlayer.SunsHeart = 0;
+            }
         }
 
         public override void PostUpdateEquips()
@@ -58,6 +82,11 @@ namespace HomewardRagnarok
                 {
                     Projectile.NewProjectile(Player.GetSource_Accessory(Player.HeldItem), Player.Center, Vector2.Zero, projType, 250, 2f, Player.whoAmI);
                 }
+            }
+
+            if (hasSunsHeartFlightUpgrade && Player.wingTimeMax > 0)
+            {
+                Player.wingTimeMax = (int)(Player.wingTimeMax * 1.20f);
             }
         }
 

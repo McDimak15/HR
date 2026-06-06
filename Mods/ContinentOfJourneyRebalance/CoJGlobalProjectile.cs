@@ -1,6 +1,8 @@
 using Terraria;
 using Terraria.ModLoader;
 using ContinentOfJourney.Buffs;
+using ContinentOfJourney;
+using CalamityMod.Buffs.DamageOverTime;
 using ThrowerUnification.Core.UnitedModdedThrowerClass;
 
 namespace HomewardRagnarok.Common.GlobalProjectiles
@@ -10,6 +12,7 @@ namespace HomewardRagnarok.Common.GlobalProjectiles
         public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.player[projectile.owner];
+            TemplatePlayer cojPlayer = player.GetModPlayer<TemplatePlayer>();
 
             if (projectile.DamageType.CountsAsClass<UnitedModdedThrower>())
             {
@@ -28,6 +31,17 @@ namespace HomewardRagnarok.Common.GlobalProjectiles
                 if (player.HasBuff(ModContent.BuffType<Flask_ForceBreakBuff>()))
                 {
                     target.AddBuff(ModContent.BuffType<ForceBreakBuff>(), 600);
+                }
+            }
+
+            if (projectile.owner >= 0 && projectile.owner < Main.maxPlayers)
+            {
+                if (cojPlayer.StarQuiver)
+                {
+                    if (projectile.DamageType.CountsAsClass(DamageClass.Ranged))
+                    {
+                        target.AddBuff(ModContent.BuffType<HolyFlames>(), 300);
+                    }
                 }
             }
         }

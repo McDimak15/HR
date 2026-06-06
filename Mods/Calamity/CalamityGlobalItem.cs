@@ -229,6 +229,7 @@ namespace HomewardRagnarok.CrossMod
                     break;
                 case "PlanebreakersPouch":
                     InsertTooltip(tooltips, "StarQuiver", "StarQuiver");
+                    InsertTooltip(tooltips, "StarQuiverEffect", "StarQuiverEffect");
                     break;
                 case "ElementalGauntlet":
                     InsertTooltip(tooltips, "DivineFireEffect", "DivineTouch");

@@ -75,7 +75,7 @@ Items: {
 		DisplayName: Herbalist Pouch
 		Tooltip:
 			'''
-			While equipped, your yoyo damage inflicts frostburn and venom and has a chance to freeze enemies
+			While equipped, your yoyo damage inflict [cbuff:Frostburn] and [cbuff:Venom] and has a chance to freeze enemies
 			Damaging an enemy with a yoyo will grant you 10% damage reduction until you take damage
 			This effect must recharge for 15 seconds after protecting you
 			Hitting enemies with yoyos charge a leaf shield
@@ -91,7 +91,7 @@ Items: {
 			'''
 			20% chance to not consume ammo when using a flamethrower
 			Allows you to customize the projectile of your flamethrower
-			Your flamethrower inflicts Brain Rot debuff
+			Your flamethrower inflict [cbuff:CalamityMod/BrainRot] debuff
 			When equipped, show items that can be inserted
 			You can insert 2 ingredients at most
 			'''
@@ -520,42 +520,42 @@ Items: {
 	}
 
 	ThreeThousandWorldsRelic: {
-		DisplayName: Three Thousand Worlds Relic
+		DisplayName: Infernal Three Thousand Worlds Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	TheHolyRelic: {
-		DisplayName: The Holy Relic
+		DisplayName: Infernal The Holy Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	SpiralStairsRelic: {
-		DisplayName: Spiral Stairs Relic
+		DisplayName: Infernal Spiral Stairs Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	RisingWorldRelic: {
-		DisplayName: Rising World Relic
+		DisplayName: Infernal Rising World Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	OozysseyRelic: {
-		DisplayName: Oozyssey Relic
+		DisplayName: Infernal Oozyssey Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	LunarRelic: {
-		DisplayName: Lunar Relic
+		DisplayName: Infernal Lunar Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	KhronoTriggerRelic: {
-		DisplayName: Khrono Trigger Relic
+		DisplayName: Infernal Khrono Trigger Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 
 	EtzHaChayimRelic: {
-		DisplayName: Etz Ha Chayim Relic
+		DisplayName: Infernal Etz Ha Chayim Relic
 		Tooltip: Imbued with the infernal flames of a defeated foe
 	}
 }
@@ -868,7 +868,6 @@ ItemTooltips: {
 		Landing the killing blow on enemies may also refund ammo
 		If accessory visablity is on, you consume void instead of ammunition
 		'''
-	DivineTouch: Causes melee attacks to inflict the Divine Fire debuff
 
 	EtherealTalisman: {
 		OrigTooltip1: +150 max mana and 10% decreased mana usage
@@ -887,9 +886,11 @@ ItemTooltips: {
 	}
 
 	Negatama: Releases dark energy, the lower mana you have, the more damage it deals
-	PoisonEffect: Inflicts Poison
-	HolyFlamesEffect: Inflicts Holy Flames
-	VaporfiedEffect: Inflicts Vaporfied
+	DivineTouch: Causes melee attacks to inflict the [cbuff:ContinentOfJourney/DivineFireBuff]
+	StarQuiverEffect: Cause ranger attacks to inflict [cbuff:CalamityMod/HolyFlames]
+	PoisonEffect: Inflict [cbuff:Poisoned]
+	HolyFlamesEffect: Inflict [cbuff:CalamityMod/HolyFlames]
+	VaporfiedEffect: Inflict [cbuff:CalamityMod/Vaporfied]
 
 	ThrowerTickets: {
 		Orig: Enables charge shot for consumable ranged weapons
@@ -1080,6 +1081,11 @@ ItemTooltips: {
 	MushroomAccessory: {
 		OrigTooltip: Increase healing amount
 		Replace: Increase bonus healing by {0}
+	}
+
+	SunsHeart: {
+		OrigTooltip: Enables wings slot
+		Replace: Permanently increases wing flight time by 20%
 	}
 
 	FlasksTooltip: {
