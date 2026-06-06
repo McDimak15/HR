@@ -568,6 +568,7 @@ Tiles: {
 Projectiles: {
 	BabyOilDroplet.DisplayName: Baby Oil Droplet
 	DevourScarf.DisplayName: Devour Scarf
+	EurekaPortal.DisplayName: Eureka Portal
 }
 
 Buffs: {
@@ -1086,6 +1087,18 @@ ItemTooltips: {
 	SunsHeart: {
 		OrigTooltip: Enables wings slot
 		Replace: Permanently increases wing flight time by 20%
+	}
+
+	EurekaEffect: {
+		OrigTooltip1: Teleport to your cursor's location
+		OrigTooltip2: This item has a 6s cooldown
+		Replace2:
+			'''
+			Summons a temporary gateway between 2 chosen spots
+			Left and Right click to choose spots
+			Right click the portal to teleport with 10s cooldown
+			'''
+		ThoriumHeal: Heal by 40 when teleported
 	}
 
 	FlasksTooltip: {

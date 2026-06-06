@@ -79,6 +79,10 @@ namespace HomewardRagnarok.Mods.Thorium
                         InsertTooltip(tooltips, "SteamWatch", "SteamkeeperWatch");
                         break;
 
+                    case "EurekaEffect":
+                        InsertTooltip(tooltips, "ThoriumHeal", "EurekaEffect.ThoriumHeal", false);
+                        break;
+
                     case "NaturalEssence":
                     case "Starflower":
                         InsertTooltip(tooltips, "HungerBlossom", "HungeringBlossom");

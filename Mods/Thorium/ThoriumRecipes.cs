@@ -11,6 +11,7 @@ using ThoriumMod.Items.BossThePrimordials.Omni;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.FurnitureStatigel;
 using CalamityMod.Items.Accessories;
+using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
 using HomewardRagnarok.Items.Accessories;
@@ -64,6 +65,11 @@ namespace HomewardRagnarok.Mods.Thorium
                 if (type == ModContent.ItemType<ConstructionPDA>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<SteamkeeperWatch>());
+                }
+
+                if (type == ModContent.ItemType<EurekaEffect>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<DarkGate>());
                 }
 
                 // Rift Generator

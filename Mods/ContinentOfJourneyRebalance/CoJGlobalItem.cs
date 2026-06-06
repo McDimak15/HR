@@ -1,13 +1,17 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
+using ContinentOfJourney.Items;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
+using ContinentOfJourney.Buffs;
 using HomewardRagnarok.Config;
+using HomewardRagnarok.Projectiles;
 
 namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
@@ -48,6 +52,28 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             {
                 return false;
             }
+            if (item.ModItem != null && item.ModItem.Type == ModContent.ItemType<EurekaEffect>())
+            {
+                if (player.HasBuff(ModContent.BuffType<EurekaEffectBuff>()))
+                    return false;
+
+                if (player.whoAmI == Main.myPlayer)
+                {
+                    int portalType = player.altFunctionUse == 2 ? 1 : 0;
+
+                    for (int i = 0; i < Main.maxProjectiles; i++)
+                    {
+                        Projectile p = Main.projectile[i];
+                        if (p.active && p.owner == player.whoAmI && p.type == ModContent.ProjectileType<EurekaPortal>() && p.ai[0] == portalType)
+                        {
+                            p.Kill();
+                        }
+                    }
+                    Projectile.NewProjectile(player.GetSource_ItemUse(item), Main.MouseWorld, Vector2.Zero, ModContent.ProjectileType<EurekaPortal>(), 0, 0, player.whoAmI, portalType);
+                }
+                player.itemTime = item.useTime;
+                return false;
+            }
             return base.CanUseItem(item, player);
         }
         public override bool? UseItem(Item item, Player player)
@@ -59,7 +85,25 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
             }
             return base.UseItem(item, player);
         }
-
+        public override bool AltFunctionUse(Item item, Player player)
+        {
+            if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
+            {
+                if (item.TryGetGlobalItem<SpearBadge_GlobalItem>(out var cojGlobal))
+                {
+                    if (cojGlobal.isSpear == 2)
+                    {
+                        cojGlobal.isSpear = 1;
+                        return false;
+                    }
+                }
+            }
+            if (item.ModItem != null && item.ModItem.Type == ModContent.ItemType<EurekaEffect>())
+            {
+                return true;
+            }
+            return base.AltFunctionUse(item, player);
+        }
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
@@ -96,6 +140,19 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                         {
                             if (line.Text.Contains("1"))
                                 line.Text = line.Text.Replace("1", "2");
+                        }
+                        break;
+
+
+                    case "EurekaEffect":
+                        tooltips.RemoveAll(line => line.Text.Contains(Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.EurekaEffect.OrigTooltip1")));
+                        foreach (var line in tooltips)
+                        {
+                            string origText = Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.EurekaEffect.OrigTooltip2");
+                            if (line.Text.Contains(origText))
+                            {
+                                line.Text = line.Text.Replace(origText, Language.GetTextValue("Mods.HomewardRagnarok.ItemTooltips.EurekaEffect.Replace2"));
+                            }
                         }
                         break;
 
@@ -163,22 +220,6 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                         break;
                 }
             }
-        }
-
-        public override bool AltFunctionUse(Item item, Player player)
-        {
-            if (item.ModItem != null && item.ModItem.Mod.Name != "ContinentOfJourney")
-            {
-                if (item.TryGetGlobalItem<SpearBadge_GlobalItem>(out var cojGlobal))
-                {
-                    if (cojGlobal.isSpear == 2)
-                    {
-                        cojGlobal.isSpear = 1;
-                        return false;
-                    }
-                }
-            }
-            return base.AltFunctionUse(item, player);
         }
 
         private void InsertTooltip(List<TooltipLine> tooltips, string lineName, string langKey)
