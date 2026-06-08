@@ -32,6 +32,12 @@ namespace HomewardRagnarok.Mods.SOTS
                 .AddIngredient(ModContent.ItemType<TerminalCluster>())
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
+
+            Recipe.Create(ModContent.ItemType<SoulOfPlight>(), 3)
+                .AddIngredient(ModContent.ItemType<SoulOfPlight>())
+                .AddIngredient(ModContent.ItemType<EssenceofDarkness>(), 3)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
         }
 
         public override void PostAddRecipes()

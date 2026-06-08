@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using HomewardRagnarok.Config;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.Consolaria
 {
     public class BlightRecipeCloner : ModSystem
     {

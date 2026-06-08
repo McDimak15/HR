@@ -140,6 +140,14 @@ namespace HomewardRagnarok
             if (item.ModItem is Fission)
                 item.damage = 127;
 
+            // Terra Light
+            if (item.ModItem is ContinentOfJourney.Items.TerraLight)
+                item.damage = 57;
+
+            // Ten Noons
+            if (item.ModItem is ContinentOfJourney.Items.TenNoons)
+                item.damage = 18;
+
             // Materialism
             if (item.ModItem is ContinentOfJourney.Items.Materialism)
             {

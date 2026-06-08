@@ -4,6 +4,8 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
+using Terraria.Audio;
 using ContinentOfJourney.Buffs;
 using ContinentOfJourney.Items;
 
@@ -22,6 +24,11 @@ namespace HomewardRagnarok.Projectiles
             Projectile.penetrate = -1;
             Projectile.timeLeft = 7200;
             Projectile.netImportant = true;
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            SoundEngine.PlaySound(SoundID.Item104, Projectile.Center);
         }
 
         public override void AI()

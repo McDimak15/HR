@@ -104,12 +104,6 @@ namespace HomewardRagnarok.Mods.Thorium
                 {
                     recipe.RemoveIngredient(ModContent.ItemType<SteamkeeperWatch>());
                 }
-
-                // Ancient Blessing
-                if (type == ModContent.ItemType<AncientBlessing>())
-                {
-                    recipe.AddIngredient(ModContent.ItemType<DeathEssence>(), 3);
-                }
             }
         }
     }

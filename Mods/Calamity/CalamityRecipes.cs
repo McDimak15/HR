@@ -9,6 +9,7 @@ using CalamityMod.Items.Weapons.Rogue;
 using CalamityMod.Items.Weapons.Ranged;
 using CalamityMod.Items.Weapons.Summon;
 using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Magic;
 using CalamityMod.Items.Materials;
 using CalamityMod.Tiles.Furniture.CraftingStations;
 using CalamityMod.Items.Potions;
@@ -230,6 +231,31 @@ namespace HomewardRagnarok.Mods.Calamity
                         recipe.RemoveIngredient(ing.type);
                         recipe.AddIngredient(ModContent.ItemType<FT2Wildfire>());
                     }
+                }
+
+                // Lunarian Bow
+                if (type == ModContent.ItemType<LunarianBow>())
+                {
+                    recipe.RemoveIngredient(ItemID.DemonBow);
+                    recipe.RemoveIngredient(ItemID.TendonBow);
+                    recipe.RemoveIngredient(ItemID.MoltenFury);
+                    recipe.AddIngredient(ModContent.ItemType<TenNoons>());
+
+                    recipe.RemoveIngredient(ModContent.ItemType<PurifiedGel>());
+                    recipe.AddIngredient(ModContent.ItemType<PurifiedGel>(), 10);
+                }
+
+                // Planetary Annihilation
+                if (type == ModContent.ItemType<PlanetaryAnnihilation>())
+                {
+                    recipe.RemoveIngredient(ModContent.ItemType<VernalBolter>());
+                    recipe.AddIngredient(ModContent.ItemType<TerraLight>());
+                }
+
+                // Augur of the Void
+                if (type == ModContent.ItemType<AuguroftheVoid>())
+                {
+                    recipe.AddIngredient(ModContent.ItemType<TerraVow>());
                 }
 
                 // Legion of Celestia

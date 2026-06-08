@@ -12,6 +12,7 @@ using ContinentOfJourney.Items.Material;
 using ContinentOfJourney.Items.Placables;
 using ContinentOfJourney.Items.Accessories.MechArms;
 using ContinentOfJourney.Items.Flamethrowers;
+using ContinentOfJourney.Items.Zeus;
 using ContinentOfJourney.Tiles;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Accessories.Wings;
@@ -96,6 +97,23 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                         recipe.AddIngredient(ModContent.ItemType<Necroplasm>(), 4);
                     }
 
+                    if (resultType == ModContent.ItemType<TerraLight>())
+                    {
+                        recipe.RemoveIngredient(ItemID.DaedalusStormbow);
+                        recipe.RemoveIngredient(ItemID.IceBow);
+                        recipe.RemoveIngredient(ItemID.ShadowFlameBow);
+                        recipe.RemoveIngredient(ModContent.ItemType<TenNoons>());
+                        recipe.AddIngredient(ModContent.ItemType<VernalBolter>());
+                    }
+
+                    if (resultType == ModContent.ItemType<Zeus>())
+                    {
+                        recipe.RemoveIngredient(ModContent.ItemType<TerraLight>());
+                        recipe.AddIngredient(ModContent.ItemType<HeavenlyGale>());
+                        recipe.RemoveIngredient(ModContent.ItemType<EssenceofBright>());
+                        recipe.AddIngredient(ModContent.ItemType<EssenceofBright>(), 10);
+                    }
+
                     if (resultType == ItemID.Zenith)
                     {
                         recipe.RemoveIngredient(ModContent.ItemType<EssenceofBright>());
@@ -105,6 +123,14 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                     {
                         recipe.AddIngredient(ModContent.ItemType<DivineGeode>(), 5);
                         recipe.AddIngredient(ModContent.ItemType<UnholyEssence>(), 3);
+                    }
+
+                    if (resultType == ModContent.ItemType<AncientBlessing>())
+                    {
+                        recipe.RemoveIngredient(ModContent.ItemType<TankOfThePastJungle>());
+                        recipe.AddIngredient(ModContent.ItemType<EssenceofLife>(), 4);
+                        recipe.requiredTile.Clear();
+                        recipe.requiredTile.Add(ModContent.TileType<ContinentOfJourney.Tiles.FountainofLife>());
                     }
 
                     if (resultType == ModContent.ItemType<GrandSpectral>())

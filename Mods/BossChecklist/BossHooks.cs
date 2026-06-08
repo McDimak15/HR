@@ -42,7 +42,7 @@ namespace HomewardRagnarok.Mods.BossChecklist
                 new { Key = "CoJScarabBelief",  Expected = 24f,   NewVal = 20.7f  },
                 new { Key = "CoJOrdeals",       Expected = 23f,   NewVal = 21.6f  },
                 new { Key = "CoJWorldsEndEverlastingFallingWhale", Expected = 25f, NewVal = 21.7f },
-                new { Key = "CoJSon",           Expected = 26f,   NewVal = 23.6f  }
+                new { Key = "CoJSon",           Expected = 26f,   NewVal = 23.7f  }
             };
 
             

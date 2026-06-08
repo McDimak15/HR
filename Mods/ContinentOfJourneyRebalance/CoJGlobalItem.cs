@@ -7,17 +7,38 @@ using System;
 using System.Collections.Generic;
 using ContinentOfJourney;
 using ContinentOfJourney.Items;
+using ContinentOfJourney.Tiles;
+using ContinentOfJourney.Buffs;
 using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Accessories.MeleeExpansion;
-using ContinentOfJourney.Buffs;
 using HomewardRagnarok.Config;
 using HomewardRagnarok.Projectiles;
 
 namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
+    public class OreRetier : ModSystem
+    {
+        public override void PostSetupContent()
+        {
+            var finalore = ModContent.GetInstance<TruePearlstone>();
+            if (finalore != null)
+            {
+                finalore.MinPick = 275;
+            }
+        }
+    }
+
     public class COJGlobalItem : GlobalItem
     {
         public override bool InstancePerEntity => true;
+
+        public override void SetDefaults(Item item)
+        {
+            if (item.type == ModContent.ItemType<Deconstructor>())
+            {
+                item.pick = 275;
+            }
+        }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
