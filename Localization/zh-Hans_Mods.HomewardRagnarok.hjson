@@ -558,7 +558,7 @@ Items: {
 	EtzHaChayimRelic: {
 		DisplayName: 正生命之树炼狱圣物
 		Tooltip: 以殁者之火铸其形，其焰猩赫
-		}
+	}
 }
 
 Tiles: {
@@ -569,6 +569,7 @@ Tiles: {
 Projectiles: {
 	BabyOilDroplet.DisplayName: 宝宝油液滴
 	DevourScarf.DisplayName: 吞噬者围巾
+	// EurekaPortal.DisplayName: Eureka Portal
 }
 
 Buffs: {

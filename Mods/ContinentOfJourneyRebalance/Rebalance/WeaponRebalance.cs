@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
 using Terraria.Localization;
 using HomewardRagnarok.Config;
 using ContinentOfJourney.Items;

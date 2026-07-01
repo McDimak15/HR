@@ -7,10 +7,21 @@
 	<PropertyGroup>
 		
 	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="CalamityMod">
+	    <HintPath>..\..\ModReader\CalamityMod\CalamityMod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="ContinentOfJourney">
+	    <HintPath>..\..\ModReader\ContinentOfJourney\ContinentOfJourney.dll</HintPath>
+	  </Reference>
+	  <Reference Include="ThoriumMod">
+	    <HintPath>..\..\ModReader\ThoriumMod\ThoriumMod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="ThrowerUnification">
+	    <HintPath>..\..\ModReader\ThrowerUnification\ThrowerUnification.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 
 	<!-- References -->
-	<ItemGroup>
-
-	</ItemGroup>
 
 </Project>

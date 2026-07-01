@@ -1,11 +1,11 @@
 displayName = Homeward Ragnarok
 author = Kes
-version = 0.9.0
+version = 0.10.0
 homepage = https://discord.gg/pxxQMVu5ek
 hideCode = true
 
 modReferences = ContinentOfJourney, InfernalEclipseAPI, ThrowerUnification, HomewardWorldGenFix
-weakReferences = SOTS , ThoriumMod, CalamityBardHealer
+weakReferences = SOTS, ThoriumMod, CalamityBardHealer
 sortAfter = InfernalEclipseAPI, ContinentOfJourney, ThoriumMod, SOTS, CalamityMod, Clamity
 sortBefore = ThrowerUnification
 loadAfter = RevengeancePlus

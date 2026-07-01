@@ -1,5 +1,12 @@
-InfernumTitle.SlimeGod:
-	'''
-	Безрассудное божество света
-	Бог слизней: Реванш
-	'''
+InfernumTitle: {
+	SlimeGod:
+		'''
+		Безрассудное божество света
+		Бог слизней: Реванш
+		'''
+	/* PuppetOpera:
+		'''
+		The Other Puppet
+		Phantom of the Opera
+		''' */
+}

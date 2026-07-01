@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using HomewardRagnarok.Config;
 using System.Collections.Generic;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Rebalance
 {
     public class CoJClassOverrides : GlobalItem
     {
@@ -23,10 +23,13 @@ namespace HomewardRagnarok
                     "AdamantiteKnife","BrokenHammer","Backstabber","Bloodthirst","CobaltKnife",
                     "CopperKnife","GoldKnife","IronKnife","MythrilKnife","OrichalcumKnife",
                     "PalladiumKnife","PlatinumKnife","SilverKnife","TinKnife","HardKnuckle",
-                    "Hellfire","Longinus","InkyToss","RollingCutter","ItemDarkKnife",
+                    "Hellfire","Longinus","InkyToss2","RollingCutter","ItemDarkKnife",
                     "TitaniumKnife","TungstenKnife","ChlorophyteKnife","LeadKnife",
                     "ToothOfCthulhu","ItemCactusBall","ItemSolidTornado","SpikyBomb","Fission",
-                    "SamsaraOfDawnlight", "RisingAction"
+                    "SamsaraOfDawnlight", "RisingAction", "ItemCobaltThrowhammer", "ItemCopperThrowhammer",
+                    "ItemPalladiumThrowhammer", "ItemTinThrowhammer", "ItemLeadBowlingBall", "ItemSilverTomahawk",
+                    "ItemTungstenTomahawk", "ItemGoldenRang", "ItemPlatinumRang", "ItemBloodyShuriken",
+                    "ItemEvilShuriken", "ItemMetalBlade", "ConniversKunai"
                 };
 
                 foreach (string name in rogueNames)
