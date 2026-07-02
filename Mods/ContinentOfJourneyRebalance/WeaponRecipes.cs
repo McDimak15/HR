@@ -1,3 +1,4 @@
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,27 +9,47 @@ using CalamityMod.Items.Weapons.Summon;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Items.Weapons.Ranged;
 using CalamityMod.Items.Materials;
+using ContinentOfJourney.Items.ThrowerWeapons;
+using ContinentOfJourney;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Rebalance
 {
-    public class CoJCalamityRecipePatches : ModSystem
+    public class WeaponRecipes : ModSystem
     {
+        public override void AddRecipes()
+        {
+            Recipe.Create(ModContent.ItemType<ItemMetalBlade>())
+            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddRecipeGroup("CoJMod:CoJAnySilverBarGroup", 10)
+            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddTile(TileID.Anvils)
+            .Register();
+        }
         public override void PostAddRecipes()
         {
             if (!ServerConfig.Instance.WeaponBalancing)
                 return;
 
-            if (!ModLoader.HasMod("ContinentOfJourney") || !ModLoader.HasMod("CalamityMod"))
-                return;
+            string[] throwerItems = {
+                "ItemCactusBall","ItemSolidTornado","SpikyBomb", "ItemCobaltThrowhammer", "ItemCopperThrowhammer",
+                "ItemPalladiumThrowhammer", "ItemTinThrowhammer", "ItemLeadBowlingBall", "ItemSilverTomahawk",
+                "ItemTungstenTomahawk", "ItemGoldenRang", "ItemPlatinumRang", "ItemBloodyShuriken",
+                "ItemEvilShuriken", "ItemMetalBlade", "ConniversKunai"
+            };
 
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
                 Recipe recipe = Main.recipe[i];
+                Item craftedItem = recipe.createItem;
+                int resultType = craftedItem.type;
 
                 if (recipe == null || recipe.createItem == null || recipe.createItem.IsAir)
                     continue;
 
-                int resultType = recipe.createItem.type;
+                if (craftedItem.ModItem != null && throwerItems.Contains(craftedItem.ModItem.Name))
+                {
+                    recipe.createItem.stack = 1;
+                }
 
                 // Terraheart (ClottedStaff) swap OrganicStaff with PlantationStaff
                 if (resultType == ModContent.ItemType<ClottedStaff>())
@@ -82,6 +103,92 @@ namespace HomewardRagnarok
                 {
                     if (!recipe.HasIngredient(ModContent.ItemType<VeinBurster>()))
                         recipe.AddIngredient(ModContent.ItemType<Vein>());
+                }
+
+                if (resultType == ModContent.ItemType<ItemCactusBall>())
+                {
+                    recipe.RemoveIngredient(ItemID.Cactus);
+                    recipe.AddIngredient(ItemID.Cactus, 25);
+                }
+
+                if (resultType == ModContent.ItemType<ItemCobaltThrowhammer>())
+                {
+                    recipe.RemoveIngredient(ItemID.CobaltBar);
+                    recipe.AddIngredient(ItemID.CobaltBar, 15);
+                }
+
+                if (resultType == ModContent.ItemType<ItemPalladiumThrowhammer>())
+                {
+                    recipe.RemoveIngredient(ItemID.PalladiumBar);
+                    recipe.AddIngredient(ItemID.PalladiumBar, 15);
+                }
+
+                if (resultType == ModContent.ItemType<ItemCopperThrowhammer>())
+                {
+                    recipe.RemoveIngredient(ItemID.CopperBar);
+                    recipe.AddIngredient(ItemID.CopperBar, 15);
+                }
+
+                if (resultType == ModContent.ItemType<ItemTinThrowhammer>())
+                {
+                    recipe.RemoveIngredient(ItemID.TinBar);
+                    recipe.AddIngredient(ItemID.TinBar, 15);
+                }
+
+                if (resultType == ModContent.ItemType<ItemSilverTomahawk>())
+                {
+                    recipe.RemoveIngredient(ItemID.SilverBar);
+                    recipe.AddIngredient(ItemID.SilverBar, 12);
+                }
+
+                if (resultType == ModContent.ItemType<ItemTungstenTomahawk>())
+                {
+                    recipe.RemoveIngredient(ItemID.TungstenBar);
+                    recipe.AddIngredient(ItemID.TungstenBar, 12);
+                }
+
+                if (resultType == ModContent.ItemType<ItemLeadBowlingBall>())
+                {
+                    recipe.RemoveIngredient(ItemID.LeadBar);
+                    recipe.AddIngredient(ItemID.LeadBar, 20);
+                }
+
+                if (resultType == ModContent.ItemType<ItemGoldenRang>())
+                {
+                    recipe.RemoveIngredient(ItemID.GoldBar);
+                    recipe.AddIngredient(ItemID.GoldBar, 12);
+                }
+
+                if (resultType == ModContent.ItemType<ItemPlatinumRang>())
+                {
+                    recipe.RemoveIngredient(ItemID.PlatinumBar);
+                    recipe.AddIngredient(ItemID.PlatinumBar, 12);
+                }
+
+                if (resultType == ModContent.ItemType<ItemEvilShuriken>())
+                {
+                    recipe.RemoveIngredient(ItemID.DemoniteBar);
+                    recipe.AddIngredient(ItemID.DemoniteBar, 13);
+                }
+
+                if (resultType == ModContent.ItemType<ItemBloodyShuriken>())
+                {
+                    recipe.RemoveIngredient(ItemID.CrimtaneBar);
+                    recipe.AddIngredient(ItemID.CrimtaneBar, 12);
+                }
+
+                if (resultType == ModContent.ItemType<ItemSolidTornado>())
+                {
+                    recipe.RemoveIngredient(ItemID.Cloud);
+                    recipe.RemoveIngredient(ItemID.RainCloud);
+                    recipe.AddIngredient(ItemID.Cloud, 20);
+                    recipe.AddIngredient(ItemID.RainCloud, 10);
+                }
+
+
+                if (resultType == ModContent.ItemType<ItemMetalBlade>() && recipe.Mod.Name == "ContinentOfJourney")
+                {
+                    recipe.DisableRecipe();
                 }
 
                 // Wildfire 

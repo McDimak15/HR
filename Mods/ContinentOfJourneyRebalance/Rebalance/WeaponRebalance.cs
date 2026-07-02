@@ -13,8 +13,9 @@ using ContinentOfJourney.Items.Rockets;
 using ContinentOfJourney.Projectiles;
 using ContinentOfJourney.Projectiles.Meelee;
 using CalamityMod.Buffs.DamageOverTime;
+using System.Linq;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Rebalance
 {
     public class BalanceTweaks : GlobalItem
     {
@@ -22,6 +23,13 @@ namespace HomewardRagnarok
         {
             if (!ServerConfig.Instance.WeaponBalancing)
                 return;
+            // unconsumable thrower items
+            string[] throwerItems = {
+                    "ItemCactusBall","ItemSolidTornado","SpikyBomb", "ItemCobaltThrowhammer", "ItemCopperThrowhammer",
+                    "ItemPalladiumThrowhammer", "ItemTinThrowhammer", "ItemLeadBowlingBall", "ItemSilverTomahawk",
+                    "ItemTungstenTomahawk", "ItemGoldenRang", "ItemPlatinumRang", "ItemBloodyShuriken",
+                    "ItemEvilShuriken", "ItemMetalBlade", "ConniversKunai"
+            };
 
             // Rapiers
             if (item.ModItem is CopperRapier) item.damage = (int)(item.damage * 1.3f);
@@ -79,6 +87,13 @@ namespace HomewardRagnarok
             {
                 item.damage = 28;
                 item.useTime = item.useAnimation = 20;
+            }
+
+            // Unconsumable thrower items
+            if (item.ModItem != null && throwerItems.Contains(item.ModItem.Name))
+            {
+                item.consumable = false;
+                item.maxStack = 1;
             }
 
             //  Celestial Slime Staff

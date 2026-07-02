@@ -4,6 +4,7 @@ version = 0.10.0
 homepage = https://discord.gg/pxxQMVu5ek
 hideCode = true
 
+buildIgnore = .vs\*, Properties\*, *.csproj, obj\*, bin\*, .git\*, .gitignore, .gitattributes, ChangeLog\*
 modReferences = ContinentOfJourney, InfernalEclipseAPI, ThrowerUnification, HomewardWorldGenFix
 weakReferences = SOTS, ThoriumMod, CalamityBardHealer
 sortAfter = InfernalEclipseAPI, ContinentOfJourney, ThoriumMod, SOTS, CalamityMod, Clamity

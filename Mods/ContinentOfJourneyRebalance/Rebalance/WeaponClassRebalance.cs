@@ -23,7 +23,7 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Rebalance
                     "AdamantiteKnife","BrokenHammer","Backstabber","Bloodthirst","CobaltKnife",
                     "CopperKnife","GoldKnife","IronKnife","MythrilKnife","OrichalcumKnife",
                     "PalladiumKnife","PlatinumKnife","SilverKnife","TinKnife","HardKnuckle",
-                    "Hellfire","Longinus","InkyToss2","RollingCutter","ItemDarkKnife",
+                    "Hellfire","Longinus","InkyToss","RollingCutter","ItemDarkKnife",
                     "TitaniumKnife","TungstenKnife","ChlorophyteKnife","LeadKnife",
                     "ToothOfCthulhu","ItemCactusBall","ItemSolidTornado","SpikyBomb","Fission",
                     "SamsaraOfDawnlight", "RisingAction", "ItemCobaltThrowhammer", "ItemCopperThrowhammer",
