@@ -852,6 +852,7 @@ ItemTooltips: {
 	"Remove'range'": диапозон
 	SpikyCoverRework: Наконечник кнута наносит в 1,5 раза больше урона и накладывает кровотечении
 	// ColdBloodRework: Decreases debuff time and damage by 25%
+	// FungusJacket: Increases your max number of minions by 1
 	/* WhaleBoneCharmRework:
 		'''
 		Gives 20% damage reduction

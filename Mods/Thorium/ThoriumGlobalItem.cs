@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using ContinentOfJourney.Items.Accessories;
 using ThoriumMod;
 using HomewardRagnarok.Config;
+using ContinentOfJourney.Items.Armor;
 
 namespace HomewardRagnarok.Mods.Thorium
 {
@@ -67,6 +68,15 @@ namespace HomewardRagnarok.Mods.Thorium
             }
         }
 
+        public override void UpdateEquip(Item item, Player player)
+        {
+            if (!ServerConfig.Instance.ThoriumBalance || !ServerConfig.Instance.ArmorBalancing) return;
+
+            if (item.type == ModContent.ItemType<FungusJacket>())
+            {
+                player.maxMinions += 1;
+            }
+        }
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             if (!ServerConfig.Instance.ThoriumBalance || item.ModItem == null) return;
@@ -111,6 +121,13 @@ namespace HomewardRagnarok.Mods.Thorium
                         InsertTooltip(tooltips, "SteamWatch", "SteamkeeperWatch", false);
                         break;
                 }
+            }
+
+            if (!ServerConfig.Instance.ArmorBalancing) return;
+
+            if (item.type == ModContent.ItemType<FungusJacket>())
+            {
+                InsertTooltip(tooltips, "FungusJacket", "FungusJacket", false);
             }
         }
 

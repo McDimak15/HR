@@ -853,6 +853,7 @@ ItemTooltips: {
 	"Remove'range'": 远程
 	SpikyCoverRework: 鞭子尖端造成1.5倍伤害并施加流血
 	ColdBloodRework: Decreases debuff time and damage by 25%
+	// FungusJacket: Increases your max number of minions by 1
 	WhaleBoneCharmRework:
 		'''
 		给予你20%伤害减免

@@ -16,6 +16,8 @@ using ContinentOfJourney.Items.Accessories;
 using ContinentOfJourney.Items.Material;
 using HomewardRagnarok.Items.Accessories;
 using InfernalEclipseAPI.Common.GlobalItems.CraftingTrees.EtherealTalismanCraftingTree;
+using ContinentOfJourney.Items.Armor;
+using ThoriumMod.Tiles;
 
 namespace HomewardRagnarok.Mods.Thorium
 {
@@ -67,9 +69,19 @@ namespace HomewardRagnarok.Mods.Thorium
                     recipe.AddIngredient(ModContent.ItemType<SteamkeeperWatch>());
                 }
 
+                // Eureka
                 if (type == ModContent.ItemType<EurekaEffect>())
                 {
                     recipe.AddIngredient(ModContent.ItemType<DarkGate>());
+                }
+
+                // Fungus Armor
+                if (type == ModContent.ItemType<FungusHat>() | 
+                    type == ModContent.ItemType<FungusJacket>() | 
+                    type == ModContent.ItemType<FungusTrousers>())
+                {
+                    recipe.requiredTile.Remove(TileID.WorkBenches);
+                    recipe.AddTile(ModContent.TileType<ArcaneArmorFabricator>());
                 }
 
                 // Rift Generator
