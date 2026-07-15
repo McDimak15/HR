@@ -134,7 +134,7 @@ Items: {
 			Увеличивает метательный урон на 20%
 			Увеличивает скорость полёта расходуемых метательных снарядов на 50%
 			При использовании расходуемовых оружий вы машите битой
-			   Три метательных кольца усиливают ваши метательные оружия
+			Три метательных кольца усиливают ваши метательные оружия
 			Уменьшает время использования расходуемовых метательных оружий на 20%
 			Когда вы держите в руках метательное оружие, ускорение бега увеличивается на 75%
 			Наносит дополнительный удар в размере 17.5% метательного урона
@@ -153,96 +153,140 @@ Items: {
 	}
 
 	PriestessRodRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Жрицы Стержней
+		Tooltip: 
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Жрицы стержней
 	}
 
 	ChariotRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Гоблинской Колесницы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Гоблинской колесницы
 	}
 
 	MarquisMoonsquidRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Маркиза Лунного Кальмара
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Маркиза лунного кальмара
 	}
 
 	BigDipperRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Большой Медведицы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Большой медведицы
 	}
 
 	PuppetRelic: {
-		DisplayName: Инфернальная реликвия Кукольной Оперы
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Кукольной оперы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheMotherbrainRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Материнского Мозга
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Материнского мозга
 	}
 
 	DiverRelic: {
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 		DisplayName: Инфернальная реликвия Дайвера
 	}
 
 	SolarRelic: {
 		DisplayName: Инфернальная реликвия Солнца
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheOverwatcherRelic: {
 		DisplayName: Инфернальная реликвия Часового
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	WallofShadowRelic: {
-		DisplayName: Инфернальная реликвия Стены Теней
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Стены теней
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheMaterealizerRelic: {
-		Tooltip: ""
-		DisplayName: Infernal Инфернальная реликвия Материализатора
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Материализатора
 	}
 
 	TheLifebringerRelic: {
-		Tooltip: ""
-		DisplayName: Infernal Инфернальная реликвия Жизненосца
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
+		DisplayName: Инфернальная реликвия Жизненосца
 	}
 
 	ScarabBeliefRelic: {
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 		DisplayName: Инфернальная реликвия Веры скарабея
 	}
 
 	TheSonRelic: {
 		DisplayName: Инфернальная реликвия Сына
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	WhaleRelic: {
-		DisplayName: Инфернальная реликвия Вечно Падающего Кита Конца Света
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Вечно падающего кита конца света
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	CampfireOfTheWildheart: {
-		// DisplayName: Campfire Of The Wildheart
-		// Tooltip: "'Makes you feel like you can take on multiverse'"
+		 DisplayName: Костёр дикого сердца
+		 Tooltip: "'Создаёт ощущение, что ты способен обуздать всю мульти вселенную'"
 	}
 
 	RiftGenerator: {
-		// DisplayName: Rift Generator
-		/* Tooltip:
+		 DisplayName: Генератор разломов
+		 Tooltip:
 			'''
-			Increases max minions and sentries by 1
-			Generate 4 platforms to the left and right of you
-			You can right click to drag the platforms, but they will always remain symmetrical
-			Sentries can be summoned on top of the platforms
-			Minions and sentry attacks briefly deal 2 more damage after killing an enemy
-			Summons Devour Lamprey behind you
-			''' */
+			Увеличивает максимальное количество миньонов и стражей на 1
+			Создает 4 платформы слева и справа от вас
+			Вы можете перетаскивать платформы, щелкнув правой кнопкой мыши, но они всегда будут оставаться симметричными
+			Позволяет призывать стражей на платформах
+			После убийства врага, атаки миньонов и стражей на короткое время наносят дополнительно 2 ед. урона
+			Призывает минога-пожирателя позади вас
 	}
 
 	Lore: {
@@ -521,55 +565,79 @@ Items: {
 	}
 
 	ThreeThousandWorldsRelic: {
-		// DisplayName: Infernal Three Thousand Worlds Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Three Thousand Worlds Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	TheHolyRelic: {
-		// DisplayName: Infernal The Holy Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal The Holy Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	SpiralStairsRelic: {
-		// DisplayName: Infernal Spiral Stairs Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Spiral Stairs Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	RisingWorldRelic: {
-		// DisplayName: Infernal Rising World Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Rising World Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	OozysseyRelic: {
-		// DisplayName: Infernal Oozyssey Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Oozyssey Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	LunarRelic: {
-		// DisplayName: Infernal Lunar Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Lunar Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	KhronoTriggerRelic: {
-		// DisplayName: Infernal Khrono Trigger Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Khrono Trigger Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	EtzHaChayimRelic: {
-		// DisplayName: Infernal Etz Ha Chayim Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Infernal Etz Ha Chayim Relic
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 }
 
 Tiles: {
-	TimelessFountainTile.MapEntry: Вневременной фонтан Tile
-	// CampfireOfTheWildheartTile.MapEntry: Campfire Of The Wildheart Tile
+	TimelessFountainTile.MapEntry: Вневременной фонтан
+    CampfireOfTheWildheartTile.MapEntry: Костёр дикого сердца
 }
 
 Projectiles: {
 	BabyOilDroplet.DisplayName: Капля детского масла
-	// DevourScarf.DisplayName: Devour Scarf
-	// EurekaPortal.DisplayName: Eureka Portal
+	// DevourScarf.DisplayName: Шарф пожирателя
+	// EurekaPortal.DisplayName: Портал озарения
 }
 
 Buffs: {
