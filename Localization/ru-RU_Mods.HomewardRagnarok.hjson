@@ -569,7 +569,7 @@ Items: {
 	}
 
 	ThreeThousandWorldsRelic: {
-		 DisplayName: Infernal Three Thousand Worlds Relic
+		 DisplayName: Инфернальная реликвия Трёх тысяч миров
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -577,7 +577,7 @@ Items: {
 	}
 
 	TheHolyRelic: {
-		 DisplayName: Infernal The Holy Relic
+		 DisplayName: Инфернальная реликвия Святости
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -585,7 +585,7 @@ Items: {
 	}
 
 	SpiralStairsRelic: {
-		 DisplayName: Infernal Spiral Stairs Relic
+		 DisplayName: Инфернальная реликвия Спиральной Лестницы
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -593,7 +593,7 @@ Items: {
 	}
 
 	RisingWorldRelic: {
-		 DisplayName: Infernal Rising World Relic
+		 DisplayName: Инфернальная реликвия Восходящего Мира
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -601,7 +601,7 @@ Items: {
 	}
 
 	OozysseyRelic: {
-		 DisplayName: Infernal Oozyssey Relic
+		 DisplayName: Инфернальная реликвия Оозисеи
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -609,15 +609,15 @@ Items: {
 	}
 
 	LunarRelic: {
-		 DisplayName: Infernal Lunar Relic
+		 DisplayName: Инфернальная реликвия Луны
 		 Tooltip: 
 		 '''
-		 Окружено инфернальными огнями поверженного врага
+		 Окружено инфернальными огнями поверженного события
 		 '''
 	}
 
 	KhronoTriggerRelic: {
-		 DisplayName: Infernal Khrono Trigger Relic
+		 DisplayName: Инфернальная реликвия Хроно Триггера
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
@@ -625,7 +625,7 @@ Items: {
 	}
 
 	EtzHaChayimRelic: {
-		 DisplayName: Infernal Etz Ha Chayim Relic
+		 DisplayName: Инфернальная реликвия Эц хаХаим
 		 Tooltip: 
 		 '''
 		 Окружено инфернальными огнями поверженного врага
