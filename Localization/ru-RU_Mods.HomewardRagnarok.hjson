@@ -153,35 +153,35 @@ Items: {
 	}
 
 	PriestessRodRelic: {
+        DisplayName: Инфернальная реликвия Жрицы стержней
 		Tooltip: 
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Жрицы стержней
 	}
 
 	ChariotRelic: {
+		DisplayName: Инфернальная реликвия Гоблинской колесницы
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Гоблинской колесницы
 	}
 
 	MarquisMoonsquidRelic: {
+		DisplayName: Инфернальная реликвия Маркиза лунного кальмара
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Маркиза лунного кальмара
 	}
 
 	BigDipperRelic: {
+		DisplayName: Инфернальная реликвия Большой медведицы
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Большой медведицы
 	}
 
 	PuppetRelic: {
@@ -193,19 +193,19 @@ Items: {
 	}
 
 	TheMotherbrainRelic: {
+		DisplayName: Инфернальная реликвия Материнского мозга
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Материнского мозга
 	}
 
 	DiverRelic: {
+		DisplayName: Инфернальная реликвия Дайвера
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Дайвера
 	}
 
 	SolarRelic: {
@@ -233,27 +233,27 @@ Items: {
 	}
 
 	TheMaterealizerRelic: {
+		DisplayName: Инфернальная реликвия Материализатора
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Материализатора
 	}
 
 	TheLifebringerRelic: {
+		DisplayName: Инфернальная реликвия Жизненосца
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Жизненосца
 	}
 
 	ScarabBeliefRelic: {
+		DisplayName: Инфернальная реликвия Веры скарабея
 		Tooltip:
 		'''
 		Окружено инфернальными огнями поверженного врага
 		'''
-		DisplayName: Инфернальная реликвия Веры скарабея
 	}
 
 	TheSonRelic: {
@@ -274,7 +274,10 @@ Items: {
 
 	CampfireOfTheWildheart: {
 		 DisplayName: Костёр дикого сердца
-		 Tooltip: "'Создаёт ощущение, что ты способен обуздать всю мульти вселенную'"
+		 Tooltip:
+		 '''
+		 Создаёт ощущение, что ты способен обуздать всю мульти вселенную
+		 '''
 	}
 
 	RiftGenerator: {
@@ -287,6 +290,7 @@ Items: {
 			Позволяет призывать стражей на платформах
 			После убийства врага, атаки миньонов и стражей на короткое время наносят дополнительно 2 ед. урона
 			Призывает минога-пожирателя позади вас
+			'''
 	}
 
 	Lore: {
@@ -643,7 +647,7 @@ Projectiles: {
 Buffs: {
 	BubbleShield: {
 		DisplayName: Пузырьковый щит
-		Description: Снижает следующий урон на 10%
+		Description: Следующий урон снижен на 10%
 	}
 
 	HeartOfThoriumBuff: {
@@ -653,7 +657,7 @@ Buffs: {
 
 	HeartOfLifeQuartzBuff: {
 		DisplayName: Сердце кварца жизни
-		Description: Исцеляющие заклинания восстанавливают дополнительно 2 единицы здоровья
+		Description: Исцеляющие заклинания восстанавливают дополнительно 2 ед. здоровья
 	}
 
 	HeartOfAqualiteBuff: {
@@ -668,17 +672,17 @@ Buffs: {
 
 	HeartOfLodestoneBuff: {
 		DisplayName: Сердце магнетита
-		Description: Critical chance increased by 5%
+		Description: Увеличивает шанс критического удара на 5%
 	}
 
 	HeartOfValadiumBuff: {
 		DisplayName: Сердце валадиума
-		Description: Critical chance increased by 5%
+		Description: Увеличивает шанс критического удара на5%
 	}
 
 	HeartOfIllumiteBuff: {
 		DisplayName: Сердце иллюмита
-		Description: Defense increased by 10%
+		Description: Увеличивает защиту на 10%
 	}
 
 	WhaleBoneRecovery: {
@@ -733,7 +737,7 @@ Mods: {
 			SlimeGod:
 				'''
 				Первородный Слизень
-				Бог слизней:Реванш
+				Бог Слизней
 				'''
 			TheOverwatcher:
 				'''
