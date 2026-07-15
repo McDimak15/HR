@@ -142,16 +142,6 @@ Items: {
 		NoExhaustion: При экипировке оружие больше не изматывает вас
 	}
 
-	DeluxeDewCollector: {
-		DisplayName: Собиратель росы делюкс
-		Tooltip:
-			'''
-			Лечение союзника даёт ему 2 единицы восполнения здоровья и создаёт росу
-			Поднятие росы увеличивает ваше собственное восполнение здоровья на 4 единицы
-			Исцеляющие заклинания будут восстанавливать дополнительно 6 единицы здоровья
-			'''
-	}
-
 	PriestessRodRelic: {
         DisplayName: Инфернальная реликвия Жрицы стержней
 		Tooltip: 
@@ -677,7 +667,7 @@ Buffs: {
 
 	HeartOfValadiumBuff: {
 		DisplayName: Сердце валадиума
-		Description: Увеличивает шанс критического удара на5%
+		Description: Увеличивает шанс критического удара на 5%
 	}
 
 	HeartOfIllumiteBuff: {
@@ -686,8 +676,8 @@ Buffs: {
 	}
 
 	WhaleBoneRecovery: {
-		// DisplayName: Skeletal reconstruction
-		// Description: Whale will heal you by {0}
+		DisplayName: Реконструкция скелета
+		Description: Кит исцелит тебя когда твоё здоровье будет ниже {0}
 	}
 }
 
@@ -884,18 +874,18 @@ Configs: {
 	}
 }
 
-ModCompat.BossChecklist.SlimeGod: Бог слизней: Реванш
+ModCompat.BossChecklist.SlimeGod: Слизь Божественности
 
 ItemTooltips: {
 	OmniShield: -Омни щит-
 	ImmunityVulnerable: Даёт неуязвимость к уязвимости
 	CommemorativeCoin: Урон получаемый от дебафов снижен на 35%
 	TransactionCertificate: Предотвращает смертельный урон, оставляя игроку 1 здоровье, Перезарядка: 10 минут
-	// SteamkeeperWatch: Your sentries last forever and gain up to 15% damage over the course of 2 minutes
-	// HungeringBlossom: Grants the effects of the Hungering Blossom when visibility is off
-	// ConstructionPDA: Increases your max number of sentries by 1
-	// DivineNecklace: Your minion will let your enemies bask in a Gods′ grace
-	// ToggleWings: Shift-Right Click this item in your inventory to toggle the [i:493] wings
+	SteamkeeperWatch: Призванные стражи существуют бесконечно и увеличивает их урон на 15% в течении 2 минут
+	HungeringBlossom: Даёт эффект жаждущего цветка если видимость включена
+	ConstructionPDA: Увеличивает максимальное число часовых на 1
+	DivineNecklace: Ваши прислужники заставляют врагов наслаждаться милостью Богов
+	ToggleWings: Нажмите Shift + ПКМ по этому предмету в инвентаре, чтобы переключить [i:493] крылья
 	AbyssCore: Излучает свет на позиции курсора
 	GrandSpectral:
 		'''
@@ -908,68 +898,68 @@ ItemTooltips: {
 		Увеличивает длину кнутов на 10%
 		Увеличивает максимальное число часовых на 1
 		'''
-	/* TrinketOfChi:
+	TrinketOfChi:
 		'''
-		Increases damage reduction by 8% if you avoid taking damage for 10 seconds
-		This buff expires on hit
-		+1 HP/s life regen for you and your teammates
-		''' */
-	/* DeificAmulet:
+		Увеличивает сопротивление урону на 20%, если вы не получали урона в течение 8 секунд
+		Этот бонус пропадает при получении удара
+		Увеличивает регенерацию здоровья на 1 ед./сек вам и всем членам вашей команды
 		'''
-		Releases a burst of homing star-bees, increases movement speed, and drenches you in [cbuff:Honey] after taking damage
-		Increases the length of invincibility, with it increasing even more when at low health
-		''' */
+	DeificAmulet:
+		'''
+		При получении урона выпускает рой самонаводящихся звёздных пчёл, увеличивает скорость передвижения и даёт бафф [cbuff:Honey]
+		Даёт дополнительные кадры неуязвимости; эффект усиливается при низком уровне здоровья
+		'''
 	ArmillarySphere: Ваши часовые формируют созвездие, которое наносит урон врагам на пути, нанося 50% урона ващего оружия
 	"Remove'Range'": Диапозон
 	"Remove'range'": диапозон
 	SpikyCoverRework: Наконечник кнута наносит в 1,5 раза больше урона и накладывает кровотечении
-	// ColdBloodRework: Decreases debuff time and damage by 25%
-	// FungusJacket: Increases your max number of minions by 1
-	/* WhaleBoneCharmRework:
+	ColdBloodRework: Снижает урон и время действия дебаффов на 25%
+	FungusJacket: Увеличивает максимальное число часовых на 1
+	WhaleBoneCharmRework:
 		'''
-		Gives 20% damage reduction
-		If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-		''' */
-	/* StarQuiver:
+		Увеличивает сопротивление урону на 20%
+		Если атака нанесёт 1/4 вашего здоровья, вы получаете бафф, который востановит ваше здоровье в зависимости от полученного вами урона
 		'''
-		Increase the damage of arrows by 15%
-		Turn wooden arrows into holy arrows
-		Enemies are less likely to target you
-		''' */
-	/* CrossbowScopeSOTS:
+	StarQuiver:
 		'''
-		Grants a 20% chance not to consume ammo
-		Striking enemies has a chance to refund ammo
-		Landing the killing blow on enemies may also refund ammo
-		If accessory visablity is on, you consume void instead of ammunition
-		''' */
+		Увеличивает урон от стрел на 15%
+		Превращает деревянные стрелы в святые
+		Враги с меньшей вероятностью атакуют вас
+		'''
+	CrossbowScopeSOTS:
+		'''
+		Дает 20% шанс не использовать боеприпасы
+		Удары по врагам могут вернуть боеприпасы
+		Добивание врагов также может вернуть боеприпасы
+		Если видимость аксессуара включена, вместо боеприпасов будет расходоваться пустота
+		'''
 
 	EtherealTalisman: {
-		// OrigTooltip1: +150 max mana and 10% decreased mana usage
-		// Replace1: +230 max mana and 12% decreased mana usage
+		OrigTooltip1: Увеличивает максимальный запас маны на 150 и снижает расход маны на 8%
+		Replace1: Увеличивает максимальный запас маны на 230 и снижает расход маны на 12%
 	}
 
 	AncientBlessing: {
-		// Remove: Increases length of invincibility,
-		// Remove1: Minor increase to all stats
-		// Remove2: Provides adaption to nights and liquid
-		/* AlchemistsCharm:
+		Remove: Увеличивает продолжительность неуязвимости после получения урона
+		Remove1: Немного увеличивает все характеристики
+		Remove2: Позволяет преобразовываться в ночи и жидкости
+		AlchemistsCharm:
 			'''
-			Increases healing and mana received from potions by 100
-			Increases buff duration by 67%
-			''' */
+			Увеличивает количество исцеления и маны, получаемых от зелий, на 100 ед
+			Увеличивает длительность баффов на 67%
+			'''
 	}
 
-	Negatama: Высвобождает темную энергию, чем меньше у вас маны, тем больше урона наносёт
+	Negatama: Высвобождает темную энергию, чем меньше у вас маны, тем больше урона наносет
 	DivineTouch: Атаки оружий ближнего боя заставляют ваших врагов наслождаться милостью богов
-	// StarQuiverEffect: Cause ranger attacks to inflict [cbuff:CalamityMod/HolyFlames]
+	StarQuiverEffect: Атаки стрелка накладывают дебафф [cbuff:CalamityMod/HolyFlames]
 	PoisonEffect: Накладывает отравление
 	HolyFlamesEffect: Накладывает святой огонь
 	VaporfiedEffect: Накладывает испарение
 
 	ThrowerTickets: {
-		// Orig: Enables charge shot for consumable ranged weapons
-		// Replace: Improve your Stealth strikes ability
+		Orig: Позволяет заряжать броски расходуемых дистанционных оружий
+		Replace: Улучшает ваши навыки накопления скрытности
 	}
 
 	TheSwitch: {
