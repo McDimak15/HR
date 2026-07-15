@@ -636,8 +636,8 @@ Tiles: {
 
 Projectiles: {
 	BabyOilDroplet.DisplayName: Капля детского масла
-	// DevourScarf.DisplayName: Шарф пожирателя
-	// EurekaPortal.DisplayName: Портал озарения
+	DevourScarf.DisplayName: Шарф пожирателя
+	EurekaPortal.DisplayName: Портал озарения
 }
 
 Buffs: {
