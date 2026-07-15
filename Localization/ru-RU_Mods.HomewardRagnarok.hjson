@@ -1108,8 +1108,8 @@ ItemTooltips: {
 	}
 
 	FlasksTooltip: {
-		// ItemOrigTooltip: Melee and Whip attacks
-		// BuffOrigTooltip: Melee attacks
-		// Replace: Melee, Whip and Thrower attacks
+		 ItemOrigTooltip: Удары хлыстом и атаки ближнего боя
+		 BuffOrigTooltip: Ближние атаки
+		 Replace: Ближние и разбойные атаки, а также хлысты
 	}
 }
