@@ -696,42 +696,42 @@ Mods: {
 		CoJIntro: {
 			GoblinChariot:
 				'''
-				Безбашенная машина войны
+				Безбашенная Машина Войны
 				Гоблинская Колесница
 				'''
 			PuppetOpera:
 				'''
-				Нити судьбы
+				Нити Судьбы
 				Кукольная Опера
 				'''
 			BigDipper:
 				'''
-				Блуждающая звездорожденная
+				Блуждающая Звездорожденная
 				Большая Медведица
 				'''
 			MarquisMoonsquid:
 				'''
-				Тиран глубин
+				Тиран Глубин
 				Маркиз Лунный Кальмар
 				'''
 			PriestessRod:
 				'''
-				Благославлённый апостол
+				Благославлённый Апостол
 				Жрица Стержней
 				'''
 			Diver:
 				'''
-				Хранитель глубин
+				Хранитель Глубин
 				Дайвер
 				'''
 			TheMotherbrain:
 				'''
-				Мастер машинаций
+				Мастер Машинаций
 				Материнский Мозг
 				'''
 			WallofShadow:
 				'''
-				Творение тьмы
+				Творение Тьмы
 				Стена Теней
 				'''
 			SlimeGod:
@@ -741,27 +741,27 @@ Mods: {
 				'''
 			TheOverwatcher:
 				'''
-				Смотритель реальности
+				Смотритель Реальности
 				Часовой
 				'''
 			TheLifebringerHead:
 				'''
-				Божественное цветение
+				Божественное Цветение
 				Жизненосец
 				'''
 			TheMaterealizer:
 				'''
-				Архитектор реальности
+				Архитектор Реальности
 				Материализатор
 				'''
 			ScarabBelief:
 				'''
-				Древняя набожность
+				Древняя Набожность
 				Вера Скарабея
 				'''
 			WorldsEndEverlastingFallingWhale:
 				'''
-				Сокрущающая бездна
+				Сокрущающая Бездна
 				Вечно Падающий Кит Конца Света
 				'''
 			TheSon:
@@ -798,8 +798,8 @@ Configs: {
 		}
 
 		PermanentToAccessories: {
-			// Label: "[i:ContinentOfJourney/TheSwitch] The Switch Rework"
-			// Tooltip: If enabled, The Switch will be converted to accessory.
+			// Label: "[i:ContinentOfJourney/TheSwitch] Переработка переключателя"
+			// Tooltip: Если эта функция включена, переключатель будет переработан в виде аксессуара.
 		}
 
 		EnableBookmarks: {
@@ -808,8 +808,8 @@ Configs: {
 		}
 
 		EnableTickets: {
-			// Label: "[i:ContinentOfJourney/LegacyTicket] Ticket Balancing"
-			// Tooltip: If enabled, Thrower luck tickets will be rebalanced according to other mods
+			 Label: "[i:ContinentOfJourney/LegacyTicket] Балансировка билетиков"
+			 Tooltip: Если эта функция включена, баланс билетиков удачи для метателя будет сбалансирован в соответствии с другими модами.
 		}
 
 		CustomContent: {
