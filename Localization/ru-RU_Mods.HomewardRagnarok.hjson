@@ -285,7 +285,7 @@ Items: {
 
 	Lore: {
 		LoreBigDipper: {
-			DisplayName: Большая Медведица
+			DisplayName: История (Большая Медведица)
 			Tooltip: ""
 			Lore:
 				'''
@@ -301,7 +301,7 @@ Items: {
 		}
 
 		LoreDiver: {
-			DisplayName: Дайвер
+			DisplayName: История (Дайвер)
 			Tooltip: ""
 			Lore:
 				'''
@@ -318,7 +318,7 @@ Items: {
 		}
 
 		LoreTrench: {
-			DisplayName: The Trench
+			DisplayName: История (Впадина)
 			Tooltip: ""
 			Lore:
 				'''
@@ -336,7 +336,7 @@ Items: {
 		}
 
 		LoreGoblinChariot: {
-			DisplayName: Гоблинская колесница
+			DisplayName: История (Гоблинская Колесница)
 			Tooltip: ""
 			Lore:
 				'''
@@ -352,7 +352,7 @@ Items: {
 		}
 
 		LoreMarquisMoonsquid: {
-			DisplayName: Маркиз лунный кальмар
+			DisplayName: История (Маркиз Лунный Кальмар)
 			Tooltip: ""
 			Lore:
 				'''
@@ -365,7 +365,7 @@ Items: {
 		}
 
 		LoreOverwatcher: {
-			DisplayName: Часовой
+			DisplayName: История (Часовой)
 			Tooltip: ""
 			Lore:
 				'''
@@ -380,7 +380,7 @@ Items: {
 		}
 
 		LorePriestessRod: {
-			DisplayName: Priestess Rod
+			DisplayName: История (Жрица Стержней)
 			Tooltip: ""
 			Lore:
 				'''
@@ -398,7 +398,7 @@ Items: {
 		}
 
 		LorePuppetOpera: {
-			DisplayName: Кукольная Опера
+			DisplayName: История (Кукольная Опера)
 			Tooltip: ""
 			Lore:
 				'''
@@ -414,7 +414,7 @@ Items: {
 		}
 
 		LoreScarabBelief: {
-			DisplayName: Вера Скарабея
+			DisplayName: История (Вера Скарабея)
 			Tooltip: ""
 			Lore:
 				'''
@@ -431,7 +431,7 @@ Items: {
 		}
 
 		LoreSlimeGod: {
-			DisplayName: Сльзь Божественности
+			DisplayName: История (Сльзь Божественности)
 			Tooltip: ""
 			Lore:
 				'''
@@ -450,14 +450,14 @@ Items: {
 		}
 
 		LoreTheLifebringer: {
-			DisplayName: Жизненосец
+			DisplayName: История (Жизненосец)
 			Tooltip: ""
 			Lore:
 				'''
 				Бог жизни был всеобъемлющим
 				Слишком обширная область, чтобы лишь одна ауритовая душа могла обладать полной властью над ней
 				Сама Сильва обладала властью лишь над концепцией жизни, поскольку природа была слишком разнообразна, чтобы она могла её контролировать
-				Кажется, что Жизненосец обладала более «полной» властью над муками природы, а не только над эволюцией или выживанием
+				Кажется, что Жизненосец обладала более «полной» властью над природными бедствиями, а не только над эволюцией или выживанием
 				Главное отличие от Сильвы заключалось в том, что- 
 				(Шепот на мгновение затих. Часть истории потеряна?)
 				-потому что ей не поклонялись традиционным способом, не было ни храмов, ни статуй, ни даже письменных источников, посвященных ей 
@@ -467,94 +467,94 @@ Items: {
 		}
 
 		LoreTheMaterealizer: {
-			DisplayName: The Materealizer
+			DisplayName: История (Материализатор)
 			Tooltip: ""
 			Lore:
 				'''
-				The god of matter was dutiful. 
-				As the current retainer of our world’s material laws, functionally its building blocks, 
-				he is every bit as cold and calculating as is required of him. Given a task, he will perform it to the most precise detail. 
-				The same goes for his followers, who have acted as hired builders for various factions. 
-				Pay their price, and you will not have a finer monument, from towering statues in ilmeris, to that very temple Providence calls home. 
-				Their neutrality made it easy for me to approach under the pretense of a commission, where I was led to a spiral-
-				(Loud static fills your ears, The whispers are inaudible, but continue uninterrupted. Is someone interfering?)
-				-took me an embarrassingly long amount of time to find the exit. Afterwards, I simply returned home and… pondered.
+				Бог материи был исполнительным
+				Как нынешний хранитель материальных законов нашего мира, по сути, его строительными блоками
+				Он так же холоден и расчетлив, как того и требуется. Получив задание, он выполнит его до мельчайших деталей
+				То же самое относится и к его последователям, которые выступали в роли наемных строителей для различных фракций
+				Заплатив им плату, вы не найдете памятника лучше, от возвышающихся статуй в Ильмерисе до того самого храма, который Провиденс называет своим домом
+				Их нейтралитет позволил мне легко подобраться к ним под предлогом выполнения поручения, что привело меня к спиральной-
+				(В уши проникает громкий статический шум, шёпот неслышен, он продолжается без перерыва. Кто-то мешает?)
+				-Мне потребовалось до смешного много времени, чтобы найти выход. После этого я просто вернулся домой и... задумался
 				'''
 		}
 
 		LoreTheMotherbrain: {
-			// DisplayName: The Motherbrain
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Материнский мозг)
+			Tooltip: ""
+			Lore:
 				'''
-				I had forgotten about this machine's existence for some time. 
-				Draedon was commissioned to create this shell by the dragon cult, 
-				built to occupy the jobs of the jailors whose souls were used in its creation. 
-				Having much higher intelligence, it also served as an experiment in psionic tech,
-				being able to lock any unruly prisoners in a virtual world designed to confuse and torment. 
-				The request called for a warden, what they got was a torture device.
-				When the souls within the dungeon grew restless, Draedon was forced to abandon it within those cursed walls. 
-				I could tell he was annoyed by that, but he never complained much, already moving on to his next project. 
-				With everything else falling apart around me, a lost machine, 
-				unaware that my crusade had already come to a close, became a footnote in my terrible, blood-stained history.
-				''' */
+				На какое-то время я забыл о существовании данной машины
+				Дрэйдону было поручено создать эту оболочку по поручению культа драконов
+				построенную лишь для того, чтобы занять место тюремщиков, чьи души были использованы при её создании
+				Обладая гораздо более высоким интеллектом, она также служила экспериментом в области псионических технологий,
+				возможность запирать любых непокорных заключенных в виртуальном мире, созданном для пыток и наказаний 
+				Запрос требовал надзирателя, но получилось устройство пыток
+				Когда души в темнице стали беспокойными, Дрэйдон был вынужден оставить её за этими проклятыми стенами 
+				Я понимал, что его это раздражает, но он почти не жаловался, уже переходя к следующему проекту 
+				В то время как всё вокруг рушилось, потерянная машина,
+				не осознавая, что мой крестовый поход уже подошёл к концу, стала лишь напоминанием о моей ужасной, кровавой истории
+				'''
 		}
 
 		LoreTheSon: {
-			// DisplayName: The Son
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Сын)
+			Tooltip: ""
+			Lore:
 				'''
-				As the gods staked their claim in this world,
-				their actions caused stirring amongst the primordial forces that dwell far above.
-				There was one who claimed to be a direct descendant of our universe's highest authority, 
-				chastising their crimes against Terraria. 
-				The power wielded by this half-mortal, a facsimile of the truly divine, was remarkable, 
-				tempered by a philosophical mind that positioned him at the forefront of a crusade that predated my birth.
-				Sadly, right as he began his movement... Noxus had gotten involved.
-				Everything around that name is distorted in of itself,
-				but I can reasonably confirm he played a key role in getting the Son crucified.
-				Perhaps whatever plan he had was directly threatened by the Son's existence.
-				I only learned all of this when I activated that same structure you unknowingly activated to-
-				(Outside influence muffles the whispers… then you hear a rumbling.)
-				I think that’s enough.
-				''' */
+				Когда боги заявили о своих правах на этот мир,
+				их действия вызвали волнения среди первобытных сил, обитающих высоко в небесах
+				Был тот, кто утверждал, что является прямым потомком высшей власти нашей вселенной, 
+				обличая их преступления против Террарии
+				Сила, которой обладал этот полусмертный, подобие истинного божественного, была поразительной, 
+				одарённый философским складом ума, он оказался в авангарде крестового похода, предшествовавшего моему рождению
+				К сожалению, как только он начал своё движение... в дело вмешался Ноксус
+				Всё, что связано с этим именем, искажено само по себе,
+				но я могу с достаточной уверенностью подтвердить, что он сыграл ключевую роль в распятии Сына
+				Возможно, его план был напрямую подорван самим существованием Сына
+				Я узнал обо всём этом только тогда, когда активировал ту же структуру, которую ты неосознанно активировал, чтобы-
+				(Внешнее влияние заглушает шёпот… затем вы слышите грохот)
+				Думаю, этого достаточно
+				'''
 		}
 
 		LoreWallofShadow: {
-			// DisplayName: Wall of Shadow
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Стена Теней)
+			Tooltip: ""
+			Lore:
 				'''
-				Alternating patterns of shadow and sinew, limbs outstretched to feed its hungry eyes, 
-				the stench of death hanging in the air... I'd recognize this brand of magic anywhere. 
-				This is unquestionably, uncannily, the same kind of behemoth as the one I used to bind the gods' essences. 
-				I highly doubt its makers were even aware of me, merely converging on this solution to contain otherworlders who emerge from their portals. 
-				Their plan’s failure was simple: the makers did not account for when their prison inevitably became full. 
-				By the time primordial shadows were leaking out of the brickwork, it was already too late. 
-				It became a ticking time bomb of essences from countless dimensions studied over the city's life. 
-				With the explosion of color you've forced upon this world, it will not be long until the gods take notice of your presence. 
-				Once they choose to act, you will know what to do.
-				''' */
+				Чередующиеся узоры теней и сухожилий, вытянутые конечности, чтобы накормить его голодные глаза, 
+				запах смерти, витавший в воздухе... Я бы узнал эту магию где угодно
+				Это, несомненно, поразительно похоже на то создание, которое я использовал для пленения сущностей богов
+				Я сильно сомневаюсь, что создатели вообще знали обо мне, просто сосредоточившись на решении для сдерживания пришельцев из других миров, выходящих из их порталов
+				Провал их плана был прост: создатели не учли, что их тюрьма неизбежно переполнится
+				К тому моменту, когда первобытные тени начали просачиваться сквозь кирпичную кладку, было уже слишком поздно
+				Она превратилась в бомбу замедленного действия, наполненную сущностями из бесчисленных измерений, изученных за всю жизнь города
+				С этим взрывом красок, который ты был вынужден обрушить на этот мир, скоро боги обратят на вас свой взор
+				Как только они решат действовать, вы будете знать, что делать
+				'''
 		}
 
 		LoreWhale: {
-			// DisplayName: World's End Everlasting Falling Whale
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Вечно Падающий Кит Конца Света)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of death was ironic. 
-				Of everything that could have taken the role of reaper, 
-				of every horror that could have used the power to enforce death, potentially even on the traitor almighty… 
-				that title fell to the whale. Though not unintelligent, it is much closer to an actual animal in behavior, 
-				acting with an innocence which belies its truly terrifying power. 
-				The legend of the Everlasting Whale survived by being mostly passed around by sailors, 
-				attracting foolhardy parties to try, and ultimately fail, to claim its power. 
-				I deliberated on following these unconfirmed testimonies, eventually settling on-
-				(The whispers become briefly muffled. Is part of the story missing?) 
-				-For what it's worth, I recognize the whale as a product of circumstance and nothing more. 
-				I could never condone its worship, but there are far worse crimes than wanting to be left alone.
-				''' */
+				Бог смерти был ироничен
+				Из всех тех, кто мог бы взять на себя роль жнеца, 
+				из всех ужасов, которые могли бы использовать свою силу для воцарения смерти, потенциально даже над всемогущим предателем...
+				этот титул достался киту. Хотя он и не глуп, по поведению он гораздо ближе к настоящему животному, 
+				действуя с невинностью, в которой и кроется его поистине ужасающая сила
+				Легенды о Вечнопадающем Ките сохранилась в основном благодаря тому, что её передавали из уст в уста моряки,
+				привлекая безрассудных путешественников, пытавшихся, в конечном итоге, потерпеть неудачу, в попытке завладеть его силой
+				Я раздумывал, стоит ли верить этим неподтвержденным свидетельствам, в конце концов придя к-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				- в итоге, я признаю кита продуктом обстоятельств и ничем иным
+				Я никогда не смог бы оправдать поклонение ему, но есть гораздо худшие преступления, чем желание, чтобы его оставили в покое
+				'''
 		}
 	}
 
