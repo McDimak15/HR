@@ -774,7 +774,7 @@ Configs: {
 			WeaponChanges: Изменение оружий
 			ArmorChanges: Изменение брони
 			ModChanges: Изменения модов
-			// AccessoryChanges: Accessory Changes
+			AccessoryChanges: Изменения аксессуаров
 		}
 
 		EnableBossScaling: {
@@ -788,8 +788,8 @@ Configs: {
 		}
 
 		PermanentToAccessories: {
-			// Label: "[i:ContinentOfJourney/TheSwitch] Переработка переключателя"
-			// Tooltip: Если эта функция включена, переключатель будет переработан в виде аксессуара.
+			Label: "[i:ContinentOfJourney/TheSwitch] Переработка переключателя"
+			Tooltip: Если эта функция включена, переключатель будет переработан в виде аксессуара.
 		}
 
 		EnableBookmarks: {
@@ -963,33 +963,33 @@ ItemTooltips: {
 	}
 
 	TheSwitch: {
-		// HoldShift: Shift-Right Click this item in your inventory to change mode
-		// ColdBlood: Decrease debuff time and damage by 40%
-		/* WhaleBoneCharm:
+		HoldShift: Нажмите Shift+ПКМ по этому предмету в инвенторе, чтобы переключить
+		ColdBlood: Уменьшает урон и время действия дебаффа на 40%
+		WhaleBoneCharm:
 			'''
-			Gives 30% damage reduction
-			If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-			''' */
+			Увеличивает сопротивление урону на 30%
+			Если атака нанесёт 1/4 вашего здоровья, вы получаете бафф, который востановит ваше здоровье в зависимости от полученного вами урона
+			'''
 	}
 
 	Horizon: {
-		// Remove: "'The air lifts you upward'"
-		// HoldShift: Hold Shift for more
-		/* DefaultStats:
+		Remove: "'Воздух поднимает вас вверх'"
+		HoldShift: Удерживайте Shift для просмотра дополнительной информации
+		DefaultStats:
 			'''
-			Flight Time: 3.75 seconds
-			Max horizontal speed: 52 mph
-			Max vertical speed: 100 mph
-			''' */
-		/* HidedStats:
+			Время полёта: 3.75 секунды
+			Максимальная горизонтальная скорость: 52 км
+			Максимальная вертикальная скорость: 100 км
 			'''
-			Horizontal acceleration: 61.32 mph/s
-			Vertical Acceleration:
-			42.98 mph/s
-			89.21 mph/s if ascending slower than 41 mph
-			326.38 mph/s if ascending while falling
-			''' */
-		// RunningAccel: 44% increased running acceleration
+		HidedStats:
+			'''
+			Горизонтальное ускорение: 61,32 км/ч
+			Вертикальное ускорение:
+			42,98 км/ч
+			89,21 км/ч, если скорость подъёма ниже 41 км
+			326,38 км/ч при взлёте во время падения
+			'''
+		RunningAccel: Увеличивает ускорение при беге на 44%
 	}
 
 	CommandersGaunlet: {
@@ -1017,8 +1017,8 @@ ItemTooltips: {
 	}
 
 	HolyTrinity: {
-		// OrigTrinityClass: Consumable ranged
-		// RepTrinityClass: Thrower
+		OrigTrinityClass: Расходуемые дистанционные
+		RepTrinityClass: Метательные
 	}
 
 	GrayRook: {
@@ -1034,16 +1034,16 @@ ItemTooltips: {
 	}
 
 	BatNecklace: {
-		// OrigTooltip1: Increase your minion slot by 2
-		// Replace1: Increases your max number of minions by 2, and summon damage by 12%
-		// StatisBlessing: Increased minion knockback
-		/* ThoriumBuffs:
+		OrigTooltip1: Увеличивает максимальное число прислужников на 2
+		Replace1: Увеличивает максимальное число прислужников на 2, и урон призывателя на 12%
+		StatisBlessing: Увеличивает отбрасывание призывателя
+		ThoriumBuffs:
 			'''
-			Minion attacks have a 15% chance to produce a crystal scorpion
-			Minion attacks deal 3 more damage while a crystal scorpion is active
-			Minion and sentry attacks briefly deal 2 more damage after killing an enemy 
-			Increases max sentries by 2
-			''' */
+			Атаки миньонов с 15% шансом призывают кристального скорпиона
+			Атаки миньонов наносят на 3 ед. больше урона, пока кристальный скорпион активен
+			После убийства врага, атаки миньонов и стражей на короткое время наносят дополнительно 2 ед. урона
+			Увеличивает максимальное число часовых на 2
+			'''
 	}
 
 	GrayRookBuff: {
@@ -1153,20 +1153,20 @@ ItemTooltips: {
 	}
 
 	SunsHeart: {
-		// OrigTooltip: Enables wings slot
-		// Replace: Permanently increases wing flight time by 20%
+		OrigTooltip: Разблокирует слот для крыльев
+		Replace: Навсегда увеличивает время полёта крыльев на 20%
 	}
 
 	EurekaEffect: {
-		// OrigTooltip1: Teleport to your cursor's location
-		// OrigTooltip2: This item has a 6s cooldown
-		/* Replace2:
+		OrigTooltip1: Телепортирует на позицию мыши
+		OrigTooltip2: Перезарядка: 6 секунд
+		Replace2:
 			'''
-			Summons a temporary gateway between 2 chosen spots
-			Left and Right click to choose spots
-			Right click the portal to teleport with 10s cooldown
-			''' */
-		// ThoriumHeal: Heal by 40 when teleported
+			Призывает временный портал между вами и выбранным видимым местом
+			Нажмите ЛКМ и ПКМ чтобы выбрать позицую
+			Игроки могут использовать врата не чаще одного раза в 10 секунд
+			'''
+		ThoriumHeal: Лечит союзника и игрока на 40 ед. здоровья
 	}
 
 	FlasksTooltip: {
