@@ -365,111 +365,111 @@ Items: {
 		}
 
 		LoreOverwatcher: {
-			// DisplayName: The Overwatcher
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Часовой
+			Tooltip: ""
+			Lore:
 				'''
-				The god of time was reclusive. 
-				When one can view past and future as if they were left and right, it gives a far, far greater range of places to seclude oneself. 
-				So much so that I am still unsure how he gathered his disciples. 
-				My only method of reaching him was finding one such disciple, beating them within an inch of their life so they would lead me to their idol. 
-				Once it was in my sight-
-				(The whispers become briefly muffled. Is part of the story missing?)
-				-Leaving me stranded in the desert. For all of my effort, the only things I gained were such nonsensical wording. What a waste of my time…
-				''' */
+				Бог времени был нелюдимым
+				Когда человек может видеть прошлое и будущее будто бы слева и справа, это открывает гораздо, гораздо больший диапазон мест для уединения
+				Настолько большой, что я до сих пор не понимаю, как он собрал своих последователей
+				Единственный способ добраться до него - найти одного последователя, избить его до полусмерти, чтобы он привёл меня к своему идолу
+				Как только он оказался предо мной-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-Оставив меня посреди пустыни. Все мои усилия закончились лишь бессмысленными словами. Какая пустая трата времени...
+				'''
 		}
 
 		LorePriestessRod: {
-			// DisplayName: Priestess Rod
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Priestess Rod
+			Tooltip: ""
+			Lore:
 				'''
-				While this is definitely one of the strangest body plans of all, 
-				the propeller-like wings of Sky Rods allow them to blitz across the sky faster than any other flier, 
-				or at least those who are native to our world. 
-				The most frightful aspect of Sky Rods is their method of feeding. 
-				This species does not subsist on any solid foods, instead having the unique ability to devour souls directly. 
-				This also means they can feed on souls within machines, much to Draedon's chagrin. 
-				Turns out, soldiers of steel powered by souls are more filling than most things that live in the atmosphere. 
-				I've had to derive countermeasures against this unexpected foe more times than I'd like to admit. 
-				Some have even grown much larger from the sheer volume of souls, 
-				which in turn makes a single Priestess Rod a threat to anything my soldiers would have already threatened.
-				''' */
+				Это, безусловно, одно из самых странных строений тела, 
+				крылья Небесных Жезлов, похожие на пропеллеры, позволяют им стремительно перемещаться по небу быстрее любого другого летающего существа, 
+				или, по крайней мере, тех, кто обитает в нашем мире
+				Самый ужасающий аспект Небесных Жезлов - это их способ питания
+				Этот вид не питается твердой пищей, вместо этого обладая уникальной способностью пожирать души живых напрямую
+				Это также означает, что они могут питаться душами внутри машин, к большому разочарованию Дрэйдона
+				Оказывается, стальные солдаты, питаемые душами, обладают большей вместительностью, чем большинство существ, обитающих в атмосфере
+				Мне приходилось разрабатывать контрмеры против этого неожиданного врага чаще, чем хотелось бы признать
+				Некоторые из них даже значительно увеличились в размерах благодаря огромному количеству душ, 
+				что, в свою очередь, делает Жрицу Стержней угрозой для всего, чему мои солдаты могли противостоять
+				'''
 		}
 
 		LorePuppetOpera: {
-			// DisplayName: Puppet Opera
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Кукольная Опера
+			Tooltip: ""
+			Lore:
 				'''
-				It feels surreal to see what became of this theatre, having visited it during its prime. 
-				I could barely even see what you were fighting through that darkness.
-				This wooden maze was once a place of bustling culture, protected from attackers by its ever-shifting walls. 
-				The theatre was its heart, most known for holding the most extravagant puppet shows the land had to offer, 
-				something my archmage was known to frequent. 
-				As my crusade faded, I turned a blind eye to this place. I expected it to be abandoned at most, but this... 
-				This was once a place of reprieve. Now, it seems to be a magnet for the horrors of the world. 
-				I can only imagine what happened to its former citizens... if they yet live.
-				''' */
+				Кажется нереальным видеть, во что превратился этот театр, ведь я бывал здесь в лучшие времена
+				Я едва мог разглядеть, то, с чем ты сражался во тьме
+				Этот деревянный лабиринт когда-то был местом бурной культуры, защищенным от нападающих постоянно меняющимися стенами
+				Театр был его сердцем, самым известным своими экстравагантными кукольными представлениями, которые только можно было найти,
+				которые, как известно, часто посещал архимаг
+				Когда мой крестовый поход угас, я закрыл глаза на это место. Я ожидал, что оно будет в лучшем случае заброшено, но это... 
+				Когда-то это было место уединения. Теперь же оно, кажется, притягивает ужасы мира
+				Я могу только представить, что случилось с его бывшими жителями... если они еще живы
+				'''
 		}
 
 		LoreScarabBelief: {
-			// DisplayName: Scarab Belief
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Вера Скарабея
+			Tooltip: ""
+			Lore:
 				'''
-				The god of myth was confusing. 
-				Contradictory histories plague even the oldest libraries in Terraria, based entirely on the word of its followers. 
-				To call those followers overzealous would be an understatement, what they worshiped was the idea of worshipping itself. 
-				Every worshipper has their own version of Scarab they claim to see clearly and no two were ever the same, 
-				varying wildly even within the same group. The entire image of Scarab Belief is composed of lies and misconceptions, 
-				including nonsensical rituals where-
-				(The whispers become briefly muffled. Is part of the story missing?)
-				-bare concept of a solid form than anything else, existing as merely an idea which inhabits the minds of its followers.
-				How sickening. Even Providence never crossed that boundary. Hopefully, this perversion of faith will stay eternally forgotten.
-				''' */
+				Бог мифов был загадкой
+				Противоречивые истории поражают даже самые старые библиотеки Террарии, основанные исключительно на словах его последователей 
+				Назвать этих последователей чрезмерным рвением было бы преуменьшением, они поклонялись самой идее поклонения
+				У каждого верующего есть своя версия Скарабея, которую он, как утверждает, ясно видит, и двух одинаковых не бывает,
+				они сильно различаются даже внутри одной группы. Весь образ веры в Скарабея состоит из лжи и заблуждений, 
+				включая бессмысленные ритуалы, где-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-это всего лишь концепция материальной формы, существующая лишь как идея, обитающая в умах своих последователей
+				Как это отвратительно. Даже Провиденс никогда не переступала эту границу. Надеюсь, это извращение веры навсегда останется забытым
+				'''
 		}
 
 		LoreSlimeGod: {
-			// DisplayName: Slime of Divinity
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Сльзь Божественности
+			Tooltip: ""
+			Lore:
 				'''
-				The god of slimes was separated. 
-				You might be familiar with the entity I previously referred to as the 'Slime God'. 
-				That title isn't inaccurate... though it is quite misleading. 
-				Although a god in its own right, all slimes are theorized to have originally spawned from a singular, 'true' slime god, 
-				and will eventually return to him upon death. 
-				Information about this entity is obscure beyond his place of residence, existing either within, 
-				or potentially as, the primordial light itself. 
-				How much him and Zeratros's sun are the same being is a debate best saved for scholars, but I can tell you-
-				(You can barely hear the whispers through a loud static. Is someone interfering?)
-				-can't imagine the amount of power if he reabsorbed all slimes into himself without restraint.
-				Then, you might not have stood a chance.
-				''' */
+				Бог слизней был разделён
+				Возможно, ты уже знакомы с сущностью, которую я называл «Богом слизней»
+				Это название не совсем неверно... хоть и довольно обманчиво
+				Хотя он и является богом сам по себе, считается, что все слизни изначально произошли от единого, «истинного» бога слизней
+				и в конечном итоге вернутся к нему после смерти
+				Информация об этом существе за пределами его места жительства туманна, оно существует либо внутри, 
+				либо, возможно, как сам первозданный свет 
+				Насколько он и солнце Зератроса - одно и то же существо, - это вопрос, который лучше оставить для ученых, но я могу сказать тебе-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-не могу представить себе, какой силы он обладал бы, если бы без ограничений поглощал всю слизь
+				Тогда у тебя, скорее всего, не было бы ни единого шанса
+				'''
 		}
 
 		LoreTheLifebringer: {
-			// DisplayName: The Lifebringer
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Жизненосец
+			Tooltip: ""
+			Lore:
 				'''
-				The god of life was broad. 
-				Too broad for any one auric soul to hold complete dominion over. 
-				Silva herself only held dominion over a portion of life's concepts, as nature was far too diverse for her to control. 
-				The Lifebringer appears to hold a more ‘complete’ power over the throes of nature, not just evolution or survival.
-				Her greatest difference from Silva was- 
-				(The whispers become briefly muffled. Is part of the story missing?) 
-				-cause she wasn't worshiped in the conventional way, there were no temples, statues, or even writing that regarded her. 
-				I had no trail to follow, and I couldn't justify an aimless hunt, so I postponed until I had a better method. 
-				Needless to say, I never found one.
-				''' */
+				Бог жизни был всеобъемлющим
+				Слишком обширная область, чтобы лишь одна ауритовая душа могла обладать полной властью над ней
+				Сама Сильва обладала властью лишь над концепцией жизни, поскольку природа была слишком разнообразна, чтобы она могла её контролировать
+				Кажется, что Жизненосец обладала более «полной» властью над муками природы, а не только над эволюцией или выживанием
+				Главное отличие от Сильвы заключалось в том, что- 
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-потому что ей не поклонялись традиционным способом, не было ни храмов, ни статуй, ни даже письменных источников, посвященных ей 
+				У меня не было никаких зацепок, и я не мог оправдать бесцельные поиски, поэтому я отложил их до тех пор, пока не найду лучший способ
+				Излишне говорить, что его я так и не нашёл
+				'''
 		}
 
 		LoreTheMaterealizer: {
-			// DisplayName: The Materealizer
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: The Materealizer
+			Tooltip: ""
+			Lore:
 				'''
 				The god of matter was dutiful. 
 				As the current retainer of our world’s material laws, functionally its building blocks, 
@@ -479,7 +479,7 @@ Items: {
 				Their neutrality made it easy for me to approach under the pretense of a commission, where I was led to a spiral-
 				(Loud static fills your ears, The whispers are inaudible, but continue uninterrupted. Is someone interfering?)
 				-took me an embarrassingly long amount of time to find the exit. Afterwards, I simply returned home and… pondered.
-				''' */
+				'''
 		}
 
 		LoreTheMotherbrain: {
