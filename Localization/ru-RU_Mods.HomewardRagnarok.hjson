@@ -285,83 +285,83 @@ Items: {
 
 	Lore: {
 		LoreBigDipper: {
-			// DisplayName: Big Dipper
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Большая Медведица
+			Tooltip: ""
+			Lore:
 				'''
-				My head scientist told me of his past only once. How he woke up in a laboratory, 
-				surrounded by advanced technology, eventually joining my cause to build machines of war, all in the name of progress. 
-				I bring this up because Draedon has explicitly told me that this satellite is not one of his. 
-				As far as we could tell, this was a communications satellite that could relay positions on a detailed map of the land. 
-				Unfortunately, the map itself only shows locations already mapped centuries ago. 
-				Draedon has already analyzed everything he could about this satellite, even making more robust models for himself.
-				While possessing little value in of itself, it's a stark reminder that, 
-				if someone built Draedon through great effort, who's to say there couldn't be other, equally advanced creations?
-				''' */
+				Мой главный учёный лишь однажды рассказал мне о своём прошлом. О том, как он проснулся в лаборатории,
+				окруженный передовыми технологиями, в конце концов он присоединился к мне, создавая боевых машин, и всё это во имя прогресса 
+				Я поднимаю этот вопрос, потому что Дрэйдон прямо сказал мне, что этот спутник не принадлежит ему
+				Насколько нам удалось выяснить, это был спутник связи, способный передавать координаты подробной карте местности
+				К сожалению, на самой карте показаны только те места, нанесенные на карту столетия назад
+				Дрэйдон уже проанализировал всё, что мог, об этом спутнике, создав для себя более совершенные модели
+				Хотя сам по себе он не представляет никакой ценности, он служит ярким напоминанием о том,
+				что если кто-то с огромным трудом создал Дрэйдона, кто может сказать, что не может существовать других, столь же совершенных творений?
+				'''
 		}
 
 		LoreDiver: {
-			// DisplayName: Diver
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Дайвер
+			Tooltip: ""
+			Lore:
 				'''
-				A trans-dimensional gateway keyed to the heart of an alternate universe... it is no wonder what brought ruin to this place. 
-				Many institutions were erected for the purpose of reaching and studying whatever alternate dimensions they happened to come across,
-				especially when rumors around the devourer started spreading. 
-				None of these organizations still exist. 
-				This abomination is a perfect example of what the endpoint of interdimensional research looks like: 
-				to be noticed by a greater darkness, bringing madness and death for everyone involved.
-				The best one can hope from peering sideways in reality is a place populated exclusively by simple beings, 
-				like a world of sapient birds riding giant crabs. 
-				...Don't ask why I know that. Cosmology can be a very strange field.
-				''' */
+				Межпространственный портал, ведущий в сердце альтернативной вселенной... неудивительно, что привело это место к разрушению
+				Многие организации были созданы с целью достижения и изучения любых альтернативных измерений, с которыми они случайно сталкивались,
+				особенно когда начали распространяться слухи о Пожирателе
+				Ни одной из этих организаций больше не существует
+				Это чудовище - прекрасный пример того, как выглядит конечная цель межпространственных исследований: 
+				быть замеченным высшей тьмой, что принесет безумие и смерть всем участникам
+				В лучшем случае, если заглянуть в реальность под другим углом, можно увидеть место, населенное исключительно простыми существами,
+				например, мир разумных птиц, скачущих на гигантских крабах
+				...Не спрашивай, откуда я это знаю. Космология - очень странная область науки
+				'''
 		}
 
 		LoreTrench: {
-			// DisplayName: The Trench
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: The Trench
+			Tooltip: ""
+			Lore:
 				'''
-				Another stain on the coastline, untouched by the gods. 
-				One would assume its distance from the sulphurous seas and lack of viable entrances would render it untouchable to the outside world.
-				This is what the settlers of this trench thought, using an obscure form of hydromancy to create a dry pocket within. 
-				Cut off from the surface, they had all of the time they would ever need to themselves. 
-				All I knew was the primary development here was in demonology, 
-				the storied practice of enslaving demons to one's will, and oddly enough, cosmology.
-				I was always skeptical of how a subterranean institution could know so much about the greater universe, 
-				but by the time Draedon had probed it, the abyssal city was long since flooded and abandoned. 
-				Judging by the various horrors that now inhabit this place, 
-				I have a reasonable enough answer for my questions about both the nature and fate of these people.
-				''' */
+				Ещё одно пятно на побережье, не тронутое богами
+				Можно было предположить, что его удаленность от серного моря и отсутствие жизнеспособных входов делают его недоступным для внешнего мира
+				Так думали поселенцы этой впадины, используя малоизвестную форму гидромантии, чтобы создать внутри воздушный карман
+				Отрезанные от поверхности, они имели всё необходимое для себя время
+				Всё, что я знал, это то, что основное развитие здесь происходило в области демонологии,
+				известной практики порабощения демонов своей волей и, как ни странно, космологии
+				Я всегда скептически относился к тому, как подземное поселение может так много знать о Вселенной, 
+				но к тому времени, как Дрэйдон исследовал его, этот город в бездне давно был затоплен и заброшен
+				Судя по различным ужасам, которые теперь населяют это место, 
+				у меня есть достаточно разумный ответ на мои вопросы о природе и судьбе этих людей
+				'''
 		}
 
 		LoreGoblinChariot: {
-			// DisplayName: Goblin Chariot
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Гоблинская колесница
+			Tooltip: ""
+			Lore:
 				'''
-				Goblins as a race are actually fairly young in the grand scheme of Terraria. 
-				Even their oldest settlements are still young enough to be built with relatively modern infrastructure. 
-				Not much more can be said about their reputation as raiders that hasn't already been said or made obvious, 
-				especially by their common targets.
-				You'd be surprised to learn that, during the first year of my conquest, a Goblin clan was amongst the first true factions to join my side. 
-				Their ingenuity led to my first real vehicle support, 
-				which gave them my favor until a new addition to my army replaced every single one of their sciences with his own. 
-				Current times must be dire to rely on such outdated machinery.
-				''' */
+				Гоблины как раса на самом деле довольно молоды в масштабах Террарии
+				Даже их самые древние поселения довольно новы, чтобы их можно было строить с использованием более современной инфраструктуры
+				Об их репутации бандитов больше ничего сказать, кроме того, 
+				что уже было упомянуто или очевидно
+				Ты удивишься, узнав, что в первый год моих завоеваний племя гоблинов было первой, по настоящему объеденённой фракцией
+				Их изобретательность привела к появлению моей первой настоящей поддержки в виде техники, 
+				что обеспечило им мою благосклонность, пока один из новых членов моей армии не заменил все их научные разработки своими собственными
+				В наше время, должно быть, очень тяжело полагаться на такую ​​устаревшую технику
+				'''
 		}
 
 		LoreMarquisMoonsquid: {
-			// DisplayName: Marquis Moonsquid
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: Маркиз лунный кальмар
+			Tooltip: ""
+			Lore:
 				'''
-				One of countless ocean predators dwelling deep beneath the waves, though this one appears to have grown to an unusual size. 
-				Moonsquids only live in the deepest parts of the ocean, 
-				far away from the fishrons they compete with, using bioluminescence to communicate with one another in total darkness. 
-				These factors make this beast's appearance on the surface an oddity. 
-				What a curious set of changes... what must have occurred in that abyss to mutate this poor creature and push it towards the surface?
-				''' */
+				Один из бесчисленных океанских хищников, обитающих глубоко под волнами, хотя этот экземпляр, похоже, вырос до необычных размеров
+				Лунные кальмары живут только в самых глубоких частях океана, 
+				вдали от рыболюдей, с которыми они конкурируют, используя биолюминесценцию для общения друг с другом в полной темноте
+				Эти факторы делают появление этого зверя на поверхности странным явлением 
+				Какие любопытные изменения... что же должно было произойти в этой бездне, чтобы мутировать это несчастное существо и вытолкнуть его на поверхность?
+				'''
 		}
 
 		LoreOverwatcher: {
