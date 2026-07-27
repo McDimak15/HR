@@ -14,6 +14,9 @@
 	  <Reference Include="ContinentOfJourney">
 	    <HintPath>..\..\ModReader\ContinentOfJourney\ContinentOfJourney.dll</HintPath>
 	  </Reference>
+	  <Reference Include="InfernalEclipseAPI">
+	    <HintPath>..\..\ModReader\InfernalEclipseAPI\InfernalEclipseAPI.dll</HintPath>
+	  </Reference>
 	  <Reference Include="ThoriumMod">
 	    <HintPath>..\..\ModReader\ThoriumMod\ThoriumMod.dll</HintPath>
 	  </Reference>
