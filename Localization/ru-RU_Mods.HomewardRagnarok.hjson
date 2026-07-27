@@ -134,7 +134,7 @@ Items: {
 			Увеличивает метательный урон на 20%
 			Увеличивает скорость полёта расходуемых метательных снарядов на 50%
 			При использовании расходуемовых оружий вы машите битой
-			   Три метательных кольца усиливают ваши метательные оружия
+			Три метательных кольца усиливают ваши метательные оружия
 			Уменьшает время использования расходуемовых метательных оружий на 20%
 			Когда вы держите в руках метательное оружие, ускорение бега увеличивается на 75%
 			Наносит дополнительный удар в размере 17.5% метательного урона
@@ -142,440 +142,502 @@ Items: {
 		NoExhaustion: При экипировке оружие больше не изматывает вас
 	}
 
-	DeluxeDewCollector: {
-		DisplayName: Собиратель росы делюкс
-		Tooltip:
-			'''
-			Лечение союзника даёт ему 2 единицы восполнения здоровья и создаёт росу
-			Поднятие росы увеличивает ваше собственное восполнение здоровья на 4 единицы
-			Исцеляющие заклинания будут восстанавливать дополнительно 6 единицы здоровья
-			'''
-	}
-
 	PriestessRodRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Жрицы Стержней
+        DisplayName: Инфернальная реликвия Жрицы стержней
+		Tooltip: 
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	ChariotRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Гоблинской Колесницы
+		DisplayName: Инфернальная реликвия Гоблинской колесницы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	MarquisMoonsquidRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Маркиза Лунного Кальмара
+		DisplayName: Инфернальная реликвия Маркиза лунного кальмара
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	BigDipperRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Большой Медведицы
+		DisplayName: Инфернальная реликвия Большой медведицы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	PuppetRelic: {
-		DisplayName: Инфернальная реликвия Кукольной Оперы
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Кукольной оперы
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheMotherbrainRelic: {
-		Tooltip: ""
-		DisplayName: Инфернальная реликвия Материнского Мозга
+		DisplayName: Инфернальная реликвия Материнского мозга
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	DiverRelic: {
-		Tooltip: ""
 		DisplayName: Инфернальная реликвия Дайвера
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	SolarRelic: {
 		DisplayName: Инфернальная реликвия Солнца
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheOverwatcherRelic: {
 		DisplayName: Инфернальная реликвия Часового
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	WallofShadowRelic: {
-		DisplayName: Инфернальная реликвия Стены Теней
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Стены теней
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheMaterealizerRelic: {
-		Tooltip: ""
-		DisplayName: Infernal Инфернальная реликвия Материализатора
+		DisplayName: Инфернальная реликвия Материализатора
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheLifebringerRelic: {
-		Tooltip: ""
-		DisplayName: Infernal Инфернальная реликвия Жизненосца
+		DisplayName: Инфернальная реликвия Жизненосца
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	ScarabBeliefRelic: {
-		Tooltip: ""
 		DisplayName: Инфернальная реликвия Веры скарабея
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	TheSonRelic: {
 		DisplayName: Инфернальная реликвия Сына
-		Tooltip: ""
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	WhaleRelic: {
-		DisplayName: Инфернальная реликвия Вечно Падающего Кита Конца Света
-		Tooltip: ""
+		DisplayName: Инфернальная реликвия Вечно падающего кита конца света
+		Tooltip:
+		'''
+		Окружено инфернальными огнями поверженного врага
+		'''
 	}
 
 	CampfireOfTheWildheart: {
-		// DisplayName: Campfire Of The Wildheart
-		// Tooltip: "'Makes you feel like you can take on multiverse'"
+		 DisplayName: Костёр дикого сердца
+		 Tooltip:
+		 '''
+		 Создаёт ощущение, что ты способен обуздать всю мульти вселенную
+		 '''
 	}
 
 	RiftGenerator: {
-		// DisplayName: Rift Generator
-		/* Tooltip:
+		 DisplayName: Генератор разломов
+		 Tooltip:
 			'''
-			Increases max minions and sentries by 1
-			Generate 4 platforms to the left and right of you
-			You can right click to drag the platforms, but they will always remain symmetrical
-			Sentries can be summoned on top of the platforms
-			Minions and sentry attacks briefly deal 2 more damage after killing an enemy
-			Summons Devour Lamprey behind you
-			''' */
+			Увеличивает максимальное количество миньонов и стражей на 1
+			Создает 4 платформы слева и справа от вас
+			Вы можете перетаскивать платформы, щелкнув правой кнопкой мыши, но они всегда будут оставаться симметричными
+			Позволяет призывать стражей на платформах
+			После убийства врага, атаки миньонов и стражей на короткое время наносят дополнительно 2 ед. урона
+			Призывает минога-пожирателя позади вас
+			'''
 	}
 
 	Lore: {
 		LoreBigDipper: {
-			// DisplayName: Big Dipper
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Большая Медведица)
+			Tooltip: ""
+			Lore:
 				'''
-				My head scientist told me of his past only once. How he woke up in a laboratory, 
-				surrounded by advanced technology, eventually joining my cause to build machines of war, all in the name of progress. 
-				I bring this up because Draedon has explicitly told me that this satellite is not one of his. 
-				As far as we could tell, this was a communications satellite that could relay positions on a detailed map of the land. 
-				Unfortunately, the map itself only shows locations already mapped centuries ago. 
-				Draedon has already analyzed everything he could about this satellite, even making more robust models for himself.
-				While possessing little value in of itself, it's a stark reminder that, 
-				if someone built Draedon through great effort, who's to say there couldn't be other, equally advanced creations?
-				''' */
+				Мой главный учёный лишь однажды рассказал мне о своём прошлом. О том, как он проснулся в лаборатории,
+				окруженный передовыми технологиями, в конце концов он присоединился к мне, создавая боевых машин, и всё это во имя прогресса 
+				Я поднимаю этот вопрос, потому что Дрэйдон прямо сказал мне, что этот спутник не принадлежит ему
+				Насколько нам удалось выяснить, это был спутник связи, способный передавать координаты подробной карте местности
+				К сожалению, на самой карте показаны только те места, нанесенные на карту столетия назад
+				Дрэйдон уже проанализировал всё, что мог, об этом спутнике, создав для себя более совершенные модели
+				Хотя сам по себе он не представляет никакой ценности, он служит ярким напоминанием о том,
+				что если кто-то с огромным трудом создал Дрэйдона, кто может сказать, что не может существовать других, столь же совершенных творений?
+				'''
 		}
 
 		LoreDiver: {
-			// DisplayName: Diver
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Дайвер)
+			Tooltip: ""
+			Lore:
 				'''
-				A trans-dimensional gateway keyed to the heart of an alternate universe... it is no wonder what brought ruin to this place. 
-				Many institutions were erected for the purpose of reaching and studying whatever alternate dimensions they happened to come across,
-				especially when rumors around the devourer started spreading. 
-				None of these organizations still exist. 
-				This abomination is a perfect example of what the endpoint of interdimensional research looks like: 
-				to be noticed by a greater darkness, bringing madness and death for everyone involved.
-				The best one can hope from peering sideways in reality is a place populated exclusively by simple beings, 
-				like a world of sapient birds riding giant crabs. 
-				...Don't ask why I know that. Cosmology can be a very strange field.
-				''' */
+				Межпространственный портал, ведущий в сердце альтернативной вселенной... неудивительно, что привело это место к разрушению
+				Многие организации были созданы с целью достижения и изучения любых альтернативных измерений, с которыми они случайно сталкивались,
+				особенно когда начали распространяться слухи о Пожирателе
+				Ни одной из этих организаций больше не существует
+				Это чудовище - прекрасный пример того, как выглядит конечная цель межпространственных исследований: 
+				быть замеченным высшей тьмой, что принесет безумие и смерть всем участникам
+				В лучшем случае, если заглянуть в реальность под другим углом, можно увидеть место, населенное исключительно простыми существами,
+				например, мир разумных птиц, скачущих на гигантских крабах
+				...Не спрашивай, откуда я это знаю. Космология - очень странная область науки
+				'''
 		}
 
 		LoreTrench: {
-			// DisplayName: The Trench
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Впадина)
+			Tooltip: ""
+			Lore:
 				'''
-				Another stain on the coastline, untouched by the gods. 
-				One would assume its distance from the sulphurous seas and lack of viable entrances would render it untouchable to the outside world.
-				This is what the settlers of this trench thought, using an obscure form of hydromancy to create a dry pocket within. 
-				Cut off from the surface, they had all of the time they would ever need to themselves. 
-				All I knew was the primary development here was in demonology, 
-				the storied practice of enslaving demons to one's will, and oddly enough, cosmology.
-				I was always skeptical of how a subterranean institution could know so much about the greater universe, 
-				but by the time Draedon had probed it, the abyssal city was long since flooded and abandoned. 
-				Judging by the various horrors that now inhabit this place, 
-				I have a reasonable enough answer for my questions about both the nature and fate of these people.
-				''' */
+				Ещё одно пятно на побережье, не тронутое богами
+				Можно было предположить, что его удаленность от серного моря и отсутствие жизнеспособных входов делают его недоступным для внешнего мира
+				Так думали поселенцы этой впадины, используя малоизвестную форму гидромантии, чтобы создать внутри воздушный карман
+				Отрезанные от поверхности, они имели всё необходимое для себя время
+				Всё, что я знал, это то, что основное развитие здесь происходило в области демонологии,
+				известной практики порабощения демонов своей волей и, как ни странно, космологии
+				Я всегда скептически относился к тому, как подземное поселение может так много знать о Вселенной, 
+				но к тому времени, как Дрэйдон исследовал его, этот город в бездне давно был затоплен и заброшен
+				Судя по различным ужасам, которые теперь населяют это место, 
+				у меня есть достаточно разумный ответ на мои вопросы о природе и судьбе этих людей
+				'''
 		}
 
 		LoreGoblinChariot: {
-			// DisplayName: Goblin Chariot
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Гоблинская Колесница)
+			Tooltip: ""
+			Lore:
 				'''
-				Goblins as a race are actually fairly young in the grand scheme of Terraria. 
-				Even their oldest settlements are still young enough to be built with relatively modern infrastructure. 
-				Not much more can be said about their reputation as raiders that hasn't already been said or made obvious, 
-				especially by their common targets.
-				You'd be surprised to learn that, during the first year of my conquest, a Goblin clan was amongst the first true factions to join my side. 
-				Their ingenuity led to my first real vehicle support, 
-				which gave them my favor until a new addition to my army replaced every single one of their sciences with his own. 
-				Current times must be dire to rely on such outdated machinery.
-				''' */
+				Гоблины как раса на самом деле довольно молоды в масштабах Террарии
+				Даже их самые древние поселения довольно новы, чтобы их можно было строить с использованием более современной инфраструктуры
+				Об их репутации бандитов больше ничего сказать, кроме того, 
+				что уже было упомянуто или очевидно
+				Ты удивишься, узнав, что в первый год моих завоеваний племя гоблинов было первой, по настоящему объеденённой фракцией
+				Их изобретательность привела к появлению моей первой настоящей поддержки в виде техники, 
+				что обеспечило им мою благосклонность, пока один из новых членов моей армии не заменил все их научные разработки своими собственными
+				В наше время, должно быть, очень тяжело полагаться на такую ​​устаревшую технику
+				'''
 		}
 
 		LoreMarquisMoonsquid: {
-			// DisplayName: Marquis Moonsquid
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Маркиз Лунный Кальмар)
+			Tooltip: ""
+			Lore:
 				'''
-				One of countless ocean predators dwelling deep beneath the waves, though this one appears to have grown to an unusual size. 
-				Moonsquids only live in the deepest parts of the ocean, 
-				far away from the fishrons they compete with, using bioluminescence to communicate with one another in total darkness. 
-				These factors make this beast's appearance on the surface an oddity. 
-				What a curious set of changes... what must have occurred in that abyss to mutate this poor creature and push it towards the surface?
-				''' */
+				Один из бесчисленных океанских хищников, обитающих глубоко под волнами, хотя этот экземпляр, похоже, вырос до необычных размеров
+				Лунные кальмары живут только в самых глубоких частях океана, 
+				вдали от рыболюдей, с которыми они конкурируют, используя биолюминесценцию для общения друг с другом в полной темноте
+				Эти факторы делают появление этого зверя на поверхности странным явлением 
+				Какие любопытные изменения... что же должно было произойти в этой бездне, чтобы мутировать это несчастное существо и вытолкнуть его на поверхность?
+				'''
 		}
 
 		LoreOverwatcher: {
-			// DisplayName: The Overwatcher
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Часовой)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of time was reclusive. 
-				When one can view past and future as if they were left and right, it gives a far, far greater range of places to seclude oneself. 
-				So much so that I am still unsure how he gathered his disciples. 
-				My only method of reaching him was finding one such disciple, beating them within an inch of their life so they would lead me to their idol. 
-				Once it was in my sight-
-				(The whispers become briefly muffled. Is part of the story missing?)
-				-Leaving me stranded in the desert. For all of my effort, the only things I gained were such nonsensical wording. What a waste of my time…
-				''' */
+				Бог времени был нелюдимым
+				Когда человек может видеть прошлое и будущее будто бы слева и справа, это открывает гораздо, гораздо больший диапазон мест для уединения
+				Настолько большой, что я до сих пор не понимаю, как он собрал своих последователей
+				Единственный способ добраться до него - найти одного последователя, избить его до полусмерти, чтобы он привёл меня к своему идолу
+				Как только он оказался предо мной-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-Оставив меня посреди пустыни. Все мои усилия закончились лишь бессмысленными словами. Какая пустая трата времени...
+				'''
 		}
 
 		LorePriestessRod: {
-			// DisplayName: Priestess Rod
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Жрица Стержней)
+			Tooltip: ""
+			Lore:
 				'''
-				While this is definitely one of the strangest body plans of all, 
-				the propeller-like wings of Sky Rods allow them to blitz across the sky faster than any other flier, 
-				or at least those who are native to our world. 
-				The most frightful aspect of Sky Rods is their method of feeding. 
-				This species does not subsist on any solid foods, instead having the unique ability to devour souls directly. 
-				This also means they can feed on souls within machines, much to Draedon's chagrin. 
-				Turns out, soldiers of steel powered by souls are more filling than most things that live in the atmosphere. 
-				I've had to derive countermeasures against this unexpected foe more times than I'd like to admit. 
-				Some have even grown much larger from the sheer volume of souls, 
-				which in turn makes a single Priestess Rod a threat to anything my soldiers would have already threatened.
-				''' */
+				Это, безусловно, одно из самых странных строений тела, 
+				крылья Небесных Жезлов, похожие на пропеллеры, позволяют им стремительно перемещаться по небу быстрее любого другого летающего существа, 
+				или, по крайней мере, тех, кто обитает в нашем мире
+				Самый ужасающий аспект Небесных Жезлов - это их способ питания
+				Этот вид не питается твердой пищей, вместо этого обладая уникальной способностью пожирать души живых напрямую
+				Это также означает, что они могут питаться душами внутри машин, к большому разочарованию Дрэйдона
+				Оказывается, стальные солдаты, питаемые душами, обладают большей вместительностью, чем большинство существ, обитающих в атмосфере
+				Мне приходилось разрабатывать контрмеры против этого неожиданного врага чаще, чем хотелось бы признать
+				Некоторые из них даже значительно увеличились в размерах благодаря огромному количеству душ, 
+				что, в свою очередь, делает Жрицу Стержней угрозой для всего, чему мои солдаты могли противостоять
+				'''
 		}
 
 		LorePuppetOpera: {
-			// DisplayName: Puppet Opera
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Кукольная Опера)
+			Tooltip: ""
+			Lore:
 				'''
-				It feels surreal to see what became of this theatre, having visited it during its prime. 
-				I could barely even see what you were fighting through that darkness.
-				This wooden maze was once a place of bustling culture, protected from attackers by its ever-shifting walls. 
-				The theatre was its heart, most known for holding the most extravagant puppet shows the land had to offer, 
-				something my archmage was known to frequent. 
-				As my crusade faded, I turned a blind eye to this place. I expected it to be abandoned at most, but this... 
-				This was once a place of reprieve. Now, it seems to be a magnet for the horrors of the world. 
-				I can only imagine what happened to its former citizens... if they yet live.
-				''' */
+				Кажется нереальным видеть, во что превратился этот театр, ведь я бывал здесь в лучшие времена
+				Я едва мог разглядеть, то, с чем ты сражался во тьме
+				Этот деревянный лабиринт когда-то был местом бурной культуры, защищенным от нападающих постоянно меняющимися стенами
+				Театр был его сердцем, самым известным своими экстравагантными кукольными представлениями, которые только можно было найти,
+				которые, как известно, часто посещал архимаг
+				Когда мой крестовый поход угас, я закрыл глаза на это место. Я ожидал, что оно будет в лучшем случае заброшено, но это... 
+				Когда-то это было место уединения. Теперь же оно, кажется, притягивает ужасы мира
+				Я могу только представить, что случилось с его бывшими жителями... если они еще живы
+				'''
 		}
 
 		LoreScarabBelief: {
-			// DisplayName: Scarab Belief
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Вера Скарабея)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of myth was confusing. 
-				Contradictory histories plague even the oldest libraries in Terraria, based entirely on the word of its followers. 
-				To call those followers overzealous would be an understatement, what they worshiped was the idea of worshipping itself. 
-				Every worshipper has their own version of Scarab they claim to see clearly and no two were ever the same, 
-				varying wildly even within the same group. The entire image of Scarab Belief is composed of lies and misconceptions, 
-				including nonsensical rituals where-
-				(The whispers become briefly muffled. Is part of the story missing?)
-				-bare concept of a solid form than anything else, existing as merely an idea which inhabits the minds of its followers.
-				How sickening. Even Providence never crossed that boundary. Hopefully, this perversion of faith will stay eternally forgotten.
-				''' */
+				Бог мифов был загадкой
+				Противоречивые истории поражают даже самые старые библиотеки Террарии, основанные исключительно на словах его последователей 
+				Назвать этих последователей чрезмерным рвением было бы преуменьшением, они поклонялись самой идее поклонения
+				У каждого верующего есть своя версия Скарабея, которую он, как утверждает, ясно видит, и двух одинаковых не бывает,
+				они сильно различаются даже внутри одной группы. Весь образ веры в Скарабея состоит из лжи и заблуждений, 
+				включая бессмысленные ритуалы, где-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-это всего лишь концепция материальной формы, существующая лишь как идея, обитающая в умах своих последователей
+				Как это отвратительно. Даже Провиденс никогда не переступала эту границу. Надеюсь, это извращение веры навсегда останется забытым
+				'''
 		}
 
 		LoreSlimeGod: {
-			// DisplayName: Slime of Divinity
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Сльзь Божественности)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of slimes was separated. 
-				You might be familiar with the entity I previously referred to as the 'Slime God'. 
-				That title isn't inaccurate... though it is quite misleading. 
-				Although a god in its own right, all slimes are theorized to have originally spawned from a singular, 'true' slime god, 
-				and will eventually return to him upon death. 
-				Information about this entity is obscure beyond his place of residence, existing either within, 
-				or potentially as, the primordial light itself. 
-				How much him and Zeratros's sun are the same being is a debate best saved for scholars, but I can tell you-
-				(You can barely hear the whispers through a loud static. Is someone interfering?)
-				-can't imagine the amount of power if he reabsorbed all slimes into himself without restraint.
-				Then, you might not have stood a chance.
-				''' */
+				Бог слизней был разделён
+				Возможно, ты уже знакомы с сущностью, которую я называл «Богом слизней»
+				Это название не совсем неверно... хоть и довольно обманчиво
+				Хотя он и является богом сам по себе, считается, что все слизни изначально произошли от единого, «истинного» бога слизней
+				и в конечном итоге вернутся к нему после смерти
+				Информация об этом существе за пределами его места жительства туманна, оно существует либо внутри, 
+				либо, возможно, как сам первозданный свет 
+				Насколько он и солнце Зератроса - одно и то же существо, - это вопрос, который лучше оставить для ученых, но я могу сказать тебе-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-не могу представить себе, какой силы он обладал бы, если бы без ограничений поглощал всю слизь
+				Тогда у тебя, скорее всего, не было бы ни единого шанса
+				'''
 		}
 
 		LoreTheLifebringer: {
-			// DisplayName: The Lifebringer
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Жизненосец)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of life was broad. 
-				Too broad for any one auric soul to hold complete dominion over. 
-				Silva herself only held dominion over a portion of life's concepts, as nature was far too diverse for her to control. 
-				The Lifebringer appears to hold a more ‘complete’ power over the throes of nature, not just evolution or survival.
-				Her greatest difference from Silva was- 
-				(The whispers become briefly muffled. Is part of the story missing?) 
-				-cause she wasn't worshiped in the conventional way, there were no temples, statues, or even writing that regarded her. 
-				I had no trail to follow, and I couldn't justify an aimless hunt, so I postponed until I had a better method. 
-				Needless to say, I never found one.
-				''' */
+				Бог жизни был всеобъемлющим
+				Слишком обширная область, чтобы лишь одна ауритовая душа могла обладать полной властью над ней
+				Сама Сильва обладала властью лишь над концепцией жизни, поскольку природа была слишком разнообразна, чтобы она могла её контролировать
+				Кажется, что Жизненосец обладала более «полной» властью над природными бедствиями, а не только над эволюцией или выживанием
+				Главное отличие от Сильвы заключалось в том, что- 
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				-потому что ей не поклонялись традиционным способом, не было ни храмов, ни статуй, ни даже письменных источников, посвященных ей 
+				У меня не было никаких зацепок, и я не мог оправдать бесцельные поиски, поэтому я отложил их до тех пор, пока не найду лучший способ
+				Излишне говорить, что его я так и не нашёл
+				'''
 		}
 
 		LoreTheMaterealizer: {
-			// DisplayName: The Materealizer
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Материализатор)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of matter was dutiful. 
-				As the current retainer of our world’s material laws, functionally its building blocks, 
-				he is every bit as cold and calculating as is required of him. Given a task, he will perform it to the most precise detail. 
-				The same goes for his followers, who have acted as hired builders for various factions. 
-				Pay their price, and you will not have a finer monument, from towering statues in ilmeris, to that very temple Providence calls home. 
-				Their neutrality made it easy for me to approach under the pretense of a commission, where I was led to a spiral-
-				(Loud static fills your ears, The whispers are inaudible, but continue uninterrupted. Is someone interfering?)
-				-took me an embarrassingly long amount of time to find the exit. Afterwards, I simply returned home and… pondered.
-				''' */
+				Бог материи был исполнительным
+				Как нынешний хранитель материальных законов нашего мира, по сути, его строительными блоками
+				Он так же холоден и расчетлив, как того и требуется. Получив задание, он выполнит его до мельчайших деталей
+				То же самое относится и к его последователям, которые выступали в роли наемных строителей для различных фракций
+				Заплатив им плату, вы не найдете памятника лучше, от возвышающихся статуй в Ильмерисе до того самого храма, который Провиденс называет своим домом
+				Их нейтралитет позволил мне легко подобраться к ним под предлогом выполнения поручения, что привело меня к спиральной-
+				(В уши проникает громкий статический шум, шёпот неслышен, он продолжается без перерыва. Кто-то мешает?)
+				-Мне потребовалось до смешного много времени, чтобы найти выход. После этого я просто вернулся домой и... задумался
+				'''
 		}
 
 		LoreTheMotherbrain: {
-			// DisplayName: The Motherbrain
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Материнский мозг)
+			Tooltip: ""
+			Lore:
 				'''
-				I had forgotten about this machine's existence for some time. 
-				Draedon was commissioned to create this shell by the dragon cult, 
-				built to occupy the jobs of the jailors whose souls were used in its creation. 
-				Having much higher intelligence, it also served as an experiment in psionic tech,
-				being able to lock any unruly prisoners in a virtual world designed to confuse and torment. 
-				The request called for a warden, what they got was a torture device.
-				When the souls within the dungeon grew restless, Draedon was forced to abandon it within those cursed walls. 
-				I could tell he was annoyed by that, but he never complained much, already moving on to his next project. 
-				With everything else falling apart around me, a lost machine, 
-				unaware that my crusade had already come to a close, became a footnote in my terrible, blood-stained history.
-				''' */
+				На какое-то время я забыл о существовании данной машины
+				Дрэйдону было поручено создать эту оболочку по поручению культа драконов
+				построенную лишь для того, чтобы занять место тюремщиков, чьи души были использованы при её создании
+				Обладая гораздо более высоким интеллектом, она также служила экспериментом в области псионических технологий,
+				возможность запирать любых непокорных заключенных в виртуальном мире, созданном для пыток и наказаний 
+				Запрос требовал надзирателя, но получилось устройство пыток
+				Когда души в темнице стали беспокойными, Дрэйдон был вынужден оставить её за этими проклятыми стенами 
+				Я понимал, что его это раздражает, но он почти не жаловался, уже переходя к следующему проекту 
+				В то время как всё вокруг рушилось, потерянная машина,
+				не осознавая, что мой крестовый поход уже подошёл к концу, стала лишь напоминанием о моей ужасной, кровавой истории
+				'''
 		}
 
 		LoreTheSon: {
-			// DisplayName: The Son
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Сын)
+			Tooltip: ""
+			Lore:
 				'''
-				As the gods staked their claim in this world,
-				their actions caused stirring amongst the primordial forces that dwell far above.
-				There was one who claimed to be a direct descendant of our universe's highest authority, 
-				chastising their crimes against Terraria. 
-				The power wielded by this half-mortal, a facsimile of the truly divine, was remarkable, 
-				tempered by a philosophical mind that positioned him at the forefront of a crusade that predated my birth.
-				Sadly, right as he began his movement... Noxus had gotten involved.
-				Everything around that name is distorted in of itself,
-				but I can reasonably confirm he played a key role in getting the Son crucified.
-				Perhaps whatever plan he had was directly threatened by the Son's existence.
-				I only learned all of this when I activated that same structure you unknowingly activated to-
-				(Outside influence muffles the whispers… then you hear a rumbling.)
-				I think that’s enough.
-				''' */
+				Когда боги заявили о своих правах на этот мир,
+				их действия вызвали волнения среди первобытных сил, обитающих высоко в небесах
+				Был тот, кто утверждал, что является прямым потомком высшей власти нашей вселенной, 
+				обличая их преступления против Террарии
+				Сила, которой обладал этот полусмертный, подобие истинного божественного, была поразительной, 
+				одарённый философским складом ума, он оказался в авангарде крестового похода, предшествовавшего моему рождению
+				К сожалению, как только он начал своё движение... в дело вмешался Ноксус
+				Всё, что связано с этим именем, искажено само по себе,
+				но я могу с достаточной уверенностью подтвердить, что он сыграл ключевую роль в распятии Сына
+				Возможно, его план был напрямую подорван самим существованием Сына
+				Я узнал обо всём этом только тогда, когда активировал ту же структуру, которую ты неосознанно активировал, чтобы-
+				(Внешнее влияние заглушает шёпот… затем вы слышите грохот)
+				Думаю, этого достаточно
+				'''
 		}
 
 		LoreWallofShadow: {
-			// DisplayName: Wall of Shadow
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Стена Теней)
+			Tooltip: ""
+			Lore:
 				'''
-				Alternating patterns of shadow and sinew, limbs outstretched to feed its hungry eyes, 
-				the stench of death hanging in the air... I'd recognize this brand of magic anywhere. 
-				This is unquestionably, uncannily, the same kind of behemoth as the one I used to bind the gods' essences. 
-				I highly doubt its makers were even aware of me, merely converging on this solution to contain otherworlders who emerge from their portals. 
-				Their plan’s failure was simple: the makers did not account for when their prison inevitably became full. 
-				By the time primordial shadows were leaking out of the brickwork, it was already too late. 
-				It became a ticking time bomb of essences from countless dimensions studied over the city's life. 
-				With the explosion of color you've forced upon this world, it will not be long until the gods take notice of your presence. 
-				Once they choose to act, you will know what to do.
-				''' */
+				Чередующиеся узоры теней и сухожилий, вытянутые конечности, чтобы накормить его голодные глаза, 
+				запах смерти, витавший в воздухе... Я бы узнал эту магию где угодно
+				Это, несомненно, поразительно похоже на то создание, которое я использовал для пленения сущностей богов
+				Я сильно сомневаюсь, что создатели вообще знали обо мне, просто сосредоточившись на решении для сдерживания пришельцев из других миров, выходящих из их порталов
+				Провал их плана был прост: создатели не учли, что их тюрьма неизбежно переполнится
+				К тому моменту, когда первобытные тени начали просачиваться сквозь кирпичную кладку, было уже слишком поздно
+				Она превратилась в бомбу замедленного действия, наполненную сущностями из бесчисленных измерений, изученных за всю жизнь города
+				С этим взрывом красок, который ты был вынужден обрушить на этот мир, скоро боги обратят на вас свой взор
+				Как только они решат действовать, вы будете знать, что делать
+				'''
 		}
 
 		LoreWhale: {
-			// DisplayName: World's End Everlasting Falling Whale
-			// Tooltip: ""
-			/* Lore:
+			DisplayName: История (Вечно Падающий Кит Конца Света)
+			Tooltip: ""
+			Lore:
 				'''
-				The god of death was ironic. 
-				Of everything that could have taken the role of reaper, 
-				of every horror that could have used the power to enforce death, potentially even on the traitor almighty… 
-				that title fell to the whale. Though not unintelligent, it is much closer to an actual animal in behavior, 
-				acting with an innocence which belies its truly terrifying power. 
-				The legend of the Everlasting Whale survived by being mostly passed around by sailors, 
-				attracting foolhardy parties to try, and ultimately fail, to claim its power. 
-				I deliberated on following these unconfirmed testimonies, eventually settling on-
-				(The whispers become briefly muffled. Is part of the story missing?) 
-				-For what it's worth, I recognize the whale as a product of circumstance and nothing more. 
-				I could never condone its worship, but there are far worse crimes than wanting to be left alone.
-				''' */
+				Бог смерти был ироничен
+				Из всех тех, кто мог бы взять на себя роль жнеца, 
+				из всех ужасов, которые могли бы использовать свою силу для воцарения смерти, потенциально даже над всемогущим предателем...
+				этот титул достался киту. Хотя он и не глуп, по поведению он гораздо ближе к настоящему животному, 
+				действуя с невинностью, в которой и кроется его поистине ужасающая сила
+				Легенды о Вечнопадающем Ките сохранилась в основном благодаря тому, что её передавали из уст в уста моряки,
+				привлекая безрассудных путешественников, пытавшихся, в конечном итоге, потерпеть неудачу, в попытке завладеть его силой
+				Я раздумывал, стоит ли верить этим неподтвержденным свидетельствам, в конце концов придя к-
+				(Шепот на мгновение затих. Часть истории потеряна?)
+				- в итоге, я признаю кита продуктом обстоятельств и ничем иным
+				Я никогда не смог бы оправдать поклонение ему, но есть гораздо худшие преступления, чем желание, чтобы его оставили в покое
+				'''
 		}
 	}
 
 	ThreeThousandWorldsRelic: {
-		// DisplayName: Infernal Three Thousand Worlds Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Трёх тысяч миров
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	TheHolyRelic: {
-		// DisplayName: Infernal The Holy Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Святости
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	SpiralStairsRelic: {
-		// DisplayName: Infernal Spiral Stairs Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Спиральной Лестницы
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	RisingWorldRelic: {
-		// DisplayName: Infernal Rising World Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Восходящего Мира
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	OozysseyRelic: {
-		// DisplayName: Infernal Oozyssey Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Оозисеи
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	LunarRelic: {
-		// DisplayName: Infernal Lunar Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Луны
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного события
+		 '''
 	}
 
 	KhronoTriggerRelic: {
-		// DisplayName: Infernal Khrono Trigger Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Хроно Триггера
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 
 	EtzHaChayimRelic: {
-		// DisplayName: Infernal Etz Ha Chayim Relic
-		// Tooltip: Imbued with the infernal flames of a defeated foe
+		 DisplayName: Инфернальная реликвия Эц хаХаим
+		 Tooltip: 
+		 '''
+		 Окружено инфернальными огнями поверженного врага
+		 '''
 	}
 }
 
 Tiles: {
-	TimelessFountainTile.MapEntry: Вневременной фонтан Tile
-	// CampfireOfTheWildheartTile.MapEntry: Campfire Of The Wildheart Tile
+	TimelessFountainTile.MapEntry: Вневременной фонтан
+    CampfireOfTheWildheartTile.MapEntry: Костёр дикого сердца
 }
 
 Projectiles: {
 	BabyOilDroplet.DisplayName: Капля детского масла
-	// DevourScarf.DisplayName: Devour Scarf
-	// EurekaPortal.DisplayName: Eureka Portal
+	DevourScarf.DisplayName: Шарф пожирателя
+	EurekaPortal.DisplayName: Портал озарения
 }
 
 Buffs: {
 	BubbleShield: {
 		DisplayName: Пузырьковый щит
-		Description: Снижает следующий урон на 10%
+		Description: Следующий урон снижен на 10%
 	}
 
 	HeartOfThoriumBuff: {
@@ -585,7 +647,7 @@ Buffs: {
 
 	HeartOfLifeQuartzBuff: {
 		DisplayName: Сердце кварца жизни
-		Description: Исцеляющие заклинания восстанавливают дополнительно 2 единицы здоровья
+		Description: Исцеляющие заклинания восстанавливают дополнительно 2 ед. здоровья
 	}
 
 	HeartOfAqualiteBuff: {
@@ -600,22 +662,22 @@ Buffs: {
 
 	HeartOfLodestoneBuff: {
 		DisplayName: Сердце магнетита
-		Description: Critical chance increased by 5%
+		Description: Увеличивает шанс критического удара на 5%
 	}
 
 	HeartOfValadiumBuff: {
 		DisplayName: Сердце валадиума
-		Description: Critical chance increased by 5%
+		Description: Увеличивает шанс критического удара на 5%
 	}
 
 	HeartOfIllumiteBuff: {
 		DisplayName: Сердце иллюмита
-		Description: Defense increased by 10%
+		Description: Увеличивает защиту на 10%
 	}
 
 	WhaleBoneRecovery: {
-		// DisplayName: Skeletal reconstruction
-		// Description: Whale will heal you by {0}
+		DisplayName: Реконструкция скелета
+		Description: Кит исцелит тебя когда твоё здоровье будет ниже {0}
 	}
 }
 
@@ -624,73 +686,78 @@ Mods: {
 		CoJIntro: {
 			GoblinChariot:
 				'''
-				Безбашенная машина войны
-				Гоблинская Колесница
+				БЕЗБАШЕННАЯ МАШИНА ВОЙНЫ
+				ГОБЛИНСКАЯ КОЛЕСНИЦА
 				'''
 			PuppetOpera:
 				'''
-				Нити судьбы
-				Кукольная Опера
+				НИТИ СУДЬБЫ
+				КУКОЛЬНАЯ ОПЕРА
 				'''
 			BigDipper:
 				'''
-				Блуждающая звездорожденная
-				Большая Медведица
+				БЛУЖДАЮЩАЯ ЗВЕЗДОРОЖДЁННАЯ
+				БОЛЬШАЯ МЕДВЕДИЦА
 				'''
 			MarquisMoonsquid:
 				'''
-				Тиран глубин
-				Маркиз Лунный Кальмар
+				ТИРАН ГЛУБИН
+				МАРКИЗ ЛУННЫЙ КАЛЬМАР
 				'''
 			PriestessRod:
 				'''
-				Благославлённый апостол
-				Жрица Стержней
+				БЛАГОСЛОВЛЁННЫЙ АПОСТОЛ
+				ЖРИЦА СТЕРЖНЕЙ
 				'''
 			Diver:
 				'''
-				Хранитель глубин
-				Дайвер
+				ХРАНИТЕЛЬ ГЛУБИН
+				ДАЙВЕР
 				'''
 			TheMotherbrain:
 				'''
-				Мастер машинаций
-				Материнский Мозг
+				МАСТЕР МАШИНАЦИЙ
+				МАТЕРИНСКИЙ МОЗГ
 				'''
 			WallofShadow:
 				'''
-				Творение тьмы
-				Стена Теней
+				ТВОРЕНИЕ ТЬМЫ
+				СТЕНА ТЕНЕЙ
+				'''
+			SlimeGod:
+				'''
+				Первородный Слизень
+				Бог слизней:Реванш
 				'''
 			TheOverwatcher:
 				'''
-				Смотритель реальности
-				Часовой
+				СМОТРИТЕЛЬ РЕАЛЬНОСТИ
+				ЧАСОВОЙ
 				'''
 			TheLifebringerHead:
 				'''
-				Божественное цветение
-				Жизненосец
+				БОЖЕСТВЕННОЕ ЦВЕТЕНИЕ
+				ЖИЗНЕНОСЕЦ
 				'''
 			TheMaterealizer:
 				'''
-				Архитектор реальности
-				Материализатор
+				АРХИТЕКТОР РЕАЛЬНОСТИ
+				МАТЕРИАЛИЗАТОР
 				'''
 			ScarabBelief:
 				'''
-				Древняя набожность
-				Вера Скарабея
+				ДРЕВНЯЯ НАБОЖНОСТЬ
+				ВЕРА СКАРАБЕЯ
 				'''
 			WorldsEndEverlastingFallingWhale:
 				'''
-				Сокрущающая бездна
-				Вечно Падающий Кит Конца Света
+				СОКРУЩАЮЩАЯ БЕЗДНА
+				ВЕЧНО ПАДАЮЩИЙ КИТ КОНЦА СВЕТА
 				'''
 			TheSon:
 				'''
-				Святой Христос
-				Сын
+				СВЯТОЙ ХРИСТОС
+				СЫН
 				'''
 		}
 	}
@@ -707,7 +774,7 @@ Configs: {
 			WeaponChanges: Изменение оружий
 			ArmorChanges: Изменение брони
 			ModChanges: Изменения модов
-			// AccessoryChanges: Accessory Changes
+			AccessoryChanges: Изменения аксессуаров
 		}
 
 		EnableBossScaling: {
@@ -721,8 +788,8 @@ Configs: {
 		}
 
 		PermanentToAccessories: {
-			// Label: "[i:ContinentOfJourney/TheSwitch] The Switch Rework"
-			// Tooltip: If enabled, The Switch will be converted to accessory.
+			Label: "[i:ContinentOfJourney/TheSwitch] Переработка переключателя"
+			Tooltip: Если эта функция включена, переключатель будет переработан в виде аксессуара.
 		}
 
 		EnableBookmarks: {
@@ -731,8 +798,8 @@ Configs: {
 		}
 
 		EnableTickets: {
-			// Label: "[i:ContinentOfJourney/LegacyTicket] Ticket Balancing"
-			// Tooltip: If enabled, Thrower luck tickets will be rebalanced according to other mods
+			 Label: "[i:ContinentOfJourney/LegacyTicket] Балансировка билетиков"
+			 Tooltip: Если эта функция включена, баланс билетиков удачи для метателя будет сбалансирован в соответствии с другими модами.
 		}
 
 		CustomContent: {
@@ -807,18 +874,18 @@ Configs: {
 	}
 }
 
-ModCompat.BossChecklist.SlimeGod: Бог слизней: Реванш
+ModCompat.BossChecklist.SlimeGod: Слизь Божественности
 
 ItemTooltips: {
 	OmniShield: -Омни щит-
 	ImmunityVulnerable: Даёт неуязвимость к уязвимости
 	CommemorativeCoin: Урон получаемый от дебафов снижен на 35%
 	TransactionCertificate: Предотвращает смертельный урон, оставляя игроку 1 здоровье, Перезарядка: 10 минут
-	// SteamkeeperWatch: Your sentries last forever and gain up to 15% damage over the course of 2 minutes
-	// HungeringBlossom: Grants the effects of the Hungering Blossom when visibility is off
-	// ConstructionPDA: Increases your max number of sentries by 1
-	// DivineNecklace: Your minion will let your enemies bask in a Gods′ grace
-	// ToggleWings: Shift-Right Click this item in your inventory to toggle the [i:493] wings
+	SteamkeeperWatch: Призванные стражи существуют бесконечно и увеличивает их урон на 15% в течении 2 минут
+	HungeringBlossom: Даёт эффект жаждущего цветка если видимость включена
+	ConstructionPDA: Увеличивает максимальное число часовых на 1
+	DivineNecklace: Ваши прислужники заставляют врагов наслаждаться милостью Богов
+	ToggleWings: Нажмите Shift + ПКМ по этому предмету в инвентаре, чтобы переключить [i:493] крылья
 	AbyssCore: Излучает свет на позиции курсора
 	GrandSpectral:
 		'''
@@ -831,98 +898,98 @@ ItemTooltips: {
 		Увеличивает длину кнутов на 10%
 		Увеличивает максимальное число часовых на 1
 		'''
-	/* TrinketOfChi:
+	TrinketOfChi:
 		'''
-		Increases damage reduction by 8% if you avoid taking damage for 10 seconds
-		This buff expires on hit
-		+1 HP/s life regen for you and your teammates
-		''' */
-	/* DeificAmulet:
+		Увеличивает сопротивление урону на 20%, если вы не получали урона в течение 8 секунд
+		Этот бонус пропадает при получении удара
+		Увеличивает регенерацию здоровья на 1 ед./сек вам и всем членам вашей команды
 		'''
-		Releases a burst of homing star-bees, increases movement speed, and drenches you in [cbuff:Honey] after taking damage
-		Increases the length of invincibility, with it increasing even more when at low health
-		''' */
+	DeificAmulet:
+		'''
+		При получении урона выпускает рой самонаводящихся звёздных пчёл, увеличивает скорость передвижения и даёт бафф [cbuff:Honey]
+		Даёт дополнительные кадры неуязвимости; эффект усиливается при низком уровне здоровья
+		'''
 	ArmillarySphere: Ваши часовые формируют созвездие, которое наносит урон врагам на пути, нанося 50% урона ващего оружия
 	"Remove'Range'": Диапозон
 	"Remove'range'": диапозон
 	SpikyCoverRework: Наконечник кнута наносит в 1,5 раза больше урона и накладывает кровотечении
-	// ColdBloodRework: Decreases debuff time and damage by 25%
-	// FungusJacket: Increases your max number of minions by 1
-	/* WhaleBoneCharmRework:
+	ColdBloodRework: Снижает урон и время действия дебаффов на 25%
+	FungusJacket: Увеличивает максимальное число часовых на 1
+	WhaleBoneCharmRework:
 		'''
-		Gives 20% damage reduction
-		If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-		''' */
-	/* StarQuiver:
+		Увеличивает сопротивление урону на 20%
+		Если атака нанесёт 1/4 вашего здоровья, вы получаете бафф, который востановит ваше здоровье в зависимости от полученного вами урона
 		'''
-		Increase the damage of arrows by 15%
-		Turn wooden arrows into holy arrows
-		Enemies are less likely to target you
-		''' */
-	/* CrossbowScopeSOTS:
+	StarQuiver:
 		'''
-		Grants a 20% chance not to consume ammo
-		Striking enemies has a chance to refund ammo
-		Landing the killing blow on enemies may also refund ammo
-		If accessory visablity is on, you consume void instead of ammunition
-		''' */
+		Увеличивает урон от стрел на 15%
+		Превращает деревянные стрелы в святые
+		Враги с меньшей вероятностью атакуют вас
+		'''
+	CrossbowScopeSOTS:
+		'''
+		Дает 20% шанс не использовать боеприпасы
+		Удары по врагам могут вернуть боеприпасы
+		Добивание врагов также может вернуть боеприпасы
+		Если видимость аксессуара включена, вместо боеприпасов будет расходоваться пустота
+		'''
 
 	EtherealTalisman: {
-		// OrigTooltip1: +150 max mana and 10% decreased mana usage
-		// Replace1: +230 max mana and 12% decreased mana usage
+		OrigTooltip1: Увеличивает максимальный запас маны на 150 и снижает расход маны на 8%
+		Replace1: Увеличивает максимальный запас маны на 230 и снижает расход маны на 12%
 	}
 
 	AncientBlessing: {
-		// Remove: Increases length of invincibility,
-		// Remove1: Minor increase to all stats
-		// Remove2: Provides adaption to nights and liquid
-		/* AlchemistsCharm:
+		Remove: Увеличивает продолжительность неуязвимости после получения урона
+		Remove1: Немного увеличивает все характеристики
+		Remove2: Позволяет преобразовываться в ночи и жидкости
+		AlchemistsCharm:
 			'''
-			Increases healing and mana received from potions by 100
-			Increases buff duration by 67%
-			''' */
+			Увеличивает количество исцеления и маны, получаемых от зелий, на 100 ед
+			Увеличивает длительность баффов на 67%
+			'''
 	}
 
-	Negatama: Высвобождает темную энергию, чем меньше у вас маны, тем больше урона наносёт
+	Negatama: Высвобождает темную энергию, чем меньше у вас маны, тем больше урона наносет
 	DivineTouch: Атаки оружий ближнего боя заставляют ваших врагов наслождаться милостью богов
-	// StarQuiverEffect: Cause ranger attacks to inflict [cbuff:CalamityMod/HolyFlames]
+	StarQuiverEffect: Атаки стрелка накладывают дебафф [cbuff:CalamityMod/HolyFlames]
 	PoisonEffect: Накладывает отравление
 	HolyFlamesEffect: Накладывает святой огонь
 	VaporfiedEffect: Накладывает испарение
 
 	ThrowerTickets: {
-		// Orig: Enables charge shot for consumable ranged weapons
-		// Replace: Improve your Stealth strikes ability
+		Orig: Позволяет заряжать броски расходуемых дистанционных оружий
+		Replace: Улучшает ваши навыки накопления скрытности
 	}
 
 	TheSwitch: {
-		// HoldShift: Shift-Right Click this item in your inventory to change mode
-		// ColdBlood: Decrease debuff time and damage by 40%
-		/* WhaleBoneCharm:
+		HoldShift: Нажмите Shift+ПКМ по этому предмету в инвенторе, чтобы переключить
+		ColdBlood: Уменьшает урон и время действия дебаффа на 40%
+		WhaleBoneCharm:
 			'''
-			Gives 30% damage reduction
-			If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-			''' */
+			Увеличивает сопротивление урону на 30%
+			Если атака нанесёт 1/4 вашего здоровья, вы получаете бафф, который востановит ваше здоровье в зависимости от полученного вами урона
+			'''
 	}
 
 	Horizon: {
-		// Remove: "'The air lifts you upward'"
-		// HoldShift: Hold Shift for more
-		/* DefaultStats:
+		Remove: "'Воздух поднимает вас вверх'"
+		HoldShift: Удерживайте Shift для просмотра дополнительной информации
+		DefaultStats:
 			'''
-			Flight Time: 3.75 seconds
-			Max horizontal speed: 52 mph
-			Max vertical speed: 100 mph
-			''' */
-		/* HidedStats:
+			Время полёта: 3.75 секунды
+			Максимальная горизонтальная скорость: 52 км
+			Максимальная вертикальная скорость: 100 км
 			'''
-			Horizontal acceleration: 61.32 mph/s
-			Vertical Acceleration:
-			42.98 mph/s
-			89.21 mph/s if ascending slower than 41 mph
-			326.38 mph/s if ascending while falling
-			''' */
-		// RunningAccel: 44% increased running acceleration
+		HidedStats:
+			'''
+			Горизонтальное ускорение: 61,32 км/ч
+			Вертикальное ускорение:
+			42,98 км/ч
+			89,21 км/ч, если скорость подъёма ниже 41 км
+			326,38 км/ч при взлёте во время падения
+			'''
+		RunningAccel: Увеличивает ускорение при беге на 44%
 	}
 
 	CommandersGaunlet: {
@@ -950,8 +1017,8 @@ ItemTooltips: {
 	}
 
 	HolyTrinity: {
-		// OrigTrinityClass: Consumable ranged
-		// RepTrinityClass: Thrower
+		OrigTrinityClass: Расходуемые дистанционные
+		RepTrinityClass: Метательные
 	}
 
 	GrayRook: {
@@ -967,16 +1034,16 @@ ItemTooltips: {
 	}
 
 	BatNecklace: {
-		// OrigTooltip1: Increase your minion slot by 2
-		// Replace1: Increases your max number of minions by 2, and summon damage by 12%
-		// StatisBlessing: Increased minion knockback
-		/* ThoriumBuffs:
+		OrigTooltip1: Увеличивает максимальное число прислужников на 2
+		Replace1: Увеличивает максимальное число прислужников на 2, и урон призывателя на 12%
+		StatisBlessing: Увеличивает отбрасывание призывателя
+		ThoriumBuffs:
 			'''
-			Minion attacks have a 15% chance to produce a crystal scorpion
-			Minion attacks deal 3 more damage while a crystal scorpion is active
-			Minion and sentry attacks briefly deal 2 more damage after killing an enemy 
-			Increases max sentries by 2
-			''' */
+			Атаки миньонов с 15% шансом призывают кристального скорпиона
+			Атаки миньонов наносят на 3 ед. больше урона, пока кристальный скорпион активен
+			После убийства врага, атаки миньонов и стражей на короткое время наносят дополнительно 2 ед. урона
+			Увеличивает максимальное число часовых на 2
+			'''
 	}
 
 	GrayRookBuff: {
@@ -1086,25 +1153,25 @@ ItemTooltips: {
 	}
 
 	SunsHeart: {
-		// OrigTooltip: Enables wings slot
-		// Replace: Permanently increases wing flight time by 20%
+		OrigTooltip: Разблокирует слот для крыльев
+		Replace: Навсегда увеличивает время полёта крыльев на 20%
 	}
 
 	EurekaEffect: {
-		// OrigTooltip1: Teleport to your cursor's location
-		// OrigTooltip2: This item has a 6s cooldown
-		/* Replace2:
+		OrigTooltip1: Телепортирует на позицию мыши
+		OrigTooltip2: Перезарядка: 6 секунд
+		Replace2:
 			'''
-			Summons a temporary gateway between 2 chosen spots
-			Left and Right click to choose spots
-			Right click the portal to teleport with 10s cooldown
-			''' */
-		// ThoriumHeal: Heal by 40 when teleported
+			Призывает временный портал между вами и выбранным видимым местом
+			Нажмите ЛКМ и ПКМ чтобы выбрать позицую
+			Игроки могут использовать врата не чаще одного раза в 10 секунд
+			'''
+		ThoriumHeal: Лечит союзника и игрока на 40 ед. здоровья
 	}
 
 	FlasksTooltip: {
-		// ItemOrigTooltip: Melee and Whip attacks
-		// BuffOrigTooltip: Melee attacks
-		// Replace: Melee, Whip and Thrower attacks
+		 ItemOrigTooltip: Удары хлыстом и атаки ближнего боя
+		 BuffOrigTooltip: Ближние атаки
+		 Replace: Ближние и разбойные атаки, а также хлысты
 	}
 }
