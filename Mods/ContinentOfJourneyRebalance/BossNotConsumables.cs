@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using ContinentOfJourney.Items;
 
-namespace HomewardRagnarok.CrossMod
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
 {
-    public class CoJSummonPatch : GlobalItem
+    public class BossNotConsumables : GlobalItem
     {
         public override void SetDefaults(Item item)
         {
