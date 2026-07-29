@@ -75,7 +75,7 @@ Items: {
 		DisplayName: 药草袋
 		Tooltip:
 			'''
-			[i:ThoriumMod/BlizzardPouch] 装备时，悠悠球攻击施加[C/1CC6F4:霜冻]和[C/7B4783:酸性毒液]并有概率冻结敌怪
+			[i:ThoriumMod/BlizzardPouch] 装备时，悠悠球攻击施加[cbuff:Frostburn]和[cbuff:Venom]减益并有概率冻结敌怪
 			用悠悠球攻击敌怪使你获得10%伤害减免，直到受到伤害为止
 			此效果在保护你后必须花15秒重新充能
 			[i:ContinentOfJourney/LeafOil] 悠悠球击中敌人为叶子护盾充能
@@ -91,7 +91,7 @@ Items: {
 			'''
 			使用喷火器时有20%概率不消耗弹药
 			允许你自定义喷火器的射弹
-			喷火器能施加[C/A4A84E:大脑溃烂]减益
+			喷火器能施加[cbuff:CalamityMod/BrainRot]减益
 			装备时显示可以放入的材料
 			可放入至多2个材料
 			'''
@@ -569,7 +569,7 @@ Tiles: {
 Projectiles: {
 	BabyOilDroplet.DisplayName: 宝宝油液滴
 	DevourScarf.DisplayName: 吞噬者围巾
-	// EurekaPortal.DisplayName: Eureka Portal
+	EurekaPortal.DisplayName: 尤里卡传送门
 }
 
 Buffs: {
@@ -689,7 +689,7 @@ Mods: {
 				'''
 			TheSon:
 				'''
-				圣洁基督
+				神圣之源
 				圣子
 				'''
 		}
@@ -822,7 +822,6 @@ ItemTooltips: {
 	AbyssCore: 鼠标位置发光
 	GrandSpectral:
 		'''
-		延长你的无敌时间
 		受伤时召唤光谱追杀敌人
 		击中敌人时召唤光谱追杀敌人
 		'''
@@ -847,8 +846,8 @@ ItemTooltips: {
 	"Remove'Range'": 远程
 	"Remove'range'": 远程
 	SpikyCoverRework: 鞭子尖端造成1.5倍伤害并施加流血
-	ColdBloodRework: Decreases debuff time and damage by 25%
-	// FungusJacket: Increases your max number of minions by 1
+	ColdBloodRework: 降低25%减益持续时间和伤害
+	FungusJacket: 增加1个最大仆从栏
 	WhaleBoneCharmRework:
 		'''
 		给予你20%伤害减免
@@ -885,11 +884,11 @@ ItemTooltips: {
 	}
 
 	Negatama: 释放暗能量，魔力越低伤害越高
-	DivineTouch: 近战攻击施加圣火减益
-	StarQuiverEffect: 远程攻击造成[cbuff:CalamityMod/HolyFlames]
+	DivineTouch: 近战攻击施加[cbuff:ContinentOfJourney/DivineFireBuff]减益
+	StarQuiverEffect: 远程攻击造成[cbuff:CalamityMod/HolyFlames]减益
 	PoisonEffect: 施加[cbuff:Poisoned]减益
 	HolyFlamesEffect: 施加[cbuff:CalamityMod/HolyFlames]减益
-	VaporfiedEffect: 施加蒸汽波减益
+	VaporfiedEffect: 施加[cbuff:CalamityMod/Vaporfied]减益
 
 	ThrowerTickets: {
 		Orig: 为消耗性远程武器启用蓄力攻击
