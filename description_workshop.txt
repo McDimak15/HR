@@ -1,25 +1,30 @@
-Homeward Ragnarok is an UNOFFICIAL add-on to Infernal Eclipse of Ragnarok,
-it adds compatibility between Infernal Eclipse of Ragnarok and Homeward Journey mods.
+[h1] Homeward Ragnarok [/h1]
+[h2] Homeward Journey add-on to Infernal Eclipse of Ragnarok [/h2]
 
-Included support for this mods:
-- Homeward Journey
-- Calamity
-- Thorium
-- Fargo's Souls
-- Calamity - Fargo's Souls DLC
-- Community Souls Expansion
+The official DLC for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]Infernal Eclipse of Ragnarok[/url], which adds enhanced compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
 
+This mod includes compatibility support for the following mods:
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072]Calamity[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium[/url]
+[/list]
 
-Included support but low:
-- Secret of the shadows
-- Consolaria
+Some limited support for:
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]Secrets of the Shadows[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929]Consolaria[/url]
+[/list]
 
-This mod was tested in multiplayer but still possible bugs.
-Also the mod might be unbalanced.
+The mod has been tested in multiplayer, but some bugs might still appear.
+It may also be a bit unbalanced in some situations.
 
-Changelog: https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing
-
-Discord Server: https://discord.gg/pxxQMVu5ek
+Useful links:
+[list]
+[*] [url=https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing]Changelog[/url]
+[*] [url=https://discord.gg/pxxQMVu5ek]Discord Server[/url]
+[*] [url=https://terrariamods.wiki.gg/wiki/Infernal_Eclipse_of_Ragnarok]Official Wiki[/url], still WIP
+[/list]
 
 Special thanks to Soltan, Infernal Eclipse of Ragnarok Team and Homeward Journey Devs.
 
@@ -27,4 +32,4 @@ Sprites by Soltan, Cenix and Duwop.
 Icon by Duwop.
 Created by Kes.
 
-Please Report Any Bugs.
+Bug reports are appreciated — please share any issues you find.
