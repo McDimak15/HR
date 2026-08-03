@@ -3,33 +3,41 @@
 
 The official DLC for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]Infernal Eclipse of Ragnarok[/url], which adds enhanced compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
 
-This mod includes compatibility support for the following mods:
+This DLC includes compatibility support for the following mods:
 [list]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072]Calamity[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium[/url]
-[/list]
-
-Some limited support for:
-[list]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]Secrets of the Shadows[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929]Consolaria[/url]
 [/list]
 
-The mod has been tested in multiplayer, but some bugs might still appear.
-It may also be a bit unbalanced in some situations.
+The DLC currently adds the following:
+[list]
+[*] Merged crafting trees for many weapons and accessories
+[*] 100+ Recipe changes
+[*] 75+ Weapon changes
+[*] 50+ Accessory changes
+[*] Cross-mod Infernum intros for bosses
+[*] Boss adjustments 
+[*] Infernal Boss relics
+[*] Boss lore items
+[/list]
 
 Useful links:
 [list]
 [*] [url=https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing]Changelog[/url]
 [*] [url=https://discord.gg/pxxQMVu5ek]Discord Server[/url]
-[*] [url=https://terrariamods.wiki.gg/wiki/Infernal_Eclipse_of_Ragnarok]Official Wiki[/url], still WIP
+[*] [url=https://terrariamods.wiki.gg/wikiInfernal_Eclipse_of_Ragnarok]Official Wiki[/url], still WIP
 [/list]
 
-Special thanks to Soltan, Infernal Eclipse of Ragnarok Team and Homeward Journey Devs.
+Created by:
+Developer: Kes.
+Sprites: Duwop, Soltan.
+Balance Changes: Mr.Puzzles, Soltan.
+Story: targetson.
+Localisation: Pudd1ng, De1tA (Chinese), Mr.Puzzles (Russian).
 
-Sprites by Soltan, Cenix and Duwop.
-Icon by Duwop.
-Created by Kes.
+Special thanks to Infernal Eclipse of Ragnarok Team and Homeward Journey Devs.
 
+The mod has been tested in multiplayer, but some bugs might still appear.
 Bug reports are appreciated — please share any issues you find.
