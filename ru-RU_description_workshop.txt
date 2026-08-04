@@ -1,0 +1,43 @@
+[h1] Homeward Ragnarok [/h1]
+[h2] Аддон на Homeward Journey для Infernal Eclipse of Ragnarok [/h2]
+
+Официальное DLC для [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]Infernal Eclipse of Ragnarok[/url], которое добавляет совместимость с [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
+
+Это DLC поддерживает следующие моды:
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072]Calamity[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]Secrets of the Shadows[/url]
+[/list]
+
+Это DLC добавляет:
+[list]
+[*] Совмещённые древа крафтов для оружий и аксессуаров
+[*] 100+ изменений рецептов
+[*] 75+ изменений оружий
+[*] 50+ изменений аксессуаров
+[*] Титульные экраны Infernum для боссов HWJ
+[*] Изменения боссов
+[*] Инфернальные реликвии боссов
+[*] Истории боссов из Calamity для боссов HWJ
+[/list]
+
+Полезные ссылки:
+[list]
+[*] [url=https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing]Список изменений[/url]
+[*] [url=https://discord.gg/pxxQMVu5ek]Discord сервер[/url]
+[*] [url=https://terrariamods.wiki.gg/wikiInfernal_Eclipse_of_Ragnarok]Official Wiki[/url], в разработке
+[/list]
+
+Создано:
+Разработчик: Kes.
+Спрайты: Duwop, Soltan.
+Изменения баланса: Mr.Puzzles, Soltan.
+История: targetson.
+Локализация: Pudd1ng, De1tA (Китайский), Mr.Puzzles (Русский).
+
+Отдельная благодарность команде Infernal Eclipse of Ragnarok и разработчикам Homeward Journey.
+
+Мод был протестирован в мультиплеере, но всё ещё могут быть ошибки.
+Сообщения об ошибках приветствуются — пожалуйста, сообщайте обо всех обнаруженных ошибках.
