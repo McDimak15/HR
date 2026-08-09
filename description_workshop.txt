@@ -3,24 +3,31 @@
 
 The official DLC for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]Infernal Eclipse of Ragnarok[/url], which adds enhanced compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
 
-This mod includes compatibility support for the following mods:
+This DLC includes compatibility support for the following mods:
 [list]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]Homeward Journey[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072]Calamity[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]Secrets of the Shadows[/url]
 [/list]
 
-Some limited support for:
+The DLC currently adds the following:
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]Secrets of the Shadows[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929]Consolaria[/url]
+[*] Merged crafting trees for many weapons and accessories
+[*] 100+ Recipe changes
+[*] 75+ Weapon changes
+[*] 50+ Accessory changes
+[*] Cross-mod Infernum intros for bosses
+[*] Boss adjustments 
+[*] Infernal Boss relics
+[*] Boss lore items
 [/list]
 
 Useful links:
 [list]
 [*] [url=https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing]Changelog[/url]
 [*] [url=https://discord.gg/pxxQMVu5ek]Discord Server[/url]
-[*] [url=https://terrariamods.wiki.gg/wiki/Infernal_Eclipse_of_Ragnarok]Official Wiki[/url], still WIP
+[*] [url=https://terrariamods.wiki.gg/wikiInfernal_Eclipse_of_Ragnarok]Official Wiki[/url], still WIP
 [/list]
 
 Created by:

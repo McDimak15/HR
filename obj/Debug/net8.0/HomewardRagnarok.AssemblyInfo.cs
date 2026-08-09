@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomewardRagnarok")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acaa9eaf8e3eff1e1a5f5a59923aeb652dac7192")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed46f094a1caa8dcc4ac5144dbb5bff48712eda1")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomewardRagnarok")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomewardRagnarok")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
