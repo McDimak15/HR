@@ -859,6 +859,11 @@ ItemTooltips: {
 		Turn wooden arrows into holy arrows
 		Enemies are less likely to target you
 		'''
+	DeadshotBrooch:
+		'''
+		Pressing an Accessory Ability hotkey will automatically swap the ammos in your ammo slots 
+		The ammo type swapped depends on the ammo of the weapon you are holding
+		'''
 	CrossbowScopeSOTS:
 		'''
 		Grants a 20% chance not to consume ammo

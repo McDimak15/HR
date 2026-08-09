@@ -1,6 +1,6 @@
 displayName = Homeward Ragnarok
 author = Kes
-version = 0.9.2
+version = 0.9.4
 homepage = https://discord.gg/pxxQMVu5ek
 hideCode = true
 

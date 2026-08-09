@@ -229,6 +229,7 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                     case "StarQuiver":
                     case "CrossbowScope":
                         InsertTooltip(tooltips, "StarQuiverEffect", "StarQuiverEffect");
+                        InsertTooltip(tooltips, "DeadshotBrooch", "DeadshotBrooch");
                         break;
                 }
             }

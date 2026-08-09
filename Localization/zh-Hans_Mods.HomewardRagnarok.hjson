@@ -860,6 +860,11 @@ ItemTooltips: {
 		将木箭转化为圣箭
 		敌人将不太可能瞄准你
 		'''
+	/* DeadshotBrooch:
+		'''
+		Pressing an Accessory Ability hotkey will automatically swap the ammos in your ammo slots 
+		The ammo type swapped depends on the ammo of the weapon you are holding
+		''' */
 	CrossbowScopeSOTS:
 		'''
 		20%几率不消耗弹药

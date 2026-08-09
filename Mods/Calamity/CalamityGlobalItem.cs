@@ -1,17 +1,16 @@
-using Terraria;
-using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.ID;
-using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
-using ContinentOfJourney;
-using ContinentOfJourney.Items.Accessories;
-using CalamityMod.Buffs.StatBuffs;
 using CalamityMod;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Items.Accessories;
+using ContinentOfJourney;
 using HomewardRagnarok.Config;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Localization;
+using Terraria.ModLoader;
 
-namespace HomewardRagnarok.CrossMod
+namespace HomewardRagnarok.Mods.Calamity
 {
     public class CalamityGlobalItem : GlobalItem
     {
@@ -88,7 +87,19 @@ namespace HomewardRagnarok.CrossMod
 
                 if (itemName == "CrossbowScope")
                 {
-                    player.Calamity().deadshotBrooch = true;
+                    int deadshotType = ModContent.ItemType<DeadshotBrooch>();
+                    if (!CalamityKeybinds.KeybindRentalQueue.Contains(deadshotType))
+                    {
+                        CalamityKeybinds.KeybindRentalQueue.Add(deadshotType);
+                    }
+
+                    var calamityPlayer = player.Calamity();
+                    if (calamityPlayer.ammoCycleItem == null || calamityPlayer.ammoCycleItem.type != deadshotType)
+                    {
+                        Item ammoCycleItem = new();
+                        ammoCycleItem.SetDefaults(deadshotType);
+                        calamityPlayer.ammoCycleItem = ammoCycleItem;
+                    }
                     player.Calamity().ammoCost *= 0.8f;
                 }
             }
