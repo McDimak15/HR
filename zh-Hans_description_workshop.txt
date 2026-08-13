@@ -1,0 +1,46 @@
+[h1] 旅人黄昏 [/h1]
+[h2] 诸神黄昏：炼狱蚀光-旅人归途拓展 [/h2]
+
+本模组是[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]诸神黄昏：炼狱蚀光[/url]的官方DLC
+它为[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3456517686]诸神黄昏：炼狱蚀光[/url]与[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]旅人归途[/url]两个模组之间提供了兼容性支持
+
+已包含支持的模组：
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2930931197]旅人归途[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072]灾厄[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]瑟银[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2843112914]暗影奥秘[/url]
+[/list]
+
+DLC目前添加内容如下：
+[list]
+[*] 大量武器和饰品的合成树融合
+[*] 100+配方改动
+[*] 75+武器改动
+[*] 50+饰品改动
+[*] 跨模组Boss炼狱入场动画
+[*] Boss调整
+[*] Boss炼狱圣物
+[*] Boss传颂之物
+[/list]
+
+相关链接：
+[list]
+[*] [url=https://docs.google.com/document/d/19O5bj2FAEq26qzSlS4Fay27gHAEk8WsP9rdWAfgMRf0/edit?usp=sharing]更新日志[/url]
+[*] [url=https://discord.gg/pxxQMVu5ek]官方Discord服务器[/url]
+[*] [url=https://terrariamods.wiki.gg/wikiInfernal_Eclipse_of_Ragnarok]官方中文Wiki[/url]，仍在编写中
+[/list]
+
+模组内容的汉化请使用[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3588408051]诸神黄昏：炼狱蚀光-汉化补丁[/url]，翻译问题请到汉化补丁评论区反馈
+
+制作人员
+开发者：Kes
+美术：Duwop, Soltan
+平衡：Mr.Puzzles, Soltan
+故事编写：targetson
+本地化：Pudd1ng, De1tA（中文）， Mr.Puzzles（俄文）
+
+特别感谢诸神黄昏：炼狱蚀光团队和旅人归途的开发者
+
+本模组已在多人模式下进行过测试，但仍可能出现一些Bug
+欢迎提交Bug报告 —— 分享你发现的任何问题
