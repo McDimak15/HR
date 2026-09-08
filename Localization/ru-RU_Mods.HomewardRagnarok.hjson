@@ -810,7 +810,7 @@ Configs: {
 ModCompat.BossChecklist.SlimeGod: Слизь Божественности
 
 ItemTooltips: {
-	OmniShield: -Омни щит-
+	OmniShield: -Универсальный щит-
 	ImmunityVulnerable: Даёт неуязвимость к уязвимости
 	CommemorativeCoin: Урон получаемый от дебафов снижен на 35%
 	TransactionCertificate: Предотвращает смертельный урон, оставляя игроку 1 здоровье, Перезарядка: 10 минут
