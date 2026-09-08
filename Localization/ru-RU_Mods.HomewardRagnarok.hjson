@@ -859,11 +859,11 @@ ItemTooltips: {
 		Превращает деревянные стрелы в святые
 		Враги с меньшей вероятностью атакуют вас
 		'''
-	/* DeadshotBrooch:
+	DeadshotBrooch:
 		'''
-		Pressing an Accessory Ability hotkey will automatically swap the ammos in your ammo slots 
-		The ammo type swapped depends on the ammo of the weapon you are holding
-		''' */
+		Нажатие клавиша способности аксессуара автоматически меняет порядок боеприпасов в слотах для боеприпасов 
+		Тип переключаемых боеприпасов зависит от оружия, находящегося в ваших руках
+		'''
 	CrossbowScopeSOTS:
 		'''
 		Дает 20% шанс не использовать боеприпасы
