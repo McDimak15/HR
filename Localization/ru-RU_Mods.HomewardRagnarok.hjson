@@ -1,6 +1,6 @@
 Items: {
 	ClericBadge: {
-		DisplayName: Значок святого
+		DisplayName: Значок капеллана
 		Tooltip:
 			'''
 			Увеличивает лучезарный урон на 20%
@@ -9,7 +9,7 @@ Items: {
 	}
 
 	BardBadge: {
-		DisplayName: Значок маэстро
+		DisplayName: Значок композитора
 		Tooltip:
 			'''
 			Увеличивает симфонический урон на 20%
