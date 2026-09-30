@@ -36,7 +36,7 @@ Items: {
 	}
 
 	RogueBadge: {
-		DisplayName: Значок великого вора
+		DisplayName: Значок плута
 		Tooltip:
 			'''
 			Увеличивает разбойный урон на 20%
