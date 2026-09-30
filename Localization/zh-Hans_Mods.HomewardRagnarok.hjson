@@ -847,12 +847,12 @@ ItemTooltips: {
 	"Remove'range'": 远程
 	SpikyCoverRework: 鞭子尖端造成1.5倍伤害并施加流血
 	ColdBloodRework: 降低25%减益持续时间和伤害
-	FungusJacket: 增加1个最大仆从栏
 	WhaleBoneCharmRework:
 		'''
 		给予你20%伤害减免
 		如果一个攻击造成超过你最大生命值1/4的伤害，你会获得一个根据承受伤害量恢复你生命值的增益
 		'''
+	FungusJacket: 增加1个最大仆从栏
 	StarQuiver:
 		'''
 		增加15%箭矢伤害
@@ -1108,4 +1108,32 @@ ItemTooltips: {
 		BuffOrigTooltip: 近战攻击
 		Replace: 近战、鞭子和盗贼攻击
 	}
+}
+
+ArmorTooltips: {
+	BiologicalBreastplate: {
+		// Orig: 24% increased ranged damage and critical strike chance
+		/* Replace:
+			'''
+			15% increased ranged damage
+			10% increased critical strike chance
+			''' */
+	}
+
+	ForestBreastplate: {
+		// Orig: 27% increased ranged damage and critical strike chance
+		/* Replace:
+			'''
+			10% increased ranged damage
+			8% increased critical strike chance
+			''' */
+	}
+
+	// HeliologyMaskRemove: Decreases your max number of minions by 4
+	// HeliologyMinionArmorBonus: Increases max number of minions by 20%
+	/* HeliologySentryArmorBonus:
+		'''
+		Increases whip range by 18% and speed by 18%
+		Increase sentry slots by 20%
+		''' */
 }

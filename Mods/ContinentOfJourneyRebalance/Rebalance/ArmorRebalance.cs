@@ -1,15 +1,16 @@
-using Terraria;
-using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.ID;
+using ContinentOfJourney.Items.Armor;
 using HomewardRagnarok.Config;
-using System.Linq;
-using System.Reflection;
+using HomewardRagnarok.Config;
 using System.Collections.Generic;
+using System.Reflection;
+using Terraria;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
 
-namespace HomewardRagnarok
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Rebalance
 {
-    public class ArmorDefensePatch : GlobalItem
+    public class ArmorRebalance : GlobalItem
     {
         public override void SetDefaults(Item item)
         {
@@ -17,72 +18,166 @@ namespace HomewardRagnarok
                 return;
 
             // Aurora Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.AuroraHeadwear>())
+            if (item.type == ModContent.ItemType<AuroraHeadwear>())
                 item.defense = 20; // Aurora Headwear 
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.AuroraRobe>())
+            if (item.type == ModContent.ItemType<AuroraRobe>())
                 item.defense = 24; // Aurora Breastplate
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.AuroraBoots>())
+            if (item.type == ModContent.ItemType<AuroraBoots>())
                 item.defense = 18; // Aurora Leggings
 
             // Sunlight Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.SunlightHelmet>())
+            if (item.type == ModContent.ItemType<SunlightHelmet>())
                 item.defense = 20; // Sun God Helmet
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.SunlightBreastplate>())
+            if (item.type == ModContent.ItemType<SunlightBreastplate>())
                 item.defense = 26; // Sun God Breastplate
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.SunlightLegging>())
+            if (item.type == ModContent.ItemType<SunlightLegging>())
                 item.defense = 24; // Sun God Leggings
 
             // Heliology Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.HeliologyHelmet>())
+            if (item.type == ModContent.ItemType<HeliologyMask>())
+                item.defense = 22; // Six-star General Mask
+            if (item.type == ModContent.ItemType<HeliologyHelmet>())
                 item.defense = 22; // Five-star General Hat
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.HeliologyPlate>())
+            if (item.type == ModContent.ItemType<HeliologyPlate>())
                 item.defense = 26; // Five-star General Coat
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.HeliologyLeggings>())
+            if (item.type == ModContent.ItemType<HeliologyLeggings>())
                 item.defense = 20; // Five-star General Trousers
 
             // Perpetual (Chrono)
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.PerpetualHelmet>())
+            if (item.type == ModContent.ItemType<PerpetualHelmet>())
                 item.defense = 16; // Chrono Helmet
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.PerpetualPlate>())
+            if (item.type == ModContent.ItemType<PerpetualPlate>())
                 item.defense = 30; // Chrono Breastplate
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.PerpetualLeggings>())
+            if (item.type == ModContent.ItemType<PerpetualLeggings>())
                 item.defense = 18; // Chrono Leggings
 
             // Biological
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.BiologicalHelmet>())
-                item.defense = 40;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.BiologicalBreastplate>())
-                item.defense = 48;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.BiologicalLeggings>())
-                item.defense = 40;
+            if (item.type == ModContent.ItemType<BiologicalHelmet>())
+                item.defense = 30;
+            if (item.type == ModContent.ItemType<BiologicalBreastplate>())
+                item.defense = 38;
+            if (item.type == ModContent.ItemType<BiologicalLeggings>())
+                item.defense = 28;
 
             // Reflector
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.ReflectorHelmet>())
+            if (item.type == ModContent.ItemType<ReflectorHelmet>())
                 item.defense = 56;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.ReflectorBreastplate>())
+            if (item.type == ModContent.ItemType<ReflectorBreastplate>())
                 item.defense = 52; // Reflector Bodysuit
 
             // Watchman Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.WatchmanHat>())
+            if (item.type == ModContent.ItemType<WatchmanHat>())
                 item.defense = 18;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.WatchmanShirt>())
+            if (item.type == ModContent.ItemType<WatchmanShirt>())
                 item.defense = 32;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.WatchmanDress>())
+            if (item.type == ModContent.ItemType<WatchmanDress>())
                 item.defense = 20;
 
             // Forest Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.ForestHelmet>())
-                item.defense = 44;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.ForestBreastplate>())
-                item.defense = 50;
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.ForestLeggings>())
-                item.defense = 42;
+            if (item.type == ModContent.ItemType<ForestHelmet>())
+                item.defense = 24;
+            if (item.type == ModContent.ItemType<ForestBreastplate>())
+                item.defense = 32;
+            if (item.type == ModContent.ItemType<ForestLeggings>())
+                item.defense = 22;
 
             // Equilibrium Set
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.EquilibriumBreastplate>())
+            if (item.type == ModContent.ItemType<EquilibriumBreastplate>())
                 item.defense = 54; // Equilibrium Bodysuit
-            if (item.type == ModContent.ItemType<ContinentOfJourney.Items.Armor.EquilibriumLeggings>())
+            if (item.type == ModContent.ItemType<EquilibriumLeggings>())
                 item.defense = 48; // Equilibrium Stockings
+        }
+        public override void UpdateEquip(Item item, Player player)
+        {
+            if (item.type == ModContent.ItemType<BiologicalHelmet>())
+            {
+                player.GetDamage(DamageClass.Ranged) = player.GetDamage(DamageClass.Ranged) / 1.2f * 1.14f;
+            }
+            if (item.type == ModContent.ItemType<BiologicalBreastplate>())
+            {
+                player.GetDamage(DamageClass.Ranged) = player.GetDamage(DamageClass.Ranged) / 1.24f * 1.15f;
+                player.GetCritChance(DamageClass.Ranged) -= 14;
+            }
+            if (item.type == ModContent.ItemType<BiologicalLeggings>())
+            {
+                player.maxRunSpeed = player.maxRunSpeed / 1.25f * 1.15f;
+                player.runAcceleration = player.runAcceleration / 1.25f * 1.15f;
+            }
+            if (item.type == ModContent.ItemType<HeliologyMask>())
+            {
+                player.maxTurrets += 1;
+                player.maxMinions += 4;
+            }
+
+            if (item.type == ModContent.ItemType<ForestHelmet>())
+            {
+                player.GetDamage(DamageClass.Ranged) = player.GetDamage(DamageClass.Ranged) / 1.3f * 1.08f;
+                player.GetCritChance(DamageClass.Ranged) -= 7;
+            }
+            if (item.type == ModContent.ItemType<ForestBreastplate>())
+            {
+                player.GetDamage(DamageClass.Ranged) = player.GetDamage(DamageClass.Ranged) / 1.27f * 1.1f;
+                player.GetCritChance(DamageClass.Ranged) -= 19;
+            }
+        }
+
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            foreach (var line in tooltips)
+            {
+                if (item.type == ModContent.ItemType<BiologicalHelmet>())
+                {
+                    if (line.Text.Contains("20%"))
+                        line.Text = line.Text.Replace("20%", "14%");
+                }
+                else if (item.type == ModContent.ItemType<BiologicalLeggings>())
+                {
+                    if (line.Text.Contains("25%"))
+                        line.Text = line.Text.Replace("25%", "15%");
+                }
+                else if (item.type == ModContent.ItemType<BiologicalBreastplate>())
+                {
+                    string origText = Language.GetTextValue("Mods.HomewardRagnarok.ArmorTooltips.BiologicalBreastplate.Orig");
+                    string newText = Language.GetTextValue("Mods.HomewardRagnarok.ArmorTooltips.BiologicalBreastplate.Replace");
+
+                    if (line.Text.Contains(origText))
+                    {
+                        line.Text = line.Text.Replace(origText, newText);
+                        break;
+                    }
+                }
+                if (item.type == ModContent.ItemType<ForestHelmet>())
+                {
+                    if (line.Text.Contains("30%"))
+                        line.Text = line.Text.Replace("30%", "8%");
+                    if (line.Text.Contains("12%"))
+                        line.Text = line.Text.Replace("12%", "5%");
+                }
+                else if (item.type == ModContent.ItemType<ForestBreastplate>())
+                {
+                    string origText = Language.GetTextValue("Mods.HomewardRagnarok.ArmorTooltips.ForestBreastplate.Orig");
+                    string newText = Language.GetTextValue("Mods.HomewardRagnarok.ArmorTooltips.ForestBreastplate.Replace");
+
+                    if (line.Text.Contains(origText))
+                    {
+                        line.Text = line.Text.Replace(origText, newText);
+                        break;
+                    }
+                }
+            }
+            if (item.type == ModContent.ItemType<HeliologyMask>())
+            {
+                foreach (TooltipLine line in tooltips)
+                {
+                    if (line.Text.Contains('1'))
+                        line.Text = line.Text.Replace("1", "2");
+                }
+                string removeText = Language.GetTextValue("Mods.HomewardRagnarok.ArmorTooltips.HeliologyMaskRemove");
+                if (!string.IsNullOrWhiteSpace(removeText))
+                {
+                    tooltips.RemoveAll(t => t.Text.Contains(removeText));
+                }
+            }
         }
     }
 
@@ -96,14 +191,18 @@ namespace HomewardRagnarok
             {
                 if (cojPlayer.HeliologyArmorSetEffect)
                 {
-                    float baseMinions = Player.maxMinions / 1.77f;
-                    Player.maxMinions = (int)System.Math.Round(baseMinions * 1.20f);
+                    Player.maxMinions = (int)System.Math.Round(Player.maxMinions / 1.77f * 1.20f);
+                }
+                if (cojPlayer.HeliologyArmorSentrySetEffect)
+                {
+                    Player.maxTurrets -= 3;
+                    Player.maxTurrets = (int)System.Math.Round(Player.maxTurrets / 1.77f * 1.20f);
                 }
             }
         }
     }
 
-    public class ArmorGlobalProjectile : GlobalProjectile
+    public class ArmorRebalanceGlobalProjectile : GlobalProjectile
     {
         public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
         {
@@ -112,57 +211,38 @@ namespace HomewardRagnarok
             Player player = Main.player[projectile.owner];
             if (player.TryGetModPlayer<ContinentOfJourney.TemplatePlayer>(out var cojPlayer))
             {
-                if (cojPlayer.HeliologyArmorSetEffect && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
+                if ((cojPlayer.HeliologyArmorSetEffect || cojPlayer.HeliologyArmorSentrySetEffect) && (projectile.minion || ProjectileID.Sets.MinionShot[projectile.type]))
                 {
-                    float penaltyAmount = (projectile.damage - Terraria.Utils.Clamp(projectile.ArmorPenetration, 0, target.defense) / 2) * 0.38f;
+                    float penaltyAmount = (projectile.damage - Utils.Clamp(projectile.ArmorPenetration, 0, target.defense) / 2) * 0.38f;
                     modifiers.FinalDamage.Flat += penaltyAmount;
                 }
             }
         }
     }
 
-    public class ArmorTooltipSystem : ModSystem
+    public class ArmorBonusRebalanceTooltip : ModSystem
     {
         public override void PostSetupContent()
         {
             if (!ServerConfig.Instance.ArmorBalancing) return;
 
-            string key = "Mods.ContinentOfJourney.Armor_HeliologyBonus";
-            string newText = "Increases max number of minions by 20%";
-
-            if (Language.Exists(key))
+            if (Language.Exists("Mods.ContinentOfJourney.Armor_HeliologyBonus"))
             {
-                LocalizedText localizedText = Language.GetText(key);
+                LocalizedText localizedText = Language.GetText("Mods.ContinentOfJourney.Armor_HeliologyBonus");
 
                 FieldInfo valueField = typeof(LocalizedText).GetField("value", BindingFlags.NonPublic | BindingFlags.Instance)
                                     ?? typeof(LocalizedText).GetField("_value", BindingFlags.NonPublic | BindingFlags.Instance);
 
-                if (valueField != null)
-                {
-                    valueField.SetValue(localizedText, newText);
-                }
+                valueField?.SetValue(localizedText, "Increases max number of minions by 20%");
             }
-        }
-    }
-
-    public class ArmorRecipePatch : ModSystem
-    {
-        public override void PostAddRecipes()
-        {
-            if (!ServerConfig.Instance.ArmorCraft)
-                return;
-        }
-
-        private void ReplaceIngredient(Recipe recipe, int oldItem, int newItem)
-        {
-            for (int i = 0; i < recipe.requiredItem.Count; i++)
+            if (Language.Exists("Mods.ContinentOfJourney.Armor_HeliologySentryBonus"))
             {
-                if (recipe.requiredItem[i].type == oldItem)
-                {
-                    int stack = recipe.requiredItem[i].stack;
-                    recipe.requiredItem[i].SetDefaults(newItem);
-                    recipe.requiredItem[i].stack = stack;
-                }
+                LocalizedText localizedText = Language.GetText("Mods.ContinentOfJourney.Armor_HeliologySentryBonus");
+
+                FieldInfo valueField = typeof(LocalizedText).GetField("value", BindingFlags.NonPublic | BindingFlags.Instance)
+                                    ?? typeof(LocalizedText).GetField("_value", BindingFlags.NonPublic | BindingFlags.Instance);
+
+                valueField?.SetValue(localizedText, "\nIncreases whip range by 18% and speed by 18%\nIncrease sentry slots by 20%");
             }
         }
     }

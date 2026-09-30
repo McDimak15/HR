@@ -6,7 +6,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace HWJBardHealer.Content
+namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Hooks
 {
     public class TicketBarHook : ModSystem
     {

@@ -1,20 +1,19 @@
+using ContinentOfJourney;
+using ContinentOfJourney.Items.Accessories;
+using HomewardRagnarok;
+using HomewardRagnarok.Config;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using System.IO;
 using Terraria;
-using Terraria.ModLoader;
-using Terraria.ModLoader.IO;
 using Terraria.ID;
 using Terraria.Localization;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System.IO;
-using System.Collections.Generic;
-using CalamityMod;
-using ContinentOfJourney.Items.Accessories;
-using HomewardRagnarok.Config;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Items
 {
-    public class TheSwitchRebalance : GlobalItem
+    public class TheSwitchRework : GlobalItem
     {
         public override bool InstancePerEntity => true;
 
@@ -96,7 +95,7 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Items
             {
                 if (tooltips[i].Mod == "Terraria" && tooltips[i].Name.StartsWith("Tooltip"))
                 {
-                    if (int.TryParse(tooltips[i].Name.Substring(7), out int num) && num > maxNumber)
+                    if (int.TryParse(tooltips[i].Name[7..], out int num) && num > maxNumber)
                     {
                         maxNumber = num;
                         insertAt = i + 1;
@@ -104,24 +103,20 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance.Items
                 }
             }
 
-            TooltipLine newLine = new TooltipLine(Mod, lineName, Language.GetTextValue($"Mods.HomewardRagnarok.ItemTooltips.{langKey}"));
+            TooltipLine newLine = new(Mod, lineName, Language.GetTextValue($"Mods.KesHomewardBalance.ItemTooltips.{langKey}"));
             tooltips.Insert(insertAt, newLine);
             return newLine;
-        }
-
-        public override void PostDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
-        {
-            CalamityUtils.DrawInventoryDot(spriteBatch, position, new Vector2(16f, 16f) * Main.inventoryScale, modeColdBlood);
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
             var hrPlayer = player.GetModPlayer<HomeRagPlayer>();
+            var cojPlayer = player.GetModPlayer<TemplatePlayer>();
 
             if (modeColdBlood)
                 hrPlayer.equippedImprovedColdBlood = true;
             else
-                hrPlayer.equippedImprovedWhaleBone = true;
+                cojPlayer.WhaleBoneCharm = true;
         }
     }
 }

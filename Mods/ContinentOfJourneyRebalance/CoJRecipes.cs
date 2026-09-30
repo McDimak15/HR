@@ -67,6 +67,9 @@ namespace HomewardRagnarok.Mods.ContinentOfJourneyRebalance
                     if (resultType == ModContent.ItemType<HoneyMushroom>())
                         recipe.RemoveIngredient(ItemID.BeeWax);
 
+                    if (resultType == ModContent.ItemType<Altitude>())
+                        recipe.AddIngredient(ModContent.ItemType<EssenceofBright>(), 5);
+
                     if (resultType == ModContent.ItemType<StarImage>())
                         recipe.requiredItem.RemoveAll(ing => ing.type == ModContent.ItemType<EssenceofMatter>());
 

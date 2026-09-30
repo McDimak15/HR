@@ -847,12 +847,8 @@ ItemTooltips: {
 	"Remove'range'": range
 	SpikyCoverRework: Whip tips deal 1.5x damage and cause bleeding
 	ColdBloodRework: Decreases debuff time and damage by 25%
+	WhaleBoneCharmRework: Effect only active when fighting the World's End Everlasting Falling Whale
 	FungusJacket: Increases your max number of minions by 1
-	WhaleBoneCharmRework:
-		'''
-		Gives 20% damage reduction
-		If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-		'''
 	StarQuiver:
 		'''
 		Increase the damage of arrows by 15%
@@ -903,11 +899,7 @@ ItemTooltips: {
 	TheSwitch: {
 		HoldShift: Shift-Right Click this item in your inventory to change mode
 		ColdBlood: Decrease debuff time and damage by 40%
-		WhaleBoneCharm:
-			'''
-			Gives 30% damage reduction
-			If a attack does more than 1/4th of your health, you get a buff that heals you depending of the damage you took.
-			'''
+		WhaleBoneCharm: Damage taken capped at 40% of your maximum life
 	}
 
 	Horizon: {
@@ -1108,4 +1100,32 @@ ItemTooltips: {
 		BuffOrigTooltip: Melee attacks
 		Replace: Melee, Whip and Thrower attacks
 	}
+}
+
+ArmorTooltips: {
+	BiologicalBreastplate: {
+		Orig: 24% increased ranged damage and critical strike chance
+		Replace:
+			'''
+			15% increased ranged damage
+			10% increased critical strike chance
+			'''
+	}
+
+	ForestBreastplate: {
+		Orig: 27% increased ranged damage and critical strike chance
+		Replace:
+			'''
+			10% increased ranged damage
+			8% increased critical strike chance
+			'''
+	}
+
+	HeliologyMaskRemove: Decreases your max number of minions by 4
+	HeliologyMinionArmorBonus: Increases max number of minions by 20%
+	HeliologySentryArmorBonus:
+		'''
+		Increases whip range by 18% and speed by 18%
+		Increase sentry slots by 20%
+		'''
 }

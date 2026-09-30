@@ -1,0 +1,5 @@
+D:\My Games\Terraria\tModLoader\ModSources\HomewardRagnarok\obj\Debug\net8.0\HomewardRagnarok.csproj.AssemblyReference.cache
+D:\My Games\Terraria\tModLoader\ModSources\HomewardRagnarok\obj\Debug\net8.0\HomewardRagnarok.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Games\Terraria\tModLoader\ModSources\HomewardRagnarok\obj\Debug\net8.0\HomewardRagnarok.AssemblyInfoInputs.cache
+D:\My Games\Terraria\tModLoader\ModSources\HomewardRagnarok\obj\Debug\net8.0\HomewardRagnarok.AssemblyInfo.cs
+D:\My Games\Terraria\tModLoader\ModSources\HomewardRagnarok\obj\Debug\net8.0\HomewardRagnarok.csproj.CoreCompileInputs.cache

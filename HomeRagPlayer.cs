@@ -16,9 +16,7 @@ namespace HomewardRagnarok
         public bool hasRiftGenerator;
         public bool herbalistAcidVenom;
         public bool equippedColdBlood;
-        public bool equippedWhaleBoneCharm;
         public bool equippedImprovedColdBlood;
-        public bool equippedImprovedWhaleBone;
         public bool hasSunsHeartFlightUpgrade;
         public float whaleBoneHealPool = 0;
         public int devourDelay = 0;
@@ -30,9 +28,7 @@ namespace HomewardRagnarok
             hasRiftGenerator = false;
             herbalistAcidVenom = false;
             equippedColdBlood = false;
-            equippedWhaleBoneCharm = false;
             equippedImprovedColdBlood = false;
-            equippedImprovedWhaleBone = false;
         }
 
         public override void SaveData(TagCompound tag)
@@ -60,15 +56,6 @@ namespace HomewardRagnarok
         {
             if (devourDelay > 0) devourDelay--;
 
-            if (equippedImprovedWhaleBone)
-            {
-                Player.endurance += 0.30f;
-            }
-            else if (equippedWhaleBoneCharm)
-            {
-                Player.endurance += 0.20f;
-            }
-
             if (Player.TryGetModPlayer(out PermanentUpgradesPlayer permPlayer) && ServerConfig.Instance.PermanentToAccessories == true)
             {
                 permPlayer.PermanentUpgradesActivated[0] = false;
@@ -87,43 +74,6 @@ namespace HomewardRagnarok
             if (hasSunsHeartFlightUpgrade && Player.wingTimeMax > 0)
             {
                 Player.wingTimeMax = (int)(Player.wingTimeMax * 1.20f);
-            }
-        }
-
-        public override void OnHurt(Player.HurtInfo info)
-        {
-            if (equippedImprovedWhaleBone)
-            {
-                if (info.Damage > Player.statLifeMax2 / 4)
-                {
-                    whaleBoneHealPool += info.Damage * (1f / 3f);
-                    Player.AddBuff(ModContent.BuffType<WhaleBoneRecovery>(), 300);
-                }
-            }
-            else if (equippedWhaleBoneCharm)
-            {
-                if (info.Damage > Player.statLifeMax2 / 4)
-                {
-                    whaleBoneHealPool += info.Damage * 0.25f;
-                    Player.AddBuff(ModContent.BuffType<WhaleBoneRecovery>(), 300);
-                }
-            }
-        }
-
-        public override void UpdateLifeRegen()
-        {
-            if (Player.HasBuff<WhaleBoneRecovery>() && whaleBoneHealPool > 0)
-            {
-                float healSpeed = equippedImprovedWhaleBone ? 0.15f : 0.10f;
-
-                if (whaleBoneHealPool < healSpeed) healSpeed = whaleBoneHealPool;
-
-                Player.lifeRegen += (int)(healSpeed * 120);
-                whaleBoneHealPool -= healSpeed;
-            }
-            if (!Player.HasBuff<WhaleBoneRecovery>())
-            {
-                whaleBoneHealPool = 0;
             }
         }
 

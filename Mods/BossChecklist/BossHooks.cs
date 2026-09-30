@@ -37,8 +37,8 @@ namespace HomewardRagnarok.Mods.BossChecklist
             {
                 new { Key = "CoJWallOfShadow",  Expected = 18.5f, NewVal = 18.49f },
                 new { Key = "CoJOverwatcher",   Expected = 20.2f, NewVal = 19.51f },
-                new { Key = "CoJMaterealizer",  Expected = 22.2f, NewVal = 19.52f },
-                new { Key = "CoJLifebringer",   Expected = 21.2f, NewVal = 19.53f },
+                new { Key = "CoJLifebringer",   Expected = 21.2f, NewVal = 19.52f },
+                new { Key = "CoJMaterealizer",  Expected = 22.2f, NewVal = 19.53f },
                 new { Key = "CoJScarabBelief",  Expected = 24f,   NewVal = 20.7f  },
                 new { Key = "CoJOrdeals",       Expected = 23f,   NewVal = 21.6f  },
                 new { Key = "CoJWorldsEndEverlastingFallingWhale", Expected = 25f, NewVal = 21.7f },
